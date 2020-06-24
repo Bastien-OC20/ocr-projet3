@@ -1,0 +1,381 @@
+/* devonshire-regular - latin */
+@font-face {
+  font-family: "Devonshire";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/devonshire-v8-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Devonshire-Regular"), url("../fonts/devonshire-v8-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/devonshire-v8-latin-regular.woff2") format("woff2"), url("../fonts/devonshire-v8-latin-regular.woff") format("woff"), url("../fonts/devonshire-v8-latin-regular.ttf") format("truetype"), url("../fonts/devonshire-v8-latin-regular.svg#Devonshire") format("svg");
+  /* Legacy iOS */
+}
+/* croissant-one-regular - latin */
+@font-face {
+  font-family: "Croissant One";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/croissant-one-v7-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Croissant One"), local("CroissantOne-Regular"), url("../fonts/croissant-one-v7-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/croissant-one-v7-latin-regular.woff2") format("woff2"), url("../fonts/croissant-one-v7-latin-regular.woff") format("woff"), url("../fonts/croissant-one-v7-latin-regular.ttf") format("truetype"), url("../fonts/croissant-one-v7-latin-regular.svg#CroissantOne") format("svg");
+  /* Legacy iOS */
+}
+/* allura-regular - latin */
+@font-face {
+  font-family: "Allura";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/allura-v8-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Allura Regular"), local("Allura-Regular"), url("../fonts/allura-v8-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/allura-v8-latin-regular.woff2") format("woff2"), url("../fonts/allura-v8-latin-regular.woff") format("woff"), url("../fonts/allura-v8-latin-regular.ttf") format("truetype"), url("../fonts/allura-v8-latin-regular.svg#Allura") format("svg");
+  /* Legacy iOS */
+}
+/* dancing-script-regular - latin */
+@font-face {
+  font-family: "Dancing Script";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/dancing-script-v14-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/dancing-script-v14-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/dancing-script-v14-latin-regular.woff2") format("woff2"), url("../fonts/dancing-script-v14-latin-regular.woff") format("woff"), url("../fonts/dancing-script-v14-latin-regular.ttf") format("truetype"), url("../fonts/dancing-script-v14-latin-regular.svg#DancingScript") format("svg");
+  /* Legacy iOS */
+}
+/* kaushan-script-regular - latin */
+@font-face {
+  font-family: "Kaushan Script";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/kaushan-script-v8-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Kaushan Script"), local("KaushanScript-Regular"), url("../fonts/kaushan-script-v8-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/kaushan-script-v8-latin-regular.woff2") format("woff2"), url("../fonts/kaushan-script-v8-latin-regular.woff") format("woff"), url("../fonts/kaushan-script-v8-latin-regular.ttf") format("truetype"), url("../fonts/kaushan-script-v8-latin-regular.svg#KaushanScript") format("svg");
+  /* Legacy iOS */
+}
+/* source-serif-pro-regular - latin */
+@font-face {
+  font-family: "Source Serif Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/source-serif-pro-v7-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Source Serif Pro"), local("SourceSerifPro-Regular"), url("../fonts/source-serif-pro-v7-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/source-serif-pro-v7-latin-regular.woff2") format("woff2"), url("../fonts/source-serif-pro-v7-latin-regular.woff") format("woff"), url("../fonts/source-serif-pro-v7-latin-regular.ttf") format("truetype"), url("../fonts/source-serif-pro-v7-latin-regular.svg#SourceSerifPro") format("svg");
+  /* Legacy iOS */
+}
+/* caveat-regular - latin */
+@font-face {
+  font-family: "Caveat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/caveat-v7-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Caveat Regular"), local("Caveat-Regular"), url("../fonts/caveat-v7-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/caveat-v7-latin-regular.woff2") format("woff2"), url("../fonts/caveat-v7-latin-regular.woff") format("woff"), url("../fonts/caveat-v7-latin-regular.ttf") format("truetype"), url("../fonts/caveat-v7-latin-regular.svg#Caveat") format("svg");
+  /* Legacy iOS */
+}
+/* croissant-one-regular - latin */
+@font-face {
+  font-family: "Croissant One";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/croissant-one-v7-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Croissant One"), local("CroissantOne-Regular"), url("../fonts/croissant-one-v7-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/croissant-one-v7-latin-regular.woff2") format("woff2"), url("../fonts/croissant-one-v7-latin-regular.woff") format("woff"), url("../fonts/croissant-one-v7-latin-regular.ttf") format("truetype"), url("../fonts/croissant-one-v7-latin-regular.svg#CroissantOne") format("svg");
+  /* Legacy iOS */
+}
+/* allura-regular - latin */
+@font-face {
+  font-family: "Allura";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/allura-v8-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Allura Regular"), local("Allura-Regular"), url("../fonts/allura-v8-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/allura-v8-latin-regular.woff2") format("woff2"), url("../fonts/allura-v8-latin-regular.woff") format("woff"), url("../fonts/allura-v8-latin-regular.ttf") format("truetype"), url("../fonts/allura-v8-latin-regular.svg#Allura") format("svg");
+  /* Legacy iOS */
+}
+/* dancing-script-regular - latin */
+@font-face {
+  font-family: "Dancing Script";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/dancing-script-v14-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/dancing-script-v14-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/dancing-script-v14-latin-regular.woff2") format("woff2"), url("../fonts/dancing-script-v14-latin-regular.woff") format("woff"), url("../fonts/dancing-script-v14-latin-regular.ttf") format("truetype"), url("../fonts/dancing-script-v14-latin-regular.svg#DancingScript") format("svg");
+  /* Legacy iOS */
+}
+/* kaushan-script-regular - latin */
+@font-face {
+  font-family: "Kaushan Script";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/kaushan-script-v8-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Kaushan Script"), local("KaushanScript-Regular"), url("../fonts/kaushan-script-v8-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/kaushan-script-v8-latin-regular.woff2") format("woff2"), url("../fonts/kaushan-script-v8-latin-regular.woff") format("woff"), url("../fonts/kaushan-script-v8-latin-regular.ttf") format("truetype"), url("../fonts/kaushan-script-v8-latin-regular.svg#KaushanScript") format("svg");
+  /* Legacy iOS */
+}
+/* source-serif-pro-regular - latin */
+@font-face {
+  font-family: "Source Serif Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/source-serif-pro-v7-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Source Serif Pro"), local("SourceSerifPro-Regular"), url("../fonts/source-serif-pro-v7-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/source-serif-pro-v7-latin-regular.woff2") format("woff2"), url("../fonts/source-serif-pro-v7-latin-regular.woff") format("woff"), url("../fonts/source-serif-pro-v7-latin-regular.ttf") format("truetype"), url("../fonts/source-serif-pro-v7-latin-regular.svg#SourceSerifPro") format("svg");
+  /* Legacy iOS */
+}
+/* caveat-regular - latin */
+@font-face {
+  font-family: "Caveat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/caveat-v7-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Caveat Regular"), local("Caveat-Regular"), url("../fonts/caveat-v7-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/caveat-v7-latin-regular.woff2") format("woff2"), url("../fonts/caveat-v7-latin-regular.woff") format("woff"), url("../fonts/caveat-v7-latin-regular.ttf") format("truetype"), url("../fonts/caveat-v7-latin-regular.svg#Caveat") format("svg");
+  /* Legacy iOS */
+}
+.menu_chic h2,
+.menu_chic h3 {
+  background-image: linear-gradient(to right, #c67412, #a56799, #6e4ccc);
+  -webkit-background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+header h1 {
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 400ms;
+}
+header h1:hover {
+  transform: scale(1.15);
+}
+
+.menu_note {
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 400ms;
+}
+.menu_note:hover {
+  transform: scale(1.15);
+}
+
+.menu_chic {
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 400ms;
+}
+.menu_chic:hover {
+  transform: scale(1.15);
+}
+
+.menu_delice {
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 400ms;
+}
+.menu_delice:hover {
+  transform: scale(1.15);
+}
+
+.menu_gout {
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 400ms;
+}
+.menu_gout:hover {
+  transform: scale(1.15);
+}
+
+.bounce {
+  animation: bounce 700ms ease infinite;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}
+* {
+  margin: 0 auto;
+}
+
+body {
+  padding-bottom: 2em;
+  max-width: 1024px;
+  margin: auto;
+  position: relative;
+}
+
+header {
+  background-color: #579c87;
+  width: 100%;
+  height: 5em;
+  position: relative;
+}
+header h1 {
+  color: #fdcb46;
+  text-align: center;
+  line-height: 1.2em;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 4em;
+  font-weight: bolder;
+}
+header a {
+  text-decoration: none;
+}
+header a:visited {
+  color: #fdcb46;
+}
+
+main {
+  padding: 2em;
+  justify-content: space-between;
+  text-align: center;
+}
+main article {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+main h4 {
+  font-size: 1em;
+}
+main article {
+  width: 100%;
+  position: relative;
+}
+main .menus {
+  display: inline-flex;
+  width: 20em;
+  height: 25em;
+  padding: 2em;
+  margin: 2em;
+  box-shadow: 0 0 10px #bbba;
+  text-align: center;
+}
+main .menus a {
+  display: block;
+  margin: auto;
+  font-size: 2em;
+  text-decoration: none;
+  text-align: center;
+}
+main .btn {
+  background: #579c87;
+  color: #fdcb46;
+  width: 25%;
+  border: 0;
+  border-radius: 15px;
+  margin-top: 2em;
+  padding: 0.5em;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+main .btn_soon {
+  justify-content: space-around;
+}
+main .bounce {
+  display: inline-flex;
+  z-index: 2;
+}
+
+footer {
+  background-color: #579c87;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0em;
+  margin: auto;
+  max-width: 1024px;
+  width: 100%;
+  height: 3em;
+}
+footer a {
+  line-height: 1.5em;
+  margin: 0 10px;
+  color: #fdcb46;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2em;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+@media (max-width: 500px) {
+  .btn {
+    width: 200px;
+    font-weight: 500;
+    font-size: 1em;
+  }
+}
+.menu_note {
+  color: #3c1218;
+  text-align: center;
+  margin: 1em;
+  box-shadow: 0.1em 0.1em 1em grey;
+  background-color: #FCDFDB;
+}
+.menu_note h2 {
+  font-family: "Devonshire";
+  font-size: 1.5em;
+  color: #3c1218;
+}
+.menu_note h2:visited {
+  color: #3c1218;
+}
+.menu_note h3 {
+  font-family: "Caveat";
+  color: #3c1218;
+}
+
+.menu_chic {
+  text-align: center;
+  margin: 1em auto;
+  box-shadow: 0.1em 0.1em 1em grey;
+  background-color: #FFF5FE;
+}
+.menu_chic h2 {
+  font-family: "Croissant One";
+  font-size: 0.8em;
+  line-height: 3em;
+}
+.menu_chic h3 {
+  font-family: "Source Serif Pro";
+  font-size: 1em;
+}
+
+.menu_delice {
+  color: black;
+  text-align: center;
+  margin: 2em auto;
+  box-shadow: 0.1em 0.1em 1em grey;
+  background-color: #F3F3F3;
+}
+.menu_delice h2 {
+  font-family: "Dancing Script";
+  font-size: 1.2em;
+  line-height: 2em;
+}
+.menu_delice h3 {
+  font-family: "Caveat";
+}
+
+.menu_gout {
+  color: black;
+  text-align: center;
+  margin: 2em auto;
+  box-shadow: 0.1em 0.1em 1em grey;
+  background-color: white;
+}
+.menu_gout h2 {
+  font-family: "Kaushan Script";
+  font-size: 1.2em;
+  line-height: 2em;
+}
+.menu_gout h3 {
+  font-family: "Caveat";
+}
+
+/*# sourceMappingURL=style.css.map */
