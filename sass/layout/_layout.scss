@@ -1,0 +1,148 @@
+* {
+    margin: 0 auto;
+}
+
+body {
+    padding-bottom: 2em;
+    max-width: 1024px;
+    margin: auto;
+    position: relative;
+}
+
+// header
+
+header {
+    background-color: $main-background;
+    width: 100%;
+    height: 5em;
+    position: relative;
+
+    h1 {
+        color: $main-text;
+        text-align: center;
+        line-height: 1.2em;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 4em;
+        font-weight: bolder;
+    }
+
+    a {
+        text-decoration: none;
+
+        &:visited {
+            color: $main-text;
+        }
+    }
+}
+
+// main
+
+main {
+    padding: 2em;
+    justify-content: space-between;
+    text-align: center;
+
+    article {
+        display: block;
+
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+
+
+    h4 {
+        font-size: 1em;
+    }
+
+    article {
+        width: 100%;
+        position: relative;
+
+    }
+
+    .menus {
+        display: inline-flex;
+        width: 20em;
+        height: 25em;
+        padding: 2em;
+        margin: 2em;
+        box-shadow: 0 0 10px #bbba;
+        text-align: center;
+
+
+
+        a {
+            display: block;
+            margin: auto;
+            font-size: 2em;
+            text-decoration: none;
+            text-align: center;
+        }
+
+
+
+
+    }
+
+    .btn {
+        background: $main-background;
+        color: $main-text;
+        width: 25%;
+        border: 0;
+        border-radius: 15px;
+        margin-top: 2em;
+        padding: 0.5em;
+        font-weight: 700;
+        font-size: 1.5rem;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .btn_soon {
+        justify-content: space-around;
+    }
+
+    .bounce {
+        display: inline-flex;
+
+        z-index: 2;
+    }
+
+
+
+
+}
+
+footer {
+    background-color: $main-background;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0em;
+    margin: auto;
+    max-width: 1024px;
+    width: 100%;
+    height: 3em;
+
+    a {
+        line-height: 1.5em;
+        margin: 0 10px;
+        color: $main-text;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 2em;
+        font-weight: bolder;
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .btn {
+        width: 200px;
+        font-weight: 500;
+        font-size: 1em;
+    }
+}
