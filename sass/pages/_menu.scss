@@ -1,0 +1,69 @@
+.menu_note {
+    color: #3c1218;
+    text-align: center;
+    margin: 2em auto;
+    box-shadow: 0.1em 0.1em 1em grey;
+    background-color: #FCDFDB;
+
+
+    h2 {
+        font-family: $typo-note;
+        font-style: normal;
+    }
+
+    h3 {
+        font-family: $typo-menu;
+    }
+}
+
+.menu_chic {
+    text-align: center;
+    margin: 2em auto;
+    box-shadow: 0.1em 0.1em 1em grey;
+    background-color: #FFF5FE;
+
+    h2 {
+        font-family: $typo-chic;
+    }
+
+    h3 {
+        font-family: $typo-menu2;
+    }
+}
+
+.menu_delice {
+    color: black;
+    text-align: center;
+    margin: 2em auto;
+    box-shadow: 0.1em 0.1em 1em grey;
+    background-color: #F3F3F3;
+
+
+    h2 {
+        font-family: $typo-delice;
+
+    }
+
+    h3 {
+        font-family: $typo-menu;
+    }
+
+}
+
+.menu_gout {
+    color: black;
+    text-align: center;
+    margin: 2em auto;
+    box-shadow: 0.1em 0.1em 1em grey;
+    background-color: white;
+
+
+    h2 {
+        font-family: $typo-gout;
+    }
+
+    h3 {
+        font-family: $typo-menu;
+    }
+
+}
