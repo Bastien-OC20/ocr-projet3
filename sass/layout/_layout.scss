@@ -15,13 +15,14 @@ header {
     background-color: $main-background;
     width: 100%;
     height: 5em;
+    position: relative;
 
     h1 {
         color: $main-text;
         text-align: center;
-        line-height: 1.5em;
-        font-family: $typo;
-        font-size: 3em;
+        line-height: 1.2em;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 4em;
         font-weight: bolder;
     }
 
@@ -49,17 +50,7 @@ main {
 
     }
 
-    h2 {
-        font-size: 2rem;
-        text-align: center;
-        text-decoration: none;
-    }
 
-    h3 {
-        font-size: 1.5rem;
-        text-align: center;
-
-    }
 
     h4 {
         font-size: 1em;
@@ -72,14 +63,14 @@ main {
     }
 
     .menus {
-        display: inline-block;
+        display: inline-flex;
         width: 20em;
         height: 25em;
         padding: 2em;
         margin: 2em;
         box-shadow: 0 0 10px #bbba;
         text-align: center;
-        padding-top: 6em;
+
 
 
         a {
@@ -87,7 +78,6 @@ main {
             margin: auto;
             font-size: 2em;
             text-decoration: none;
-            padding-top: 4em;
             text-align: center;
         }
 
@@ -99,15 +89,27 @@ main {
     .btn {
         background: $main-background;
         color: $main-text;
-        width: 20%;
+        width: 25%;
         border: 0;
         border-radius: 15px;
-        padding: 1rem 2rem;
+        margin-top: 2em;
+        padding: 0.5em;
         font-weight: 700;
         font-size: 1.5rem;
         text-align: center;
         cursor: pointer;
     }
+
+    .btn_soon {
+        justify-content: space-around;
+    }
+
+    .bounce {
+        display: inline-flex;
+
+        z-index: 2;
+    }
+
 
 
 
@@ -126,10 +128,11 @@ footer {
     height: 3em;
 
     a {
-        line-height: 3em;
+        line-height: 1.5em;
         margin: 0 10px;
         color: $main-text;
-        font-family: $typo;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 2em;
         font-weight: bolder;
         text-decoration: none;
     }

@@ -75,11 +75,187 @@
   /* Legacy iOS */
 }
 
+/* croissant-one-regular - latin */
+@font-face {
+  font-family: 'Croissant One';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/croissant-one-v7-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Croissant One"), local("CroissantOne-Regular"), url("../fonts/croissant-one-v7-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/croissant-one-v7-latin-regular.woff2") format("woff2"), url("../fonts/croissant-one-v7-latin-regular.woff") format("woff"), url("../fonts/croissant-one-v7-latin-regular.ttf") format("truetype"), url("../fonts/croissant-one-v7-latin-regular.svg#CroissantOne") format("svg");
+  /* Legacy iOS */
+}
+
+/* allura-regular - latin */
+@font-face {
+  font-family: 'Allura';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/allura-v8-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Allura Regular"), local("Allura-Regular"), url("../fonts/allura-v8-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/allura-v8-latin-regular.woff2") format("woff2"), url("../fonts/allura-v8-latin-regular.woff") format("woff"), url("../fonts/allura-v8-latin-regular.ttf") format("truetype"), url("../fonts/allura-v8-latin-regular.svg#Allura") format("svg");
+  /* Legacy iOS */
+}
+
+/* dancing-script-regular - latin */
+@font-face {
+  font-family: 'Dancing Script';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/dancing-script-v14-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/dancing-script-v14-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/dancing-script-v14-latin-regular.woff2") format("woff2"), url("../fonts/dancing-script-v14-latin-regular.woff") format("woff"), url("../fonts/dancing-script-v14-latin-regular.ttf") format("truetype"), url("../fonts/dancing-script-v14-latin-regular.svg#DancingScript") format("svg");
+  /* Legacy iOS */
+}
+
+/* kaushan-script-regular - latin */
+@font-face {
+  font-family: 'Kaushan Script';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/kaushan-script-v8-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Kaushan Script"), local("KaushanScript-Regular"), url("../fonts/kaushan-script-v8-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/kaushan-script-v8-latin-regular.woff2") format("woff2"), url("../fonts/kaushan-script-v8-latin-regular.woff") format("woff"), url("../fonts/kaushan-script-v8-latin-regular.ttf") format("truetype"), url("../fonts/kaushan-script-v8-latin-regular.svg#KaushanScript") format("svg");
+  /* Legacy iOS */
+}
+
+/* source-serif-pro-regular - latin */
+@font-face {
+  font-family: 'Source Serif Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/source-serif-pro-v7-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Source Serif Pro"), local("SourceSerifPro-Regular"), url("../fonts/source-serif-pro-v7-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/source-serif-pro-v7-latin-regular.woff2") format("woff2"), url("../fonts/source-serif-pro-v7-latin-regular.woff") format("woff"), url("../fonts/source-serif-pro-v7-latin-regular.ttf") format("truetype"), url("../fonts/source-serif-pro-v7-latin-regular.svg#SourceSerifPro") format("svg");
+  /* Legacy iOS */
+}
+
+/* caveat-regular - latin */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/caveat-v7-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Caveat Regular"), local("Caveat-Regular"), url("../fonts/caveat-v7-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/caveat-v7-latin-regular.woff2") format("woff2"), url("../fonts/caveat-v7-latin-regular.woff") format("woff"), url("../fonts/caveat-v7-latin-regular.ttf") format("truetype"), url("../fonts/caveat-v7-latin-regular.svg#Caveat") format("svg");
+  /* Legacy iOS */
+}
+
+.menu_chic h2,
+.menu_chic h3 {
+  background-image: -webkit-gradient(linear, left top, right top, from(#c67412), color-stop(#a56799), to(#6e4ccc));
+  background-image: linear-gradient(to right, #c67412, #a56799, #6e4ccc);
+  -webkit-background-clip: text;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+header h1 {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+}
+
 header h1:hover {
-  font-size: 4em;
-  line-height: 1em;
-  -webkit-transition-delay: 0.1s;
-          transition-delay: 0.1s;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+.menu_note {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+}
+
+.menu_note:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+.menu_chic {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+}
+
+.menu_chic:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+.menu_delice {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+}
+
+.menu_delice:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+.menu_gout {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+}
+
+.menu_gout:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+.bounce {
+  -webkit-animation: bounce 700ms ease infinite;
+          animation: bounce 700ms ease infinite;
+}
+
+@-webkit-keyframes bounce {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+}
+
+@keyframes bounce {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
 }
 
 * {
@@ -97,14 +273,15 @@ header {
   background-color: #579c87;
   width: 100%;
   height: 5em;
+  position: relative;
 }
 
 header h1 {
   color: #fdcb46;
   text-align: center;
-  line-height: 1.5em;
-  font-family: "allura";
-  font-size: 3em;
+  line-height: 1.2em;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 4em;
   font-weight: bolder;
 }
 
@@ -130,17 +307,6 @@ main article {
   margin-right: auto;
 }
 
-main h2 {
-  font-size: 2rem;
-  text-align: center;
-  text-decoration: none;
-}
-
-main h3 {
-  font-size: 1.5rem;
-  text-align: center;
-}
-
 main h4 {
   font-size: 1em;
 }
@@ -151,7 +317,9 @@ main article {
 }
 
 main .menus {
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   width: 20em;
   height: 25em;
   padding: 2em;
@@ -159,7 +327,6 @@ main .menus {
   -webkit-box-shadow: 0 0 10px #bbba;
           box-shadow: 0 0 10px #bbba;
   text-align: center;
-  padding-top: 6em;
 }
 
 main .menus a {
@@ -167,21 +334,33 @@ main .menus a {
   margin: auto;
   font-size: 2em;
   text-decoration: none;
-  padding-top: 4em;
   text-align: center;
 }
 
 main .btn {
   background: #579c87;
   color: #fdcb46;
-  width: 20%;
+  width: 25%;
   border: 0;
   border-radius: 15px;
-  padding: 1rem 2rem;
+  margin-top: 2em;
+  padding: 0.5em;
   font-weight: 700;
   font-size: 1.5rem;
   text-align: center;
   cursor: pointer;
+}
+
+main .btn_soon {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .bounce {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  z-index: 2;
 }
 
 footer {
@@ -205,10 +384,11 @@ footer {
 }
 
 footer a {
-  line-height: 3em;
+  line-height: 1.5em;
   margin: 0 10px;
   color: #fdcb46;
-  font-family: "allura";
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2em;
   font-weight: bolder;
   text-decoration: none;
 }
@@ -224,35 +404,44 @@ footer a {
 .menu_note {
   color: #3c1218;
   text-align: center;
-  margin: 2em auto;
+  margin: 1em;
   -webkit-box-shadow: 0.1em 0.1em 1em grey;
           box-shadow: 0.1em 0.1em 1em grey;
   background-color: #FCDFDB;
 }
 
 .menu_note h2 {
-  font-family: "Devonshire";
-  font-style: normal;
+  font-family: 'Devonshire';
+  font-size: 1.5em;
+  color: #3c1218;
+}
+
+.menu_note h2:visited {
+  color: #3c1218;
 }
 
 .menu_note h3 {
-  font-family: "Caveat";
+  font-family: 'Caveat';
+  color: #3c1218;
 }
 
 .menu_chic {
   text-align: center;
-  margin: 2em auto;
+  margin: 1em auto;
   -webkit-box-shadow: 0.1em 0.1em 1em grey;
           box-shadow: 0.1em 0.1em 1em grey;
   background-color: #FFF5FE;
 }
 
 .menu_chic h2 {
-  font-family: "Croissant One";
+  font-family: 'Croissant One';
+  font-size: 0.8em;
+  line-height: 3em;
 }
 
 .menu_chic h3 {
-  font-family: "Source Serif Pro";
+  font-family: 'Source Serif Pro';
+  font-size: 1em;
 }
 
 .menu_delice {
@@ -265,11 +454,13 @@ footer a {
 }
 
 .menu_delice h2 {
-  font-family: "Dancing Script";
+  font-family: 'Dancing Script';
+  font-size: 1.2em;
+  line-height: 2em;
 }
 
 .menu_delice h3 {
-  font-family: "Caveat";
+  font-family: 'Caveat';
 }
 
 .menu_gout {
@@ -282,10 +473,12 @@ footer a {
 }
 
 .menu_gout h2 {
-  font-family: "Kaushan Script";
+  font-family: 'Kaushan Script';
+  font-size: 1.2em;
+  line-height: 2em;
 }
 
 .menu_gout h3 {
-  font-family: "Caveat";
+  font-family: 'Caveat';
 }
 /*# sourceMappingURL=main.css.map */
