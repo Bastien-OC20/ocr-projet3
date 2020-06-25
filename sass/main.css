@@ -292,16 +292,6 @@
   /* Legacy iOS */
 }
 
-.menu_chic h2,
-.menu_chic h3 {
-  background-image: -webkit-gradient(linear, left top, right top, from(#c67412), color-stop(#a56799), to(#6e4ccc));
-  background-image: linear-gradient(to right, #c67412, #a56799, #6e4ccc);
-  -webkit-background-clip: text;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
 header h1 {
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -318,7 +308,7 @@ header h1:hover {
           transform: scale(1.15);
 }
 
-.menu_note {
+.menu_note a {
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition-property: -webkit-transform;
@@ -329,12 +319,12 @@ header h1:hover {
           transition-duration: 400ms;
 }
 
-.menu_note:hover {
+.menu_note a:hover {
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
 }
 
-.menu_chic {
+.menu_chic a {
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition-property: -webkit-transform;
@@ -345,12 +335,12 @@ header h1:hover {
           transition-duration: 400ms;
 }
 
-.menu_chic:hover {
+.menu_chic a:hover {
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
 }
 
-.menu_delice {
+.menu_delice a {
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition-property: -webkit-transform;
@@ -361,12 +351,12 @@ header h1:hover {
           transition-duration: 400ms;
 }
 
-.menu_delice:hover {
+.menu_delice a:hover {
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
 }
 
-.menu_gout {
+.menu_gout a {
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition-property: -webkit-transform;
@@ -377,36 +367,108 @@ header h1:hover {
           transition-duration: 400ms;
 }
 
-.menu_gout:hover {
+.menu_gout a:hover {
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
 }
 
-.bounce {
-  -webkit-animation: bounce 700ms ease infinite;
-          animation: bounce 700ms ease infinite;
+.loading span:nth-child(2) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+<<<<<<< HEAD
 }
 
-@-webkit-keyframes bounce {
-  from {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+.loading span:nth-child(3) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+=======
+}
+
+.loading span:nth-child(3) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+>>>>>>> 3e1a2fe... 📦 Mise en forme de la page d'accueil
+@-webkit-keyframes dots {
+  50% {
+    opacity: 0;
+    -webkit-transform: scale(0.7) translate(0.5em);
+            transform: scale(0.7) translate(0.5em);
   }
-  to {
-    -webkit-transform: translateY(-5px);
-            transform: translateY(-5px);
+}
+
+@keyframes dots {
+  50% {
+    opacity: 0;
+    -webkit-transform: scale(0.7) translate(0.5em);
+            transform: scale(0.7) translate(0.5em);
+<<<<<<< HEAD
   }
 }
 
-@keyframes bounce {
-  from {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+footer a:hover {
+  -webkit-animation: headshake 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9);
+          animation: headshake 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9);
+  -webkit-animation-iteration-count: 3;
+          animation-iteration-count: 3;
+}
+
+@-webkit-keyframes headshake {
+  25% {
+    -webkit-transform: translateX(2%);
+            transform: translateX(2%);
   }
+  75% {
+    -webkit-transform: translateX(-2%);
+            transform: translateX(-2%);
+  }
+}
+
+@keyframes headshake {
+=======
+  }
+}
+
+footer a:hover {
+  -webkit-animation: headshake 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9);
+          animation: headshake 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9);
+  -webkit-animation-iteration-count: 3;
+          animation-iteration-count: 3;
+}
+
+@-webkit-keyframes headshake {
+>>>>>>> 3e1a2fe... 📦 Mise en forme de la page d'accueil
+  25% {
+    -webkit-transform: translateX(2%);
+            transform: translateX(2%);
+  }
+<<<<<<< HEAD
   to {
     -webkit-transform: translateY(-5px);
             transform: translateY(-5px);
 >>>>>>> fa53b4d... 📦 Mise en forme de la page d'accueil
+=======
+  75% {
+    -webkit-transform: translateX(-2%);
+            transform: translateX(-2%);
+<<<<<<< HEAD
+=======
+  }
+}
+
+@keyframes headshake {
+  25% {
+    -webkit-transform: translateX(2%);
+            transform: translateX(2%);
+  }
+  75% {
+    -webkit-transform: translateX(-2%);
+            transform: translateX(-2%);
+>>>>>>> 3e1a2fe... 📦 Mise en forme de la page d'accueil
+>>>>>>> d04e1fb... 📦 Mise en forme de la page d'accueil
   }
 }
 
@@ -594,30 +656,51 @@ main .menus a {
 }
 
 main .btn {
+  display: block;
   background: #579c87;
   color: #fdcb46;
   width: 25%;
   border: 0;
   border-radius: 15px;
-  margin-top: 2em;
   padding: 0.5em;
+  margin-top: 2em;
   font-weight: 700;
   font-size: 1.5rem;
   text-align: center;
   cursor: pointer;
+<<<<<<< HEAD
 >>>>>>> fa53b4d... 📦 Mise en forme de la page d'accueil
+=======
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+>>>>>>> d04e1fb... 📦 Mise en forme de la page d'accueil
 }
 
 main .btn_soon {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  display: inline;
+  margin-right: 0.1em;
 }
 
-main .bounce {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  z-index: 2;
+main .loading {
+  display: inline;
+}
+
+main .loading span {
+  width: 0.3em;
+  height: 0.3em;
+  margin-right: 0.2em;
+  background-color: #fdcb46;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-animation-name: dots;
+          animation-name: dots;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 
 footer {
@@ -644,6 +727,7 @@ footer {
 
 footer a {
 <<<<<<< HEAD
+<<<<<<< HEAD
   line-height: 0.5em;
   margin: 1.2em;
   color: #FBC02D;
@@ -656,6 +740,13 @@ footer a {
   font-family: 'Times New Roman', Times, serif;
   font-size: 2em;
 >>>>>>> fa53b4d... 📦 Mise en forme de la page d'accueil
+=======
+  line-height: 0.5em;
+  margin: 1.5em;
+  color: #fdcb46;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1em;
+>>>>>>> d04e1fb... 📦 Mise en forme de la page d'accueil
   font-weight: bolder;
   text-decoration: none;
   text-shadow: 0.1em 0.1em 0.2em black;
@@ -668,6 +759,7 @@ footer a {
   }
 }
 
+<<<<<<< HEAD
 footer a:hover {
   -webkit-animation: headshake 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9);
           animation: headshake 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9);
@@ -858,6 +950,11 @@ footer a:hover {
   font-family: "Devonshire", cursive;
 =======
   margin: 1em;
+=======
+.menu_note {
+  text-align: center;
+  margin: 1em auto;
+>>>>>>> d04e1fb... 📦 Mise en forme de la page d'accueil
   -webkit-box-shadow: 0.1em 0.1em 1em grey;
           box-shadow: 0.1em 0.1em 1em grey;
 >>>>>>> fa53b4d... 📦 Mise en forme de la page d'accueil
@@ -868,6 +965,7 @@ footer a:hover {
           box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
 }
 
+<<<<<<< HEAD
 .menu-card__note p {
   font-size: 1.2em;
   margin: 0.5em;
@@ -890,9 +988,17 @@ footer a:hover {
   width: 37%;
   margin: 0em 1em 1em 1em;
 =======
+=======
+.menu_note img {
+  position: absolute;
+  top: -1.5em;
+  left: 2.5em;
+}
+
+>>>>>>> d04e1fb... 📦 Mise en forme de la page d'accueil
 .menu_note h2 {
   font-family: 'Devonshire';
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: #3c1218;
 }
 
@@ -902,6 +1008,7 @@ footer a:hover {
 
 .menu_note h3 {
   font-family: 'Caveat';
+  font-size: 2em;
   color: #3c1218;
 >>>>>>> fa53b4d... 📦 Mise en forme de la page d'accueil
 }
@@ -1006,11 +1113,21 @@ footer a:hover {
   font-family: 'Croissant One';
   font-size: 0.8em;
   line-height: 3em;
+  background-image: -webkit-gradient(linear, left top, right top, from(#c67412), color-stop(#a56799), to(#6e4ccc));
+  background-image: linear-gradient(to right, #c67412, #a56799, #6e4ccc);
+  -webkit-background-clip: text;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .menu_chic h3 {
   font-family: 'Source Serif Pro';
+<<<<<<< HEAD
+  font-size: 1.5em;
+=======
   font-size: 1em;
+<<<<<<< HEAD
 >>>>>>> fa53b4d... 📦 Mise en forme de la page d'accueil
 }
 
@@ -1021,6 +1138,13 @@ footer a:hover {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   font-size: 1.1em;
+=======
+>>>>>>> 3e1a2fe... 📦 Mise en forme de la page d'accueil
+  color: #c67412;
+}
+
+.menu_delice {
+>>>>>>> d04e1fb... 📦 Mise en forme de la page d'accueil
   text-align: center;
   color: #6e4ccc;
 }
@@ -1176,10 +1300,17 @@ footer a:hover {
   font-family: 'Dancing Script';
   font-size: 1.2em;
   line-height: 2em;
+  background-image: -webkit-gradient(linear, left top, right top, from(#0a35e0), to(#0889fb));
+  background-image: linear-gradient(to right, #0a35e0, #0889fb);
+  -webkit-background-clip: text;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .menu_delice h3 {
   font-family: 'Caveat';
+<<<<<<< HEAD
 >>>>>>> fa53b4d... 📦 Mise en forme de la page d'accueil
 }
 
@@ -1190,6 +1321,16 @@ footer a:hover {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   font-size: 1.1em;
+=======
+<<<<<<< HEAD
+  font-size: 2em;
+=======
+>>>>>>> 3e1a2fe... 📦 Mise en forme de la page d'accueil
+  color: #0889fb;
+}
+
+.menu_gout {
+>>>>>>> d04e1fb... 📦 Mise en forme de la page d'accueil
   text-align: center;
 }
 
@@ -1259,10 +1400,24 @@ h2 {
   font-family: 'Kaushan Script';
   font-size: 1.2em;
   line-height: 2em;
+  background-image: -webkit-gradient(linear, left top, right top, from(#4ea043), to(#beff7f));
+  background-image: linear-gradient(to right, #4ea043, #beff7f);
+  -webkit-background-clip: text;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .menu_gout h3 {
   font-family: 'Caveat';
+<<<<<<< HEAD
 >>>>>>> fa53b4d... 📦 Mise en forme de la page d'accueil
+=======
+<<<<<<< HEAD
+  font-size: 2em;
+=======
+>>>>>>> 3e1a2fe... 📦 Mise en forme de la page d'accueil
+  color: #beff7f;
+>>>>>>> d04e1fb... 📦 Mise en forme de la page d'accueil
 }
 /*# sourceMappingURL=main.css.map */
