@@ -1,33 +1,48 @@
 .menu_note {
     color: #3c1218;
     text-align: center;
-    margin: 2em auto;
+    margin: 1em;
     box-shadow: 0.1em 0.1em 1em grey;
     background-color: #FCDFDB;
 
 
+
+
     h2 {
-        font-family: $typo-note;
-        font-style: normal;
+        font-family: 'Devonshire';
+        font-size: 1.5em;
+        color: #3c1218;
+
+        &:visited {
+            color: #3c1218;
+        }
+
     }
 
     h3 {
-        font-family: $typo-menu;
+        font-family: 'Caveat';
+        color: #3c1218;
     }
 }
 
 .menu_chic {
     text-align: center;
-    margin: 2em auto;
+    margin: 1em auto;
     box-shadow: 0.1em 0.1em 1em grey;
     background-color: #FFF5FE;
 
     h2 {
-        font-family: $typo-chic;
+        font-family: 'Croissant One';
+        font-size: 0.8em;
+        line-height: 3em;
+
+
+
     }
 
     h3 {
-        font-family: $typo-menu2;
+        font-family: 'Source Serif Pro';
+        font-size: 1em;
     }
 }
 
@@ -40,12 +55,14 @@
 
 
     h2 {
-        font-family: $typo-delice;
+        font-family: 'Dancing Script';
+        font-size: 1.2em;
+        line-height: 2em;
 
     }
 
     h3 {
-        font-family: $typo-menu;
+        font-family: 'Caveat';
     }
 
 }
@@ -59,11 +76,13 @@
 
 
     h2 {
-        font-family: $typo-gout;
+        font-family: 'Kaushan Script';
+        font-size: 1.2em;
+        line-height: 2em;
     }
 
     h3 {
-        font-family: $typo-menu;
+        font-family: 'Caveat';
     }
 
 }

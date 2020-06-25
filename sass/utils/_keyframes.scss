@@ -1,5 +1,68 @@
-header h1:hover{
-    font-size: 4em;
-    line-height: 1em;
-    transition-delay: 0.1s;
+header h1 {
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 400ms;
+
+    &:hover {
+        transform: scale(1.15);
+    }
+}
+
+.menu_note {
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 400ms;
+
+    &:hover {
+        transform: scale(1.15);
+
+    }
+}
+
+.menu_chic {
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 400ms;
+
+    &:hover {
+        transform: scale(1.15);
+    }
+
+}
+
+.menu_delice {
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 400ms;
+
+    &:hover {
+        transform: scale(1.15);
+
+    }
+}
+
+
+.menu_gout {
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 400ms;
+
+    &:hover {
+        transform: scale(1.15);
+    }
+}
+
+.bounce {
+    animation: bounce 700ms ease infinite ;
+}
+
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-5px);
+    }
 }
