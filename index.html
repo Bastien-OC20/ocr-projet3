@@ -5,14 +5,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" href="img/favicon.ico" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
     <!-- SEO -->
-    <meta name="description" content="Ohmyfood! Réservation et composition de menus en ligne"/>
+    <meta name="description" content="Ohmyfood! Réservation et composition de menus en ligne" />
     <meta name="twitter:card" content="Ohmyfood!  Réservation et composition de menus en ligne.">
-    <meta property="og:title" content="OhMyFood: Réservation et composition de menus en ligne"/>
-    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="OhMyFood: Réservation et composition de menus en ligne" />
+    <meta property="og:type" content="website" />
     <meta property="og:url" content=" https://bastien-oc20.github.io/ocr-projet3/" />
-    <meta property="og:description" content="Ohmyfood! Réservation de restaurants et composition de menus en ligne."/>
+    <meta property="og:description" content="Ohmyfood! Réservation de restaurants et composition de menus en ligne." />
     <title>Ohmyfood</title>
   </head>
 
@@ -29,16 +30,17 @@
 
       <article>
         <!--la note enchantée-->
-        <section class="menus menu_note">
+        <section class="menu menu_note">
+
           <a href="./pages/la_note_enchantee.html">
-            <span class="note"></span>
+            <img src="img/note.png"/>
             <h2>La note enchantée</h2>
             <h3>Menu</h3>
           </a>
         </section>
 
         <!--du Chic à la francaise-->
-        <section class="menus menu_chic">
+        <section class="menu menu_chic">
           <a href="./pages/le_chic_a_la_francaise.html">
             <h2>Le chic à la française</h2>
             <h3>Menu</h3>
@@ -46,7 +48,7 @@
         </section>
 
         <!--le délice des papilles-->
-        <section class="menus menu_delice">
+        <section class="menu menu_delice">
           <a href="./pages/le_delice_des_papilles.html">
             <h2>Le délice des papilles</h2>
             <h3>Menu</h3>
@@ -54,7 +56,7 @@
         </section>
 
         <!--la palette du gout-->
-        <section class="menus menu_gout">
+        <section class="menu menu_gout">
           <a href="./pages/la_palette_du_gout.html">
             <h2>La palette du goût</h2>
             <h3>Menu</h3>
@@ -63,18 +65,19 @@
       </article>
       <!-- boutton -->
       <aside class="btn">
-        <h4 class="btn_soon">Prochainement
-          <span class="bounce">.</span>
-          <span class="bounce">.</span>
-          <span class="bounce">.</span>
-        </h4>
+        <h4 class="btn_soon">Prochainement</h4>
+        <div class="loading">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </aside>
     </main>
 
     <!--footer-->
     <footer>
       <a href="./pages/mention_legales.html">Mentions légales</a>
-      <a href="mailto:contact@ohmyfood.com">Contactez nous</a>
+      <a href="mailto:contact@ohmyfood.com">Contactez-nous</a>
     </footer>
   </body>
 
