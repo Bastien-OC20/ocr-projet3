@@ -141,16 +141,6 @@
   /* Legacy iOS */
 }
 
-.menu_chic h2,
-.menu_chic h3 {
-  background-image: -webkit-gradient(linear, left top, right top, from(#c67412), color-stop(#a56799), to(#6e4ccc));
-  background-image: linear-gradient(to right, #c67412, #a56799, #6e4ccc);
-  -webkit-background-clip: text;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
 header h1 {
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -167,7 +157,7 @@ header h1:hover {
           transform: scale(1.15);
 }
 
-.menu_note {
+.menu_note a {
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition-property: -webkit-transform;
@@ -178,12 +168,12 @@ header h1:hover {
           transition-duration: 400ms;
 }
 
-.menu_note:hover {
+.menu_note a:hover {
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
 }
 
-.menu_chic {
+.menu_chic a {
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition-property: -webkit-transform;
@@ -194,12 +184,12 @@ header h1:hover {
           transition-duration: 400ms;
 }
 
-.menu_chic:hover {
+.menu_chic a:hover {
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
 }
 
-.menu_delice {
+.menu_delice a {
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition-property: -webkit-transform;
@@ -210,12 +200,12 @@ header h1:hover {
           transition-duration: 400ms;
 }
 
-.menu_delice:hover {
+.menu_delice a:hover {
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
 }
 
-.menu_gout {
+.menu_gout a {
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition-property: -webkit-transform;
@@ -226,35 +216,63 @@ header h1:hover {
           transition-duration: 400ms;
 }
 
-.menu_gout:hover {
+.menu_gout a:hover {
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
 }
 
-.bounce {
-  -webkit-animation: bounce 700ms ease infinite;
-          animation: bounce 700ms ease infinite;
+.loading span:nth-child(2) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 
-@-webkit-keyframes bounce {
-  from {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+.loading span:nth-child(3) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+@-webkit-keyframes dots {
+  50% {
+    opacity: 0;
+    -webkit-transform: scale(0.7) translate(0.5em);
+            transform: scale(0.7) translate(0.5em);
   }
-  to {
-    -webkit-transform: translateY(-5px);
-            transform: translateY(-5px);
+}
+
+@keyframes dots {
+  50% {
+    opacity: 0;
+    -webkit-transform: scale(0.7) translate(0.5em);
+            transform: scale(0.7) translate(0.5em);
   }
 }
 
-@keyframes bounce {
-  from {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+footer a:hover {
+  -webkit-animation: headshake 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9);
+          animation: headshake 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9);
+  -webkit-animation-iteration-count: 3;
+          animation-iteration-count: 3;
+}
+
+@-webkit-keyframes headshake {
+  25% {
+    -webkit-transform: translateX(2%);
+            transform: translateX(2%);
   }
-  to {
-    -webkit-transform: translateY(-5px);
-            transform: translateY(-5px);
+  75% {
+    -webkit-transform: translateX(-2%);
+            transform: translateX(-2%);
+  }
+}
+
+@keyframes headshake {
+  25% {
+    -webkit-transform: translateX(2%);
+            transform: translateX(2%);
+  }
+  75% {
+    -webkit-transform: translateX(-2%);
+            transform: translateX(-2%);
   }
 }
 
@@ -338,29 +356,47 @@ main .menus a {
 }
 
 main .btn {
+  display: block;
   background: #579c87;
   color: #fdcb46;
   width: 25%;
   border: 0;
   border-radius: 15px;
-  margin-top: 2em;
   padding: 0.5em;
+  margin-top: 2em;
   font-weight: 700;
   font-size: 1.5rem;
   text-align: center;
   cursor: pointer;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 main .btn_soon {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  display: inline;
+  margin-right: 0.1em;
 }
 
-main .bounce {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  z-index: 2;
+main .loading {
+  display: inline;
+}
+
+main .loading span {
+  width: 0.3em;
+  height: 0.3em;
+  margin-right: 0.2em;
+  background-color: #fdcb46;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-animation-name: dots;
+          animation-name: dots;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 
 footer {
@@ -384,11 +420,11 @@ footer {
 }
 
 footer a {
-  line-height: 1.5em;
-  margin: 0 10px;
+  line-height: 0.5em;
+  margin: 1.5em;
   color: #fdcb46;
   font-family: 'Times New Roman', Times, serif;
-  font-size: 2em;
+  font-size: 1em;
   font-weight: bolder;
   text-decoration: none;
 }
@@ -402,17 +438,22 @@ footer a {
 }
 
 .menu_note {
-  color: #3c1218;
   text-align: center;
-  margin: 1em;
+  margin: 1em auto;
   -webkit-box-shadow: 0.1em 0.1em 1em grey;
           box-shadow: 0.1em 0.1em 1em grey;
   background-color: #FCDFDB;
 }
 
+.menu_note img {
+  position: absolute;
+  top: -1.5em;
+  left: 2.5em;
+}
+
 .menu_note h2 {
   font-family: 'Devonshire';
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: #3c1218;
 }
 
@@ -422,6 +463,7 @@ footer a {
 
 .menu_note h3 {
   font-family: 'Caveat';
+  font-size: 2em;
   color: #3c1218;
 }
 
@@ -437,15 +479,21 @@ footer a {
   font-family: 'Croissant One';
   font-size: 0.8em;
   line-height: 3em;
+  background-image: -webkit-gradient(linear, left top, right top, from(#c67412), color-stop(#a56799), to(#6e4ccc));
+  background-image: linear-gradient(to right, #c67412, #a56799, #6e4ccc);
+  -webkit-background-clip: text;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .menu_chic h3 {
   font-family: 'Source Serif Pro';
-  font-size: 1em;
+  font-size: 1.5em;
+  color: #c67412;
 }
 
 .menu_delice {
-  color: black;
   text-align: center;
   margin: 2em auto;
   -webkit-box-shadow: 0.1em 0.1em 1em grey;
@@ -457,14 +505,21 @@ footer a {
   font-family: 'Dancing Script';
   font-size: 1.2em;
   line-height: 2em;
+  background-image: -webkit-gradient(linear, left top, right top, from(#0a35e0), to(#0889fb));
+  background-image: linear-gradient(to right, #0a35e0, #0889fb);
+  -webkit-background-clip: text;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .menu_delice h3 {
   font-family: 'Caveat';
+  font-size: 2em;
+  color: #0889fb;
 }
 
 .menu_gout {
-  color: black;
   text-align: center;
   margin: 2em auto;
   -webkit-box-shadow: 0.1em 0.1em 1em grey;
@@ -476,9 +531,17 @@ footer a {
   font-family: 'Kaushan Script';
   font-size: 1.2em;
   line-height: 2em;
+  background-image: -webkit-gradient(linear, left top, right top, from(#4ea043), to(#beff7f));
+  background-image: linear-gradient(to right, #4ea043, #beff7f);
+  -webkit-background-clip: text;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .menu_gout h3 {
   font-family: 'Caveat';
+  font-size: 2em;
+  color: #beff7f;
 }
 /*# sourceMappingURL=main.css.map */

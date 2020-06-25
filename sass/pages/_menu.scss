@@ -1,88 +1,186 @@
-.menu_note {
-    color: #3c1218;
-    text-align: center;
+.menu {
+    width: 80%;
+    height: 25em;
+    padding: 1em;
     margin: 1em;
-    box-shadow: 0.1em 0.1em 1em grey;
-    background-color: #FCDFDB;
+    box-shadow: 0 0 10px #bbba;
+    text-align: center;
+
+    &:hover {
+        @include zoomcardhover;
+    }
+
+
+    @include mobileS-only {
+        height: 25em;
+        padding: 0em;
+    }
 
 
 
+    a {
+        display: block;
+        margin: auto;
+        padding-top: 4em;
+        font-size: 2em;
+        text-decoration: none;
+        text-align: center;
+
+        &:hover {
+            @include zoomnamehover;
+        }
+
+        @include mobileS-only {
+            padding-top: 6em;
+            font-size: 1.5em;
+        }
+
+    }
+}
+
+.menu_note {
+    @include box-shadow;
+    background-color: $bgmenu1;
+    margin: 2em;
+
+    img {
+        padding: 0em;
+        margin: 0em;
+        transition-property: transform;
+        transition-duration: 600ms;
+
+        &:hover {
+            animation: headshake 100ms cubic-bezier(.4, .1, .6, .9);
+            animation-iteration-count: 3;
+        }
+
+
+        @include mobileS-only {
+            top: 4em;
+            left: 4.5em;
+        }
+    }
+
+
+    a {
+        padding-top: 2.6em;
+        @include text-shadow2;
+
+        @include mobileS-only {
+            padding-top: 4em;
+        }
+    }
 
     h2 {
-        font-family: 'Devonshire';
-        font-size: 1.5em;
-        color: #3c1218;
+        font-family: $font2;
+        font-size: 1.2em;
+        color: $colormenu1;
+
 
         &:visited {
-            color: #3c1218;
+            color: $colormenu1;
         }
 
     }
 
     h3 {
-        font-family: 'Caveat';
-        color: #3c1218;
+        font-family: $font5;
+        font-size: 2em;
+        color: $colormenu1;
     }
 }
+
 
 .menu_chic {
     text-align: center;
-    margin: 1em auto;
-    box-shadow: 0.1em 0.1em 1em grey;
-    background-color: #FFF5FE;
+    margin: 2em;
+    @include box-shadow;
+    background-color: $bgmenu2;
+
+    a {
+        @include text-shadow2;
+    }
 
     h2 {
-        font-family: 'Croissant One';
+        font-family: $font3;
         font-size: 0.8em;
         line-height: 3em;
+        background-image: linear-gradient(to right, $colormenu2a, $colormenu2b, $colormenu2c, );
+        -webkit-background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
 
 
 
     }
 
     h3 {
-        font-family: 'Source Serif Pro';
-        font-size: 1em;
+        font-family: $font7;
+        font-size: 1.5em;
+        color: $colormenu2a;
     }
 }
 
-.menu_delice {
-    color: black;
-    text-align: center;
-    margin: 2em auto;
-    box-shadow: 0.1em 0.1em 1em grey;
-    background-color: #F3F3F3;
 
+
+.menu_delice {
+    text-align: center;
+    margin: 2em;
+    @include box-shadow;
+    background-color: $bgmenu3;
+
+    a {
+        @include text-shadow2;
+    }
 
     h2 {
-        font-family: 'Dancing Script';
+        font-family: $font4;
         font-size: 1.2em;
         line-height: 2em;
-
+        background-image: linear-gradient(to right, $colormenu3a, $colormenu3b, );
+        -webkit-background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
     }
 
     h3 {
-        font-family: 'Caveat';
+        font-family: $font5;
+        font-size: 2em;
+        color: $colormenu3b;
     }
 
 }
 
 .menu_gout {
-    color: black;
     text-align: center;
-    margin: 2em auto;
-    box-shadow: 0.1em 0.1em 1em grey;
-    background-color: white;
+    margin: 2em;
+    @include box-shadow;
+    background-color: $bgmenu4;
 
+    a {
+        @include text-shadow3;
+    }
 
     h2 {
-        font-family: 'Kaushan Script';
+        font-family: $font6;
         font-size: 1.2em;
         line-height: 2em;
+        background-image: linear-gradient(to right, $colormenu4a, $colormenu4b, );
+        -webkit-background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
     }
 
     h3 {
-        font-family: 'Caveat';
+        font-family: $font5;
+        font-size: 2em;
+        color: $colormenu4b;
     }
 
 }
