@@ -1,0 +1,26 @@
+$breakpoints: (
+  'Xsmall': 480px,
+  'small': 768px,
+  'medium': 1160px
+);
+
+@mixin tablet-only {
+    @media all and (max-width: map-get($breakpoints, medium)) {
+        @content;
+    }
+}
+
+@mixin mobile-only {
+    @media all and (max-width: map-get($breakpoints, small)) {
+        @content;
+    }
+}
+
+@mixin mobileS-only {
+    @media all and (max-width: map-get($breakpoints, Xsmall)) {
+        @content;
+    }
+}
+
+
+

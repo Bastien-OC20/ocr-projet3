@@ -1,12 +1,17 @@
+@import "breakpoints";
+
 * {
     margin: 0 auto;
+
 }
 
 body {
+    background-color: $bodybackground;
     padding-bottom: 2em;
     max-width: 1024px;
     margin: auto;
     position: relative;
+    text-decoration: none;
 }
 
 // header
@@ -16,14 +21,31 @@ header {
     width: 100%;
     height: 5em;
     position: relative;
+    @include box-shadow;
+
 
     h1 {
         color: $main-text;
         text-align: center;
-        line-height: 1.2em;
-        font-family: 'Times New Roman', Times, serif;
+        line-height: 1em;
+        font-family: $font1;
         font-size: 4em;
         font-weight: bolder;
+        @include text-shadow1;
+        @include zoomtitle;
+
+        &:hover,
+        :visited {
+            color: $main-text;
+            @include zoomtitlehover;
+
+        }
+
+        @include mobileS-only {
+            font-size: 3em;
+            line-height: 1.5em;
+        }
+
     }
 
     a {
@@ -39,81 +61,93 @@ header {
 
 main {
     padding: 2em;
-    justify-content: space-between;
     text-align: center;
 
-    article {
-        display: block;
-
-        margin-left: auto;
-        margin-right: auto;
-
+    @include mobileS-only {
+        padding: 1em;
     }
 
+    article {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-gap: 20px;
 
 
-    h4 {
+        @include mobileS-only {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(1, auto);
+            grid-gap: 15px;
+        }
+    }
+
+}
+
+
+
+
+.btn {
+    display: block;
+    background: $main-background;
+    color: $main-text;
+    width: 25%;
+    border: 0;
+    border-radius: 15px;
+    padding: 0.5em;
+    margin-top: 2em;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    justify-content: space-between;
+    @include text-shadow1;
+
+
+
+    @include mobile-only {
+        text-align: center;
+        width: 50%;
+        margin: 0em 0em 1em 5em;
         font-size: 1em;
     }
 
-    article {
-        width: 100%;
-        position: relative;
+}
 
-    }
-
-    .menus {
-        display: inline-flex;
-        width: 20em;
-        height: 25em;
-        padding: 2em;
-        margin: 2em;
-        box-shadow: 0 0 10px #bbba;
-        text-align: center;
-
-
-
-        a {
-            display: block;
-            margin: auto;
-            font-size: 2em;
-            text-decoration: none;
-            text-align: center;
-        }
-
-
-
-
-    }
-
-    .btn {
-        background: $main-background;
-        color: $main-text;
-        width: 25%;
-        border: 0;
-        border-radius: 15px;
-        margin-top: 2em;
-        padding: 0.5em;
-        font-weight: 700;
-        font-size: 1.5rem;
-        text-align: center;
-        cursor: pointer;
-    }
-
-    .btn_soon {
-        justify-content: space-around;
-    }
-
-    .bounce {
-        display: inline-flex;
-
-        z-index: 2;
-    }
-
-
-
+.btn_soon {
+    display: inline;
+    margin-right: 0.1em;
 
 }
+
+.loading {
+    display: inline;
+
+}
+
+.loading span {
+    width: 0.3em;
+    height: 0.3em;
+    margin-right: 0.2em;
+    background-color: $main-text;
+    border-radius: 50%;
+    display: inline-block;
+    animation-name: dots;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    @include text-shadow1;
+}
+
+.loading span:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.loading span:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+
 
 footer {
     background-color: $main-background;
@@ -126,23 +160,30 @@ footer {
     max-width: 1024px;
     width: 100%;
     height: 3em;
+    @include box-shadow;
+
+
+
 
     a {
-        line-height: 1.5em;
-        margin: 0 10px;
+        line-height: 0.5em;
+        margin: 1.2em;
         color: $main-text;
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 2em;
+        font-family: $font1;
+        font-size: 1em;
         font-weight: bolder;
         text-decoration: none;
-    }
-}
+        @include text-shadow1;
 
-@media (max-width: 500px) {
+        &:hover {
+            @include headshake;
+        }
 
-    .btn {
-        width: 200px;
-        font-weight: 500;
-        font-size: 1em;
+        @include mobile-only {
+            font-size: 0.8em;
+            line-height: 2em;
+        }
     }
+
+
 }

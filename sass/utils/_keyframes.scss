@@ -1,68 +1,22 @@
-header h1 {
-    transform: scale(1);
-    transition-property: transform;
-    transition-duration: 400ms;
 
-    &:hover {
-        transform: scale(1.15);
+
+// aside
+@keyframes dots {
+    50% {
+        opacity: 0;
+        transform: scale(0.7) translate(0.5em);
     }
 }
 
-.menu_note {
-    transform: scale(1);
-    transition-property: transform;
-    transition-duration: 400ms;
-
-    &:hover {
-        transform: scale(1.15);
-
-    }
-}
-
-.menu_chic {
-    transform: scale(1);
-    transition-property: transform;
-    transition-duration: 400ms;
-
-    &:hover {
-        transform: scale(1.15);
+// footer
+@keyframes headshake {
+    25% {
+        // entièrement à droite
+        transform: translateX($shake-intensity);
     }
 
-}
-
-.menu_delice {
-    transform: scale(1);
-    transition-property: transform;
-    transition-duration: 400ms;
-
-    &:hover {
-        transform: scale(1.15);
-
-    }
-}
-
-
-.menu_gout {
-    transform: scale(1);
-    transition-property: transform;
-    transition-duration: 400ms;
-
-    &:hover {
-        transform: scale(1.15);
-    }
-}
-
-.bounce {
-    animation: bounce 700ms ease infinite ;
-}
-
-
-@keyframes bounce {
-    from {
-        transform: translateY(0);
-    }
-
-    to {
-        transform: translateY(-5px);
+    75% {
+        // entièrement à gauche
+        transform: translateX($shake-intensity * -2);
     }
 }
