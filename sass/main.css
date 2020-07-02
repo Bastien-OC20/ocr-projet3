@@ -238,20 +238,12 @@ header h1:hover {
             transform: scale(0.7) translate(0.5em);
   }
 }
-
 @keyframes dots {
   50% {
     opacity: 0;
     -webkit-transform: scale(0.7) translate(0.5em);
             transform: scale(0.7) translate(0.5em);
   }
-}
-
-footer a:hover {
-  -webkit-animation: headshake 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9);
-          animation: headshake 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9);
-  -webkit-animation-iteration-count: 3;
-          animation-iteration-count: 3;
 }
 
 @-webkit-keyframes headshake {
@@ -281,81 +273,67 @@ footer a:hover {
 }
 
 body {
+  background-color: white;
   padding-bottom: 2em;
   max-width: 1024px;
   margin: auto;
   position: relative;
+  text-decoration: none;
 }
 
-header {
+.menus-title {
   background-color: #579c87;
   width: 100%;
   height: 5em;
   position: relative;
+  -webkit-box-shadow: 0.1em 0.1em 1em grey;
+          box-shadow: 0.1em 0.1em 1em grey;
 }
 
-header h1 {
+.menus-title h1 {
   color: #fdcb46;
   text-align: center;
-  line-height: 1.2em;
-  font-family: 'Times New Roman', Times, serif;
+  line-height: 1em;
+  font-family: "Ultra", serif;
   font-size: 4em;
   font-weight: bolder;
+  text-shadow: 0.1em 0.1em 0.2em black;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
 }
 
-header a {
+.menus-title h1:hover {
+  color: #fdcb46;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+.menus-title h1:visited {
+  color: #fdcb46;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+.menus-title a {
   text-decoration: none;
 }
 
-header a:visited {
+.menus-title a:visited {
   color: #fdcb46;
 }
 
-main {
-  padding: 2em;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  text-align: center;
-}
-
-main article {
+.container {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-main h4 {
-  font-size: 1em;
-}
-
-main article {
-  width: 100%;
-  position: relative;
-}
-
-main .menus {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  width: 20em;
-  height: 25em;
   padding: 2em;
-  margin: 2em;
-  -webkit-box-shadow: 0 0 10px #bbba;
-          box-shadow: 0 0 10px #bbba;
-  text-align: center;
 }
 
-main .menus a {
-  display: block;
-  margin: auto;
-  font-size: 2em;
-  text-decoration: none;
-  text-align: center;
-}
-
-main .btn {
+.btn {
   display: block;
   background: #579c87;
   color: #fdcb46;
@@ -371,18 +349,19 @@ main .btn {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  text-shadow: 0.1em 0.1em 0.2em black;
 }
 
-main .btn_soon {
+.btn_soon {
   display: inline;
   margin-right: 0.1em;
 }
 
-main .loading {
+.loading {
   display: inline;
 }
 
-main .loading span {
+.loading span {
   width: 0.3em;
   height: 0.3em;
   margin-right: 0.2em;
@@ -397,6 +376,17 @@ main .loading span {
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
+  text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+.loading span:nth-child(2) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.loading span:nth-child(3) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
 }
 
 footer {
@@ -417,131 +407,214 @@ footer {
   max-width: 1024px;
   width: 100%;
   height: 3em;
+  -webkit-box-shadow: 0.1em 0.1em 1em grey;
+          box-shadow: 0.1em 0.1em 1em grey;
 }
 
 footer a {
   line-height: 0.5em;
-  margin: 1.5em;
+  margin: 1.2em;
   color: #fdcb46;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Ultra", serif;
   font-size: 1em;
   font-weight: bolder;
   text-decoration: none;
+  text-shadow: 0.1em 0.1em 0.2em black;
 }
 
-@media (max-width: 500px) {
-  .btn {
-    width: 200px;
-    font-weight: 500;
-    font-size: 1em;
-  }
+footer a:hover {
+  -webkit-animation: headshake 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9);
+          animation: headshake 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9);
+  -webkit-animation-iteration-count: 3;
+          animation-iteration-count: 3;
 }
 
-.menu_note {
+.menus-list {
   text-align: center;
-  margin: 1em auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr);
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (auto);
+      grid-template-rows: repeat(2, auto);
+  grid-gap: 15px;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.menus-list a {
+  display: block;
+  width: 10em;
+  height: 15em;
+  font-size: 2em;
+  text-decoration: none;
+  -webkit-box-shadow: 0 0 10px #bbba;
+          box-shadow: 0 0 10px #bbba;
+  margin: 2em;
+}
+
+
+.menus-list a:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
+}
+
+.menus-list__menu_note {
   -webkit-box-shadow: 0.1em 0.1em 1em grey;
           box-shadow: 0.1em 0.1em 1em grey;
   background-color: #FCDFDB;
+  width: auto;
+  height: 15em;
 }
 
-.menu_note img {
-  position: absolute;
-  top: -1.5em;
-  left: 2.5em;
+.menus-list__menu_note img {
+  padding-top: 3em;
+  margin: auto;
 }
 
-.menu_note h2 {
-  font-family: 'Devonshire';
-  font-size: 1.2em;
+.menus-list__menu_note h2 {
+  font-family: "Devonshire", cursive;
+  font-size: 1em;
   color: #3c1218;
-}
-
-.menu_note h2:visited {
-  color: #3c1218;
-}
-
-.menu_note h3 {
-  font-family: 'Caveat';
-  font-size: 2em;
-  color: #3c1218;
-}
-
-.menu_chic {
   text-align: center;
-  margin: 1em auto;
+}
+
+.menus-list__menu_note h2:visited {
+  color: #3c1218;
+}
+
+.menus-list__menu_note p {
+  font-family: "Caveat", cursive;
+  font-size: 2em;
+  padding-top: 0.5em;
+  color: #3c1218;
+}
+
+.menus-list__menu_chic {
   -webkit-box-shadow: 0.1em 0.1em 1em grey;
           box-shadow: 0.1em 0.1em 1em grey;
   background-color: #FFF5FE;
+  width: auto;
+  height: 15em;
 }
 
-.menu_chic h2 {
-  font-family: 'Croissant One';
-  font-size: 0.8em;
-  line-height: 3em;
+.menus-list__menu_chic a {
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.menus-list__menu_chic h2 {
+  font-family: "Croissant One", cursive;
+  font-size: 0.7em;
   background-image: -webkit-gradient(linear, left top, right top, from(#c67412), color-stop(#a56799), to(#6e4ccc));
   background-image: linear-gradient(to right, #c67412, #a56799, #6e4ccc);
   -webkit-background-clip: text;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  padding-top: 7em;
+  margin: auto;
 }
 
-.menu_chic h3 {
-  font-family: 'Source Serif Pro';
+.menus-list__menu_chic p {
+  font-family: "Source Serif Pro", serif;
+  padding-top: 1em;
   font-size: 1.5em;
   color: #c67412;
 }
 
-.menu_delice {
-  text-align: center;
-  margin: 2em auto;
+.menus-list__menu_delice {
+  width: auto;
+  height: 15em;
   -webkit-box-shadow: 0.1em 0.1em 1em grey;
           box-shadow: 0.1em 0.1em 1em grey;
   background-color: #F3F3F3;
 }
 
-.menu_delice h2 {
-  font-family: 'Dancing Script';
-  font-size: 1.2em;
-  line-height: 2em;
+.menus-list__menu_delice a {
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.menus-list__menu_delice h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 1em;
   background-image: -webkit-gradient(linear, left top, right top, from(#0a35e0), to(#0889fb));
   background-image: linear-gradient(to right, #0a35e0, #0889fb);
   -webkit-background-clip: text;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  padding-top: 5em;
+  margin: auto;
 }
 
-.menu_delice h3 {
-  font-family: 'Caveat';
+.menus-list__menu_delice p {
+  font-family: "Caveat", cursive;
   font-size: 2em;
+  padding-top: 0.5em;
   color: #0889fb;
 }
 
-.menu_gout {
-  text-align: center;
-  margin: 2em auto;
+.menus-list__menu_gout {
+  width: auto;
+  height: 15em;
   -webkit-box-shadow: 0.1em 0.1em 1em grey;
           box-shadow: 0.1em 0.1em 1em grey;
   background-color: white;
 }
 
-.menu_gout h2 {
-  font-family: 'Kaushan Script';
-  font-size: 1.2em;
-  line-height: 2em;
+.menus-list__menu_gout h2 {
+  font-family: "Kaushan Script", cursive;
+  font-size: 1em;
   background-image: -webkit-gradient(linear, left top, right top, from(#4ea043), to(#beff7f));
   background-image: linear-gradient(to right, #4ea043, #beff7f);
   -webkit-background-clip: text;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  padding-top: 5em;
+  margin: auto;
 }
 
-.menu_gout h3 {
-  font-family: 'Caveat';
+.menus-list__menu_gout p {
+  font-family: "Caveat", cursive;
   font-size: 2em;
+  padding-top: 0.5em;
   color: #beff7f;
+}
+
+.menu_card1 {
+  width: auto;
+  height: auto;
+  margin: 0 10px 50px 10px;
+}
+
+.menu_card1 table {
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 0.5fr 1fr 1fr;
+      grid-template-rows: 0.5fr 1fr 1fr;
+  gap: 1px 1px;
+  margin: 0em;
+}
+
+.menu_card1 table caption {
+  text-align: center;
+}
+
+.menu_card1 table .left {
+  text-align: left;
+}
+
+.menu_card1 h2,
+.menu_card1 h3 {
+  font-family: "Devonshire", cursive;
+  font-size: 1.9rem;
+  line-height: 1.9em;
+  font-weight: 400;
 }
 /*# sourceMappingURL=main.css.map */

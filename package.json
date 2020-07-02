@@ -2,7 +2,6 @@
   "name": "ocr-projet3",
   "version": "1.0.0",
   "description": "Dynamisez une page web avec des animations CSS : https://bastien-oc20.github.io/ocr-projet3/",
-  "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./sass/main.scss:./css/style.css",
     "sassProd": "sass ./sass/main.scss:./css/style.css --style compressed",
@@ -17,5 +16,6 @@
   "bugs": {
     "url": "https://github.com/Bastien-OC20/ocr-projet3/issues"
   },
-  "homepage": "https://github.com/Bastien-OC20/ocr-projet3#readme"
+  "homepage": "https://github.com/Bastien-OC20/ocr-projet3#readme",
+  "keywords": []
 }

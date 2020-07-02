@@ -1,70 +1,37 @@
-@mixin zoomtitle{
-    transform: scale(1);
-    transition-property: transform;
-    transition-duration: 400ms;
-}
+// OMBRAGE
 
-@mixin zoomtitlehover{
-    transform: scale(1.15);
-}
-
-@mixin text-shadow1 {
+@mixin text-shadow-1 {
     text-shadow: 0.1em 0.1em 0.2em black;
 }
 
-@mixin text-shadow2 {
+@mixin text-shadow-2 {
     text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
 }
 
-@mixin text-shadow3 {
+@mixin text-shadow-3 {
     text-shadow: 2px 2px 4px rgba(153, 153, 153, 0.349);
 }
 
-@mixin box-shadow{
+@mixin box-shadow {
     box-shadow: 0.1em 0.1em 1em grey;
 }
 
-@mixin zoomcard{
-    transform: scale(1);
-    transition-property: transform;
-    transition-duration: 200ms;
-}
 
-@mixin zoomcardhover {
-    transform: scale(1.15);
-    transition-property: transform;
-    transition-duration: 200ms;
-}
-@mixin zoomnamehover {
-    transform: scale(1.15);
-    transition-property: transform;
-    transition-duration: 400ms;
+// ZOOM
+
+@mixin animate {
+    -webkit-animation: zoom-in-out 1s linear 0s 1 normal;
+    -moz-animation: zoom-in-out 1s linear 0s 1 normal;
+    -ms-animation: zoom-in-out 1s linear 0s 1 normal;
+    animation: zoom-in-out 1s linear 0s 1 normal;
+    opacity: 80%;
 }
 
 
+
+// TREMBLEMENT
 
 @mixin headshake {
     animation: headshake 100ms cubic-bezier(.4, .1, .6, .9);
     animation-iteration-count: 3;
-}
-
-
-
-
-@mixin tablet-only {
-    @media all and (max-width: map-get($breakpoints, medium)) {
-        @content;
-    }
-}
-
-@mixin mobile-only {
-    @media all and (max-width: map-get($breakpoints, small)) {
-        @content;
-    }
-}
-
-@mixin mobileS-only {
-    @media all and (max-width: map-get($breakpoints, Xsmall)) {
-        @content;
-    }
 }
