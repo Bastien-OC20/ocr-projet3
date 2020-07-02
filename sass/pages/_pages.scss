@@ -1,15 +1,19 @@
 .container {
-    display: block;
+    display: inline-flexbox;
     padding: 3em;
+    justify-content: center;
 
-
-
-
+    @include small {
+        padding: 0em;
+        margin: 3em;
+    }
 }
+
 
 // menu la note enchantée
 
-.menu-note__card {
+.menu-card__note {
+    margin: auto;
     width: 70%;
     padding: 2em;
     font-family: $font2;
@@ -18,301 +22,370 @@
     @include text-shadow-2;
     @include box-shadow;
 
-    h2 {
-        text-align: center;
-
-    }
-
-    .menu-note__card-titre {
-        display: block;
-        right: 20px;
-        text-align: center;
-
-        h2 {
-            margin-bottom: 2em;
-            font-size: 2.5em;
-
-        }
-
-    }
-
     p {
         font-size: 1.2em;
         margin: 0.5em;
-
     }
 }
 
-.menu-note__card-sousTitre {
+.menu-card__note--titre {
+    img {
+        margin-left: 19em;
+        width: 10%;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 4em;
+        margin-bottom: 1em;
+        font-family: $font2;
+    }
+
+    h3 {
+        width: 37%;
+        margin: 0em 1em 1em 1em;
+    }
+}
+
+.menu-card__note--sousTitre {
     display: flex;
     justify-content: space-around;
     font-size: 1.5em;
+    text-align: center;
+
+    h3 {
+        width: 80%;
+    }
+
+    &-barLeft {
+        width: 80%;
+
+        img {
+            margin-right: 1em;
+            width: 80%;
+        }
+    }
+
+    &-barRight {
+        width: 80%;
+
+        img {
+            margin-left: 1em;
+            width: 80%;
+        }
+    }
+
 }
 
-.menu-note__card-plats {
+.menu-card__note--plats {
     display: inline-block;
     justify-self: left;
     width: 80%;
     margin: 3em 0em 3em 2em;
 }
 
-.menu-note__card-prix {
+.menu-card__note--prix {
     display: inline-block;
     justify-self: right;
 }
 
-.menu-note__card-titre-footer {
+.menu-card__note--titreFooter {
     display: flex;
 
-    .card-titre-footer {
-        padding-left: 15em;
+    &-picture {
+        margin: 1em;
     }
 
     h3 {
         text-align: center;
-        margin-right: 4em;
-        line-height: 2;
+        line-height: 3;
         font-size: 2em;
-
     }
-
-
 }
 
 // menu le chic  la française
-.menu-chic__card {
-    width: 70%;
-    padding: 2em 2em 4em 2em;
-    margin-bottom: 2em;
+
+
+.menu-card__chic {
+    margin: auto;
+    width: 80%;
+    padding: 2em;
     font-family: $font3;
     background-color: $bgmenu2;
-    @include text-shadow-2;
-
+    @include text-shadow-3;
     @include box-shadow;
 
-    h2 {
-        text-align: center;
-        font-size: 1em;
-        background-image: linear-gradient(to right, $colormenu2a, $colormenu2b, $colormenu2c, );
-        -webkit-background-clip: text;
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        margin: 2em;
-
-
-    }
-
-    .menu-chic__card-titre {
-        display: block;
-        right: 20px;
-        background-image: linear-gradient(to right, $colormenu2a, $colormenu2b, $colormenu2c, );
-        -webkit-background-clip: text;
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        margin: auto;
-
-        h2 {
-            margin-bottom: 2em;
-            font-size: 2em;
-
-        }
-
-
-    }
-
     p {
-        font-size: 0.8em;
+        font-size: 1em;
         margin: 0.5em;
     }
 }
 
-.menu-chic__card-sousTitre {
+.menu-card__chic--titre {
+    h2 {
+        text-align: center;
+        font-size: 3em;
+        background-image: linear-gradient(to right, $colormenu2a, $colormenu2b, $colormenu2c, );
+        -webkit-background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        margin: 1em 0em 3em 0em;
+    }
+}
+
+.menu-card__chic--sousTitre {
     display: flex;
     justify-content: space-around;
-    font-size: 1em;
-    padding: 2em;
+    font-size: 1.1em;
+    text-align: center;
     color: $colormenu2c;
+
+    &-barLeft {
+        img {
+            margin-right: 1em;
+        }
+    }
+
+    &-barRight {
+        img {
+            margin-left: 1em;
+        }
+    }
 }
 
-.menu-chic__card-sousTitre:nth-child(2) {
+.menu-card__chic--sousTitre:nth-child(2) {
     color: $colormenu2a;
+    justify-content: space-around;
 }
 
-.menu-chic__card-sousTitre:nth-last-child(2n) {
+.menu-card__chic--sousTitre:nth-last-child(2n) {
     color: $colormenu2b;
+    justify-content: space-around;
 }
 
-.menu-chic__card-plats {
+.menu-card__chic--plats {
     display: inline-block;
     justify-self: left;
     width: 80%;
     margin: 3em 0em 3em 2em;
     color: $colormenu2c;
-
 }
 
-.menu-chic__card-plats:nth-child(2n) {
+.menu-card__chic--plats:nth-child(2n) {
     color: $colormenu2b;
 }
 
-.menu-chic__card-plats:nth-child(3) {
+.menu-card__chic--plats:nth-child(3) {
     color: $colormenu2a;
 }
 
-
-.menu-chic__card-prix {
+.menu-card__chic--prix {
     display: inline-block;
     justify-self: right;
     color: $colormenu2b;
 }
 
-.menu-chic__card-prix:nth-child(2n) {
+.menu-card__chic--prix:nth-child(2n) {
     color: $colormenu2a;
 }
 
-.menu-chic__card-prix:nth-last-child(1) {
+.menu-card__chic--prix:nth-last-child(1) {
     color: $colormenu2c;
 }
 
-.menu-chic__card-titre-footer {
-    display: flex;
 
-    .card-titre-footer {
-        padding-left: 15em;
-    }
-
-    h3 {
-        text-align: center;
-        margin-right: 6em;
-        line-height: 2;
-        font-size: 2em;
-    }
-
-}
 
 
 
 // menu Le délice des papilles
-.menu-delice__card {
-    width: 70%;
-    padding: 2em 2em 4em 2em;
-    margin-bottom: 2em;
+
+
+.menu-card__delice {
+    margin: auto;
+    width: 80%;
+    padding: 2em;
     font-family: $font4;
     background-color: $bgmenu3;
     @include text-shadow-2;
     @include box-shadow;
+}
 
+.menu-card__delice--titre {
     h2 {
+        margin: 2em 0em 3em 0em;
+        font-size: 3em;
         text-align: center;
-        background-image: linear-gradient(to right, $colormenu3a, $colormenu3b, );
+        background-image: linear-gradient(to right, $colormenu3a, $colormenu3b, rgb(141, 213, 247));
         -webkit-background-clip: text;
         -webkit-background-clip: text;
         -moz-background-clip: text;
         background-clip: text;
         color: transparent;
-        margin: auto;
 
-
-    }
-
-    .menu-delice__card-titre {
-        display: block;
-        right: 20px;
-        background-image: linear-gradient(to right, $colormenu2a, $colormenu2b, $colormenu2c, );
-        -webkit-background-clip: text;
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        margin: auto;
-
-        h2 {
-            margin: 1em;
-            font-size: 4em;
-
-        }
-
-
-    }
-
-    p {
-        font-size: 1.2em;
-        margin: 0.5em;
     }
 }
 
-.menu-delice__card-sousTitre {
+
+.menu-card__delice--sousTitre {
     display: flex;
     justify-content: space-around;
-    font-size: 1em;
-    padding: 2em;
+    font-size: 1.5em;
+    text-align: center;
 
+    &-barLeft {
+        img {
+            margin-top: 0.5em;
+            margin-right: 1em;
+        }
+    }
+
+    &-barRight {
+        img {
+            margin-top: 0.5em;
+            margin-right: 1em;
+        }
+    }
 }
 
+// La colonne des plats
 
-.menu-delice__card-plats {
+.menu-card__delice--plats {
     display: inline-block;
     justify-self: left;
     width: 80%;
     margin: 3em 0em 3em 2em;
+    font-size: 1.4em;
 
-
+    p {
+        margin: 1em;
+    }
 }
 
+// La colonne des prix
 
-.menu-delice__card-prix {
+.menu-card__delice--prix {
     display: inline-block;
     justify-self: right;
+    font-size: 1.2em;
 
+    p {
+        margin: 1em;
+    }
 }
 
 
 
 // menu La palette du gout
 
-.menu-gout__card {
+.menu-card__gout {
+    margin: auto;
     width: 70%;
     padding: 2em;
     font-family: $font6;
-    background-color: $bgmenu4;
+    background-color: $bgmenu3;
+    @include text-shadow-3;
     @include box-shadow;
 
-    h2 {
-        text-align: center;
-    }
-
-    .menu-gout__card-titre {
-        margin-bottom: 3em;
-        text-align: center;
-
-        h2 {
-            font-size: 4em;
-        }
-    }
-
     p {
-        font-size: 1.2em;
+        font-size: 1em;
         margin: 0.5em;
     }
 }
 
-.menu-gout__card-sousTitre {
-    display: flex;
-    justify-content: space-around;
+.menu-card__gout--titre {
+    h2 {
+        font-size: 4em;
+        text-align: center;
+        background-image: linear-gradient(to right, $colormenu4a, $colormenu4b);
+        -webkit-background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        margin: 1em 0em 2em 0em;
+    }
 }
 
-.menu-gout__card-plats {
+
+
+.menu-card__gout--sousTitre {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.1em;
+    text-align: center;
+
+    &-barLeft {
+        img {
+            margin-top: 1em;
+            margin-right: 1em;
+        }
+    }
+
+    &-barRight {
+        img {
+            margin-top: 1em;
+            margin-left: 1em;
+        }
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+}
+
+
+
+
+.menu-card__gout--plats {
     display: inline-block;
     justify-self: left;
     width: 80%;
     margin: 3em 0em 3em 2em;
 }
 
-.menu-gout__card-prix {
+.menu-card__gout--prix {
     display: inline-block;
     justify-self: right;
+    text-align: right;
+}
+
+
+
+// Page Mentions-légales
+h2 {
+    font-size: 3em;
+    font-family: $font7;
+    text-align: center;
+    margin: 1em;
+}
+
+.mention--article {
+    @include text-shadow-3;
+    padding: 1em;
+    font-family: $font7;
+
+    h3 {
+        font-size: 1.5em;
+        padding: 1em;
+    }
+}
+
+
+// Bouton Retour
+
+.btn_return a {
+    color: $main-text;
+    text-decoration: none;
+
+    .btn_return a:visited {
+        color: $main-text;
+        text-decoration: none;
+    }
+
+    .btn_return a:hover {
+        color: $main-text;
+        text-decoration: none;
+    }
 }

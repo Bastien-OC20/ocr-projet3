@@ -1,35 +1,40 @@
 .menus-list {
     text-align: center;
+    width: 90%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, auto);
-    grid-gap: 15px;
+    width: 100%;
+    margin-bottom: 5em;
+    grid-template-columns: repeat(auto-fill, 20em);
+    grid-template-rows: repeat(autofill, 10em);
+    grid-gap: 5em;
 
-    @include text-shadow-2;
+    @include small {
+        flex-direction: column;
+        justify-content: center;
+    }
 
     a {
         display: block;
         width: 10em;
         height: 15em;
         font-size: 2em;
+        margin: 0em;
         text-decoration: none;
-        box-shadow: 0 0 10px #bbba;
-        margin: 2em;
 
         &:hover {
             @include animate;
-
         }
+
+        @include small {}
     }
 }
-
-
 
 .menus-list__menu_note {
     @include box-shadow;
     background-color: $bgmenu1;
     width: auto;
     height: 15em;
+    @include text-shadow-2;
 
     img {
         padding-top: 3em;
@@ -55,16 +60,12 @@
     }
 }
 
-
 .menus-list__menu_chic {
     @include box-shadow;
     background-color: $bgmenu2;
     width: auto;
     height: 15em;
-
-    a {
-        @include text-shadow-2;
-    }
+    @include text-shadow-2;
 
     h2 {
         font-family: $font3;
@@ -77,8 +78,6 @@
         color: transparent;
         padding-top: 7em;
         margin: auto;
-
-
     }
 
     p {
@@ -89,22 +88,17 @@
     }
 }
 
-
-
 .menus-list__menu_delice {
     width: auto;
     height: 15em;
     @include box-shadow;
     background-color: $bgmenu3;
-
-    a {
-        @include text-shadow-2;
-    }
+    @include text-shadow-2;
 
     h2 {
         font-family: $font4;
         font-size: 1em;
-        background-image: linear-gradient(to right, $colormenu3a, $colormenu3b, );
+        background-image: linear-gradient(to right, $colormenu3a, $colormenu3b);
         -webkit-background-clip: text;
         -webkit-background-clip: text;
         -moz-background-clip: text;
@@ -120,7 +114,6 @@
         padding-top: 0.5em;
         color: $colormenu3b;
     }
-
 }
 
 .menus-list__menu_gout {
@@ -128,12 +121,12 @@
     height: 15em;
     @include box-shadow;
     background-color: $bgmenu4;
-
+    @include text-shadow-3;
 
     h2 {
         font-family: $font6;
         font-size: 1em;
-        background-image: linear-gradient(to right, $colormenu4a, $colormenu4b, );
+        background-image: linear-gradient(to right, $colormenu4a, $colormenu4b);
         -webkit-background-clip: text;
         -webkit-background-clip: text;
         -moz-background-clip: text;
@@ -149,5 +142,4 @@
         padding-top: 0.5em;
         color: $colormenu4b;
     }
-
 }
