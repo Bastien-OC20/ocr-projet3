@@ -1,31 +1,318 @@
-.menu_card1 {
-    width: auto;
-    height: auto;
-    margin: 0 10px 50px 10px;
+.container {
+    display: block;
+    padding: 3em;
 
-    table {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 0.5fr 1fr 1fr;
-        gap: 1px 1px;
-        margin: 0em;
 
-        caption {
-            text-align: center;
-        }
 
-        .left {
-            text-align: left;
 
-        }
+}
+
+// menu la note enchantée
+
+.menu-note__card {
+    width: 70%;
+    padding: 2em;
+    font-family: $font2;
+    background-color: $bgmenu1;
+    color: $colormenu1;
+    @include text-shadow-2;
+    @include box-shadow;
+
+    h2 {
+        text-align: center;
+
     }
 
-    h2,
+    .menu-note__card-titre {
+        display: block;
+        right: 20px;
+        text-align: center;
+
+        h2 {
+            margin-bottom: 2em;
+            font-size: 2.5em;
+
+        }
+
+    }
+
+    p {
+        font-size: 1.2em;
+        margin: 0.5em;
+
+    }
+}
+
+.menu-note__card-sousTitre {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5em;
+}
+
+.menu-note__card-plats {
+    display: inline-block;
+    justify-self: left;
+    width: 80%;
+    margin: 3em 0em 3em 2em;
+}
+
+.menu-note__card-prix {
+    display: inline-block;
+    justify-self: right;
+}
+
+.menu-note__card-titre-footer {
+    display: flex;
+
+    .card-titre-footer {
+        padding-left: 15em;
+    }
+
     h3 {
-        font-family: $font2;
-        font-size: 1.9rem;
-        line-height: 1.9em;
-        font-weight: 400;
+        text-align: center;
+        margin-right: 4em;
+        line-height: 2;
+        font-size: 2em;
 
     }
 
+
+}
+
+// menu le chic  la française
+.menu-chic__card {
+    width: 70%;
+    padding: 2em 2em 4em 2em;
+    margin-bottom: 2em;
+    font-family: $font3;
+    background-color: $bgmenu2;
+    @include text-shadow-2;
+
+    @include box-shadow;
+
+    h2 {
+        text-align: center;
+        font-size: 1em;
+        background-image: linear-gradient(to right, $colormenu2a, $colormenu2b, $colormenu2c, );
+        -webkit-background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        margin: 2em;
+
+
+    }
+
+    .menu-chic__card-titre {
+        display: block;
+        right: 20px;
+        background-image: linear-gradient(to right, $colormenu2a, $colormenu2b, $colormenu2c, );
+        -webkit-background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        margin: auto;
+
+        h2 {
+            margin-bottom: 2em;
+            font-size: 2em;
+
+        }
+
+
+    }
+
+    p {
+        font-size: 0.8em;
+        margin: 0.5em;
+    }
+}
+
+.menu-chic__card-sousTitre {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1em;
+    padding: 2em;
+    color: $colormenu2c;
+}
+
+.menu-chic__card-sousTitre:nth-child(2) {
+    color: $colormenu2a;
+}
+
+.menu-chic__card-sousTitre:nth-last-child(2n) {
+    color: $colormenu2b;
+}
+
+.menu-chic__card-plats {
+    display: inline-block;
+    justify-self: left;
+    width: 80%;
+    margin: 3em 0em 3em 2em;
+    color: $colormenu2c;
+
+}
+
+.menu-chic__card-plats:nth-child(2n) {
+    color: $colormenu2b;
+}
+
+.menu-chic__card-plats:nth-child(3) {
+    color: $colormenu2a;
+}
+
+
+.menu-chic__card-prix {
+    display: inline-block;
+    justify-self: right;
+    color: $colormenu2b;
+}
+
+.menu-chic__card-prix:nth-child(2n) {
+    color: $colormenu2a;
+}
+
+.menu-chic__card-prix:nth-last-child(1) {
+    color: $colormenu2c;
+}
+
+.menu-chic__card-titre-footer {
+    display: flex;
+
+    .card-titre-footer {
+        padding-left: 15em;
+    }
+
+    h3 {
+        text-align: center;
+        margin-right: 6em;
+        line-height: 2;
+        font-size: 2em;
+    }
+
+}
+
+
+
+// menu Le délice des papilles
+.menu-delice__card {
+    width: 70%;
+    padding: 2em 2em 4em 2em;
+    margin-bottom: 2em;
+    font-family: $font4;
+    background-color: $bgmenu3;
+    @include text-shadow-2;
+    @include box-shadow;
+
+    h2 {
+        text-align: center;
+        background-image: linear-gradient(to right, $colormenu3a, $colormenu3b, );
+        -webkit-background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        margin: auto;
+
+
+    }
+
+    .menu-delice__card-titre {
+        display: block;
+        right: 20px;
+        background-image: linear-gradient(to right, $colormenu2a, $colormenu2b, $colormenu2c, );
+        -webkit-background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        margin: auto;
+
+        h2 {
+            margin: 1em;
+            font-size: 4em;
+
+        }
+
+
+    }
+
+    p {
+        font-size: 1.2em;
+        margin: 0.5em;
+    }
+}
+
+.menu-delice__card-sousTitre {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1em;
+    padding: 2em;
+
+}
+
+
+.menu-delice__card-plats {
+    display: inline-block;
+    justify-self: left;
+    width: 80%;
+    margin: 3em 0em 3em 2em;
+
+
+}
+
+
+.menu-delice__card-prix {
+    display: inline-block;
+    justify-self: right;
+
+}
+
+
+
+// menu La palette du gout
+
+.menu-gout__card {
+    width: 70%;
+    padding: 2em;
+    font-family: $font6;
+    background-color: $bgmenu4;
+    @include box-shadow;
+
+    h2 {
+        text-align: center;
+    }
+
+    .menu-gout__card-titre {
+        margin-bottom: 3em;
+        text-align: center;
+
+        h2 {
+            font-size: 4em;
+        }
+    }
+
+    p {
+        font-size: 1.2em;
+        margin: 0.5em;
+    }
+}
+
+.menu-gout__card-sousTitre {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-gout__card-plats {
+    display: inline-block;
+    justify-self: left;
+    width: 80%;
+    margin: 3em 0em 3em 2em;
+}
+
+.menu-gout__card-prix {
+    display: inline-block;
+    justify-self: right;
 }
