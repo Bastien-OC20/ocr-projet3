@@ -1,186 +1,145 @@
-.menu {
-    width: 80%;
-    height: 25em;
-    padding: 1em;
-    margin: 1em;
-    box-shadow: 0 0 10px #bbba;
+.menus-list {
     text-align: center;
+    width: 90%;
+    display: grid;
+    width: 100%;
+    margin-bottom: 5em;
+    grid-template-columns: repeat(auto-fill, 20em);
+    grid-template-rows: repeat(autofill, 10em);
+    grid-gap: 5em;
 
-    &:hover {
-        @include zoomcardhover;
+    @include small {
+        flex-direction: column;
+        justify-content: center;
     }
-
-
-    @include mobileS-only {
-        height: 25em;
-        padding: 0em;
-    }
-
-
 
     a {
         display: block;
-        margin: auto;
-        padding-top: 4em;
+        width: 10em;
+        height: 15em;
         font-size: 2em;
+        margin: 0em;
         text-decoration: none;
-        text-align: center;
 
         &:hover {
-            @include zoomnamehover;
+            @include animate;
         }
 
-        @include mobileS-only {
-            padding-top: 6em;
-            font-size: 1.5em;
-        }
-
+        @include small {}
     }
 }
 
-.menu_note {
+.menus-list__menu_note {
     @include box-shadow;
     background-color: $bgmenu1;
-    margin: 2em;
+    width: auto;
+    height: 15em;
+    @include text-shadow-2;
 
     img {
-        padding: 0em;
-        margin: 0em;
-        transition-property: transform;
-        transition-duration: 600ms;
-
-        &:hover {
-            animation: headshake 100ms cubic-bezier(.4, .1, .6, .9);
-            animation-iteration-count: 3;
-        }
-
-
-        @include mobileS-only {
-            top: 4em;
-            left: 4.5em;
-        }
-    }
-
-
-    a {
-        padding-top: 2.6em;
-        @include text-shadow2;
-
-        @include mobileS-only {
-            padding-top: 4em;
-        }
+        padding-top: 3em;
+        margin: auto;
     }
 
     h2 {
         font-family: $font2;
-        font-size: 1.2em;
+        font-size: 1em;
         color: $colormenu1;
-
+        text-align: center;
 
         &:visited {
             color: $colormenu1;
         }
-
     }
 
-    h3 {
+    p {
         font-family: $font5;
         font-size: 2em;
+        padding-top: 0.5em;
         color: $colormenu1;
     }
 }
 
-
-.menu_chic {
-    text-align: center;
-    margin: 2em;
+.menus-list__menu_chic {
     @include box-shadow;
     background-color: $bgmenu2;
-
-    a {
-        @include text-shadow2;
-    }
+    width: auto;
+    height: 15em;
+    @include text-shadow-2;
 
     h2 {
         font-family: $font3;
-        font-size: 0.8em;
-        line-height: 3em;
+        font-size: 0.7em;
         background-image: linear-gradient(to right, $colormenu2a, $colormenu2b, $colormenu2c, );
         -webkit-background-clip: text;
         -webkit-background-clip: text;
         -moz-background-clip: text;
         background-clip: text;
         color: transparent;
-
-
-
+        padding-top: 7em;
+        margin: auto;
     }
 
-    h3 {
+    p {
         font-family: $font7;
+        padding-top: 1em;
         font-size: 1.5em;
         color: $colormenu2a;
     }
 }
 
-
-
-.menu_delice {
-    text-align: center;
-    margin: 2em;
+.menus-list__menu_delice {
+    width: auto;
+    height: 15em;
     @include box-shadow;
     background-color: $bgmenu3;
-
-    a {
-        @include text-shadow2;
-    }
+    @include text-shadow-2;
 
     h2 {
         font-family: $font4;
-        font-size: 1.2em;
-        line-height: 2em;
-        background-image: linear-gradient(to right, $colormenu3a, $colormenu3b, );
+        font-size: 1em;
+        background-image: linear-gradient(to right, $colormenu3a, $colormenu3b);
         -webkit-background-clip: text;
         -webkit-background-clip: text;
         -moz-background-clip: text;
         background-clip: text;
         color: transparent;
+        padding-top: 5em;
+        margin: auto;
     }
 
-    h3 {
+    p {
         font-family: $font5;
         font-size: 2em;
+        padding-top: 0.5em;
         color: $colormenu3b;
     }
-
 }
 
-.menu_gout {
-    text-align: center;
-    margin: 2em;
+.menus-list__menu_gout {
+    width: auto;
+    height: 15em;
     @include box-shadow;
     background-color: $bgmenu4;
-
-    a {
-        @include text-shadow3;
-    }
+    @include text-shadow-3;
 
     h2 {
         font-family: $font6;
-        font-size: 1.2em;
-        line-height: 2em;
-        background-image: linear-gradient(to right, $colormenu4a, $colormenu4b, );
+        font-size: 1em;
+        background-image: linear-gradient(to right, $colormenu4a, $colormenu4b);
         -webkit-background-clip: text;
         -webkit-background-clip: text;
         -moz-background-clip: text;
         background-clip: text;
         color: transparent;
+        padding-top: 5em;
+        margin: auto;
     }
 
-    h3 {
+    p {
         font-family: $font5;
         font-size: 2em;
+        padding-top: 0.5em;
         color: $colormenu4b;
     }
-
 }

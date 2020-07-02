@@ -1,8 +1,8 @@
 @import "breakpoints";
 
 * {
-    margin: 0 auto;
-
+    margin: 0em;
+    justify-content: center;
 }
 
 body {
@@ -12,17 +12,22 @@ body {
     margin: auto;
     position: relative;
     text-decoration: none;
+
+    @include small;
 }
 
-// header
+// header titre des pages du site
 
-header {
+.menus-title {
     background-color: $main-background;
     width: 100%;
     height: 5em;
     position: relative;
     @include box-shadow;
 
+    @include small {
+        height: 6em;
+    }
 
     h1 {
         color: $main-text;
@@ -31,21 +36,20 @@ header {
         font-family: $font1;
         font-size: 4em;
         font-weight: bolder;
-        @include text-shadow1;
-        @include zoomtitle;
+        @include text-shadow-1;
 
-        &:hover,
-        :visited {
-            color: $main-text;
-            @include zoomtitlehover;
-
-        }
-
-        @include mobileS-only {
+        @include small {
             font-size: 3em;
-            line-height: 1.5em;
+            line-height: 2em;
         }
 
+        &:hover {
+            color: $main-text;
+        }
+
+        &:visited {
+            color: $main-text;
+        }
     }
 
     a {
@@ -57,78 +61,66 @@ header {
     }
 }
 
-// main
+// main :Conteneur de la liste des menus
 
-main {
+.container {
+    display: block;
     padding: 2em;
-    text-align: center;
-
-    @include mobileS-only {
-        padding: 1em;
-    }
-
-    article {
-        display: grid;
-        width: 100%;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, auto);
-        grid-gap: 20px;
-
-
-        @include mobileS-only {
-            grid-template-columns: repeat(1, 1fr);
-            grid-template-rows: repeat(1, auto);
-            grid-gap: 15px;
-        }
-    }
-
 }
 
 
-
-
 .btn {
-    display: block;
+    display: flex;
     background: $main-background;
     color: $main-text;
     width: 25%;
     border: 0;
     border-radius: 15px;
     padding: 0.5em;
-    margin-top: 2em;
-    font-weight: 700;
+    margin: 2em 14em 1em 14em;
     font-size: 1.5rem;
     text-align: center;
     cursor: pointer;
-    justify-content: space-between;
-    @include text-shadow1;
+    @include text-shadow-1;
 
-
-
-    @include mobile-only {
-        text-align: center;
-        width: 50%;
-        margin: 0em 0em 1em 5em;
-        font-size: 1em;
+    @include xmedium {
+        width: 45%;
+        font-size: 1.3em;
+        padding: 0.5em;
+        margin: 3em 0em 2em 6.5em;
     }
 
+    @include small {
+        text-align: center;
+        width: 60%;
+        font-size: 1em;
+        padding: 0.5em;
+        margin: 0em 0em 2em 3em;
+    }
+
+    &:hover {
+        color: $main-text;
+    }
+
+    &:visited {
+        color: $main-text;
+    }
 }
+
+// Bouton Prochainement
 
 .btn_soon {
     display: inline;
-    margin-right: 0.1em;
-
+    margin-right: 0.5em;
 }
 
 .loading {
-    display: inline;
-
+    display: inline-block;
 }
 
 .loading span {
     width: 0.3em;
     height: 0.3em;
-    margin-right: 0.2em;
     background-color: $main-text;
     border-radius: 50%;
     display: inline-block;
@@ -136,7 +128,7 @@ main {
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-    @include text-shadow1;
+    @include text-shadow-1;
 }
 
 .loading span:nth-child(2) {
@@ -147,7 +139,7 @@ main {
     animation-delay: 0.8s;
 }
 
-
+// footer :  bandeau pied de page des pages du site
 
 footer {
     background-color: $main-background;
@@ -162,9 +154,6 @@ footer {
     height: 3em;
     @include box-shadow;
 
-
-
-
     a {
         line-height: 0.5em;
         margin: 1.2em;
@@ -173,15 +162,15 @@ footer {
         font-size: 1em;
         font-weight: bolder;
         text-decoration: none;
-        @include text-shadow1;
+        @include text-shadow-1;
+
+        @include small {
+            font-size: 0.8em;
+            line-height: 1.5em;
+        }
 
         &:hover {
             @include headshake;
-        }
-
-        @include mobile-only {
-            font-size: 0.8em;
-            line-height: 2em;
         }
     }
 

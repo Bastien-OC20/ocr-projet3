@@ -1,5 +1,3 @@
-
-
 // aside
 @keyframes dots {
     50% {
@@ -19,4 +17,106 @@
         // entièrement à gauche
         transform: translateX($shake-intensity * -2);
     }
+}
+
+@keyframes zoom-hover {
+    25% {
+        transform: scale(1);
+        transition-property: transform;
+        opacity: 100%;
+    }
+
+    75% {
+        transform: scale(1.15);
+        transition-property: transform;
+        transition-duration: 800ms;
+        opacity: 60%;
+    }
+
+    100% {
+        transform: scale(1);
+        transition-property: transform;
+        opacity: 100%;
+    }
+}
+
+
+@-webkit-keyframes zoom-in-out {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes zoom-in-out {
+    0% {
+        -ms-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    100% {
+        -ms-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+
+@keyframes animationFrames{
+0% {
+  transform:  translate(-2px,-51px)  ;
+}
+100% {
+  transform:  translate(-55px,-48px)  ;
+}
+}
+
+@-moz-keyframes animationFrames{
+0% {
+  -moz-transform:  translate(-2px,-51px)  ;
+}
+100% {
+  -moz-transform:  translate(-55px,-48px)  ;
+}
+}
+
+@-webkit-keyframes animationFrames {
+0% {
+  -webkit-transform:  translate(-2px,-51px)  ;
+}
+100% {
+  -webkit-transform:  translate(-55px,-48px)  ;
+}
+}
+
+@-o-keyframes animationFrames {
+0% {
+  -o-transform:  translate(-2px,-51px)  ;
+}
+100% {
+  -o-transform:  translate(-55px,-48px)  ;
+}
+}
+
+@-ms-keyframes animationFrames {
+0% {
+  -ms-transform:  translate(-2px,-51px)  ;
+}
+100% {
+  -ms-transform:  translate(-55px,-48px)  ;
+}
 }
