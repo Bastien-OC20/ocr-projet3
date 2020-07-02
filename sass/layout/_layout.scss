@@ -1,8 +1,8 @@
 @import "breakpoints";
 
 * {
-    margin: 0 auto;
-
+    margin: 0em;
+    justify-content: center;
 }
 
 body {
@@ -12,6 +12,8 @@ body {
     margin: auto;
     position: relative;
     text-decoration: none;
+
+    @include small;
 }
 
 // header titre des pages du site
@@ -23,6 +25,9 @@ body {
     position: relative;
     @include box-shadow;
 
+    @include small {
+        height: 6em;
+    }
 
     h1 {
         color: $main-text;
@@ -33,15 +38,17 @@ body {
         font-weight: bolder;
         @include text-shadow-1;
 
+        @include small {
+            font-size: 3em;
+            line-height: 2em;
+        }
 
         &:hover {
             color: $main-text;
-
         }
 
         &:visited {
             color: $main-text;
-
         }
     }
 
@@ -59,45 +66,61 @@ body {
 .container {
     display: block;
     padding: 2em;
-
 }
 
 
 .btn {
-    display: block;
+    display: flex;
     background: $main-background;
     color: $main-text;
     width: 25%;
     border: 0;
     border-radius: 15px;
     padding: 0.5em;
-    margin-top: 2em;
-    font-weight: 700;
+    margin: 2em 14em 1em 14em;
     font-size: 1.5rem;
     text-align: center;
     cursor: pointer;
-    justify-content: space-between;
     @include text-shadow-1;
-}
 
+    @include xmedium {
+        width: 45%;
+        font-size: 1.3em;
+        padding: 0.5em;
+        margin: 3em 0em 2em 6.5em;
+    }
+
+    @include small {
+        text-align: center;
+        width: 60%;
+        font-size: 1em;
+        padding: 0.5em;
+        margin: 0em 0em 2em 3em;
+    }
+
+    &:hover {
+        color: $main-text;
+    }
+
+    &:visited {
+        color: $main-text;
+    }
+}
 
 // Bouton Prochainement
 
 .btn_soon {
     display: inline;
-    margin-right: 0.1em;
-
+    margin-right: 0.5em;
 }
 
 .loading {
-    display: inline;
-
+    display: inline-block;
 }
 
 .loading span {
     width: 0.3em;
     height: 0.3em;
-    margin-right: 0.2em;
     background-color: $main-text;
     border-radius: 50%;
     display: inline-block;
@@ -116,9 +139,6 @@ body {
     animation-delay: 0.8s;
 }
 
-
-
-
 // footer :  bandeau pied de page des pages du site
 
 footer {
@@ -134,9 +154,6 @@ footer {
     height: 3em;
     @include box-shadow;
 
-
-
-
     a {
         line-height: 0.5em;
         margin: 1.2em;
@@ -146,6 +163,11 @@ footer {
         font-weight: bolder;
         text-decoration: none;
         @include text-shadow-1;
+
+        @include small {
+            font-size: 0.8em;
+            line-height: 1.5em;
+        }
 
         &:hover {
             @include headshake;
