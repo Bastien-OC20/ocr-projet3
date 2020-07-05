@@ -1,1009 +1,263 @@
-.container {
-    display: inline-flexbox;
-    padding: 3em;
-    justify-content: center;
+.note {
+    background-color: $bgmenu1;
+    color: $colormenu1;
+    font-family: $font2;
 
-    @include small {
-        padding: 0em;
-        margin: 3em;
+    img {
+        width: 4em;
+        padding-top: 2em;
+    }
+
+    h2:nth-child(2) {
+        font-family: $font2;
+        font-size: 3em;
+        padding: 0em 0em 0.5em 0em;
+    }
+
+    .menu-card_bandeau {
+        a {
+            text-decoration: none;
+            color: $colormenu1;
+        }
+
+        :hover {
+            color: $colormenu1;
+            text-decoration: none;
+        }
+
+        :visited {
+            color: $colormenu1;
+            text-decoration: none;
+        }
+    }
+
+    .menu-card_detail_prix {
+        font-weight: bolder;
     }
 }
 
-
-
-.menu-card {
-
-
-
-    // menu la note enchantée
-
-
-    &__note {
-        display: block;
-        margin: auto;
-        padding: 2em;
-        text-align: center;
-        font-family: $font2;
-        background-color: $bgmenu1;
-        color: $colormenu1;
-        @include text-shadow-2;
-        @include box-shadow;
-
-        img {
-            display: flex;
-            margin: auto;
-            padding-top: 1em;
-            width: 5em;
-        }
-
-        h2 {
-            text-align: center;
-            font-size: 4em;
-            margin-bottom: 1em;
-            font-family: $font2;
-        }
-
-        h3 {
-            color: $colormenu1;
-            margin: 0em;
-            padding: 0em;
-
-            :visited {
-                color: $colormenu1;
-            }
-
-            :hover {
-                color: $colormenu1;
-            }
-        }
-
-        p {
-            font-size: 1.5em;
-            margin: 0.5em;
-        }
-
-        // menu la note enchantée entrée
-        &--entree {
-            display: block;
-            margin-bottom: 4em;
-
-            &-plats {
-                display: inline-block;
-                width: 35em;
-                text-align: left;
-            }
-
-            &-prix {
-                display: inline-block;
-                padding-left: 6em;
-                text-align: right;
-
-            }
-
-            &-sousTitre {
-                display: flex;
-                justify-content: space-around;
-                font-size: 2em;
-                padding-bottom: 1em;
-
-                &-barLeft {
-                    display: inline-block;
-
-                    img {
-                        width: 9em;
-                    }
-                }
-
-                a {
-                    padding-top: 0.5em;
-                }
-
-                &-trait {
-                    letter-spacing: 0.05em;
-                    display: inline-block;
-                }
-
-                &-barRight {
-                    display: inline-block;
-
-                    img {
-
-                        width: 9em;
-                    }
-
-                }
-            }
-        }
-
-        // menu la note enchantée Plats principaux
-
-
-        &--platsPrincipaux {
-            display: block;
-            margin-bottom: 4em;
-
-            &-plats {
-                display: inline-block;
-                width: 35em;
-                text-align: left;
-            }
-
-            &-prix {
-                display: inline-block;
-                padding-left: 6em;
-                text-align: right;
-
-            }
-
-            &-sousTitre {
-                display: flex;
-                justify-content: space-around;
-                width: 100%;
-                font-size: 2em;
-                padding-bottom: 1em;
-
-                &-barLeft {
-                    display: inline-block;
-
-                    img {
-
-                        width: 9em;
-                    }
-
-                }
-
-                a {
-                    padding-top: 0.5em;
-                }
-
-                &-trait {
-                    letter-spacing: 0.05em;
-                    display: inline-block;
-                    font-size: 1em;
-                }
-
-                &-barRight {
-                    display: inline-block;
-
-                    img {
-
-                        width: 9em;
-                    }
-
-                }
-            }
-        }
-
-        // menu la note enchantée dessert
-
-
-        &--dessert {
-            display: block;
-            margin-bottom: 4em;
-
-            &-plats {
-                Display: inline-block;
-                width: 35em;
-                text-align: left;
-            }
-
-            &-prix {
-                display: inline-block;
-                padding-left: 6em;
-                text-align: right;
-
-            }
-
-            &-sousTitre {
-                display: flex;
-                justify-content: space-around;
-                text-align: center;
-                width: 100%;
-                font-size: 2em;
-                padding-bottom: 1em;
-
-                &-barLeft {
-                    display: inline-block;
-
-                    img {
-
-                        width: 9em;
-                    }
-                }
-
-                a {
-                    padding-top: 0.5em;
-                }
-
-                &-trait {
-                    letter-spacing: 0.05em;
-                    display: inline-block;
-                }
-
-                &-barRight {
-                    display: inline-block;
-
-                    img {
-
-                        width: 9em;
-                    }
-
-                }
-            }
-        }
-
-
-        // menu la note enchantée Footer image
-        &--titreFooter {
-            &-picture {
-                img {
-                    display: inline-block;
-                    justify-content: space-around;
-                    width: 3em;
-                    margin: auto;
-                }
-            }
-
-            a {
-                text-decoration: none;
-                display: inline-block;
-                justify-content: space-around;
-                padding: 1em;
-
-                h3 {
-                    font-size: 2em;
-                }
-            }
-        }
-    }
-
-
-    // menu le chic à la française
-
-    &__chic {
-        display: block;
-        margin: auto;
-        padding: 2em;
-        text-align: center;
+.chic {
+    font-family: $font3;
+    background-color: $bgmenu2;
+
+    h2 {
+        background-image: linear-gradient(to right, $colormenu2a, $colormenu2b, $colormenu2c, );
+        -webkit-background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
         font-family: $font3;
-        background-color: $bgmenu2;
-        @include text-shadow-3;
-        @include box-shadow;
+    }
 
-        h2 {
-            text-align: center;
-            font-size: 3em;
-            padding-top: 1em;
-            margin-bottom: 2em;
-            font-family: $font3;
-            @include text-shadow-3;
-            background-image: linear-gradient(to right, $colormenu2a, $colormenu2b, $colormenu2c, );
-            -webkit-background-clip: text;
-            -webkit-background-clip: text;
-            -moz-background-clip: text;
-            background-clip: text;
-            color: transparent;
+    .orange,
+    .violet,
+    .bleu {
+        font-size: 0.8em;
+    }
+
+    .orange h3 {
+        color: $colormenu2a;
+
+        :hover {
+            color: $colormenu2a;
         }
 
-        a {
-            text-decoration: none;
-            margin-bottom: 1em;
-        }
-
-        p {
-            font-size: 1em;
-            margin: 0.5em;
-        }
-
-        // menu le chic à la française entrée
-
-        &--entree {
-            display: block;
-            margin-bottom: 3em;
-
-            &-plats {
-                display: inline-block;
-                width: 38em;
-                text-align: left;
-                color: $colormenu2a;
-                margin-bottom: 2em;
-            }
-
-            &-prix {
-                display: inline-block;
-                padding-left: 6em;
-                text-align: right;
-                color: $colormenu2a;
-
-            }
-
-            &-sousTitre {
-                display: flex;
-                justify-content: space-around;
-                font-size: 1.5em;
-
-                h3 {
-                    color: $colormenu2a;
-                    margin: 0em;
-                    padding: 0em;
-
-                    :visited {
-                        color: $colormenu2a;
-                    }
-
-                    :hover {
-                        color: $colormenu2a;
-
-                    }
-                }
-
-                &-barLeft {
-                    display: inline-block;
-
-                    img {
-
-                        width: 9em;
-                    }
-                }
-
-                &-trait {
-                    letter-spacing: 0.05em;
-                    display: inline-block;
-                    font-size: 1em;
-                }
-
-                &-barRight {
-                    display: inline-block;
-
-                    img {
-
-                        width: 9em;
-                    }
-
-                }
-            }
-        }
-
-
-        // menu le chic à la française plats principaux
-
-
-        &--platsPrincipaux {
-            display: block;
-            margin-bottom: 3em;
-
-            &-plats {
-                display: inline-block;
-                width: 38em;
-                text-align: left;
-                color: $colormenu2b;
-                margin-bottom: 2em;
-            }
-
-            &-prix {
-                display: inline-block;
-                margin-top: -1em;
-                padding-left: 6em;
-                text-align: right;
-                color: $colormenu2b;
-
-            }
-
-            &-sousTitre {
-                display: flex;
-                justify-content: space-around;
-                font-size: 1.5em;
-
-                h3 {
-                    color: $colormenu2b;
-                    margin: 0em;
-                    padding: 0em;
-
-                    :visited {
-                        color: $colormenu2b;
-                    }
-
-                    :hover {
-                        color: $colormenu2b;
-
-                    }
-                }
-
-                &-barLeft {
-                    display: inline-block;
-
-                    img {
-                        width: 9em;
-                    }
-                }
-
-                &-trait {
-                    letter-spacing: 0.05em;
-                    display: inline-block;
-                    font-size: 1em;
-                }
-
-                &-barRight {
-                    display: inline-block;
-
-                    img {
-                        width: 9em;
-                    }
-
-                }
-            }
-        }
-
-
-        // menu le chic à la française dessert
-
-
-        &--dessert {
-            display: block;
-            margin-bottom: 3em;
-
-            &-plats {
-                display: inline-block;
-                width: 38em;
-                text-align: left;
-                color: $colormenu2c;
-                margin-bottom: 2em;
-            }
-
-            &-prix {
-                display: inline-block;
-                padding-left: 6em;
-                text-align: right;
-                color: $colormenu2c;
-
-            }
-
-            &-sousTitre {
-                display: flex;
-                justify-content: space-between;
-                font-size: 1.2em;
-
-                h3 {
-                    color: $colormenu2c;
-                    line-height: 1em;
-                    margin: 0em;
-                    padding: 0em;
-
-                    :visited {
-                        color: $colormenu2c;
-                    }
-
-                    :hover {
-                        color: $colormenu2c;
-
-                    }
-                }
-
-                &-barLeft {
-                    display: inline-block;
-
-                    img {
-                        width: 14em;
-                    }
-                }
-
-                &-trait {
-                    letter-spacing: 0.05em;
-                    display: inline-block;
-                }
-
-                &-barRight {
-                    display: inline-block;
-
-                    img {
-                        width: 14em;
-                    }
-
-                }
-            }
+        :visited {
+            color: $colormenu2a;
         }
     }
 
+    .violet h3 {
+        color: $colormenu2b;
 
-    // menu le délice des papilles
+        :hover {
+            color: $colormenu2b;
+        }
 
+        :visited {
+            color: $colormenu2b;
+        }
+    }
 
-    &__delice {
-        display: block;
-        margin: auto;
-        padding: 2em;
-        text-align: center;
+    .bleu h3 {
+        color: $colormenu2c;
+
+        :hover {
+            color: $colormenu2c;
+        }
+
+        :visited {
+            color: $colormenu2c;
+        }
+    }
+
+    .menu-card_detail_prix {
+        font-weight: bolder;
+    }
+
+    .orange p {
+        color: $colormenu2a;
+    }
+
+    .violet p {
+        color: $colormenu2b;
+    }
+
+    .bleu p {
+        color: $colormenu2c;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+}
+
+.delice {
+    font-family: $font4;
+    background-color: $bgmenu3;
+
+    h2 {
         font-family: $font4;
-        background-color: $bgmenu3;
-        @include text-shadow-3;
-        @include box-shadow;
+        background-image: linear-gradient(to right, $colormenu3a, $colormenu3b);
+        -webkit-background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
 
-        h2 {
-            text-align: center;
-            font-size: 4em;
-            padding-top: 1em;
-            margin-bottom: 2em;
-            font-family: $font4;
-            @include text-shadow-3;
-            background-image: linear-gradient(to right, $colormenu3a, $colormenu3b, $colormenu2c, rgb(4, 152, 250));
-            -webkit-background-clip: text;
-            -webkit-background-clip: text;
-            -moz-background-clip: text;
-            background-clip: text;
-            color: transparent;
+    h2:nth-child(1) {
+        font-family: $font4;
+        font-size: 4em;
+        padding: 1em 0em 1em 0em;
+
+        @include small {
+            font-size: 3em;
+        }
+    }
+
+    .bleuClaire,
+    .BleuAzur,
+    .bleuMarin {
+        font-size: 1em;
+    }
+
+    .bleuClaire h3 {
+        color: rgb(0, 162, 255);
+
+        :hover {
+            color: rgb(0, 162, 255);
         }
 
-        a {
-            text-decoration: none;
-            margin-bottom: 1em;
+        :visited {
+            color: rgb(0, 162, 255);
+        }
+    }
+
+    .BleuAzur h3 {
+        color: $colormenu3b;
+
+        :hover {
+            color: $colormenu3b;
         }
 
-        p {
-            font-size: 1.2em;
-            margin: 0.5em;
+        :visited {
+            color: $colormenu3b;
+        }
+    }
+
+    .bleuMarin h3 {
+        color: $colormenu3a;
+
+        :hover {
+            color: $colormenu3a;
         }
 
+        :visited {
+            color: $colormenu3a;
+        }
+    }
 
-        // menu le délice des papilles  entrée
+    .menu-card_detail_prix {
+        font-weight: bolder;
+    }
 
+    .orange p {
+        color: $colormenu2a;
+    }
 
-        &--entree {
-            display: block;
-            margin-bottom: 3em;
+    .violet p {
+        color: $colormenu2b;
+    }
 
-            &-plats {
-                display: inline-block;
-                width: 30em;
-                text-align: left;
+    .bleu p {
+        color: $colormenu3b;
+    }
 
-            }
+    a {
+        text-decoration: none;
+    }
 
-            &-prix {
-                display: inline-block;
-                padding-left: 6em;
-                text-align: right;
+}
 
+.gout {
+    font-family: $font6;
+    background-color: $bgmenu4;
 
-            }
+    h2 {
+        font-family: $font5;
+        background-image: linear-gradient(to right, $colormenu4a, $colormenu4b);
+        -webkit-background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
 
-            &-sousTitre {
-                display: flex;
-                justify-content: space-around;
-                font-size: 1.5em;
-                line-height: 1em;
+    h2:nth-child(1) {
+        font-family: $font5;
+        font-size: 5em;
+        padding: 1em 0em 1em 0em;
+    }
 
-                h3 {
-                    color: black;
-                    margin: 0em;
-                    padding: 0em;
+    h3 {
+        font-size: 1em;
+        color: black;
 
-                    :visited {
-                        color: black;
-                    }
-
-                    :hover {
-                        color: black;
-
-                    }
-                }
-
-                &-barLeft {
-                    display: inline-block;
-
-                    img {
-
-                        width: 9em;
-                    }
-                }
-
-                &-trait {
-                    letter-spacing: 0.05em;
-                    display: inline-block;
-                    font-size: 1em;
-                }
-
-                &-barRight {
-                    display: inline-block;
-
-                    img {
-
-                        width: 9em;
-                    }
-
-                }
-            }
+        :hover {
+            color: black;
+            @include animate;
         }
 
-
-        // menu le délice des papilles  plats principaux
-
-
-        &--platsPrincipaux {
-            display: block;
-            margin-bottom: 3em;
-
-            &-plats {
-                display: inline-block;
-                width: 30em;
-                text-align: left;
-
-            }
-
-            &-prix {
-                display: inline-block;
-                padding-left: 6em;
-                text-align: right;
-
-
-            }
-
-            &-sousTitre {
-                display: flex;
-                justify-content: space-around;
-                font-size: 1.5em;
-
-                h3 {
-                    color: black;
-                    margin: 0em;
-                    padding: 0em;
-
-                    :visited {
-                        color: black;
-                    }
-
-                    :hover {
-                        color: black;
-
-                    }
-                }
-
-                &-barLeft {
-                    display: inline-block;
-
-                    img {
-                        width: 9em;
-                    }
-                }
-
-                &-trait {
-                    letter-spacing: 0.05em;
-                    display: inline-block;
-                    font-size: 1em;
-                }
-
-                &-barRight {
-                    display: inline-block;
-
-                    img {
-                        width: 9em;
-                    }
-
-                }
-            }
+        :visited {
+            color: black;
         }
-
-
-        // menu le délice des papilles  dessert
-
-
-        &--dessert {
-            display: block;
-            margin-bottom: 3em;
-
-            &-plats {
-                display: inline-block;
-                width: 30em;
-                text-align: left;
-
-            }
-
-            &-prix {
-                display: inline-block;
-                padding-left: 6em;
-                text-align: right;
-
-
-            }
-
-            &-sousTitre {
-                display: flex;
-                justify-content: space-around;
-                font-size: 1.5em;
-
-                h3 {
-                    color: black;
-                    margin: 0em;
-                    padding: 0em;
-
-                    :visited {
-                        color: black;
-                    }
-
-                    :hover {
-                        color: black;
-
-                    }
-                }
-
-                &-barLeft {
-                    display: inline-block;
-
-                    img {
-                        width: 9em;
-                    }
-                }
-
-                &-trait {
-                    letter-spacing: 0.05em;
-                    display: inline-block;
-                }
-
-                &-barRight {
-                    display: inline-block;
-
-                    img {
-                        width: 9em;
-                    }
-
-                }
-            }
-        }
-
     }
 
 
-    // menu la palette du gout
 
-
-    &__gout {
-        display: block;
-        margin: auto;
-        padding: 2em;
-        text-align: center;
-        font-family: $font6;
-        background-color: $bgmenu4;
-        @include text-shadow-3;
-        @include box-shadow;
-
-        h2 {
-            text-align: center;
-            font-size: 4em;
-            padding-top: 1em;
-            margin-bottom: 2em;
-            font-family: $font6;
-            @include text-shadow-3;
-            background-image: linear-gradient(to right, $colormenu4a, $colormenu4b, rgba(145, 243, 174, 0.904));
-            -webkit-background-clip: text;
-            -webkit-background-clip: text;
-            -moz-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        a {
-            text-decoration: none;
-            margin-bottom: 1em;
-        }
-
-        p {
-            font-size: 1.2em;
-            margin: 0.5em;
-        }
-
-
-
-        // menu la palette du gout entrée
-
-
-
-        &--entree {
-            display: block;
-            margin-bottom: 3em;
-
-            &-plats {
-                display: inline-block;
-                width: 38em;
-                text-align: left;
-                color: black;
-                margin-bottom: 2em;
-            }
-
-            &-prix {
-                display: inline-block;
-                padding-left: 6em;
-                text-align: right;
-                color: black;
-
-            }
-
-            &-sousTitre {
-                display: flex;
-                justify-content: space-around;
-                font-size: 2em;
-                line-height: 1em;
-
-                h3 {
-                    color: black;
-                    margin: 0em;
-                    padding: 0em;
-
-                    :visited {
-                        color: black;
-                    }
-
-                    :hover {
-                        color: black;
-
-                    }
-                }
-
-                &-barLeft {
-                    display: inline-block;
-
-                    img {
-
-                        width: 9em;
-                    }
-                }
-
-                &-trait {
-                    letter-spacing: 0.05em;
-                    display: inline-block;
-                    font-size: 1em;
-                }
-
-                &-barRight {
-                    display: inline-block;
-
-                    img {
-
-                        width: 9em;
-                    }
-
-                }
-            }
-        }
-
-
-        // menu la palette du gout plats principaux
-
-
-        &--platsPrincipaux {
-            display: block;
-            margin-bottom: 3em;
-
-            &-plats {
-                display: inline-block;
-                width: 38em;
-                text-align: left;
-                color: black;
-                margin-bottom: 2em;
-            }
-
-            &-prix {
-                display: inline-block;
-                margin-top: -1em;
-                padding-left: 6em;
-                text-align: right;
-                color: black;
-
-            }
-
-            &-sousTitre {
-                text-align: center;
-                display: flex;
-                justify-content: space-around;
-                font-size: 2em;
-                line-height: 1em;
-
-                h3 {
-                    color: black;
-                    margin: 0em;
-                    padding: 0em;
-
-                    :visited {
-                        color: black;
-                    }
-
-                    :hover {
-                        color: black;
-
-                    }
-                }
-
-                &-barLeft {
-                    display: inline-block;
-
-                    img {
-                        width: 8em;
-                    }
-                }
-
-                &-trait {
-                    display: inline-block;
-                    font-size: 1em;
-                }
-
-                &-barRight {
-                    display: inline-block;
-
-                    img {
-                        width: 8em;
-                    }
-
-                }
-            }
-        }
-
-
-        // menu la palette du gout dessert
-
-
-        &--dessert {
-            display: block;
-            margin-bottom: 3em;
-
-            &-plats {
-                display: inline-block;
-                width: 38em;
-                text-align: left;
-                color: black;
-                margin-bottom: 2em;
-            }
-
-            &-prix {
-                display: inline-block;
-                padding-left: 6em;
-                text-align: right;
-                color: black;
-
-            }
-
-            &-sousTitre {
-                display: flex;
-                justify-content: space-around;
-                font-size: 2em;
-
-                h3 {
-                    color: black;
-                    line-height: 1em;
-                    margin: 0em;
-                    padding: 0em;
-
-                    :visited {
-                        color: black;
-                    }
-
-                    :hover {
-                        color: black;
-
-                    }
-                }
-
-                &-barLeft {
-                    display: inline-block;
-
-                    img {
-                        width: 9em;
-                    }
-                }
-
-                &-trait {
-                    letter-spacing: 0.05em;
-                    display: inline-block;
-                }
-
-                &-barRight {
-                    display: inline-block;
-
-                    img {
-                        width: 9em;
-                    }
-
-                }
-            }
-        }
+    .menu-card_detail_prix {
+        font-weight: bolder;
     }
+
+    .orange p {
+        color: $colormenu2a;
+    }
+
+    .violet p {
+        color: $colormenu2b;
+    }
+
+    .bleu p {
+        color: $colormenu3b;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
 }
 
 // Page Mentions-légales
@@ -1025,18 +279,86 @@ h2 {
 }
 
 
-// Bouton Retour
 
-.btn_return a {
+
+// Page Mentions-légales
+h2 {
+    font-size: 3em;
+    font-family: $font7;
+    text-align: center;
+}
+
+.mention--article {
+    @include text-shadow-3;
+    padding: 1em;
+    font-family: $font7;
+
+    &-soustitre {
+        font-size: 1.5em;
+        padding: 1em;
+    }
+}
+
+
+// Bouton Retour
+.btn-accueil {
+    i {
+        display: block;
+        width: 8em;
+        color: $main-background;
+    }
+
+    display: flex;
+    background: $main-background;
+    color: $main-text;
+    width: 10%;
+    border: 0;
+    border-radius: 15px;
+    padding: 0.5em;
+    margin: 2em 14em 1em 16em;
+    font-size: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    @include text-shadow-1;
+
+    @include medium {
+        display: flex;
+        justify-content: center;
+        width: 45%;
+        font-size: 1.3em;
+        padding: 0.5em;
+        margin: 1em 1em 2em 6em;
+    }
+
+    @include small {
+        text-align: center;
+        width: 70%;
+        font-size: 1em;
+        padding: 0.5em;
+        margin: 1em 1em 2em 2.5em;
+    }
+
+    &:hover {
+        color: $main-text;
+    }
+
+    &:visited {
+        color: $main-text;
+    }
+}
+
+// Bouton Home
+
+.btn_home a {
     color: $main-text;
     text-decoration: none;
 
-    .btn_return a:visited {
+    .btn_home a:visited {
         color: $main-text;
         text-decoration: none;
     }
 
-    .btn_return a:hover {
+    .btn_home a:hover {
         color: $main-text;
         text-decoration: none;
     }

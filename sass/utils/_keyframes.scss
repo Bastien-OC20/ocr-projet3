@@ -121,8 +121,23 @@
 }
 }
 
-@media screen and (max-height: 300px) {
-  ul {
-      margin-top: 40px;
+@keyframes couleur{
+  from{
+    color: rgb(121, 80, 80);
   }
+  60%{
+    color:rgb(88, 23, 32, 0.685);
+  }
+  to{
+    color: $colormenu1;
+  }
+}
+
+@keyframes progress-bar {
+  from {
+    width: 0%;
+}
+to {
+   width: 100%;
+}
 }
