@@ -150,9 +150,37 @@
   }
 }
 
-@media screen and (max-height: 300px) {
-  ul {
-    margin-top: 40px;
+@-webkit-keyframes couleur {
+  from {
+    color: rgba(88, 23, 32, 0.685);
+  }
+}
+
+@keyframes couleur {
+  from {
+    color: rgba(88, 23, 32, 0.685);
+  }
+}
+
+@-webkit-keyframes progress-bar {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes progress-bar {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
   }
 }
 
@@ -244,20 +272,26 @@ body {
 
 @media all and (min-width: 560px) and (max-width: 960px) {
   .btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 45%;
     font-size: 1.3em;
     padding: 0.5em;
-    margin: 3em 0em 2em 6.5em;
+    margin: 1em 1em 2em 6em;
   }
 }
 
 @media all and (min-width: 320px) and (max-width: 480px) {
   .btn {
     text-align: center;
-    width: 60%;
+    width: 70%;
     font-size: 1em;
     padding: 0.5em;
-    margin: 0em 0em 2em 3em;
+    margin: 1em 1em 2em 2.5em;
   }
 }
 
@@ -393,6 +427,13 @@ footer a:hover {
   opacity: 80%;
 }
 
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menus-list a {
+    width: 90%;
+    margin: auto;
+  }
+}
+
 .menus-list__menu_note {
   -webkit-box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
           box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
@@ -523,7 +564,7 @@ footer a:hover {
 @media all and (min-width: 320px) and (max-width: 480px) {
   .container {
     padding: 0em;
-    margin: 3em;
+    margin: 1em;
   }
 }
 
@@ -540,6 +581,12 @@ footer a:hover {
           box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
 }
 
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note {
+    padding: 1em;
+  }
+}
+
 .menu-card__note img {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -549,6 +596,12 @@ footer a:hover {
   width: 5em;
 }
 
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note img {
+    width: 4em;
+  }
+}
+
 .menu-card__note h2 {
   text-align: center;
   font-size: 4em;
@@ -556,18 +609,27 @@ footer a:hover {
   font-family: "Devonshire", cursive;
 }
 
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note h2 {
+    font-size: 3em;
+  }
+}
+
 .menu-card__note h3 {
   color: #3c1218;
   margin: 0em;
   padding: 0em;
+  text-decoration: none;
 }
 
 .menu-card__note h3 :visited {
   color: #3c1218;
+  text-decoration: none;
 }
 
 .menu-card__note h3 :hover {
   color: #3c1218;
+  text-decoration: none;
 }
 
 .menu-card__note p {
@@ -575,9 +637,35 @@ footer a:hover {
   margin: 0.5em;
 }
 
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note p {
+    font-size: 1.2em;
+    padding: 1em 0em 0.5em 0em;
+  }
+}
+
+@media all and (min-width: 560px) and (max-width: 960px) {
+  .menu-card__note p {
+    font-size: 1.5em;
+    padding: 1em 0em 0.5em 0em;
+  }
+}
+
 .menu-card__note--entree {
   display: block;
   margin-bottom: 4em;
+}
+
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note--entree {
+    margin-bottom: -20em;
+  }
+}
+
+@media all and (min-width: 560px) and (max-width: 960px) {
+  .menu-card__note--entree {
+    margin-bottom: -20em;
+  }
 }
 
 .menu-card__note--entree-plats {
@@ -586,10 +674,45 @@ footer a:hover {
   text-align: left;
 }
 
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note--entree-plats {
+    width: 90%;
+    text-align: center;
+  }
+}
+
+@media all and (min-width: 560px) and (max-width: 960px) {
+  .menu-card__note--entree-plats {
+    width: 90%;
+    text-align: center;
+    margin-bottom: 0.5em;
+  }
+}
+
 .menu-card__note--entree-prix {
   display: inline-block;
   padding-left: 6em;
   text-align: right;
+}
+
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note--entree-prix {
+    position: relative;
+    top: -21em;
+    padding: 0em;
+    line-height: 3.25em;
+    text-align: left;
+  }
+}
+
+@media all and (min-width: 560px) and (max-width: 960px) {
+  .menu-card__note--entree-prix {
+    position: relative;
+    top: -25em;
+    padding: 0em;
+    line-height: 3.70em;
+    text-align: left;
+  }
 }
 
 .menu-card__note--entree-sousTitre {
@@ -602,21 +725,54 @@ footer a:hover {
   padding-bottom: 1em;
 }
 
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note--entree-sousTitre {
+    display: block;
+    font-size: 1.5em;
+  }
+}
+
+@media all and (min-width: 560px) and (max-width: 960px) {
+  .menu-card__note--entree-sousTitre {
+    font-size: 1.2em;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
 .menu-card__note--entree-sousTitre-barLeft {
   display: inline-block;
 }
 
 .menu-card__note--entree-sousTitre-barLeft img {
-  width: 9em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
 }
 
 .menu-card__note--entree-sousTitre a {
+  display: block;
+  margin: auto;
   padding-top: 0.5em;
+  width: 128px;
+  text-decoration: none;
+}
+
+.menu-card__note--entree-sousTitre a :hover {
+  text-decoration: none;
+  border-bottom: solid 0.07em #3c1218;
+  -webkit-animation: progress-bar 1000ms;
+          animation: progress-bar 1000ms;
+}
+
+.menu-card__note--entree-sousTitre a :visited {
+  text-decoration: none;
 }
 
 .menu-card__note--entree-sousTitre-trait {
   letter-spacing: 0.05em;
-  display: inline-block;
+  text-decoration: none;
 }
 
 .menu-card__note--entree-sousTitre-barRight {
@@ -624,12 +780,27 @@ footer a:hover {
 }
 
 .menu-card__note--entree-sousTitre-barRight img {
-  width: 9em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
 }
 
 .menu-card__note--platsPrincipaux {
   display: block;
   margin-bottom: 4em;
+}
+
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note--platsPrincipaux {
+    margin-bottom: -12em;
+  }
+}
+
+@media all and (min-width: 560px) and (max-width: 960px) {
+  .menu-card__note--platsPrincipaux {
+    margin-bottom: -12em;
+  }
 }
 
 .menu-card__note--platsPrincipaux-plats {
@@ -638,10 +809,44 @@ footer a:hover {
   text-align: left;
 }
 
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note--platsPrincipaux-plats {
+    width: 90%;
+    text-align: center;
+  }
+}
+
+@media all and (min-width: 560px) and (max-width: 960px) {
+  .menu-card__note--platsPrincipaux-plats {
+    width: 90%;
+    text-align: center;
+  }
+}
+
 .menu-card__note--platsPrincipaux-prix {
   display: inline-block;
   padding-left: 6em;
   text-align: right;
+}
+
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note--platsPrincipaux-prix {
+    position: relative;
+    top: -13em;
+    padding: 0em;
+    line-height: 2.5em;
+    text-align: left;
+  }
+}
+
+@media all and (min-width: 560px) and (max-width: 960px) {
+  .menu-card__note--platsPrincipaux-prix {
+    position: relative;
+    top: -17em;
+    padding: 0em;
+    line-height: 3.5em;
+    text-align: left;
+  }
 }
 
 .menu-card__note--platsPrincipaux-sousTitre {
@@ -655,6 +860,22 @@ footer a:hover {
   padding-bottom: 1em;
 }
 
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note--platsPrincipaux-sousTitre {
+    display: block;
+    font-size: 1.5em;
+  }
+}
+
+@media all and (min-width: 560px) and (max-width: 960px) {
+  .menu-card__note--platsPrincipaux-sousTitre {
+    font-size: 1.2em;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .menu-card__note--platsPrincipaux-sousTitre-barLeft {
   display: inline-block;
 }
@@ -664,7 +885,10 @@ footer a:hover {
 }
 
 .menu-card__note--platsPrincipaux-sousTitre a {
+  display: block;
+  margin: auto;
   padding-top: 0.5em;
+  width: 128px;
 }
 
 .menu-card__note--platsPrincipaux-sousTitre-trait {
@@ -686,16 +910,62 @@ footer a:hover {
   margin-bottom: 4em;
 }
 
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note--dessert {
+    margin-bottom: -10em;
+  }
+}
+
+@media all and (min-width: 560px) and (max-width: 960px) {
+  .menu-card__note--dessert {
+    margin-bottom: -10em;
+  }
+}
+
 .menu-card__note--dessert-plats {
-  Display: inline-block;
+  display: inline-block;
   width: 35em;
   text-align: left;
+}
+
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note--dessert-plats {
+    width: 90%;
+    text-align: center;
+  }
+}
+
+@media all and (min-width: 560px) and (max-width: 960px) {
+  .menu-card__note--dessert-plats {
+    width: 90%;
+    text-align: center;
+  }
 }
 
 .menu-card__note--dessert-prix {
   display: inline-block;
   padding-left: 6em;
   text-align: right;
+}
+
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note--dessert-prix {
+    position: relative;
+    top: -13em;
+    padding: 0em;
+    line-height: 3em;
+    text-align: left;
+  }
+}
+
+@media all and (min-width: 560px) and (max-width: 960px) {
+  .menu-card__note--dessert-prix {
+    position: relative;
+    top: -14em;
+    padding: 0em;
+    line-height: 2.5em;
+    text-align: left;
+  }
 }
 
 .menu-card__note--dessert-sousTitre {
@@ -710,6 +980,23 @@ footer a:hover {
   padding-bottom: 1em;
 }
 
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note--dessert-sousTitre {
+    display: block;
+    font-size: 1.5em;
+  }
+}
+
+@media all and (min-width: 560px) and (max-width: 960px) {
+  .menu-card__note--dessert-sousTitre {
+    font-size: 1.2em;
+    line-height: 1em;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .menu-card__note--dessert-sousTitre-barLeft {
   display: inline-block;
 }
@@ -719,7 +1006,16 @@ footer a:hover {
 }
 
 .menu-card__note--dessert-sousTitre a {
+  display: block;
+  margin: auto;
   padding-top: 0.5em;
+  width: 128px;
+}
+
+.menu-card__note--dessert-sousTitre a :hover {
+  border-bottom: solid 0.07em #3c1218;
+  -webkit-animation: progress-bar 1000ms;
+          animation: progress-bar 1000ms;
 }
 
 .menu-card__note--dessert-sousTitre-trait {
