@@ -122,6 +122,20 @@
   100% {
     stroke-dashoffset: -35%;
   }
+  60% {
+    color: rgba(88, 23, 32, 0.685);
+  }
+  to {
+    color: #3c1218;
+  }
+}
+@keyframes progress-bar {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
 }
 .btn_return a {
   color: #ebc64d;
