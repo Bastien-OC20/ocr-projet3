@@ -21,11 +21,16 @@
         margin: 0em;
         text-decoration: none;
 
+
         &:hover {
             @include animate;
         }
 
-        @include small {}
+        @include small {
+
+            width: 90%;
+            margin: auto;
+        }
     }
 }
 

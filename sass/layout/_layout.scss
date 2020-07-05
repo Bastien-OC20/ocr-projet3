@@ -84,18 +84,20 @@ body {
     @include text-shadow-1;
 
     @include xmedium {
+        display: flex;
+        justify-content: center;
         width: 45%;
         font-size: 1.3em;
         padding: 0.5em;
-        margin: 3em 0em 2em 6.5em;
+        margin:1em 1em 2em 6em ;
     }
 
     @include small {
         text-align: center;
-        width: 60%;
+        width: 70%;
         font-size: 1em;
         padding: 0.5em;
-        margin: 0em 0em 2em 3em;
+        margin:1em 1em 2em 2.5em ;
     }
 
     &:hover {

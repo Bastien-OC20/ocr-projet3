@@ -5,7 +5,7 @@
 
     @include small {
         padding: 0em;
-        margin: 3em;
+        margin: 1em;
     }
 }
 
@@ -29,11 +29,8 @@
         @include text-shadow-2;
         @include box-shadow;
 
-        img {
-            display: flex;
-            margin: auto;
-            padding-top: 1em;
-            width: 5em;
+        @include small {
+            padding: 1em;
         }
 
         h2 {
@@ -41,25 +38,54 @@
             font-size: 4em;
             margin-bottom: 1em;
             font-family: $font2;
+
+            @include small {
+                font-size: 2.5em;
+            }
+        }
+
+        img {
+            @include small {
+                width: 4em;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            margin-bottom: 1em;
         }
 
         h3 {
             color: $colormenu1;
             margin: 0em;
-            padding: 0em;
+            width: auto;
+            text-decoration: none;
+
+            @include small {
+                font-size: 1em;
+                margin-top: 1em;
+
+            }
 
             :visited {
                 color: $colormenu1;
+                text-decoration: none;
             }
 
             :hover {
                 color: $colormenu1;
+                text-decoration: none;
             }
         }
 
         p {
             font-size: 1.5em;
             margin: 0.5em;
+
+            @include small {
+                font-size: 1.5em;
+                padding: 1em 0em 0.5em 0em;
+            }
         }
 
         // menu la note enchantée entrée
@@ -67,10 +93,20 @@
             display: block;
             margin-bottom: 4em;
 
+            @include small {
+                margin-bottom: -27em;
+            }
+
             &-plats {
+                position: static;
                 display: inline-block;
                 width: 35em;
                 text-align: left;
+
+                @include small {
+                    width: 90%;
+                    text-align: center;
+                }
             }
 
             &-prix {
@@ -78,37 +114,75 @@
                 padding-left: 6em;
                 text-align: right;
 
+                @include small {
+                    position: relative;
+                    top: -26em;
+                    padding: 0em;
+                    line-height: 4.5em;
+                    text-align: left;
+                }
             }
 
             &-sousTitre {
                 display: flex;
                 justify-content: space-around;
+                width: 100%;
                 font-size: 2em;
                 padding-bottom: 1em;
+
+                @include small {
+                    display: block;
+                    font-size: 1.5em;
+                }
 
                 &-barLeft {
                     display: inline-block;
 
                     img {
-                        width: 9em;
+                        display: flex;
+                        width: auto;
                     }
                 }
 
                 a {
-                    padding-top: 0.5em;
+                    width: 3em;
+                    text-decoration: none;
+
+                    @include small {
+                        margin: auto;
+                    }
+
+                    :hover {
+                        text-decoration: none;
+                        @include progress-bar;
+                        @include text-shadow-2;
+
+                    }
+
+                    :visited {
+                        text-decoration: none;
+                    }
+
+                    @include small {
+                        margin: auto;
+                        width: 6em;
+                    }
+
                 }
 
                 &-trait {
+                    position: relative;
+                    top: -0.5em;
                     letter-spacing: 0.05em;
-                    display: inline-block;
+
                 }
 
                 &-barRight {
                     display: inline-block;
 
                     img {
-
-                        width: 9em;
+                        display: flex;
+                        width: auto;
                     }
 
                 }
@@ -122,10 +196,20 @@
             display: block;
             margin-bottom: 4em;
 
+            @include small {
+                margin-bottom: -17em;
+            }
+
             &-plats {
+                position: static;
                 display: inline-block;
                 width: 35em;
                 text-align: left;
+
+                @include small {
+                    width: 90%;
+                    text-align: center;
+                }
             }
 
             &-prix {
@@ -133,6 +217,13 @@
                 padding-left: 6em;
                 text-align: right;
 
+                @include small {
+                    position: relative;
+                    top: -19em;
+                    padding: 0em;
+                    line-height: 4em;
+                    text-align: left;
+                }
             }
 
             &-sousTitre {
@@ -142,32 +233,54 @@
                 font-size: 2em;
                 padding-bottom: 1em;
 
+                @include small {
+                    display: block;
+                    font-size: 1.5em;
+                }
+
                 &-barLeft {
                     display: inline-block;
 
                     img {
-
-                        width: 9em;
+                        display: flex;
+                        width: auto;
                     }
-
                 }
 
                 a {
-                    padding-top: 0.5em;
+                    width: auto;
+                    display: flex;
+                    text-decoration: none;
+
+                    @include small {
+                        margin: auto;
+                    }
+
+                    :hover {
+                        text-decoration: none;
+                        @include progress-bar;
+                        @include text-shadow-2;
+
+                    }
+
+                    :visited {
+                        text-decoration: none;
+                    }
                 }
 
                 &-trait {
+                    position: relative;
+                    top: -0.5em;
                     letter-spacing: 0.05em;
-                    display: inline-block;
-                    font-size: 1em;
                 }
 
                 &-barRight {
                     display: inline-block;
 
                     img {
+                        display: flex;
+                        width: auto;
 
-                        width: 9em;
                     }
 
                 }
@@ -181,10 +294,20 @@
             display: block;
             margin-bottom: 4em;
 
+            @include small {
+                margin-bottom: -18em;
+            }
+
             &-plats {
-                Display: inline-block;
+                position: static;
+                display: inline-block;
                 width: 35em;
                 text-align: left;
+
+                @include small {
+                    width: 90%;
+                    text-align: center;
+                }
             }
 
             &-prix {
@@ -192,40 +315,64 @@
                 padding-left: 6em;
                 text-align: right;
 
+                @include small {
+                    position: relative;
+                    top: -18.5em;
+                    padding: 0em;
+                    line-height: 4em;
+                    text-align: left;
+                }
             }
 
             &-sousTitre {
                 display: flex;
-                justify-content: space-around;
+                justify-content: space-between;
                 text-align: center;
                 width: 100%;
                 font-size: 2em;
                 padding-bottom: 1em;
 
+                @include small {
+                    display: block;
+                    font-size: 1.5em;
+                }
+
                 &-barLeft {
                     display: inline-block;
 
                     img {
-
-                        width: 9em;
+                        display: flex;
+                        width: auto;
                     }
                 }
 
                 a {
-                    padding-top: 0.5em;
+                    width: 7em;
+                    text-decoration: none;
+
+                    :hover {
+                        text-decoration: none;
+                        @include progress-bar;
+                        @include text-shadow-2;
+                    }
+
+                    :visited {
+                        text-decoration: none;
+                    }
                 }
 
                 &-trait {
+                    position: relative;
+                    top: -0.5em;
                     letter-spacing: 0.05em;
-                    display: inline-block;
                 }
 
                 &-barRight {
                     display: inline-block;
 
                     img {
-
-                        width: 9em;
+                        display: flex;
+                        width: auto;
                     }
 
                 }
@@ -252,6 +399,10 @@
 
                 h3 {
                     font-size: 2em;
+
+                    @include small {
+                        font-size: 1.5em;
+                    }
                 }
             }
         }
@@ -270,6 +421,10 @@
         @include text-shadow-3;
         @include box-shadow;
 
+        @include small {
+            padding: 1em;
+        }
+
         h2 {
             text-align: center;
             font-size: 3em;
@@ -283,16 +438,39 @@
             -moz-background-clip: text;
             background-clip: text;
             color: transparent;
+
+            @include small {
+                font-size: 2em;
+            }
         }
 
-        a {
-            text-decoration: none;
-            margin-bottom: 1em;
+        h3 {
+            @include small {
+                font-size: 0.8em;
+                margin: auto;
+                padding: 1em;
+                width: auto;
+            }
+
+            :visited {
+                color: $colormenu1;
+                text-decoration: none;
+            }
+
+            :hover {
+                color: $colormenu1;
+                text-decoration: none;
+            }
         }
 
         p {
             font-size: 1em;
             margin: 0.5em;
+
+            @include small {
+                font-size: 0.8em;
+                padding: 1em 0em 0.5em 0em;
+            }
         }
 
         // menu le chic à la française entrée
@@ -301,12 +479,21 @@
             display: block;
             margin-bottom: 3em;
 
+            @include small {
+                margin-bottom: -6em;
+            }
+
             &-plats {
                 display: inline-block;
                 width: 38em;
                 text-align: left;
                 color: $colormenu2a;
                 margin-bottom: 2em;
+
+                @include small {
+                    width: 90%;
+                    text-align: center;
+                }
             }
 
             &-prix {
@@ -315,25 +502,46 @@
                 text-align: right;
                 color: $colormenu2a;
 
+                @include small {
+                    position: relative;
+                    top: -9em;
+                    padding: 0em;
+                    line-height: 1.2em;
+                    text-align: left;
+                }
+
             }
 
             &-sousTitre {
                 display: flex;
                 justify-content: space-around;
-                font-size: 1.5em;
+                width: 100%;
+                font-size: 2em;
+                padding-bottom: 1em;
 
-                h3 {
+                @include small {
+                    display: block;
+                    font-size: 1.5em;
+                }
+
+                a {
                     color: $colormenu2a;
-                    margin: 0em;
-                    padding: 0em;
+                    width: auto;
+                    text-decoration: none;
 
-                    :visited {
-                        color: $colormenu2a;
+                    @include small {
+
+                        margin: auto;
                     }
 
                     :hover {
-                        color: $colormenu2a;
+                        text-decoration: none;
+                        @include progress-bar;
+                        @include text-shadow-2;
+                    }
 
+                    :visited {
+                        text-decoration: none;
                     }
                 }
 
@@ -341,8 +549,8 @@
                     display: inline-block;
 
                     img {
-
-                        width: 9em;
+                        display: flex;
+                        width: auto;
                     }
                 }
 
@@ -356,8 +564,8 @@
                     display: inline-block;
 
                     img {
-
-                        width: 9em;
+                        display: flex;
+                        width: auto;
                     }
 
                 }
@@ -370,42 +578,72 @@
 
         &--platsPrincipaux {
             display: block;
-            margin-bottom: 3em;
+            margin-bottom: 4em;
+
+            @include small {
+                margin-bottom: -7em;
+            }
 
             &-plats {
+                position: static;
                 display: inline-block;
-                width: 38em;
+                width: 35em;
                 text-align: left;
                 color: $colormenu2b;
-                margin-bottom: 2em;
+
+                @include small {
+                    width: 90%;
+                    text-align: center;
+                }
             }
 
             &-prix {
                 display: inline-block;
-                margin-top: -1em;
                 padding-left: 6em;
                 text-align: right;
                 color: $colormenu2b;
+
+                @include small {
+                    position: relative;
+                    top: -10em;
+                    padding: 0em;
+                    line-height: 2em;
+                    text-align: left;
+                }
 
             }
 
             &-sousTitre {
                 display: flex;
                 justify-content: space-around;
-                font-size: 1.5em;
+                width: 100%;
+                font-size: 2em;
+                padding-bottom: 1em;
 
-                h3 {
+                @include small {
+                    display: block;
+                    font-size: 1.5em;
+                }
+
+                a {
                     color: $colormenu2b;
-                    margin: 0em;
-                    padding: 0em;
+                    width: auto;
+                    display: flex;
+                    text-decoration: none;
+
+                    @include small {
+                        margin: auto;
+                        padding: 0em;
+                    }
 
                     :visited {
-                        color: $colormenu2b;
+                        text-decoration: none;
                     }
 
                     :hover {
-                        color: $colormenu2b;
-
+                        text-decoration: none;
+                        @include progress-bar;
+                        @include text-shadow-2;
                     }
                 }
 
@@ -413,21 +651,23 @@
                     display: inline-block;
 
                     img {
-                        width: 9em;
+                        display: flex;
+                        width: auto;
                     }
                 }
 
                 &-trait {
+                    position: relative;
+                    top: -0.5em;
                     letter-spacing: 0.05em;
-                    display: inline-block;
-                    font-size: 1em;
                 }
 
                 &-barRight {
                     display: inline-block;
 
                     img {
-                        width: 9em;
+                        display: flex;
+                        width: auto;
                     }
 
                 }
@@ -440,14 +680,23 @@
 
         &--dessert {
             display: block;
-            margin-bottom: 3em;
+            margin-bottom: 4em;
+
+            @include small {
+                margin-bottom: -5em;
+            }
 
             &-plats {
+                position: static;
                 display: inline-block;
-                width: 38em;
+                width: 35em;
                 text-align: left;
                 color: $colormenu2c;
-                margin-bottom: 2em;
+
+                @include small {
+                    width: 90%;
+                    text-align: center;
+                }
             }
 
             &-prix {
@@ -456,26 +705,48 @@
                 text-align: right;
                 color: $colormenu2c;
 
+                @include small {
+                    position: relative;
+                    top: -7em;
+                    padding: 0em;
+                    line-height: 1em;
+                    text-align: left;
+                }
+
             }
 
             &-sousTitre {
                 display: flex;
                 justify-content: space-between;
-                font-size: 1.2em;
+                text-align: center;
+                width: 100%;
+                font-size: 2em;
+                padding-bottom: 1em;
+                color: $colormenu2c;
 
-                h3 {
-                    color: $colormenu2c;
-                    line-height: 1em;
-                    margin: 0em;
-                    padding: 0em;
+                @include small {
+                    display: block;
+                    font-size: 1.5em;
+                }
+
+                a {
+                    width: auto;
+                    display: flex;
+                    text-decoration: none;
+
+                    @include small {
+                        margin: auto;
+                        padding: 0em;
+                    }
 
                     :visited {
-                        color: $colormenu2c;
+                        text-decoration: none;
                     }
 
                     :hover {
-                        color: $colormenu2c;
-
+                        text-decoration: none;
+                        @include progress-bar;
+                        @include text-shadow-2;
                     }
                 }
 
@@ -483,20 +754,23 @@
                     display: inline-block;
 
                     img {
-                        width: 14em;
+                        display: flex;
+                        width: auto;
                     }
                 }
 
                 &-trait {
+                    position: relative;
+                    top: -0.5em;
                     letter-spacing: 0.05em;
-                    display: inline-block;
                 }
 
                 &-barRight {
                     display: inline-block;
 
                     img {
-                        width: 14em;
+                        display: flex;
+                        width: auto;
                     }
 
                 }
@@ -518,10 +792,13 @@
         @include text-shadow-3;
         @include box-shadow;
 
+        @include small {
+            padding: 1em;
+        }
+
         h2 {
             text-align: center;
             font-size: 4em;
-            padding-top: 1em;
             margin-bottom: 2em;
             font-family: $font4;
             @include text-shadow-3;
@@ -531,6 +808,10 @@
             -moz-background-clip: text;
             background-clip: text;
             color: transparent;
+
+            @include small {
+                font-size: 2.5em;
+            }
         }
 
         a {
@@ -538,9 +819,33 @@
             margin-bottom: 1em;
         }
 
+        h3 {
+            margin: auto;
+            width: auto;
+            text-decoration: none;
+
+            @include small {
+                font-size: 1.2em;
+                margin: 1em;
+            }
+
+            :visited {
+                text-decoration: none;
+            }
+
+            :hover {
+                text-decoration: none;
+            }
+        }
+
         p {
             font-size: 1.2em;
             margin: 0.5em;
+
+            @include small {
+                font-size: 1em;
+                padding: 1em 0em 0.5em 0em;
+            }
         }
 
 
@@ -549,13 +854,22 @@
 
         &--entree {
             display: block;
-            margin-bottom: 3em;
+            margin-bottom: 4em;
+
+            @include small {
+                margin-bottom: -2em;
+            }
 
             &-plats {
+                position: static;
                 display: inline-block;
-                width: 30em;
+                width: 35em;
                 text-align: left;
 
+                @include small {
+                    width: 90%;
+                    text-align: center;
+                }
             }
 
             &-prix {
@@ -563,51 +877,73 @@
                 padding-left: 6em;
                 text-align: right;
 
-
+                @include small {
+                    position: relative;
+                    top: -9em;
+                    padding: 0em;
+                    line-height: 1.5em;
+                    text-align: left;
+                }
             }
 
             &-sousTitre {
                 display: flex;
                 justify-content: space-around;
-                font-size: 1.5em;
-                line-height: 1em;
+                width: 100%;
+                font-size: 2em;
+                padding-bottom: 1em;
 
-                h3 {
+                @include small {
+                    display: block;
+                    font-size: 1.5em;
+                }
+
+                a {
+                    width: auto;
+                    display: flex;
+                    text-decoration: none;
                     color: black;
-                    margin: 0em;
-                    padding: 0em;
 
-                    :visited {
-                        color: black;
+                    @include small {
+                        margin: auto;
                     }
 
                     :hover {
                         color: black;
+                        text-decoration: none;
+                        @include progress-bar;
+                        @include text-shadow-2;
 
                     }
+
+                    :visited {
+                        color: black;
+                        text-decoration: none;
+                    }
+
                 }
 
                 &-barLeft {
                     display: inline-block;
 
                     img {
-
-                        width: 9em;
+                        display: flex;
+                        width: auto;
                     }
                 }
 
                 &-trait {
+                    position: relative;
+                    top: -0.5em;
                     letter-spacing: 0.05em;
-                    display: inline-block;
-                    font-size: 1em;
                 }
 
                 &-barRight {
                     display: inline-block;
 
                     img {
-
-                        width: 9em;
+                        display: flex;
+                        width: auto;
                     }
 
                 }
@@ -620,13 +956,22 @@
 
         &--platsPrincipaux {
             display: block;
-            margin-bottom: 3em;
+            margin-bottom: 4em;
+
+            @include small {
+                margin-bottom: -2em;
+            }
 
             &-plats {
+                position: static;
                 display: inline-block;
-                width: 30em;
+                width: 35em;
                 text-align: left;
 
+                @include small {
+                    width: 90%;
+                    text-align: center;
+                }
             }
 
             &-prix {
@@ -634,26 +979,52 @@
                 padding-left: 6em;
                 text-align: right;
 
+                @include small {
+                    position: relative;
+                    top: -9em;
+                    padding: 0em;
+                    line-height: 1.5em;
+                    text-align: left;
+                }
 
             }
 
             &-sousTitre {
                 display: flex;
                 justify-content: space-around;
-                font-size: 1.5em;
+                width: 100%;
+                font-size: 2em;
+                padding-bottom: 1em;
 
-                h3 {
+                @include small {
+                    display: block;
+                    font-size: 1.5em;
+                }
+
+                a {
+                    width: auto;
+                    display: flex;
+                    text-decoration: none;
                     color: black;
-                    margin: 0em;
-                    padding: 0em;
 
-                    :visited {
-                        color: black;
+                    @include small {
+                        margin: auto;
                     }
 
                     :hover {
-                        color: black;
+                        text-decoration: none;
+                        @include progress-bar;
+                        @include text-shadow-2;
 
+                    }
+
+                    :visited {
+                        text-decoration: none;
+                    }
+
+                    @include small {
+                        margin: auto;
+                        width: auto
                     }
                 }
 
@@ -661,21 +1032,23 @@
                     display: inline-block;
 
                     img {
-                        width: 9em;
+                        display: flex;
+                        width: auto;
                     }
                 }
 
                 &-trait {
+                    position: relative;
+                    top: -0.5em;
                     letter-spacing: 0.05em;
-                    display: inline-block;
-                    font-size: 1em;
                 }
 
                 &-barRight {
                     display: inline-block;
 
                     img {
-                        width: 9em;
+                        display: flex;
+                        width: auto;
                     }
 
                 }
@@ -691,10 +1064,15 @@
             margin-bottom: 3em;
 
             &-plats {
+                position: static;
                 display: inline-block;
-                width: 30em;
+                width: 35em;
                 text-align: left;
 
+                @include small {
+                    width: 90%;
+                    text-align: center;
+                }
             }
 
             &-prix {
@@ -702,18 +1080,39 @@
                 padding-left: 6em;
                 text-align: right;
 
+                @include small {
+                    position: relative;
+                    top: -8em;
+                    padding: 0em;
+                    line-height: 1em;
+                    text-align: left;
+                }
 
             }
 
             &-sousTitre {
                 display: flex;
-                justify-content: space-around;
-                font-size: 1.5em;
+                justify-content: space-between;
+                text-align: center;
+                width: 100%;
+                font-size: 2em;
+                padding-bottom: 1em;
 
-                h3 {
+                @include small {
+                    display: block;
+                    font-size: 1.5em;
+                }
+
+                a {
+                    width: auto;
+                    display: flex;
+                    text-decoration: none;
                     color: black;
-                    margin: 0em;
-                    padding: 0em;
+
+                    @include small {
+                        margin: auto;
+                        padding: 0em;
+                    }
 
                     :visited {
                         color: black;
@@ -721,7 +1120,8 @@
 
                     :hover {
                         color: black;
-
+                        @include progress-bar;
+                        @include text-shadow-2;
                     }
                 }
 
@@ -767,7 +1167,7 @@
 
         h2 {
             text-align: center;
-            font-size: 4em;
+            font-size: 3em;
             padding-top: 1em;
             margin-bottom: 2em;
             font-family: $font6;
@@ -778,16 +1178,39 @@
             -moz-background-clip: text;
             background-clip: text;
             color: transparent;
+
+            @include small {
+                font-size: 2em;
+            }
         }
 
-        a {
-            text-decoration: none;
-            margin-bottom: 1em;
+        h3 {
+            @include small {
+                font-size: 0.8em;
+                margin: auto;
+                padding: 1em;
+                width: auto;
+            }
+
+            :visited {
+                color: $colormenu1;
+                text-decoration: none;
+            }
+
+            :hover {
+                color: $colormenu1;
+                text-decoration: none;
+            }
         }
 
         p {
             font-size: 1.2em;
             margin: 0.5em;
+
+            @include small {
+                font-size: 1em;
+                padding: 1em 0em 0.5em 0em;
+            }
         }
 
 
@@ -800,12 +1223,20 @@
             display: block;
             margin-bottom: 3em;
 
+            @include small {
+                margin-bottom: -10em;
+            }
+
             &-plats {
                 display: inline-block;
                 width: 38em;
                 text-align: left;
                 color: black;
-                margin-bottom: 2em;
+
+                @include small {
+                    width: 90%;
+                    text-align: center;
+                }
             }
 
             &-prix {
@@ -814,26 +1245,46 @@
                 text-align: right;
                 color: black;
 
+                @include small {
+                    position: relative;
+                    top: -13em;
+                    padding: 0em;
+                    line-height: 3em;
+                    text-align: left;
+                }
+
             }
 
             &-sousTitre {
                 display: flex;
                 justify-content: space-around;
+                width: 100%;
                 font-size: 2em;
-                line-height: 1em;
+                padding-bottom: 1em;
 
-                h3 {
+                @include small {
+                    display: block;
+                    font-size: 1.5em;
+                }
+
+                a {
                     color: black;
-                    margin: 0em;
-                    padding: 0em;
+                    width: auto;
+                    text-decoration: none;
 
-                    :visited {
-                        color: black;
+                    @include small {
+                        text-decoration: none;
+                        margin: auto;
                     }
 
                     :hover {
-                        color: black;
+                        text-decoration: none;
+                        @include progress-bar;
+                        @include text-shadow-2;
+                    }
 
+                    :visited {
+                        text-decoration: none;
                     }
                 }
 
@@ -841,8 +1292,8 @@
                     display: inline-block;
 
                     img {
-
-                        width: 9em;
+                        display: flex;
+                        width: auto;
                     }
                 }
 
@@ -856,8 +1307,8 @@
                     display: inline-block;
 
                     img {
-
-                        width: 9em;
+                        display: flex;
+                        width: auto;
                     }
 
                 }
@@ -872,42 +1323,69 @@
             display: block;
             margin-bottom: 3em;
 
+            @include small {
+                margin-bottom: -7em;
+            }
+
             &-plats {
+                position: static;
                 display: inline-block;
-                width: 38em;
+                width: 35em;
                 text-align: left;
                 color: black;
-                margin-bottom: 2em;
+
+                @include small {
+                    width: 90%;
+                    text-align: center;
+                }
             }
 
             &-prix {
                 display: inline-block;
-                margin-top: -1em;
                 padding-left: 6em;
                 text-align: right;
                 color: black;
 
+                @include small {
+                    position: relative;
+                    top: -10em;
+                    padding: 0em;
+                    line-height: 2em;
+                    text-align: left;
+                }
             }
 
             &-sousTitre {
-                text-align: center;
                 display: flex;
                 justify-content: space-around;
+                width: 100%;
                 font-size: 2em;
-                line-height: 1em;
+                padding-bottom: 1em;
 
-                h3 {
+                @include small {
+                    display: block;
+                    font-size: 1.5em;
+                }
+
+                a {
                     color: black;
-                    margin: 0em;
-                    padding: 0em;
+                    width: auto;
+                    display: flex;
+                    text-decoration: none;
+
+                    @include small {
+                        margin: auto;
+                        padding: 0em;
+                    }
 
                     :visited {
-                        color: black;
+                        text-decoration: none;
                     }
 
                     :hover {
-                        color: black;
-
+                        text-decoration: none;
+                        @include progress-bar;
+                        @include text-shadow-2;
                     }
                 }
 
@@ -915,20 +1393,23 @@
                     display: inline-block;
 
                     img {
-                        width: 8em;
+                        display: flex;
+                        width: auto;
                     }
                 }
 
                 &-trait {
-                    display: inline-block;
-                    font-size: 1em;
+                    position: relative;
+                    top: -0.5em;
+                    letter-spacing: 0.05em;
                 }
 
                 &-barRight {
                     display: inline-block;
 
                     img {
-                        width: 8em;
+                        display: flex;
+                        width: auto;
                     }
 
                 }
@@ -941,14 +1422,23 @@
 
         &--dessert {
             display: block;
-            margin-bottom: 3em;
+            margin-bottom: 4em;
+
+            @include small {
+                margin-bottom: -5em;
+            }
 
             &-plats {
+                position: static;
                 display: inline-block;
-                width: 38em;
+                width: 35em;
                 text-align: left;
                 color: black;
-                margin-bottom: 2em;
+
+                @include small {
+                    width: 90%;
+                    text-align: center;
+                }
             }
 
             &-prix {
@@ -957,26 +1447,50 @@
                 text-align: right;
                 color: black;
 
+                @include small {
+                    position: relative;
+                    top: -12em;
+                    padding: 0em;
+                    line-height: 2.5em;
+                    text-align: left;
+                }
             }
 
             &-sousTitre {
                 display: flex;
-                justify-content: space-around;
+                justify-content: space-between;
+                text-align: center;
+                width: 100%;
                 font-size: 2em;
+                padding-bottom: 1em;
+                color: black;
 
-                h3 {
+                @include small {
+                    display: block;
+                    font-size: 1.5em;
+                }
+
+                a {
+                    width: auto;
+                    display: flex;
+                    text-decoration: none;
                     color: black;
-                    line-height: 1em;
-                    margin: 0em;
-                    padding: 0em;
+
+                    @include small {
+                        margin: auto;
+                        padding: 0em;
+                    }
 
                     :visited {
                         color: black;
+                        text-decoration: none;
                     }
 
                     :hover {
                         color: black;
-
+                        text-decoration: none;
+                        @include progress-bar;
+                        @include text-shadow-2;
                     }
                 }
 
@@ -984,20 +1498,23 @@
                     display: inline-block;
 
                     img {
-                        width: 9em;
+                        display: flex;
+                        width: auto;
                     }
                 }
 
                 &-trait {
+                    position: relative;
+                    top: -0.5em;
                     letter-spacing: 0.05em;
-                    display: inline-block;
                 }
 
                 &-barRight {
                     display: inline-block;
 
                     img {
-                        width: 9em;
+                        display: flex;
+                        width: auto;
                     }
 
                 }

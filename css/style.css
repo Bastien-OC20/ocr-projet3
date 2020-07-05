@@ -99,11 +99,38 @@
     -ms-transform: translate(-55px, -48px);
   }
 }
-@media screen and (max-height: 300px) {
-  ul {
-    margin-top: 40px;
+@keyframes couleur {
+  from {
+    color: #795050;
+  }
+  60% {
+    color: rgba(88, 23, 32, 0.685);
+  }
+  to {
+    color: #3c1218;
   }
 }
+@keyframes progress-bar {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+.btn_return a {
+  color: #ebc64d;
+  text-decoration: none;
+}
+.btn_return a .btn_return a:visited {
+  color: #ebc64d;
+  text-decoration: none;
+}
+.btn_return a .btn_return a:hover {
+  color: #ebc64d;
+  text-decoration: none;
+}
+
 * {
   margin: 0em;
   justify-content: center;
@@ -178,19 +205,21 @@ body {
 }
 @media all and (min-width: 560px) and (max-width: 960px) {
   .btn {
+    display: flex;
+    justify-content: center;
     width: 45%;
     font-size: 1.3em;
     padding: 0.5em;
-    margin: 3em 0em 2em 6.5em;
+    margin: 1em 1em 2em 6em;
   }
 }
 @media all and (min-width: 320px) and (max-width: 480px) {
   .btn {
     text-align: center;
-    width: 60%;
+    width: 70%;
     font-size: 1em;
     padding: 0.5em;
-    margin: 0em 0em 2em 3em;
+    margin: 1em 1em 2em 2.5em;
   }
 }
 .btn:hover {
@@ -264,6 +293,19 @@ footer a:hover {
   animation-iteration-count: 3;
 }
 
+.btn_return a {
+  color: #ebc64d;
+  text-decoration: none;
+}
+.btn_return a .btn_return a:visited {
+  color: #ebc64d;
+  text-decoration: none;
+}
+.btn_return a .btn_return a:hover {
+  color: #ebc64d;
+  text-decoration: none;
+}
+
 .menus-list {
   text-align: center;
   width: 90%;
@@ -295,6 +337,13 @@ footer a:hover {
   animation: zoom-in-out 1s linear 0s 1 normal;
   opacity: 80%;
 }
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menus-list a {
+    width: 90%;
+    margin: auto;
+  }
+}
+
 .menus-list__menu_note {
   box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
   background-color: #FCDFDB;
@@ -408,7 +457,7 @@ footer a:hover {
 @media all and (min-width: 320px) and (max-width: 480px) {
   .container {
     padding: 0em;
-    margin: 3em;
+    margin: 1em;
   }
 }
 
@@ -423,11 +472,10 @@ footer a:hover {
   text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
   box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
 }
-.menu-card__note img {
-  display: flex;
-  margin: auto;
-  padding-top: 1em;
-  width: 5em;
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note {
+    padding: 1em;
+  }
 }
 .menu-card__note h2 {
   text-align: center;
@@ -435,73 +483,176 @@ footer a:hover {
   margin-bottom: 1em;
   font-family: "Devonshire", cursive;
 }
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note h2 {
+    font-size: 2.5em;
+  }
+}
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note img {
+    width: 4em;
+  }
+}
+.menu-card__note a {
+  text-decoration: none;
+  margin-bottom: 1em;
+}
 .menu-card__note h3 {
   color: #3c1218;
   margin: 0em;
-  padding: 0em;
+  width: auto;
+  text-decoration: none;
+}
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note h3 {
+    font-size: 1em;
+    margin-top: 1em;
+  }
 }
 .menu-card__note h3 :visited {
   color: #3c1218;
+  text-decoration: none;
 }
 .menu-card__note h3 :hover {
   color: #3c1218;
+  text-decoration: none;
 }
 .menu-card__note p {
   font-size: 1.5em;
   margin: 0.5em;
 }
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note p {
+    font-size: 1.5em;
+    padding: 1em 0em 0.5em 0em;
+  }
+}
 .menu-card__note--entree {
   display: block;
   margin-bottom: 4em;
 }
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note--entree {
+    margin-bottom: -27em;
+  }
+}
 .menu-card__note--entree-plats {
+  position: static;
   display: inline-block;
   width: 35em;
   text-align: left;
+}
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note--entree-plats {
+    width: 90%;
+    text-align: center;
+  }
 }
 .menu-card__note--entree-prix {
   display: inline-block;
   padding-left: 6em;
   text-align: right;
 }
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note--entree-prix {
+    position: relative;
+    top: -26em;
+    padding: 0em;
+    line-height: 4.5em;
+    text-align: left;
+  }
+}
 .menu-card__note--entree-sousTitre {
   display: flex;
   justify-content: space-around;
+  width: 100%;
   font-size: 2em;
   padding-bottom: 1em;
+}
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note--entree-sousTitre {
+    display: block;
+    font-size: 1.5em;
+  }
 }
 .menu-card__note--entree-sousTitre-barLeft {
   display: inline-block;
 }
 .menu-card__note--entree-sousTitre-barLeft img {
-  width: 9em;
+  display: flex;
+  width: auto;
 }
 .menu-card__note--entree-sousTitre a {
-  padding-top: 0.5em;
+  width: 3em;
+  text-decoration: none;
+}
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note--entree-sousTitre a {
+    margin: auto;
+  }
+}
+.menu-card__note--entree-sousTitre a :hover {
+  text-decoration: none;
+  border-bottom: solid 0.07em;
+  text-shadow: 2px 2px 4px rgba(153, 153, 153, 0.349);
+  animation: couleur, progress-bar 1000ms;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+}
+.menu-card__note--entree-sousTitre a :visited {
+  text-decoration: none;
+}
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note--entree-sousTitre a {
+    margin: auto;
+    width: 6em;
+  }
 }
 .menu-card__note--entree-sousTitre-trait {
+  position: relative;
+  top: -0.5em;
   letter-spacing: 0.05em;
-  display: inline-block;
 }
 .menu-card__note--entree-sousTitre-barRight {
   display: inline-block;
 }
 .menu-card__note--entree-sousTitre-barRight img {
-  width: 9em;
+  display: flex;
+  width: auto;
 }
 .menu-card__note--platsPrincipaux {
   display: block;
   margin-bottom: 4em;
 }
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note--platsPrincipaux {
+    margin-bottom: -17em;
+  }
+}
 .menu-card__note--platsPrincipaux-plats {
+  position: static;
   display: inline-block;
   width: 35em;
   text-align: left;
+}
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note--platsPrincipaux-plats {
+    width: 90%;
+    text-align: center;
+  }
 }
 .menu-card__note--platsPrincipaux-prix {
   display: inline-block;
   padding-left: 6em;
   text-align: right;
+}
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note--platsPrincipaux-prix {
+    position: relative;
+    top: -19em;
+    padding: 0em;
+    line-height: 4em;
+    text-align: left;
+  }
 }
 .menu-card__note--platsPrincipaux-sousTitre {
   display: flex;
@@ -510,66 +661,132 @@ footer a:hover {
   font-size: 2em;
   padding-bottom: 1em;
 }
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note--platsPrincipaux-sousTitre {
+    display: block;
+    font-size: 1.5em;
+  }
+}
 .menu-card__note--platsPrincipaux-sousTitre-barLeft {
   display: inline-block;
 }
 .menu-card__note--platsPrincipaux-sousTitre-barLeft img {
-  width: 9em;
+  display: flex;
+  width: auto;
 }
 .menu-card__note--platsPrincipaux-sousTitre a {
-  padding-top: 0.5em;
+  width: auto;
+  display: flex;
+  text-decoration: none;
+}
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note--platsPrincipaux-sousTitre a {
+    margin: auto;
+  }
+}
+.menu-card__note--platsPrincipaux-sousTitre a :hover {
+  text-decoration: none;
+  border-bottom: solid 0.07em;
+  text-shadow: 2px 2px 4px rgba(153, 153, 153, 0.349);
+  animation: couleur, progress-bar 1000ms;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+}
+.menu-card__note--platsPrincipaux-sousTitre a :visited {
+  text-decoration: none;
 }
 .menu-card__note--platsPrincipaux-sousTitre-trait {
+  position: relative;
+  top: -0.5em;
   letter-spacing: 0.05em;
-  display: inline-block;
-  font-size: 1em;
 }
 .menu-card__note--platsPrincipaux-sousTitre-barRight {
   display: inline-block;
 }
 .menu-card__note--platsPrincipaux-sousTitre-barRight img {
-  width: 9em;
+  display: flex;
+  width: auto;
 }
 .menu-card__note--dessert {
   display: block;
   margin-bottom: 4em;
 }
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note--dessert {
+    margin-bottom: -18em;
+  }
+}
 .menu-card__note--dessert-plats {
-  Display: inline-block;
+  position: static;
+  display: inline-block;
   width: 35em;
   text-align: left;
+}
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note--dessert-plats {
+    width: 90%;
+    text-align: center;
+  }
 }
 .menu-card__note--dessert-prix {
   display: inline-block;
   padding-left: 6em;
   text-align: right;
 }
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note--dessert-prix {
+    position: relative;
+    top: -18.5em;
+    padding: 0em;
+    line-height: 4em;
+    text-align: left;
+  }
+}
 .menu-card__note--dessert-sousTitre {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   text-align: center;
   width: 100%;
   font-size: 2em;
   padding-bottom: 1em;
 }
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note--dessert-sousTitre {
+    display: block;
+    font-size: 1.5em;
+  }
+}
 .menu-card__note--dessert-sousTitre-barLeft {
   display: inline-block;
 }
 .menu-card__note--dessert-sousTitre-barLeft img {
-  width: 9em;
+  display: flex;
+  width: auto;
 }
 .menu-card__note--dessert-sousTitre a {
-  padding-top: 0.5em;
+  width: 7em;
+  text-decoration: none;
+}
+.menu-card__note--dessert-sousTitre a :hover {
+  text-decoration: none;
+  border-bottom: solid 0.07em;
+  text-shadow: 2px 2px 4px rgba(153, 153, 153, 0.349);
+  animation: couleur, progress-bar 1000ms;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+}
+.menu-card__note--dessert-sousTitre a :visited {
+  text-decoration: none;
 }
 .menu-card__note--dessert-sousTitre-trait {
+  position: relative;
+  top: -0.5em;
   letter-spacing: 0.05em;
-  display: inline-block;
 }
 .menu-card__note--dessert-sousTitre-barRight {
   display: inline-block;
 }
 .menu-card__note--dessert-sousTitre-barRight img {
-  width: 9em;
+  display: flex;
+  width: auto;
 }
 .menu-card__note--titreFooter-picture img {
   display: inline-block;
@@ -586,6 +803,11 @@ footer a:hover {
 .menu-card__note--titreFooter a h3 {
   font-size: 2em;
 }
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__note--titreFooter a h3 {
+    font-size: 1.5em;
+  }
+}
 .menu-card__chic {
   display: block;
   margin: auto;
@@ -595,6 +817,11 @@ footer a:hover {
   background-color: #FFF5FE;
   text-shadow: 2px 2px 4px rgba(153, 153, 153, 0.349);
   box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
+}
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__chic {
+    padding: 1em;
+  }
 }
 .menu-card__chic h2 {
   text-align: center;
@@ -610,17 +837,45 @@ footer a:hover {
   background-clip: text;
   color: transparent;
 }
-.menu-card__chic a {
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__chic h2 {
+    font-size: 2em;
+  }
+}
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__chic h3 {
+    font-size: 0.8em;
+    margin: auto;
+    padding: 1em;
+    width: auto;
+  }
+}
+.menu-card__chic h3 :visited {
+  color: #3c1218;
   text-decoration: none;
-  margin-bottom: 1em;
+}
+.menu-card__chic h3 :hover {
+  color: #3c1218;
+  text-decoration: none;
 }
 .menu-card__chic p {
   font-size: 1em;
   margin: 0.5em;
 }
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__chic p {
+    font-size: 0.8em;
+    padding: 1em 0em 0.5em 0em;
+  }
+}
 .menu-card__chic--entree {
   display: block;
   margin-bottom: 3em;
+}
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__chic--entree {
+    margin-bottom: -6em;
+  }
 }
 .menu-card__chic--entree-plats {
   display: inline-block;
@@ -629,33 +884,66 @@ footer a:hover {
   color: #c67412;
   margin-bottom: 2em;
 }
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__chic--entree-plats {
+    width: 90%;
+    text-align: center;
+  }
+}
 .menu-card__chic--entree-prix {
   display: inline-block;
   padding-left: 6em;
   text-align: right;
   color: #c67412;
 }
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__chic--entree-prix {
+    position: relative;
+    top: -9em;
+    padding: 0em;
+    line-height: 1.2em;
+    text-align: left;
+  }
+}
 .menu-card__chic--entree-sousTitre {
   display: flex;
   justify-content: space-around;
-  font-size: 1.5em;
+  width: 100%;
+  font-size: 2em;
+  padding-bottom: 1em;
 }
-.menu-card__chic--entree-sousTitre h3 {
-  color: #c67412;
-  margin: 0em;
-  padding: 0em;
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__chic--entree-sousTitre {
+    display: block;
+    font-size: 1.5em;
+  }
 }
-.menu-card__chic--entree-sousTitre h3 :visited {
+.menu-card__chic--entree-sousTitre a {
   color: #c67412;
+  width: auto;
+  text-decoration: none;
 }
-.menu-card__chic--entree-sousTitre h3 :hover {
-  color: #c67412;
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__chic--entree-sousTitre a {
+    margin: auto;
+  }
+}
+.menu-card__chic--entree-sousTitre a :hover {
+  text-decoration: none;
+  border-bottom: solid 0.07em;
+  text-shadow: 2px 2px 4px rgba(153, 153, 153, 0.349);
+  animation: couleur, progress-bar 1000ms;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+}
+.menu-card__chic--entree-sousTitre a :visited {
+  text-decoration: none;
 }
 .menu-card__chic--entree-sousTitre-barLeft {
   display: inline-block;
 }
 .menu-card__chic--entree-sousTitre-barLeft img {
-  width: 9em;
+  display: flex;
+  width: auto;
 }
 .menu-card__chic--entree-sousTitre-trait {
   letter-spacing: 0.05em;
@@ -666,69 +954,121 @@ footer a:hover {
   display: inline-block;
 }
 .menu-card__chic--entree-sousTitre-barRight img {
-  width: 9em;
+  display: flex;
+  width: auto;
 }
 .menu-card__chic--platsPrincipaux {
   display: block;
-  margin-bottom: 3em;
+  margin-bottom: 4em;
+}
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__chic--platsPrincipaux {
+    margin-bottom: -7em;
+  }
 }
 .menu-card__chic--platsPrincipaux-plats {
+  position: static;
   display: inline-block;
-  width: 38em;
+  width: 35em;
   text-align: left;
   color: #a56799;
-  margin-bottom: 2em;
+}
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__chic--platsPrincipaux-plats {
+    width: 90%;
+    text-align: center;
+  }
 }
 .menu-card__chic--platsPrincipaux-prix {
   display: inline-block;
-  margin-top: -1em;
   padding-left: 6em;
   text-align: right;
   color: #a56799;
 }
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__chic--platsPrincipaux-prix {
+    position: relative;
+    top: -10em;
+    padding: 0em;
+    line-height: 2em;
+    text-align: left;
+  }
+}
 .menu-card__chic--platsPrincipaux-sousTitre {
   display: flex;
   justify-content: space-around;
-  font-size: 1.5em;
+  width: 100%;
+  font-size: 2em;
+  padding-bottom: 1em;
 }
-.menu-card__chic--platsPrincipaux-sousTitre h3 {
-  color: #a56799;
-  margin: 0em;
-  padding: 0em;
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__chic--platsPrincipaux-sousTitre {
+    display: block;
+    font-size: 1.5em;
+  }
 }
-.menu-card__chic--platsPrincipaux-sousTitre h3 :visited {
+.menu-card__chic--platsPrincipaux-sousTitre a {
   color: #a56799;
+  width: auto;
+  display: flex;
+  text-decoration: none;
 }
-.menu-card__chic--platsPrincipaux-sousTitre h3 :hover {
-  color: #a56799;
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__chic--platsPrincipaux-sousTitre a {
+    margin: auto;
+    padding: 0em;
+  }
+}
+.menu-card__chic--platsPrincipaux-sousTitre a :visited {
+  text-decoration: none;
+}
+.menu-card__chic--platsPrincipaux-sousTitre a :hover {
+  text-decoration: none;
+  border-bottom: solid 0.07em;
+  text-shadow: 2px 2px 4px rgba(153, 153, 153, 0.349);
+  animation: couleur, progress-bar 1000ms;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
 }
 .menu-card__chic--platsPrincipaux-sousTitre-barLeft {
   display: inline-block;
 }
 .menu-card__chic--platsPrincipaux-sousTitre-barLeft img {
-  width: 9em;
+  display: flex;
+  width: auto;
 }
 .menu-card__chic--platsPrincipaux-sousTitre-trait {
+  position: relative;
+  top: -0.5em;
   letter-spacing: 0.05em;
-  display: inline-block;
-  font-size: 1em;
 }
 .menu-card__chic--platsPrincipaux-sousTitre-barRight {
   display: inline-block;
 }
 .menu-card__chic--platsPrincipaux-sousTitre-barRight img {
-  width: 9em;
+  display: flex;
+  width: auto;
 }
 .menu-card__chic--dessert {
   display: block;
-  margin-bottom: 3em;
+  margin-bottom: 4em;
+}
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__chic--dessert {
+    margin-bottom: -5em;
+  }
 }
 .menu-card__chic--dessert-plats {
+  position: static;
   display: inline-block;
-  width: 38em;
+  width: 35em;
   text-align: left;
   color: #6e4ccc;
-  margin-bottom: 2em;
+}
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__chic--dessert-plats {
+    width: 90%;
+    text-align: center;
+  }
 }
 .menu-card__chic--dessert-prix {
   display: inline-block;
@@ -736,38 +1076,69 @@ footer a:hover {
   text-align: right;
   color: #6e4ccc;
 }
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__chic--dessert-prix {
+    position: relative;
+    top: -7em;
+    padding: 0em;
+    line-height: 1em;
+    text-align: left;
+  }
+}
 .menu-card__chic--dessert-sousTitre {
   display: flex;
   justify-content: space-between;
-  font-size: 1.2em;
-}
-.menu-card__chic--dessert-sousTitre h3 {
-  color: #6e4ccc;
-  line-height: 1em;
-  margin: 0em;
-  padding: 0em;
-}
-.menu-card__chic--dessert-sousTitre h3 :visited {
+  text-align: center;
+  width: 100%;
+  font-size: 2em;
+  padding-bottom: 1em;
   color: #6e4ccc;
 }
-.menu-card__chic--dessert-sousTitre h3 :hover {
-  color: #6e4ccc;
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__chic--dessert-sousTitre {
+    display: block;
+    font-size: 1.5em;
+  }
+}
+.menu-card__chic--dessert-sousTitre a {
+  width: auto;
+  display: flex;
+  text-decoration: none;
+}
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__chic--dessert-sousTitre a {
+    margin: auto;
+    padding: 0em;
+  }
+}
+.menu-card__chic--dessert-sousTitre a :visited {
+  text-decoration: none;
+}
+.menu-card__chic--dessert-sousTitre a :hover {
+  text-decoration: none;
+  border-bottom: solid 0.07em;
+  text-shadow: 2px 2px 4px rgba(153, 153, 153, 0.349);
+  animation: couleur, progress-bar 1000ms;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
 }
 .menu-card__chic--dessert-sousTitre-barLeft {
   display: inline-block;
 }
 .menu-card__chic--dessert-sousTitre-barLeft img {
-  width: 14em;
+  display: flex;
+  width: auto;
 }
 .menu-card__chic--dessert-sousTitre-trait {
+  position: relative;
+  top: -0.5em;
   letter-spacing: 0.05em;
-  display: inline-block;
 }
 .menu-card__chic--dessert-sousTitre-barRight {
   display: inline-block;
 }
 .menu-card__chic--dessert-sousTitre-barRight img {
-  width: 14em;
+  display: flex;
+  width: auto;
 }
 .menu-card__delice {
   display: block;
@@ -779,10 +1150,14 @@ footer a:hover {
   text-shadow: 2px 2px 4px rgba(153, 153, 153, 0.349);
   box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
 }
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__delice {
+    padding: 1em;
+  }
+}
 .menu-card__delice h2 {
   text-align: center;
   font-size: 4em;
-  padding-top: 1em;
   margin-bottom: 2em;
   font-family: "Dancing Script", cursive;
   text-shadow: 2px 2px 4px rgba(153, 153, 153, 0.349);
@@ -793,138 +1168,291 @@ footer a:hover {
   background-clip: text;
   color: transparent;
 }
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__delice h2 {
+    font-size: 2.5em;
+  }
+}
 .menu-card__delice a {
   text-decoration: none;
   margin-bottom: 1em;
+}
+.menu-card__delice h3 {
+  margin: auto;
+  width: auto;
+  text-decoration: none;
+}
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__delice h3 {
+    font-size: 1.2em;
+    margin: 1em;
+  }
+}
+.menu-card__delice h3 :visited {
+  text-decoration: none;
+}
+.menu-card__delice h3 :hover {
+  text-decoration: none;
 }
 .menu-card__delice p {
   font-size: 1.2em;
   margin: 0.5em;
 }
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__delice p {
+    font-size: 1em;
+    padding: 1em 0em 0.5em 0em;
+  }
+}
 .menu-card__delice--entree {
   display: block;
-  margin-bottom: 3em;
+  margin-bottom: 4em;
+}
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__delice--entree {
+    margin-bottom: -2em;
+  }
 }
 .menu-card__delice--entree-plats {
+  position: static;
   display: inline-block;
-  width: 30em;
+  width: 35em;
   text-align: left;
+}
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__delice--entree-plats {
+    width: 90%;
+    text-align: center;
+  }
 }
 .menu-card__delice--entree-prix {
   display: inline-block;
   padding-left: 6em;
   text-align: right;
 }
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__delice--entree-prix {
+    position: relative;
+    top: -9em;
+    padding: 0em;
+    line-height: 1.5em;
+    text-align: left;
+  }
+}
 .menu-card__delice--entree-sousTitre {
   display: flex;
   justify-content: space-around;
-  font-size: 1.5em;
-  line-height: 1em;
+  width: 100%;
+  font-size: 2em;
+  padding-bottom: 1em;
 }
-.menu-card__delice--entree-sousTitre h3 {
-  color: black;
-  margin: 0em;
-  padding: 0em;
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__delice--entree-sousTitre {
+    display: block;
+    font-size: 1.5em;
+  }
 }
-.menu-card__delice--entree-sousTitre h3 :visited {
+.menu-card__delice--entree-sousTitre a {
+  width: auto;
+  display: flex;
+  text-decoration: none;
   color: black;
 }
-.menu-card__delice--entree-sousTitre h3 :hover {
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__delice--entree-sousTitre a {
+    margin: auto;
+  }
+}
+.menu-card__delice--entree-sousTitre a :hover {
   color: black;
+  text-decoration: none;
+  border-bottom: solid 0.07em;
+  text-shadow: 2px 2px 4px rgba(153, 153, 153, 0.349);
+  animation: couleur, progress-bar 1000ms;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+}
+.menu-card__delice--entree-sousTitre a :visited {
+  color: black;
+  text-decoration: none;
 }
 .menu-card__delice--entree-sousTitre-barLeft {
   display: inline-block;
 }
 .menu-card__delice--entree-sousTitre-barLeft img {
-  width: 9em;
+  display: flex;
+  width: auto;
 }
 .menu-card__delice--entree-sousTitre-trait {
+  position: relative;
+  top: -0.5em;
   letter-spacing: 0.05em;
-  display: inline-block;
-  font-size: 1em;
 }
 .menu-card__delice--entree-sousTitre-barRight {
   display: inline-block;
 }
 .menu-card__delice--entree-sousTitre-barRight img {
-  width: 9em;
+  display: flex;
+  width: auto;
 }
 .menu-card__delice--platsPrincipaux {
   display: block;
-  margin-bottom: 3em;
+  margin-bottom: 4em;
+}
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__delice--platsPrincipaux {
+    margin-bottom: -2em;
+  }
 }
 .menu-card__delice--platsPrincipaux-plats {
+  position: static;
   display: inline-block;
-  width: 30em;
+  width: 35em;
   text-align: left;
+}
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__delice--platsPrincipaux-plats {
+    width: 90%;
+    text-align: center;
+  }
 }
 .menu-card__delice--platsPrincipaux-prix {
   display: inline-block;
   padding-left: 6em;
   text-align: right;
 }
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__delice--platsPrincipaux-prix {
+    position: relative;
+    top: -9em;
+    padding: 0em;
+    line-height: 1.5em;
+    text-align: left;
+  }
+}
 .menu-card__delice--platsPrincipaux-sousTitre {
   display: flex;
   justify-content: space-around;
-  font-size: 1.5em;
+  width: 100%;
+  font-size: 2em;
+  padding-bottom: 1em;
 }
-.menu-card__delice--platsPrincipaux-sousTitre h3 {
-  color: black;
-  margin: 0em;
-  padding: 0em;
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__delice--platsPrincipaux-sousTitre {
+    display: block;
+    font-size: 1.5em;
+  }
 }
-.menu-card__delice--platsPrincipaux-sousTitre h3 :visited {
+.menu-card__delice--platsPrincipaux-sousTitre a {
+  width: auto;
+  display: flex;
+  text-decoration: none;
   color: black;
 }
-.menu-card__delice--platsPrincipaux-sousTitre h3 :hover {
-  color: black;
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__delice--platsPrincipaux-sousTitre a {
+    margin: auto;
+  }
+}
+.menu-card__delice--platsPrincipaux-sousTitre a :hover {
+  text-decoration: none;
+  border-bottom: solid 0.07em;
+  text-shadow: 2px 2px 4px rgba(153, 153, 153, 0.349);
+  animation: couleur, progress-bar 1000ms;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+}
+.menu-card__delice--platsPrincipaux-sousTitre a :visited {
+  text-decoration: none;
+}
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__delice--platsPrincipaux-sousTitre a {
+    margin: auto;
+    width: auto;
+  }
 }
 .menu-card__delice--platsPrincipaux-sousTitre-barLeft {
   display: inline-block;
 }
 .menu-card__delice--platsPrincipaux-sousTitre-barLeft img {
-  width: 9em;
+  display: flex;
+  width: auto;
 }
 .menu-card__delice--platsPrincipaux-sousTitre-trait {
+  position: relative;
+  top: -0.5em;
   letter-spacing: 0.05em;
-  display: inline-block;
-  font-size: 1em;
 }
 .menu-card__delice--platsPrincipaux-sousTitre-barRight {
   display: inline-block;
 }
 .menu-card__delice--platsPrincipaux-sousTitre-barRight img {
-  width: 9em;
+  display: flex;
+  width: auto;
 }
 .menu-card__delice--dessert {
   display: block;
   margin-bottom: 3em;
 }
 .menu-card__delice--dessert-plats {
+  position: static;
   display: inline-block;
-  width: 30em;
+  width: 35em;
   text-align: left;
+}
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__delice--dessert-plats {
+    width: 90%;
+    text-align: center;
+  }
 }
 .menu-card__delice--dessert-prix {
   display: inline-block;
   padding-left: 6em;
   text-align: right;
 }
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__delice--dessert-prix {
+    position: relative;
+    top: -8em;
+    padding: 0em;
+    line-height: 1em;
+    text-align: left;
+  }
+}
 .menu-card__delice--dessert-sousTitre {
   display: flex;
-  justify-content: space-around;
-  font-size: 1.5em;
+  justify-content: space-between;
+  text-align: center;
+  width: 100%;
+  font-size: 2em;
+  padding-bottom: 1em;
 }
-.menu-card__delice--dessert-sousTitre h3 {
-  color: black;
-  margin: 0em;
-  padding: 0em;
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__delice--dessert-sousTitre {
+    display: block;
+    font-size: 1.5em;
+  }
 }
-.menu-card__delice--dessert-sousTitre h3 :visited {
+.menu-card__delice--dessert-sousTitre a {
+  width: auto;
+  display: flex;
+  text-decoration: none;
   color: black;
 }
-.menu-card__delice--dessert-sousTitre h3 :hover {
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__delice--dessert-sousTitre a {
+    margin: auto;
+    padding: 0em;
+  }
+}
+.menu-card__delice--dessert-sousTitre a :visited {
   color: black;
+}
+.menu-card__delice--dessert-sousTitre a :hover {
+  color: black;
+  border-bottom: solid 0.07em;
+  text-shadow: 2px 2px 4px rgba(153, 153, 153, 0.349);
+  animation: couleur, progress-bar 1000ms;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
 }
 .menu-card__delice--dessert-sousTitre-barLeft {
   display: inline-block;
@@ -954,7 +1482,7 @@ footer a:hover {
 }
 .menu-card__gout h2 {
   text-align: center;
-  font-size: 4em;
+  font-size: 3em;
   padding-top: 1em;
   margin-bottom: 2em;
   font-family: "Kaushan Script", cursive;
@@ -966,24 +1494,57 @@ footer a:hover {
   background-clip: text;
   color: transparent;
 }
-.menu-card__gout a {
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__gout h2 {
+    font-size: 2em;
+  }
+}
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__gout h3 {
+    font-size: 0.8em;
+    margin: auto;
+    padding: 1em;
+    width: auto;
+  }
+}
+.menu-card__gout h3 :visited {
+  color: #3c1218;
   text-decoration: none;
-  margin-bottom: 1em;
+}
+.menu-card__gout h3 :hover {
+  color: #3c1218;
+  text-decoration: none;
 }
 .menu-card__gout p {
   font-size: 1.2em;
   margin: 0.5em;
 }
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__gout p {
+    font-size: 1em;
+    padding: 1em 0em 0.5em 0em;
+  }
+}
 .menu-card__gout--entree {
   display: block;
   margin-bottom: 3em;
+}
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__gout--entree {
+    margin-bottom: -10em;
+  }
 }
 .menu-card__gout--entree-plats {
   display: inline-block;
   width: 38em;
   text-align: left;
   color: black;
-  margin-bottom: 2em;
+}
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__gout--entree-plats {
+    width: 90%;
+    text-align: center;
+  }
 }
 .menu-card__gout--entree-prix {
   display: inline-block;
@@ -991,28 +1552,55 @@ footer a:hover {
   text-align: right;
   color: black;
 }
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__gout--entree-prix {
+    position: relative;
+    top: -13em;
+    padding: 0em;
+    line-height: 3em;
+    text-align: left;
+  }
+}
 .menu-card__gout--entree-sousTitre {
   display: flex;
   justify-content: space-around;
+  width: 100%;
   font-size: 2em;
-  line-height: 1em;
+  padding-bottom: 1em;
 }
-.menu-card__gout--entree-sousTitre h3 {
-  color: black;
-  margin: 0em;
-  padding: 0em;
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__gout--entree-sousTitre {
+    display: block;
+    font-size: 1.5em;
+  }
 }
-.menu-card__gout--entree-sousTitre h3 :visited {
+.menu-card__gout--entree-sousTitre a {
   color: black;
+  width: auto;
+  text-decoration: none;
 }
-.menu-card__gout--entree-sousTitre h3 :hover {
-  color: black;
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__gout--entree-sousTitre a {
+    text-decoration: none;
+    margin: auto;
+  }
+}
+.menu-card__gout--entree-sousTitre a :hover {
+  text-decoration: none;
+  border-bottom: solid 0.07em;
+  text-shadow: 2px 2px 4px rgba(153, 153, 153, 0.349);
+  animation: couleur, progress-bar 1000ms;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+}
+.menu-card__gout--entree-sousTitre a :visited {
+  text-decoration: none;
 }
 .menu-card__gout--entree-sousTitre-barLeft {
   display: inline-block;
 }
 .menu-card__gout--entree-sousTitre-barLeft img {
-  width: 9em;
+  display: flex;
+  width: auto;
 }
 .menu-card__gout--entree-sousTitre-trait {
   letter-spacing: 0.05em;
@@ -1023,70 +1611,121 @@ footer a:hover {
   display: inline-block;
 }
 .menu-card__gout--entree-sousTitre-barRight img {
-  width: 9em;
+  display: flex;
+  width: auto;
 }
 .menu-card__gout--platsPrincipaux {
   display: block;
   margin-bottom: 3em;
 }
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__gout--platsPrincipaux {
+    margin-bottom: -7em;
+  }
+}
 .menu-card__gout--platsPrincipaux-plats {
+  position: static;
   display: inline-block;
-  width: 38em;
+  width: 35em;
   text-align: left;
   color: black;
-  margin-bottom: 2em;
+}
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__gout--platsPrincipaux-plats {
+    width: 90%;
+    text-align: center;
+  }
 }
 .menu-card__gout--platsPrincipaux-prix {
   display: inline-block;
-  margin-top: -1em;
   padding-left: 6em;
   text-align: right;
   color: black;
 }
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__gout--platsPrincipaux-prix {
+    position: relative;
+    top: -10em;
+    padding: 0em;
+    line-height: 2em;
+    text-align: left;
+  }
+}
 .menu-card__gout--platsPrincipaux-sousTitre {
-  text-align: center;
   display: flex;
   justify-content: space-around;
+  width: 100%;
   font-size: 2em;
-  line-height: 1em;
+  padding-bottom: 1em;
 }
-.menu-card__gout--platsPrincipaux-sousTitre h3 {
-  color: black;
-  margin: 0em;
-  padding: 0em;
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__gout--platsPrincipaux-sousTitre {
+    display: block;
+    font-size: 1.5em;
+  }
 }
-.menu-card__gout--platsPrincipaux-sousTitre h3 :visited {
+.menu-card__gout--platsPrincipaux-sousTitre a {
   color: black;
+  width: auto;
+  display: flex;
+  text-decoration: none;
 }
-.menu-card__gout--platsPrincipaux-sousTitre h3 :hover {
-  color: black;
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__gout--platsPrincipaux-sousTitre a {
+    margin: auto;
+    padding: 0em;
+  }
+}
+.menu-card__gout--platsPrincipaux-sousTitre a :visited {
+  text-decoration: none;
+}
+.menu-card__gout--platsPrincipaux-sousTitre a :hover {
+  text-decoration: none;
+  border-bottom: solid 0.07em;
+  text-shadow: 2px 2px 4px rgba(153, 153, 153, 0.349);
+  animation: couleur, progress-bar 1000ms;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
 }
 .menu-card__gout--platsPrincipaux-sousTitre-barLeft {
   display: inline-block;
 }
 .menu-card__gout--platsPrincipaux-sousTitre-barLeft img {
-  width: 8em;
+  display: flex;
+  width: auto;
 }
 .menu-card__gout--platsPrincipaux-sousTitre-trait {
-  display: inline-block;
-  font-size: 1em;
+  position: relative;
+  top: -0.5em;
+  letter-spacing: 0.05em;
 }
 .menu-card__gout--platsPrincipaux-sousTitre-barRight {
   display: inline-block;
 }
 .menu-card__gout--platsPrincipaux-sousTitre-barRight img {
-  width: 8em;
+  display: flex;
+  width: auto;
 }
 .menu-card__gout--dessert {
   display: block;
-  margin-bottom: 3em;
+  margin-bottom: 4em;
+}
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__gout--dessert {
+    margin-bottom: -5em;
+  }
 }
 .menu-card__gout--dessert-plats {
+  position: static;
   display: inline-block;
-  width: 38em;
+  width: 35em;
   text-align: left;
   color: black;
-  margin-bottom: 2em;
+}
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__gout--dessert-plats {
+    width: 90%;
+    text-align: center;
+  }
 }
 .menu-card__gout--dessert-prix {
   display: inline-block;
@@ -1094,38 +1733,72 @@ footer a:hover {
   text-align: right;
   color: black;
 }
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__gout--dessert-prix {
+    position: relative;
+    top: -12em;
+    padding: 0em;
+    line-height: 2.5em;
+    text-align: left;
+  }
+}
 .menu-card__gout--dessert-sousTitre {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  text-align: center;
+  width: 100%;
   font-size: 2em;
-}
-.menu-card__gout--dessert-sousTitre h3 {
-  color: black;
-  line-height: 1em;
-  margin: 0em;
-  padding: 0em;
-}
-.menu-card__gout--dessert-sousTitre h3 :visited {
+  padding-bottom: 1em;
   color: black;
 }
-.menu-card__gout--dessert-sousTitre h3 :hover {
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__gout--dessert-sousTitre {
+    display: block;
+    font-size: 1.5em;
+  }
+}
+.menu-card__gout--dessert-sousTitre a {
+  width: auto;
+  display: flex;
+  text-decoration: none;
   color: black;
+}
+@media all and (min-width: 320px) and (max-width: 480px) {
+  .menu-card__gout--dessert-sousTitre a {
+    margin: auto;
+    padding: 0em;
+  }
+}
+.menu-card__gout--dessert-sousTitre a :visited {
+  color: black;
+  text-decoration: none;
+}
+.menu-card__gout--dessert-sousTitre a :hover {
+  color: black;
+  text-decoration: none;
+  border-bottom: solid 0.07em;
+  text-shadow: 2px 2px 4px rgba(153, 153, 153, 0.349);
+  animation: couleur, progress-bar 1000ms;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
 }
 .menu-card__gout--dessert-sousTitre-barLeft {
   display: inline-block;
 }
 .menu-card__gout--dessert-sousTitre-barLeft img {
-  width: 9em;
+  display: flex;
+  width: auto;
 }
 .menu-card__gout--dessert-sousTitre-trait {
+  position: relative;
+  top: -0.5em;
   letter-spacing: 0.05em;
-  display: inline-block;
 }
 .menu-card__gout--dessert-sousTitre-barRight {
   display: inline-block;
 }
 .menu-card__gout--dessert-sousTitre-barRight img {
-  width: 9em;
+  display: flex;
+  width: auto;
 }
 
 h2 {

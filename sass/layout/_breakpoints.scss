@@ -37,3 +37,22 @@ $breakpoints: (
 
 
 
+
+
+
+// Bouton Retour
+
+.btn_return a {
+    color: $main-text;
+    text-decoration: none;
+
+    .btn_return a:visited {
+        color: $main-text;
+        text-decoration: none;
+    }
+
+    .btn_return a:hover {
+        color: $main-text;
+        text-decoration: none;
+    }
+}
