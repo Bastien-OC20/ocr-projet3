@@ -1,2 +1,3 @@
 # ignore files visual studio code.
 *.[vs]
+*.[node-modules]
