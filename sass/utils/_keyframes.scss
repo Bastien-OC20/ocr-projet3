@@ -157,19 +157,4 @@
   100% {
     stroke-dashoffset: -35%;
   }
-  60%{
-    color:rgb(88, 23, 32, 0.685);
-  }
-  to{
-    color: $colormenu1;
-  }
-}
-
-@keyframes progress-bar {
-  from {
-    width: 0%;
-}
-to {
-   width: 100%;
-}
 }

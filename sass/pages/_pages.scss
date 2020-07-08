@@ -25,6 +25,7 @@
             text-decoration: none;
         }
 
+
         :visited {
             color: $colormenu1;
             text-decoration: none;
@@ -49,14 +50,15 @@
         color: transparent;
         font-family: $font3;
 
-// test du svg
+        // test du svg
 
         svg {
             display: block;
             font: 3em 'croissant';
             width: 100%;
             height: 1.5em;
-            @include small{
+
+            @include small {
                 font-size: 7em;
             }
         }
@@ -154,12 +156,12 @@
     .bleu p {
         color: $colormenu2c;
     }
-
-    a {
-        text-decoration: none;
-    }
-
 }
+
+a {
+    text-decoration: none;
+}
+
 
 .delice {
     font-family: $font4;
@@ -197,57 +199,58 @@
         :hover {
             color: rgb(0, 162, 255);
         }
-
-        :visited {
-            color: rgb(0, 162, 255);
-        }
     }
 
-    .BleuAzur h3 {
-        color: $colormenu3b;
-
-        :hover {
-            color: $colormenu3b;
-        }
-
-        :visited {
-            color: $colormenu3b;
-        }
+    :visited {
+        color: rgb(0, 162, 255);
     }
-
-    .bleuMarin h3 {
-        color: $colormenu3a;
-
-        :hover {
-            color: $colormenu3a;
-        }
-
-        :visited {
-            color: $colormenu3a;
-        }
-    }
-
-    .menu-card_detail_prix {
-        font-weight: bolder;
-    }
-
-    .orange p {
-        color: $colormenu2a;
-    }
-
-    .violet p {
-        color: $colormenu2b;
-    }
-
-    .bleu p {
-        color: $colormenu3b;
-    }
-
-    a {
-        text-decoration: none;
-    }
-
 }
+
+.BleuAzur h3 {
+    color: $colormenu3b;
+
+    :hover {
+        color: $colormenu3b;
+    }
+
+    :visited {
+        color: $colormenu3b;
+    }
+}
+
+.bleuMarin h3 {
+    color: $colormenu3a;
+
+    :hover {
+        color: $colormenu3a;
+    }
+}
+
+:visited {
+    color: $colormenu3a;
+}
+
+
+.menu-card_detail_prix {
+    font-weight: bolder;
+}
+
+.orange p {
+    color: $colormenu2a;
+}
+
+.violet p {
+    color: $colormenu2b;
+}
+
+.bleu p {
+    color: $colormenu3b;
+}
+
+a {
+    text-decoration: none;
+}
+
 
 .gout {
     font-family: $font6;
@@ -277,74 +280,43 @@
             color: black;
             @include animate;
         }
-
-        :visited {
-            color: black;
-        }
     }
 
-
-
-    .menu-card_detail_prix {
-        font-weight: bolder;
+    :visited {
+        color: black;
     }
-
-    .orange p {
-        color: $colormenu2a;
-    }
-
-    .violet p {
-        color: $colormenu2b;
-    }
-
-    .bleu p {
-        color: $colormenu3b;
-    }
-
-    a {
-        text-decoration: none;
-    }
-
 }
 
-// Page Mentions-légales
-h2 {
-    font-size: 3em;
-    font-family: $font7;
-    text-align: center;
+h3 {
+    font-size: 1.5em;
 }
 
-.mention--article {
-    @include text-shadow-3;
-    padding: 1em;
-    font-family: $font7;
 
-    &-soustitre {
-        font-size: 1.5em;
-        padding: 1em;
-    }
+
+.menu-card_detail_prix {
+    font-weight: bolder;
+}
+
+.orange p {
+    color: $colormenu2a;
+}
+
+.violet p {
+    color: $colormenu2b;
+}
+
+.bleu p {
+    color: $colormenu3b;
+}
+
+a {
+    text-decoration: none;
 }
 
 
 
 
-// Page Mentions-légales
-h2 {
-    font-size: 3em;
-    font-family: $font7;
-    text-align: center;
-}
 
-.mention--article {
-    @include text-shadow-3;
-    padding: 1em;
-    font-family: $font7;
-
-    &-soustitre {
-        font-size: 1.5em;
-        padding: 1em;
-    }
-}
 
 
 // Bouton Retour

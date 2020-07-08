@@ -122,31 +122,17 @@
   100% {
     stroke-dashoffset: -35%;
   }
-  60% {
-    color: rgba(88, 23, 32, 0.685);
-  }
-  to {
-    color: #3c1218;
-  }
-}
-@keyframes progress-bar {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
-  }
 }
 .btn_return a {
-  color: #ebc64d;
+  color: #FBC02D;
   text-decoration: none;
 }
 .btn_return a .btn_return a:visited {
-  color: #ebc64d;
+  color: #FBC02D;
   text-decoration: none;
 }
 .btn_return a .btn_return a:hover {
-  color: #ebc64d;
+  color: #FBC02D;
   text-decoration: none;
 }
 
@@ -166,7 +152,7 @@ body {
 .menus-title {
   background-color: #589a86;
   width: 100%;
-  height: 8em;
+  height: 5em;
   position: relative;
   box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
 }
@@ -177,11 +163,11 @@ body {
   }
 }
 .menus-title h1 {
-  color: #ebc64d;
+  color: #FBC02D;
   text-align: center;
   line-height: 1em;
   font-family: "roboto", serif;
-  font-size: 6em;
+  font-size: 4em;
   font-weight: bolder;
   text-shadow: 0.1em 0.1em 0.2em black;
 }
@@ -192,16 +178,16 @@ body {
   }
 }
 .menus-title h1:hover {
-  color: #ebc64d;
+  color: #FBC02D;
 }
 .menus-title h1:visited {
-  color: #ebc64d;
+  color: #FBC02D;
 }
 .menus-title a {
   text-decoration: none;
 }
 .menus-title a:visited {
-  color: #ebc64d;
+  color: #FBC02D;
 }
 
 .container {
@@ -236,6 +222,9 @@ body {
   margin: auto;
 }
 .container--menu .menu-card h2 {
+  display: block;
+  margin: auto;
+  text-align: center;
   font-size: 2.5em;
   padding: 2em 0em 2em 0em;
   text-shadow: 2px 2px 4px rgba(153, 153, 153, 0.349);
@@ -397,7 +386,7 @@ body {
 .btn {
   display: flex;
   background: #589a86;
-  color: #ebc64d;
+  color: #FBC02D;
   width: 25%;
   border: 0;
   border-radius: 15px;
@@ -428,10 +417,10 @@ body {
   }
 }
 .btn:hover {
-  color: #ebc64d;
+  color: #FBC02D;
 }
 .btn:visited {
-  color: #ebc64d;
+  color: #FBC02D;
 }
 
 .btn_soon {
@@ -446,7 +435,7 @@ body {
 .loading span {
   width: 0.3em;
   height: 0.3em;
-  background-color: #ebc64d;
+  background-color: #FBC02D;
   border-radius: 50%;
   display: inline-block;
   animation-name: dots;
@@ -480,7 +469,7 @@ footer {
 footer a {
   line-height: 0.5em;
   margin: 1.2em;
-  color: #ebc64d;
+  color: #FBC02D;
   font-family: "roboto", serif;
   font-size: 1em;
   font-weight: bolder;
@@ -497,17 +486,20 @@ footer a:hover {
   animation: headshake 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9);
   animation-iteration-count: 3;
 }
+footer a:visited {
+  color: #FBC02D;
+}
 
 .btn_return a {
-  color: #ebc64d;
+  color: #FBC02D;
   text-decoration: none;
 }
 .btn_return a .btn_return a:visited {
-  color: #ebc64d;
+  color: #FBC02D;
   text-decoration: none;
 }
 .btn_return a .btn_return a:hover {
-  color: #ebc64d;
+  color: #FBC02D;
   text-decoration: none;
 }
 
@@ -570,7 +562,7 @@ footer a:hover {
 .menus-list__menu_note p {
   font-family: "Caveat", cursive;
   font-size: 2em;
-  padding-top: 0.4em;
+  padding-top: 0.5em;
   color: #3c1218;
 }
 
@@ -650,6 +642,29 @@ footer a:hover {
   font-size: 2em;
   padding-top: 0.5em;
   color: #8BC34A;
+}
+
+.container-mention {
+  box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
+  padding: 2em;
+  margin: 3em;
+}
+.container-mention h2 {
+  font-size: 3em;
+  font-family: "Source Serif Pro", serif;
+  text-align: center;
+}
+.container-mention .mention--article {
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+  padding: 2em;
+  font-family: "Source Serif Pro", serif;
+}
+.container-mention .mention--article h3 {
+  padding: 1em;
+}
+.container-mention .mention--article-soustitre {
+  font-size: 1.5em;
+  padding: 1.5em;
 }
 
 .note {
@@ -779,7 +794,8 @@ footer a:hover {
 .chic .bleu p {
   color: #6e4ccc;
 }
-.chic a {
+
+a {
   text-decoration: none;
 }
 
@@ -817,40 +833,48 @@ footer a:hover {
 .delice .bleuClaire h3 :hover {
   color: #00a2ff;
 }
-.delice .bleuClaire h3 :visited {
+.delice :visited {
   color: #00a2ff;
 }
-.delice .BleuAzur h3 {
+
+.BleuAzur h3 {
   color: #0889fb;
 }
-.delice .BleuAzur h3 :hover {
+.BleuAzur h3 :hover {
   color: #0889fb;
 }
-.delice .BleuAzur h3 :visited {
+.BleuAzur h3 :visited {
   color: #0889fb;
 }
-.delice .bleuMarin h3 {
+
+.bleuMarin h3 {
   color: #0a35e0;
 }
-.delice .bleuMarin h3 :hover {
+.bleuMarin h3 :hover {
   color: #0a35e0;
 }
-.delice .bleuMarin h3 :visited {
+
+:visited {
   color: #0a35e0;
 }
-.delice .menu-card_detail_prix {
+
+.menu-card_detail_prix {
   font-weight: bolder;
 }
-.delice .orange p {
+
+.orange p {
   color: #c67412;
 }
-.delice .violet p {
+
+.violet p {
   color: #a56799;
 }
-.delice .bleu p {
+
+.bleu p {
   color: #0889fb;
 }
-.delice a {
+
+a {
   text-decoration: none;
 }
 
@@ -884,61 +908,38 @@ footer a:hover {
   animation: zoom-in-out 1s linear 0s 1 normal;
   opacity: 80%;
 }
-.gout h3 :visited {
+.gout :visited {
   color: black;
 }
-.gout .menu-card_detail_prix {
+
+h3 {
+  font-size: 1.5em;
+}
+
+.menu-card_detail_prix {
   font-weight: bolder;
 }
-.gout .orange p {
+
+.orange p {
   color: #c67412;
 }
-.gout .violet p {
+
+.violet p {
   color: #a56799;
 }
-.gout .bleu p {
+
+.bleu p {
   color: #0889fb;
 }
-.gout a {
+
+a {
   text-decoration: none;
-}
-
-h2 {
-  font-size: 3em;
-  font-family: "Source Serif Pro", serif;
-  text-align: center;
-}
-
-.mention--article {
-  text-shadow: 2px 2px 4px rgba(153, 153, 153, 0.349);
-  padding: 1em;
-  font-family: "Source Serif Pro", serif;
-}
-.mention--article-soustitre {
-  font-size: 1.5em;
-  padding: 1em;
-}
-
-h2 {
-  font-size: 3em;
-  font-family: "Source Serif Pro", serif;
-  text-align: center;
-}
-
-.mention--article {
-  text-shadow: 2px 2px 4px rgba(153, 153, 153, 0.349);
-  padding: 1em;
-  font-family: "Source Serif Pro", serif;
-}
-.mention--article-soustitre {
-  font-size: 1.5em;
-  padding: 1em;
 }
 
 .btn-accueil {
   display: flex;
   background: #589a86;
-  color: #ebc64d;
+  color: #FBC02D;
   width: 10%;
   border: 0;
   border-radius: 15px;
@@ -974,22 +975,22 @@ h2 {
   }
 }
 .btn-accueil:hover {
-  color: #ebc64d;
+  color: #FBC02D;
 }
 .btn-accueil:visited {
-  color: #ebc64d;
+  color: #FBC02D;
 }
 
 .btn_home a {
-  color: #ebc64d;
+  color: #FBC02D;
   text-decoration: none;
 }
 .btn_home a .btn_home a:visited {
-  color: #ebc64d;
+  color: #FBC02D;
   text-decoration: none;
 }
 .btn_home a .btn_home a:hover {
-  color: #ebc64d;
+  color: #FBC02D;
   text-decoration: none;
 }
 
