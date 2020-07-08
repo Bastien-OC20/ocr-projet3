@@ -1,11 +1,9 @@
 .menus-list {
     text-align: center;
-    width: 90%;
+    width: auto;
     display: grid;
-    width: 100%;
-    margin-bottom: 5em;
+    padding: 2em;
     grid-template-columns: repeat(auto-fill, 20em);
-    grid-template-rows: repeat(autofill, 10em);
     grid-gap: 5em;
 
     @include small {

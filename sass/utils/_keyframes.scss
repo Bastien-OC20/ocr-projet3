@@ -1,134 +1,141 @@
 // aside
 @keyframes dots {
-    50% {
-        opacity: 0;
-        transform: scale(0.7) translate(0.5em);
-    }
+  50% {
+    opacity: 0;
+    transform: scale(0.7) translate(0.5em);
+  }
 }
 
 // footer
 @keyframes headshake {
-    25% {
-        // entièrement à droite
-        transform: translateX($shake-intensity);
-    }
+  25% {
+    // entièrement à droite
+    transform: translateX($shake-intensity);
+  }
 
-    75% {
-        // entièrement à gauche
-        transform: translateX($shake-intensity * -2);
-    }
+  75% {
+    // entièrement à gauche
+    transform: translateX($shake-intensity * -2);
+  }
 }
 
 @keyframes zoom-hover {
-    25% {
-        transform: scale(1);
-        transition-property: transform;
-        opacity: 100%;
-    }
+  25% {
+    transform: scale(1);
+    transition-property: transform;
+    opacity: 100%;
+  }
 
-    75% {
-        transform: scale(1.15);
-        transition-property: transform;
-        transition-duration: 800ms;
-        opacity: 60%;
-    }
+  75% {
+    transform: scale(1.15);
+    transition-property: transform;
+    transition-duration: 800ms;
+    opacity: 60%;
+  }
 
-    100% {
-        transform: scale(1);
-        transition-property: transform;
-        opacity: 100%;
-    }
+  100% {
+    transform: scale(1);
+    transition-property: transform;
+    opacity: 100%;
+  }
 }
 
 
 @-webkit-keyframes zoom-in-out {
-    0% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 
-    50% {
-        -webkit-transform: scale(1.2);
-        transform: scale(1.2);
-    }
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
 
-    100% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }
 
 @keyframes zoom-in-out {
-    0% {
-        -ms-transform: scale(1);
-        transform: scale(1);
-    }
+  0% {
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
 
-    50% {
-        -ms-transform: scale(1.2);
-        transform: scale(1.2);
-    }
+  50% {
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
 
-    100% {
-        -ms-transform: scale(1);
-        transform: scale(1);
-    }
-}
-
-
-@keyframes animationFrames{
-0% {
-  transform:  translate(-2px,-51px)  ;
-}
-100% {
-  transform:  translate(-55px,-48px)  ;
-}
+  100% {
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
 }
 
-@-moz-keyframes animationFrames{
-0% {
-  -moz-transform:  translate(-2px,-51px)  ;
+
+@keyframes animationFrames {
+  0% {
+    transform: translate(-2px, -51px);
+  }
+
+  100% {
+    transform: translate(-55px, -48px);
+  }
 }
-100% {
-  -moz-transform:  translate(-55px,-48px)  ;
-}
+
+@-moz-keyframes animationFrames {
+  0% {
+    -moz-transform: translate(-2px, -51px);
+  }
+
+  100% {
+    -moz-transform: translate(-55px, -48px);
+  }
 }
 
 @-webkit-keyframes animationFrames {
-0% {
-  -webkit-transform:  translate(-2px,-51px)  ;
-}
-100% {
-  -webkit-transform:  translate(-55px,-48px)  ;
-}
+  0% {
+    -webkit-transform: translate(-2px, -51px);
+  }
+
+  100% {
+    -webkit-transform: translate(-55px, -48px);
+  }
 }
 
 @-o-keyframes animationFrames {
-0% {
-  -o-transform:  translate(-2px,-51px)  ;
-}
-100% {
-  -o-transform:  translate(-55px,-48px)  ;
-}
+  0% {
+    -o-transform: translate(-2px, -51px);
+  }
+
+  100% {
+    -o-transform: translate(-55px, -48px);
+  }
 }
 
 @-ms-keyframes animationFrames {
-0% {
-  -ms-transform:  translate(-2px,-51px)  ;
-}
-100% {
-  -ms-transform:  translate(-55px,-48px)  ;
-}
+  0% {
+    -ms-transform: translate(-2px, -51px);
+  }
+
+  100% {
+    -ms-transform: translate(-55px, -48px);
+  }
 }
 
-@keyframes couleur{
-  from{
+@keyframes couleur {
+  from {
     color: rgb(121, 80, 80);
   }
-  60%{
-    color:rgb(88, 23, 32, 0.685);
+
+  60% {
+    color: rgb(88, 23, 32, 0.685);
   }
-  to{
+
+  to {
     color: $colormenu1;
   }
 }
@@ -136,8 +143,19 @@
 @keyframes progress-bar {
   from {
     width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
 }
-to {
-   width: 100%;
-}
+
+
+
+// animation chic à la française
+
+@keyframes stroke-offset {
+  100% {
+    stroke-dashoffset: -35%;
+  }
 }

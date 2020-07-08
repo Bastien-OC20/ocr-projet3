@@ -18,6 +18,7 @@ body {
 
 // header titre des pages du site
 
+
 .menus-title {
     background-color: $main-background;
     width: 100%;
@@ -26,6 +27,7 @@ body {
     @include box-shadow;
 
     @include small {
+        width: auto;
         height: 6em;
     }
 
@@ -39,8 +41,8 @@ body {
         @include text-shadow-1;
 
         @include small {
-            font-size: 3em;
-            line-height: 2em;
+            font-size: 4em;
+            line-height: 1.5em;
         }
 
         &:hover {
@@ -69,6 +71,205 @@ body {
 }
 
 
+// Cadre des pages des menus
+.container--menu {
+    display: block;
+    padding: 4em;
+    margin: auto;
+
+    @include small {
+        padding: 1em;
+    }
+
+    .menu-card {
+        @include box-shadow;
+        display: block;
+        justify-content: center;
+        margin: auto;
+        padding: 1em 2em 8em 2em;
+
+        @include small {
+            padding: 0.5em;
+        }
+
+        img {
+            display: block;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            padding: 2em 0em 2em 0em;
+            @include text-shadow-3;
+            @include small {
+                font-size: 1em;
+            }
+        }
+
+        .menu-card_bandeau {
+            display: flex;
+            justify-content: space-between;
+            width: auto;
+            margin: auto;
+            padding: 1em 1em 2em 1em;
+
+            @include small {
+                display: block;
+            }
+
+            @include medium {
+                display: block;
+            }
+
+            .menu-card_bandeau-bar {
+                img {
+                    display: flex;
+                    width: auto;
+                    margin: auto;
+                    padding: 1em 0em 2em 0em;
+
+                    @include small {
+                        width: 80%;
+                    }
+                }
+            }
+
+            a {
+                display: block;
+                width: auto;
+                justify-content: center;
+
+                :hover {
+                    @include progress-bar;
+                    text-decoration: none;
+                }
+
+                :visited {
+                    text-decoration: none;
+                }
+
+                @include small {
+                    display: block;
+                    margin: auto;
+                    width: auto;
+                }
+            }
+
+            h3 {
+                font-size: 2em;
+                text-decoration: none;
+                display: inline-block;
+                width: auto;
+                margin: auto;
+                padding-bottom: 0.2em;
+                justify-content: center;
+
+                @include small {
+                    display: block;
+                    font-size: 1.5em;
+                    margin-left: 1em;
+                }
+
+                @include medium {
+                    display: block;
+                    margin: auto;
+                    text-align: center;
+                }
+
+                :hover {
+                    text-decoration: none;
+                }
+
+                :visited {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .menu-card_detail {
+            display: block;
+            margin-left: 2em;
+            padding: 0em 3em 4em 3em;
+
+            @include small {
+                width: auto;
+                margin: auto;
+                padding: 0.5em;
+            }
+
+            p {
+                font-size: 1.2em;
+            }
+
+            .menu-card_detail_plats {
+                display: inline-flex;
+                width: 84%;
+                justify-content: left;
+
+                @include small {
+                    display: block;
+                    margin: auto;
+                }
+            }
+
+            .menu-card_detail_prix {
+                display: inline-flex;
+                text-align: right;
+                width: 15%;
+                    @include small {
+                        display: block;
+                        width: auto;
+                        text-align: center;
+                    }
+            }
+        }
+
+        .menu-card_detail:nth-last-child(2) {
+            padding-bottom: 4em;
+        }
+
+        .menu-card_detail:nth-last-child(6) {
+            padding-bottom: 4em;
+        }
+
+        .menu-card__titreFooter {
+            display: flex;
+            justify-content: center;
+
+            .menu-card__titreFooter-picture {
+                img {
+                    display: inline-block;
+                    width: 3em;
+                }
+
+            }
+
+            a {
+                text-decoration: none;
+
+                h3 {
+                    display: inline;
+                    line-height: 5.5em;
+                    margin-left: 0.5em;
+                    font-size: 1.5em;
+                    color: $colormenu1;
+
+                    :hover {
+                        color: $colormenu1;
+                        text-decoration: none;
+                    }
+
+                    :visited {
+                        color: $colormenu1;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// bouton
 .btn {
     display: flex;
     background: $main-background;
@@ -83,13 +284,14 @@ body {
     cursor: pointer;
     @include text-shadow-1;
 
-    @include xmedium {
-        display: flex;
+    @include medium {
+        display: block;
         justify-content: center;
-        width: 45%;
+        width: 30%;
         font-size: 1.3em;
         padding: 0.5em;
-        margin:1em 1em 2em 6em ;
+        margin: auto;
+
     }
 
     @include small {
@@ -97,7 +299,8 @@ body {
         width: 70%;
         font-size: 1em;
         padding: 0.5em;
-        margin:1em 1em 2em 2.5em ;
+        margin: 1em 1em 2em 2.5em;
+
     }
 
     &:hover {
