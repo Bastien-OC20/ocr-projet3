@@ -1,0 +1,9 @@
+SetEnvIf Remote_Addr "^127.0.0.1$" mun_site_ip
+SetEnvIf Request_URI "^C:/wamp64/www/ocr-projet3/index.html" mon_site_url
+SetEnvIf Request_URI "^C:/wamp64/www/ocr-projet3/css/(css|js|img|template)/" media
+
+Order Deny,Allow
+deny from env=!media
+Allow from env=mon_site_url
+Allow from env=mun_site_ip
+Allow from env=local

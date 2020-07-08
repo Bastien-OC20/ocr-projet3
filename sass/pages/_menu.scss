@@ -1,3 +1,228 @@
+.menus__header {
+    background-color: $main-background;
+
+    &__title {
+        font-family: $font1;
+        font-size: 8em;
+        color: $main-text;
+
+        a:visited {
+            color: $main-text;
+        }
+    }
+}
+
+.menus__container {
+
+    &__list {
+        a {
+            display: block;
+
+            :hover {
+               display: block;
+                @include animate;
+            }
+        }
+
+        &__restaurant {
+            img {
+                width: 4em;
+            }
+
+            &__titre {
+                @include text-shadow-3;
+            }
+
+            &__carte {
+                font-size: 3em;
+            }
+        }
+
+        .restaurant--note {
+            background-color: $bgmenu1;
+            color: $colormenu1;
+
+            h2 {
+                animation-play-state: paused;
+                color: $colormenu1;
+                font-size: 2.5em;
+                font-family: $font2;
+            }
+
+            p {
+                animation-play-state: paused;
+                font-family: $font7;
+                font-weight: bold;
+            }
+        }
+
+        .restaurant--chic {
+            background-color: $bgmenu2;
+
+            h2 {
+                animation-play-state: paused;
+                margin-top: 7.5em;
+                background-image: linear-gradient(to right, $colormenu2a, $colormenu2b, $colormenu2c, );
+                -webkit-background-clip: text;
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                font-size: 1.5em;
+                font-family: $font3;
+            }
+
+            p {
+                animation-play-state: paused;
+                color: $colormenu2a;
+                margin-top: 1.5em;
+                font-family: $font7;
+                font-weight: bold;
+            }
+        }
+
+        .restaurant--delice {
+            background-color: $bgmenu2;
+
+            h2 {
+                animation-play-state: paused;
+                margin-top: 7.5em;
+                background-image: linear-gradient(to right, $colormenu3a, $colormenu3b, $colormenu3c);
+                -webkit-background-clip: text;
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                font-size: 1.5em;
+                font-family: $font3;
+            }
+
+            p {
+                animation-play-state: paused;
+                color: $colormenu3b;
+                margin-top: 1.5em;
+                font-family: $font7;
+                font-weight: bold;
+            }
+        }
+
+        .restaurant--gout {
+            background-color: $bgmenu2;
+            background-image: linear-gradient(45deg, $colormenu4a, $colormenu4b);
+            -webkit-background-clip: text;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            color: transparent;
+
+            h2 {
+                animation-play-state: paused;
+                background-image: linear-gradient(45deg, $colormenu4a, $colormenu4b);
+                -webkit-background-clip: text;
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                margin-top: 7.5em;
+                font-size: 1.5em;
+                font-family: $font3;
+            }
+
+            p {
+                animation-play-state: paused;
+                background-image: linear-gradient(45deg, $colormenu4a, $colormenu4b);
+                -webkit-background-clip: text;
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                margin-top: 1.5em;
+                font-family: $font7;
+                font-weight: bold;
+            }
+        }
+    }
+
+    &__list__bouton {
+        display: flex;
+        width: 25%;
+        border: 0;
+        border-radius: 15px;
+        padding: 0.5em;
+        margin: 2em 14em 1em 14em;
+        font-size: 1.5rem;
+        text-align: center;
+        cursor: pointer;
+        @include text-shadow-1;
+        @include box-shadow;
+
+        &__prochainement {
+            display: inline;
+            margin-right: 0.5em;
+
+            &__loading {
+                display: inline-block;
+            }
+        }
+    }
+
+    &__list__bouton {
+        background-color: $main-background;
+
+        &__prochainement {
+            color: $main-text;
+
+            &__loading span {
+                width: 0.3em;
+                height: 0.3em;
+                background-color: $main-text;
+                border-radius: 50%;
+                display: inline-block;
+                animation-name: dots;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in-out;
+                @include text-shadow-1;
+            }
+
+            .loading span:nth-child(2) {
+                animation-delay: 0.4s;
+            }
+
+            .loading span:nth-child(3) {
+                animation-delay: 0.8s;
+            }
+        }
+    }
+}
+
+.menus__footer {
+    background-color: $main-background;
+
+    &__info {
+        color: $main-text;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .menus-list {
     text-align: center;
     width: auto;

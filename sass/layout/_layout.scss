@@ -13,376 +13,105 @@ body {
     position: relative;
     text-decoration: none;
 
-    @include small;
-}
+    // Cadre index.html
 
-// header titre des pages du site
-
-
-.menus-title {
-    background-color: $main-background;
-    width: 100%;
-    height: 5em;
-    position: relative;
-    @include box-shadow;
-
-    @include small {
+    .menus__header {
         width: auto;
-        height: 6em;
-    }
-
-    h1 {
-        color: $main-text;
-        text-align: center;
-        line-height: 1em;
-        font-family: $font1;
-        font-size: 4em;
-        font-weight: bolder;
-        @include text-shadow-1;
-
-        @include small {
-            font-size: 4em;
-            line-height: 1.5em;
-        }
-
-        &:hover {
-            color: $main-text;
-        }
-
-        &:visited {
-            color: $main-text;
-        }
-    }
-
-    a {
-        text-decoration: none;
-
-        &:visited {
-            color: $main-text;
-        }
-    }
-}
-
-// main :Conteneur de la liste des menus
-
-.container {
-    display: block;
-    padding: 2em;
-}
-
-
-// Cadre des pages des menus
-.container--menu {
-    display: block;
-    padding: 4em;
-    margin: auto;
-
-    @include small {
+        height: 8em;
+        position: relative;
         padding: 1em;
-    }
-
-    .menu-card {
         @include box-shadow;
-        display: block;
-        justify-content: center;
-        margin: auto;
-        padding: 1em 2em 8em 2em;
 
-        @include small {
-            padding: 0.5em;
-        }
-
-        img {
-            display: block;
-            margin: auto;
-        }
-
-        h2 {
-            display: block;
-            margin: auto;
+        &__title {
             text-align: center;
-            font-size: 2.5em;
-            padding: 2em 0em 2em 0em;
-            @include text-shadow-3;
-            @include small {
-                font-size: 1em;
-            }
-        }
-
-        .menu-card_bandeau {
-            display: flex;
-            justify-content: space-between;
-            width: auto;
-            margin: auto;
-            padding: 1em 1em 2em 1em;
-
-            @include small {
-                display: block;
-            }
-
-            @include medium {
-                display: block;
-            }
-
-            .menu-card_bandeau-bar {
-                img {
-                    display: flex;
-                    width: auto;
-                    margin: auto;
-                    padding: 1em 0em 2em 0em;
-
-                    @include small {
-                        width: 80%;
-                    }
-                }
-            }
-
-            a {
-                display: block;
-                width: auto;
-                justify-content: center;
-
-                :hover {
-                    @include progress-bar;
-                    text-decoration: none;
-                }
-
-                :visited {
-                    text-decoration: none;
-                }
-
-                @include small {
-                    display: block;
-                    margin: auto;
-                    width: auto;
-                }
-            }
-
-            h3 {
-                font-size: 2em;
-                text-decoration: none;
-                display: inline-block;
-                width: auto;
-                margin: auto;
-                padding-bottom: 0.2em;
-                justify-content: center;
-
-                @include small {
-                    display: block;
-                    font-size: 1.5em;
-                    margin-left: 1em;
-                }
-
-                @include medium {
-                    display: block;
-                    margin: auto;
-                    text-align: center;
-                }
-
-                :hover {
-                    text-decoration: none;
-                }
-
-                :visited {
-                    text-decoration: none;
-                }
-            }
-        }
-
-        .menu-card_detail {
-            display: block;
-            margin-left: 2em;
-            padding: 0em 3em 4em 3em;
-
-            @include small {
-                width: auto;
-                margin: auto;
-                padding: 0.5em;
-            }
-
-            p {
-                font-size: 1.2em;
-            }
-
-            .menu-card_detail_plats {
-                display: inline-flex;
-                width: 84%;
-                justify-content: left;
-
-                @include small {
-                    display: block;
-                    margin: auto;
-                }
-            }
-
-            .menu-card_detail_prix {
-                display: inline-flex;
-                text-align: right;
-                width: 15%;
-                    @include small {
-                        display: block;
-                        width: auto;
-                        text-align: center;
-                    }
-            }
-        }
-
-        .menu-card_detail:nth-last-child(2) {
-            padding-bottom: 4em;
-        }
-
-        .menu-card_detail:nth-last-child(6) {
-            padding-bottom: 4em;
-        }
-
-        .menu-card__titreFooter {
-            display: flex;
-            justify-content: center;
-
-            .menu-card__titreFooter-picture {
-                img {
-                    display: inline-block;
-                    width: 3em;
-                }
-
-            }
-
-            a {
-                text-decoration: none;
-
-                h3 {
-                    display: inline;
-                    line-height: 5.5em;
-                    margin-left: 0.5em;
-                    font-size: 1.5em;
-                    color: $colormenu1;
-
-                    :hover {
-                        color: $colormenu1;
-                        text-decoration: none;
-                    }
-
-                    :visited {
-                        color: $colormenu1;
-                        text-decoration: none;
-                    }
-                }
-            }
+            line-height: 0.8em;
+            text-shadow: 0.1em 0.1em 0.2em black;
         }
     }
-}
 
-// bouton
-.btn {
-    display: flex;
-    background: $main-background;
-    color: $main-text;
-    width: 25%;
-    border: 0;
-    border-radius: 15px;
-    padding: 0.5em;
-    margin: 2em 14em 1em 14em;
-    font-size: 1.5rem;
-    text-align: center;
-    cursor: pointer;
-    @include text-shadow-1;
-
-    @include medium {
+    .menus__container {
         display: block;
-        justify-content: center;
-        width: 30%;
-        font-size: 1.3em;
-        padding: 0.5em;
+        padding: 2em;
+
+        &__list {
+            text-align: center;
+            width: auto;
+            display: grid;
+            padding: 2em;
+            grid-template-columns: repeat(auto-fill, 20em);
+            grid-gap: 5em;
+
+            &__restaurant {
+                @include box-shadow;
+                display: block;
+                width: auto;
+                height: 28em;
+                padding: 1em;
+                justify-content: center;
+
+                img {
+                    position: absolute;
+                    display: block;
+                    padding: 6em 0em 0em 7em;
+                    margin: auto;
+                    justify-content: center;
+                }
+
+                &__titre {
+                    margin-top: 4.2em;
+                }
+
+                &__carte {
+                    margin-top: 1em;
+                }
+            }
+        }
+
+        &__list__bouton {
+            display: flex;
+            width: 25%;
+            border: 0;
+            border-radius: 15px;
+            padding: 0.5em;
+            margin: 2em 14em 1em 14em;
+            font-size: 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            @include text-shadow-1;
+            @include box-shadow;
+
+            &__prochainement {
+                display: inline;
+                margin-right: 0.5em;
+
+                &__loading {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    .menus__footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: fixed;
+        bottom: 0em;
         margin: auto;
-    }
+        max-width: 1024px;
+        width: 100%;
+        height: 3em;
+        @include box-shadow;
 
-    @include small {
-        text-align: center;
-        width: 70%;
-        font-size: 1em;
-        padding: 0.5em;
-        margin: 1em 1em 2em 2.5em;
-    }
-
-    &:hover {
-        color: $main-text;
-    }
-
-    &:visited {
-        color: $main-text;
-    }
-}
-
-// Bouton Prochainement
-
-.btn_soon {
-    display: inline;
-    margin-right: 0.5em;
-}
-
-.loading {
-    display: inline-block;
-}
-
-.loading span {
-    width: 0.3em;
-    height: 0.3em;
-    background-color: $main-text;
-    border-radius: 50%;
-    display: inline-block;
-    animation-name: dots;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    @include text-shadow-1;
-}
-
-.loading span:nth-child(2) {
-    animation-delay: 0.4s;
-}
-
-.loading span:nth-child(3) {
-    animation-delay: 0.8s;
-}
-
-// footer :  bandeau pied de page des pages du site
-
-footer {
-    background-color: $main-background;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    position: fixed;
-    bottom: 0em;
-    margin: auto;
-    max-width: 1024px;
-    width: 100%;
-    height: 3em;
-    @include box-shadow;
-
-    a {
-        line-height: 0.5em;
-        margin: 1.2em;
-        color: $main-text;
-        font-family: $font1;
-        font-size: 1em;
-        font-weight: bolder;
-        text-decoration: none;
-        @include text-shadow-1;
-
-        @include small {
-            font-size: 0.8em;
-            line-height: 1.5em;
+        &__info {
+            line-height: 0.5em;
+            margin: 1.2em;
+            font-size: 1em;
+            font-weight: bolder;
+            text-decoration: none;
+            @include text-shadow-1;
         }
-
-        &:hover {
-            @include headshake;
-        }
-        &:visited{
-            color: $main-text;
-        }
-
     }
-
-
 }
+
+// cadre des menus

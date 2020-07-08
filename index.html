@@ -19,54 +19,54 @@
 
   <body>
     <!--header-->
-    <header class="menus-title">
-      <h1><a href="index.html">Ohmyfood</a></h1>
+    <header class="menus__header">
+      <h1 class="menus__header__title"><a href="index.html">Ohmyfood</a></h1>
 
     </header>
 
     <!--main content-->
-    <main class="container">
+    <main class="menus__container">
       <!--menus des restaurant-->
-      <article class="menus-list">
+      <article class="menus__container__list">
 
         <!--la note enchantée-->
         <a href="./pages/la_note_enchantee.html">
-          <section class=" menus-list__menu_note">
-            <img src="img/note.png" alt="image" title="note de musique" />
-            <h2>La note enchantée</h2>
-            <p>Menu</p>
+          <section class="menus__container__list__restaurant restaurant--note">
+            <img src="img/note.png" alt="note de musique"/>
+            <h2 class="menus__container__list__restaurant__titre">La note enchantée</h2>
+            <p class="menus__container__list__restaurant__carte">Menu</p>
           </section>
         </a>
 
         <!--du Chic à la francaise-->
         <a href="./pages/le_chic_a_la_francaise.html">
-          <section class="menus-list__menu_chic">
-            <h2>Le chic à la française</h2>
-            <p>Menu</p>
+          <section class="menus__container__list__restaurant restaurant--chic">
+            <h2 class="menus__container__list__restaurant__titre">Le chic à la française</h2>
+            <p class="menus__container__list__restaurant__carte">Menu</p>
           </section>
         </a>
 
         <!--le délice des papilles-->
         <a href="./pages/le_delice_des_papilles.html">
-          <section class="menus-list__menu_delice">
-            <h2>Le délice des papilles</h2>
-            <p>Menu</p>
+          <section class="menus__container__list__restaurant restaurant--delice">
+            <h2 class="menus__container__list__restaurant__titre">Le délice des papilles</h2>
+            <p class="menus__container__list__restaurant__carte">Menu</p>
           </section>
         </a>
 
         <!--la palette du gout-->
         <a href="./pages/la_palette_du_gout.html">
-          <section class="menus-list__menu_gout">
-            <h2>La palette du goût</h2>
-            <p>Menu</p>
+          <section class="menus__container__list__restaurant restaurant--gout">
+            <h2 class="menus__container__list__restaurant__titre">La palette du goût</h2>
+            <p class="menus__container__list__restaurant__carte">Menu</p>
           </section>
         </a>
       </article>
 
       <!-- boutton -->
-      <aside class="btn">
-        <h4 class="btn_soon">Prochainement</h4>
-        <div class="loading">
+      <aside class="menus__container__list__bouton">
+        <h4 class="menus__container__list__bouton__prochainement">Prochainement</h4>
+        <div class="menus__container__list__bouton__prochainement__loading">
           <span></span>
           <span></span>
           <span></span>
@@ -75,9 +75,9 @@
     </main>
 
     <!--footer-->
-    <footer>
-      <a href="./pages/mention_legales.html">Mentions légales</a>
-      <a href="mailto:contact@ohmyfood.com">Contactez-nous</a>
+    <footer class="menus__footer">
+      <a href="./pages/mention_legales.html"><p class="menus__footer__info">Mentions légales</p></a>
+      <a href="mailto:contact@ohmyfood.com"><p class="menus__footer__info">Contactez-nous</p></a>
     </footer>
   </body>
 
