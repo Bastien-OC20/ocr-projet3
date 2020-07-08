@@ -49,6 +49,53 @@
         background-clip: text;
         color: transparent;
         font-family: $font3;
+
+// test du svg
+
+        svg {
+            display: block;
+            font: 3em 'croissant';
+            width: 100%;
+            height: 1.5em;
+            @include small{
+                font-size: 7em;
+            }
+        }
+
+        .text-copy {
+            fill: none;
+            stroke: white;
+            stroke-dasharray: 6% 29%;
+            stroke-width: 5px;
+            stroke-dashoffset: 0%;
+            animation: stroke-offset 5.5s infinite linear;
+            animation-play-state: running;
+        }
+
+        .text-copy:nth-child(1) {
+            stroke: $colormenu2a;
+            animation-delay: -1;
+        }
+
+        .text-copy:nth-child(2) {
+            stroke: $colormenu2b;
+            animation-delay: -2s;
+        }
+
+        .text-copy:nth-child(3) {
+            stroke: $colormenu2c;
+            animation-delay: -3s;
+        }
+
+        .text-copy:nth-child(4) {
+            stroke: $colormenu2a;
+            animation-delay: -4s;
+        }
+
+        .text-copy:nth-child(5) {
+            stroke: $colormenu2b;
+            animation-delay: -5s;
+        }
     }
 
     .orange,
@@ -179,7 +226,6 @@
             color: $colormenu3a;
         }
     }
-
         :visited {
             color: $colormenu3a;
         }
@@ -270,45 +316,9 @@
 
 
 
-// Page Mentions-légales
-h2 {
-    font-size: 3em;
-    font-family: $font7;
-    text-align: center;
-}
-
-.mention--article {
-    @include text-shadow-3;
-    padding: 1em;
-    font-family: $font7;
-
-    &-soustitre {
-        font-size: 1.5em;
-        padding: 1em;
-    }
-}
 
 
 
-
-// Page Mentions-légales
-h2 {
-    font-size: 3em;
-    font-family: $font7;
-    text-align: center;
-    margin: 1em;
-}
-
-.mention--article {
-    @include text-shadow-3;
-    padding: 1em;
-    font-family: $font7;
-
-    h3 {
-        font-size: 1.5em;
-        padding: 1em;
-    }
-}
 
 
 // Bouton Retour
