@@ -147,11 +147,7 @@
   }
   100% {
     -webkit-transform: translate(-55px, -48px);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
+
 /* devonshire-regular - latin */
 @font-face {
   font-family: 'Devonshire';
@@ -294,8 +290,9 @@
   src: local("Caveat Regular"), local("Caveat-Regular"), url("../fonts/caveat-v7-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/caveat-v7-latin-regular.woff2") format("woff2"), url("../fonts/caveat-v7-latin-regular.woff") format("woff"), url("../fonts/caveat-v7-latin-regular.ttf") format("truetype"), url("../fonts/caveat-v7-latin-regular.svg#Caveat") format("svg");
   /* Legacy iOS */
 }
+}
 
-header h1 {
+header  {
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition-property: -webkit-transform;
@@ -305,8 +302,8 @@ header h1 {
   -webkit-transition-duration: 400ms;
           transition-duration: 400ms;
 }
-
-header h1:hover {
+}
+header:hover {
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
 }
@@ -378,7 +375,6 @@ header h1:hover {
 .loading span:nth-child(2) {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
-<<<<<<< HEAD
 }
 
 .loading span:nth-child(3) {
@@ -386,15 +382,6 @@ header h1:hover {
           animation-delay: 0.8s;
 }
 
-=======
-}
-
-.loading span:nth-child(3) {
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
-}
-
->>>>>>> 3e1a2fe... 📦 Mise en forme de la page d'accueil
 @-webkit-keyframes dots {
   50% {
     opacity: 0;
@@ -408,7 +395,6 @@ header h1:hover {
     opacity: 0;
     -webkit-transform: scale(0.7) translate(0.5em);
             transform: scale(0.7) translate(0.5em);
-<<<<<<< HEAD
   }
 }
 
@@ -419,51 +405,11 @@ footer a:hover {
           animation-iteration-count: 3;
 }
 
-@-webkit-keyframes headshake {
-  25% {
-    -webkit-transform: translateX(2%);
-            transform: translateX(2%);
-  }
-  75% {
-    -webkit-transform: translateX(-2%);
-            transform: translateX(-2%);
-  }
-}
+
+  
+
 
 @keyframes headshake {
-=======
-  }
-}
-
-footer a:hover {
-  -webkit-animation: headshake 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9);
-          animation: headshake 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9);
-  -webkit-animation-iteration-count: 3;
-          animation-iteration-count: 3;
-}
-
-@-webkit-keyframes headshake {
->>>>>>> 3e1a2fe... 📦 Mise en forme de la page d'accueil
-  25% {
-    -webkit-transform: translateX(2%);
-            transform: translateX(2%);
-  }
-<<<<<<< HEAD
-  to {
-    -webkit-transform: translateY(-5px);
-            transform: translateY(-5px);
->>>>>>> fa53b4d... 📦 Mise en forme de la page d'accueil
-=======
-  75% {
-    -webkit-transform: translateX(-2%);
-            transform: translateX(-2%);
-<<<<<<< HEAD
-=======
-  }
-}
-
-<<<<<<< HEAD
-@keyframes headshake {
   25% {
     -webkit-transform: translateX(2%);
             transform: translateX(2%);
@@ -471,9 +417,7 @@ footer a:hover {
   75% {
     -webkit-transform: translateX(-2%);
             transform: translateX(-2%);
->>>>>>> 3e1a2fe... 📦 Mise en forme de la page d'accueil
->>>>>>> d04e1fb... 📦 Mise en forme de la page d'accueil
-=======
+
 @-webkit-keyframes couleur {
   from {
     color: rgba(88, 23, 32, 0.685);
@@ -505,19 +449,17 @@ footer a:hover {
   to {
     -webkit-transform: scaleX(1);
             transform: scaleX(1);
->>>>>>> fd690df... ✨ Ajout du responsive
->>>>>>> 81d1ad4... ✨ Ajout du responsive
->>>>>>> 6defac5... ✨ Ajout du responsive
   }
 }
-
+  }
+}
 * {
   margin: 0em;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
-
+  
 body {
   background-color: white;
   padding-bottom: 2em;
@@ -907,14 +849,6 @@ footer a:hover {
           box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 81d1ad4... ✨ Ajout du responsive
->>>>>>> 6defac5... ✨ Ajout du responsive
 .menu-card__note p {
   font-size: 1.2em;
   margin: 0.5em;
@@ -926,13 +860,13 @@ footer a:hover {
 }
 
 .menu-card__note--titre h2 {
-=======
+
 @media all and (min-width: 320px) and (max-width: 480px) {
   .menu-card__note {
     padding: 1em;
   }
 }
-
+}
 .menu-card__note img {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -948,103 +882,24 @@ footer a:hover {
   }
 }
 
-.menu-card__note h2 {
->>>>>>> fd690df... ✨ Ajout du responsive
-  text-align: center;
-  font-size: 4em;
-  margin-bottom: 1em;
-  font-family: "Devonshire", cursive;
-}
-
-<<<<<<< HEAD
 .menu-card__note--titre h3 {
   width: 37%;
   margin: 0em 1em 1em 1em;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-=======
-.menu_note img {
-  position: absolute;
-  top: -1.5em;
-  left: 2.5em;
+
 }
 
->>>>>>> d04e1fb... 📦 Mise en forme de la page d'accueil
 .menu_note h2 {
   font-family: 'Devonshire';
   font-size: 1.2em;
   color: #3c1218;
-=======
+
 @media all and (min-width: 320px) and (max-width: 480px) {
   .menu-card__note h2 {
     font-size: 3em;
   }
 }
 
-.menu-card__note h3 {
-  color: #3c1218;
-  margin: 0em;
-  padding: 0em;
-  text-decoration: none;
->>>>>>> fd690df... ✨ Ajout du responsive
-}
 
-.menu_note h2:visited {
-  color: #3c1218;
-  text-decoration: none;
-}
-
-.menu_note h3 {
-  font-family: 'Caveat';
-  font-size: 2em;
-  color: #3c1218;
-<<<<<<< HEAD
->>>>>>> fa53b4d... 📦 Mise en forme de la page d'accueil
-=======
-  text-decoration: none;
->>>>>>> fd690df... ✨ Ajout du responsive
->>>>>>> 81d1ad4... ✨ Ajout du responsive
->>>>>>> 6defac5... ✨ Ajout du responsive
-}
-
-.menu-card__note--sousTitre {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  font-size: 1.5em;
-  text-align: center;
-}
-
-<<<<<<< HEAD
-.menu-card__note--sousTitre h3 {
-  width: 80%;
-}
-
-.menu-card__note--sousTitre-barLeft {
-  width: 80%;
-}
-
-.menu-card__note--sousTitre-barLeft img {
-  margin-right: 1em;
-  width: 80%;
-}
-
-.menu-card__note--sousTitre-barRight {
-  width: 80%;
-}
-
-.menu-card__note--sousTitre-barRight img {
-  margin-left: 1em;
-  width: 80%;
-}
-
-.menu-card__note--plats {
-=======
 @media all and (min-width: 320px) and (max-width: 480px) {
   .menu-card__note p {
     font-size: 1.2em;
@@ -1059,10 +914,7 @@ footer a:hover {
   }
 }
 
-.menu-card__note--entree {
-  display: block;
-  margin-bottom: 4em;
-}
+
 
 @media all and (min-width: 320px) and (max-width: 480px) {
   .menu-card__note--entree {
@@ -1076,11 +928,6 @@ footer a:hover {
   }
 }
 
-.menu-card__note--entree-plats {
-  display: inline-block;
-  width: 35em;
-  text-align: left;
-}
 
 @media all and (min-width: 320px) and (max-width: 480px) {
   .menu-card__note--entree-plats {
@@ -1097,11 +944,7 @@ footer a:hover {
   }
 }
 
-.menu-card__note--entree-prix {
-  display: inline-block;
-  padding-left: 6em;
-  text-align: right;
-}
+
 
 @media all and (min-width: 320px) and (max-width: 480px) {
   .menu-card__note--entree-prix {
@@ -1122,7 +965,7 @@ footer a:hover {
     text-align: left;
   }
 }
-
+}
 .menu-card__note--entree-sousTitre {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1149,7 +992,6 @@ footer a:hover {
 }
 
 .menu-card__note--entree-sousTitre-barLeft {
->>>>>>> fd690df... ✨ Ajout du responsive
   display: inline-block;
   -ms-grid-column-align: left;
       justify-self: left;
@@ -1157,22 +999,6 @@ footer a:hover {
   margin: 3em 0em 3em 2em;
 }
 
-<<<<<<< HEAD
-.menu-card__note--prix {
-  display: inline-block;
-  -ms-grid-column-align: right;
-      justify-self: right;
-}
-
-.menu-card__note--titreFooter {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.menu-card__note--titreFooter-picture {
-  margin: 1em;
-=======
 .menu-card__note--entree-sousTitre-barLeft img {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1202,7 +1028,6 @@ footer a:hover {
 .menu-card__note--entree-sousTitre-trait {
   letter-spacing: 0.05em;
   text-decoration: none;
->>>>>>> fd690df... ✨ Ajout du responsive
 }
 
 .menu-card__note--titreFooter h3 {
@@ -1211,23 +1036,11 @@ footer a:hover {
   font-size: 2em;
 }
 
-<<<<<<< HEAD
-.menu-card__chic {
-  margin: auto;
-  width: 80%;
-  padding: 2em;
-  font-family: "Croissant One", cursive;
-  background-color: #FFF5FE;
-  text-shadow: 2px 2px 4px rgba(153, 153, 153, 0.349);
-  -webkit-box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
-          box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
-=======
 .menu-card__note--entree-sousTitre-barRight img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: auto;
->>>>>>> fd690df... ✨ Ajout du responsive
 }
 
 .menu-card__chic p {
@@ -1235,7 +1048,7 @@ footer a:hover {
   margin: 0.5em;
 }
 
-<<<<<<< HEAD
+
 .menu-card__chic--titre h2 {
   text-align: center;
   font-size: 3em;
@@ -1246,19 +1059,16 @@ footer a:hover {
   background-clip: text;
   color: transparent;
   margin: 1em 0em 3em 0em;
-<<<<<<< HEAD
-=======
 }
 
 .menu-card__chic--sousTitre {
-=======
+
 @media all and (min-width: 320px) and (max-width: 480px) {
   .menu-card__note--platsPrincipaux {
     margin-bottom: -12em;
   }
->>>>>>> 6defac5... ✨ Ajout du responsive
 }
-
+}
 @media all and (min-width: 560px) and (max-width: 960px) {
   .menu-card__note--platsPrincipaux {
     margin-bottom: -12em;
@@ -1311,31 +1121,10 @@ footer a:hover {
   }
 }
 
-.menu-card__note--platsPrincipaux-sousTitre {
->>>>>>> fd690df... ✨ Ajout du responsive
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  font-size: 1.1em;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 3e1a2fe... 📦 Mise en forme de la page d'accueil
-  color: #c67412;
-}
-
-<<<<<<< HEAD
 .menu_delice {
->>>>>>> d04e1fb... 📦 Mise en forme de la page d'accueil
->>>>>>> 81d1ad4... ✨ Ajout du responsive
->>>>>>> 6defac5... ✨ Ajout du responsive
   text-align: center;
   color: #6e4ccc;
-=======
+
 @media all and (min-width: 320px) and (max-width: 480px) {
   .menu-card__note--platsPrincipaux-sousTitre {
     display: block;
@@ -1352,37 +1141,6 @@ footer a:hover {
   }
 }
 
-.menu-card__note--platsPrincipaux-sousTitre-barLeft {
-  display: inline-block;
->>>>>>> fd690df... ✨ Ajout du responsive
-}
-
-.menu-card__chic--sousTitre-barLeft img {
-  margin-right: 1em;
-}
-
-<<<<<<< HEAD
-.menu-card__chic--sousTitre-barRight img {
-  margin-left: 1em;
-}
-
-.menu-card__chic--sousTitre:nth-child(2) {
-  color: #c67412;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.menu-card__chic--sousTitre:nth-last-child(2n) {
-  color: #a56799;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-=======
-.menu-card__note--platsPrincipaux-sousTitre a {
-  display: block;
-  margin: auto;
-  padding-top: 0.5em;
-  width: 128px;
->>>>>>> fd690df... ✨ Ajout du responsive
 }
 
 .menu-card__chic--plats {
@@ -1417,32 +1175,6 @@ footer a:hover {
   color: #6e4ccc;
 }
 
-<<<<<<< HEAD
-.menu-card__delice {
-  margin: auto;
-  width: 80%;
-  padding: 2em;
-  font-family: "Dancing Script", cursive;
-  background-color: #F3F3F3;
-  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
-          box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
-}
-
-.menu-card__delice--titre h2 {
-  margin: 2em 0em 3em 0em;
-  font-size: 3em;
-  text-align: center;
-  background-image: -webkit-gradient(linear, left top, right top, from(#0a35e0), color-stop(#0889fb), to(#8dd5f7));
-  background-image: linear-gradient(to right, #0a35e0, #0889fb, #8dd5f7);
-  -webkit-background-clip: text;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.menu-card__delice--sousTitre {
-=======
 @media all and (min-width: 320px) and (max-width: 480px) {
   .menu-card__note--dessert {
     margin-bottom: -10em;
@@ -1502,7 +1234,6 @@ footer a:hover {
 }
 
 .menu-card__note--dessert-sousTitre {
->>>>>>> fd690df... ✨ Ajout du responsive
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1512,11 +1243,6 @@ footer a:hover {
   text-align: center;
 }
 
-<<<<<<< HEAD
-.menu-card__delice--sousTitre-barLeft img {
-  margin-top: 0.5em;
-  margin-right: 1em;
-=======
 @media all and (min-width: 320px) and (max-width: 480px) {
   .menu-card__note--dessert-sousTitre {
     display: block;
@@ -1536,7 +1262,6 @@ footer a:hover {
 
 .menu-card__note--dessert-sousTitre-barLeft {
   display: inline-block;
->>>>>>> fd690df... ✨ Ajout du responsive
 }
 
 .menu-card__delice--sousTitre-barRight img {
@@ -1544,15 +1269,6 @@ footer a:hover {
   margin-right: 1em;
 }
 
-<<<<<<< HEAD
-.menu-card__delice--plats {
-  display: inline-block;
-  -ms-grid-column-align: left;
-      justify-self: left;
-  width: 80%;
-  margin: 3em 0em 3em 2em;
-  font-size: 1.4em;
-=======
 .menu-card__note--dessert-sousTitre a {
   display: block;
   margin: auto;
@@ -1564,7 +1280,6 @@ footer a:hover {
   border-bottom: solid 0.07em #3c1218;
   -webkit-animation: progress-bar 1000ms;
           animation: progress-bar 1000ms;
->>>>>>> fd690df... ✨ Ajout du responsive
 }
 
 .menu-card__delice--plats p {
