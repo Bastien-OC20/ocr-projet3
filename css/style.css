@@ -118,6 +118,11 @@
     width: 100%;
   }
 }
+@keyframes stroke-offset {
+  100% {
+    stroke-dashoffset: -35%;
+  }
+}
 .btn_return a {
   color: #ebc64d;
   text-decoration: none;
@@ -220,6 +225,11 @@ body {
   font-size: 2.5em;
   padding: 2em 0em 2em 0em;
   text-shadow: 2px 2px 4px rgba(153, 153, 153, 0.349);
+}
+@media all and (max-width: 480px) {
+  .container--menu .menu-card h2 {
+    font-size: 1em;
+  }
 }
 .container--menu .menu-card .menu-card_bandeau {
   display: flex;
@@ -329,6 +339,13 @@ body {
   display: inline-flex;
   text-align: right;
   width: 15%;
+}
+@media all and (max-width: 480px) {
+  .container--menu .menu-card .menu-card_detail .menu-card_detail_prix {
+    display: block;
+    width: auto;
+    text-align: center;
+  }
 }
 .container--menu .menu-card .menu-card_detail:nth-last-child(2) {
   padding-bottom: 4em;
@@ -663,6 +680,46 @@ footer a:hover {
   background-clip: text;
   color: transparent;
   font-family: "Croissant One", cursive;
+}
+.chic h2 svg {
+  display: block;
+  font: 3em "croissant";
+  width: 100%;
+  height: 1.5em;
+}
+@media all and (max-width: 480px) {
+  .chic h2 svg {
+    font-size: 7em;
+  }
+}
+.chic h2 .text-copy {
+  fill: none;
+  stroke: white;
+  stroke-dasharray: 6% 29%;
+  stroke-width: 5px;
+  stroke-dashoffset: 0%;
+  animation: stroke-offset 5.5s infinite linear;
+  animation-play-state: running;
+}
+.chic h2 .text-copy:nth-child(1) {
+  stroke: #c67412;
+  animation-delay: -1;
+}
+.chic h2 .text-copy:nth-child(2) {
+  stroke: #a56799;
+  animation-delay: -2s;
+}
+.chic h2 .text-copy:nth-child(3) {
+  stroke: #6e4ccc;
+  animation-delay: -3s;
+}
+.chic h2 .text-copy:nth-child(4) {
+  stroke: #c67412;
+  animation-delay: -4s;
+}
+.chic h2 .text-copy:nth-child(5) {
+  stroke: #a56799;
+  animation-delay: -5s;
 }
 .chic .orange,
 .chic .violet,
