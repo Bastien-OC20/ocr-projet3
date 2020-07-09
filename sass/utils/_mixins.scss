@@ -34,14 +34,57 @@
 
 @mixin headshake {
     animation: headshake 100ms cubic-bezier(.4, .1, .6, .9);
-    animation-iteration-count: 3;
+    animation-iteration-count: 4;
 }
 
 
-
+// Underline
 
 @mixin progress-bar {
     border-bottom: solid 0.07em;
     text-shadow: 2px 2px 4px rgba(153, 153, 153, 0.349);
     animation: couleur, progress-bar 1000ms;
+
+}
+
+// Focus chargement pages
+
+@mixin text-focus {
+    animation-name: text-focus-in;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+}
+
+// Etirement
+
+@mixin elastic {
+    animation-name: elastic;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+}
+
+// text gradient
+
+@mixin gradient {
+    animation: gradient 4s linear infinite;
+    background: linear-gradient(90deg, #c67412 0%, #a56799 10%, #6e4ccc 20%, #c67412 30%, #a56799 40%, #6e4ccc 50%, #c67412 60%, #a56799 70%, #6e4ccc 80%, #c67412 90%, #a56799 100%);
+    background-size: 1000% 100%;
+    -webkit-background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+// Eclairage
+@mixin blur {
+    animation: blur .5s ease-out;
+    text-shadow: 0px 0px 3px #fff, 0px 0px 5px #fff;
 }

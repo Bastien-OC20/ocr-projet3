@@ -1,0 +1,156 @@
+@import "breakpoints";
+
+* {
+    margin: 0em;
+    text-decoration: none;
+}
+
+body {
+    background-color: $bodybackground;
+    padding-bottom: 2em;
+    max-width: 1024px;
+    margin: auto;
+    position: relative;
+    text-decoration: none;
+
+
+    // cadre des menus
+    .container__carte {
+        padding: 2em;
+        margin-bottom: 3em;
+
+        &__restaurant {
+            display: block;
+            justify-content: center;
+            margin: 3em;
+            padding: 2em;
+            @include box-shadow;
+
+            &__header {
+                margin-top: 4em;
+
+                img {
+                    display: block;
+                    margin: auto;
+                    width: 4em;
+                }
+
+                &--titre {
+                    display: block;
+                    text-align: center;
+                    margin:0em 1em 1em 1em ;
+                }
+
+            }
+
+            &__mets {
+                display: block;
+                width: auto;
+                margin-bottom: 4em;
+
+                &__header {
+                    display: flex;
+                    justify-content: space-around;
+                    margin-bottom: 1em;
+
+                    img {
+                        display: flex;
+                        width: auto;
+                        margin: auto;
+                        padding: 1em 0em 2em 0em;
+                    }
+                }
+
+                &--plats {
+                    display: inline-flex;
+                    justify-content: left;
+                    width: 70%;
+                    margin-left: 4em
+                }
+
+                &--prix {
+                    display: inline-flex;
+                    justify-content: left;
+                    width: 5%;
+                    font-weight: bold;
+                }
+
+            }
+
+            &__Footer {
+                display: block;
+                padding: 2em;
+                animation-play-state: inherit;
+
+                img {
+                    position: relative;
+                    left: 18em;
+                    top: 3em;
+                }
+
+                a {
+                    display: block;
+                    margin: auto;
+                    padding-left: 8em;
+                    text-align: center;
+                    width: 11em;
+                    animation-play-state: paused;
+                    animation: none;
+
+                    :hover {
+                        animation-play-state: paused;
+                    }
+
+                    :visited {
+                        animation-play-state: paused;
+                    }
+
+                    h3 {
+                        animation-play-state: paused;
+
+                        :hover {
+                            animation-play-state: paused;
+                        }
+
+                        :visited {
+                            animation-play-state: paused;
+                        }
+                    }
+                }
+            }
+
+            &__accueil {
+                background-color: $main-background;
+                color: $main-text;
+                display: flex;
+                width: 10%;
+                border: 0;
+                border-radius: 15px;
+                padding: 0.5em;
+                margin: auto;
+                font-size: 1.5rem;
+                text-align: center;
+                cursor: pointer;
+                @include text-shadow-1;
+                @include box-shadow;
+
+                &--return {
+                    a {
+                        color: $main-text;
+                        text-decoration: none;
+
+
+                        :hover {
+                            text-decoration: none;
+
+                        }
+
+                        :visited {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

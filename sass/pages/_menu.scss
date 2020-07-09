@@ -1,3 +1,6 @@
+// Habillage de l'index
+
+// Header
 .menus__header {
     background-color: $main-background;
 
@@ -5,23 +8,41 @@
         font-family: $font1;
         font-size: 8em;
         color: $main-text;
+        text-decoration: none;
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
 
         a:visited {
+            text-decoration: none;
             color: $main-text;
         }
     }
 }
 
+// Grid des menus
 .menus__container {
 
     &__list {
         a {
-            display: block;
 
             :hover {
-               display: block;
+                text-decoration: none;
                 @include animate;
+
             }
+
+            :visited {
+                text-decoration: none;
+                @include animate;
+
+            }
+
         }
 
         &__restaurant {
@@ -33,12 +54,14 @@
                 @include text-shadow-3;
             }
 
+
             &__carte {
                 font-size: 3em;
             }
         }
 
-        .restaurant--note {
+        .restaurant__note {
+            grid-area: a;
             background-color: $bgmenu1;
             color: $colormenu1;
 
@@ -51,17 +74,19 @@
 
             p {
                 animation-play-state: paused;
-                font-family: $font7;
+                font-family: $font4;
                 font-weight: bold;
             }
         }
 
-        .restaurant--chic {
+        .restaurant__chic {
+            grid-area: ab;
             background-color: $bgmenu2;
 
+
             h2 {
-                animation-play-state: paused;
-                margin-top: 7.5em;
+                animation: none;
+                margin-top: 6em;
                 background-image: linear-gradient(to right, $colormenu2a, $colormenu2b, $colormenu2c, );
                 -webkit-background-clip: text;
                 -webkit-background-clip: text;
@@ -76,17 +101,19 @@
                 animation-play-state: paused;
                 color: $colormenu2a;
                 margin-top: 1.5em;
-                font-family: $font7;
+                font-family: $font4;
                 font-weight: bold;
+                text-decoration: none;
             }
         }
 
-        .restaurant--delice {
+        .restaurant__delice {
+            grid-area: c;
             background-color: $bgmenu2;
 
             h2 {
                 animation-play-state: paused;
-                margin-top: 7.5em;
+                margin-top: 6em;
                 background-image: linear-gradient(to right, $colormenu3a, $colormenu3b, $colormenu3c);
                 -webkit-background-clip: text;
                 -webkit-background-clip: text;
@@ -100,13 +127,13 @@
             p {
                 animation-play-state: paused;
                 color: $colormenu3b;
-                margin-top: 1.5em;
-                font-family: $font7;
+                margin-top: 1em;
+                font-family: $font4;
                 font-weight: bold;
             }
         }
 
-        .restaurant--gout {
+        .restaurant__gout {
             background-color: $bgmenu2;
             background-image: linear-gradient(45deg, $colormenu4a, $colormenu4b);
             -webkit-background-clip: text;
@@ -114,6 +141,7 @@
             -moz-background-clip: text;
             background-clip: text;
             color: transparent;
+            grid-area: d;
 
             h2 {
                 animation-play-state: paused;
@@ -123,7 +151,7 @@
                 -moz-background-clip: text;
                 background-clip: text;
                 color: transparent;
-                margin-top: 7.5em;
+                margin-top: 6em;
                 font-size: 1.5em;
                 font-family: $font3;
             }
@@ -136,8 +164,8 @@
                 -moz-background-clip: text;
                 background-clip: text;
                 color: transparent;
-                margin-top: 1.5em;
-                font-family: $font7;
+                margin-top: 1em;
+                font-family: $font4;
                 font-weight: bold;
             }
         }
@@ -166,11 +194,12 @@
         }
     }
 
-    &__list__bouton {
+    &__list__annonce {
         background-color: $main-background;
 
         &__prochainement {
             color: $main-text;
+            font-size: 1.5em;
 
             &__loading span {
                 width: 0.3em;
@@ -185,11 +214,11 @@
                 @include text-shadow-1;
             }
 
-            .loading span:nth-child(2) {
+            &__loading span:nth-child(2) {
                 animation-delay: 0.4s;
             }
 
-            .loading span:nth-child(3) {
+            &__loading span:nth-child(3) {
                 animation-delay: 0.8s;
             }
         }
@@ -199,175 +228,14 @@
 .menus__footer {
     background-color: $main-background;
 
+    a:hover {
+        color: $main-text;
+        @include headshake;
+    }
+
     &__info {
         color: $main-text;
-    }
-}
+        @include headshake;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.menus-list {
-    text-align: center;
-    width: auto;
-    display: grid;
-    padding: 2em;
-    grid-template-columns: repeat(auto-fill, 20em);
-    grid-gap: 5em;
-
-    @include small {
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    a {
-        display: block;
-        width: 10em;
-        height: 15em;
-        font-size: 2em;
-        margin: 0em;
-        text-decoration: none;
-
-
-        &:hover {
-            @include animate;
-        }
-
-        @include small {
-
-            width: 90%;
-            margin: auto;
-        }
-    }
-}
-
-.menus-list__menu_note {
-    @include box-shadow;
-    background-color: $bgmenu1;
-    width: auto;
-    height: 15em;
-    @include text-shadow-2;
-
-    img {
-        padding-top: 3em;
-        margin: auto;
-    }
-
-    h2 {
-        font-family: $font2;
-        font-size: 1em;
-        color: $colormenu1;
-        text-align: center;
-
-        &:visited {
-            color: $colormenu1;
-        }
-    }
-
-    p {
-        font-family: $font5;
-        font-size: 2em;
-        padding-top: 0.5em;
-        color: $colormenu1;
-    }
-}
-
-.menus-list__menu_chic {
-    @include box-shadow;
-    background-color: $bgmenu2;
-    width: auto;
-    height: 15em;
-    @include text-shadow-2;
-
-    h2 {
-        font-family: $font3;
-        font-size: 0.7em;
-        background-image: linear-gradient(to right, $colormenu2a, $colormenu2b, $colormenu2c, );
-        -webkit-background-clip: text;
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        padding-top: 7em;
-        margin: auto;
-    }
-
-    p {
-        font-family: $font7;
-        padding-top: 1em;
-        font-size: 1.5em;
-        color: $colormenu2a;
-    }
-}
-
-.menus-list__menu_delice {
-    width: auto;
-    height: 15em;
-    @include box-shadow;
-    background-color: $bgmenu3;
-    @include text-shadow-2;
-
-    h2 {
-        font-family: $font4;
-        font-size: 1em;
-        background-image: linear-gradient(to right, $colormenu3a, $colormenu3b);
-        -webkit-background-clip: text;
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        padding-top: 5em;
-        margin: auto;
-    }
-
-    p {
-        font-family: $font5;
-        font-size: 2em;
-        padding-top: 0.5em;
-        color: $colormenu3b;
-    }
-}
-
-.menus-list__menu_gout {
-    width: auto;
-    height: 15em;
-    @include box-shadow;
-    background-color: $bgmenu4;
-    @include text-shadow-3;
-
-    h2 {
-        font-family: $font6;
-        font-size: 1em;
-        background-image: linear-gradient(to right, $colormenu4a, $colormenu4b);
-        -webkit-background-clip: text;
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        padding-top: 5em;
-        margin: auto;
-    }
-
-    p {
-        font-family: $font5;
-        font-size: 2em;
-        padding-top: 0.5em;
-        color: $colormenu4b;
     }
 }

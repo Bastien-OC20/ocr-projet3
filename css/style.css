@@ -10,7 +10,7 @@
     transform: translateX(2%);
   }
   75% {
-    transform: translateX(-4%);
+    transform: translateX(-8%);
   }
 }
 @keyframes zoom-hover {
@@ -99,17 +99,6 @@
     -ms-transform: translate(-55px, -48px);
   }
 }
-@keyframes couleur {
-  from {
-    color: #795050;
-  }
-  60% {
-    color: rgba(88, 23, 32, 0.685);
-  }
-  to {
-    color: #3c1218;
-  }
-}
 @keyframes progress-bar {
   from {
     width: 0%;
@@ -118,9 +107,74 @@
     width: 100%;
   }
 }
-@keyframes stroke-offset {
+@keyframes text-focus-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
   100% {
-    stroke-dashoffset: -35%;
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes elastic {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  30% {
+    -webkit-transform: scaleX(1.25) scaleY(0.75);
+    transform: scaleX(1.25) scaleY(0.75);
+  }
+  40% {
+    -webkit-transform: scaleX(0.75) scaleY(1.25);
+    transform: scaleX(0.75) scaleY(1.25);
+  }
+  60% {
+    -webkit-transform: scaleX(1.15) scaleY(0.85);
+    transform: scaleX(1.15) scaleY(0.85);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 51%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 51%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 51%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes blur {
+  from {
+    text-shadow: 0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 50px #fff, 0px 0px 50px #fff, 0px 0px 50px #7B96B8, 0px 0px 150px #7B96B8, 0px 10px 100px #7B96B8, 0px 10px 100px #7B96B8, 0px 10px 100px #7B96B8, 0px 10px 100px #7B96B8, 0px -10px 100px #7B96B8, 0px -10px 100px #7B96B8;
   }
 }
 .btn_return a {
@@ -138,7 +192,7 @@
 
 * {
   margin: 0em;
-  justify-content: center;
+  text-decoration: none;
 }
 
 body {
@@ -163,15 +217,20 @@ body .menus__header__title {
 }
 body .menus__container {
   display: block;
-  padding: 2em;
+  padding: 4em;
+  margin: auto;
 }
 body .menus__container__list {
   text-align: center;
   width: auto;
   display: grid;
   padding: 2em;
+  margin: 2em;
   grid-template-columns: repeat(auto-fill, 20em);
-  grid-gap: 5em;
+  grid-gap: 8em;
+}
+body .menus__container__list a {
+  text-decoration: none;
 }
 body .menus__container__list__restaurant {
   box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
@@ -184,34 +243,34 @@ body .menus__container__list__restaurant {
 body .menus__container__list__restaurant img {
   position: absolute;
   display: block;
-  padding: 6em 0em 0em 7em;
+  padding: 4em 0em 0em 7em;
   margin: auto;
   justify-content: center;
 }
 body .menus__container__list__restaurant__titre {
-  margin-top: 4.2em;
+  margin-top: 3.3em;
 }
 body .menus__container__list__restaurant__carte {
-  margin-top: 1em;
+  margin-top: 1.3em;
 }
-body .menus__container__list__bouton {
+body .menus__container__list__annonce {
   display: flex;
-  width: 25%;
+  width: 23%;
   border: 0;
   border-radius: 15px;
   padding: 0.5em;
-  margin: 2em 14em 1em 14em;
-  font-size: 1.5rem;
+  margin: auto;
   text-align: center;
   cursor: pointer;
   text-shadow: 0.1em 0.1em 0.2em black;
   box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
 }
-body .menus__container__list__bouton__prochainement {
+body .menus__container__list__annonce__prochainement {
   display: inline;
-  margin-right: 0.5em;
+  padding-right: 0.5em;
 }
-body .menus__container__list__bouton__prochainement__loading {
+body .menus__container__list__annonce__prochainement__loading {
+  padding-top: 0.5em;
   display: inline-block;
 }
 body .menus__footer {
@@ -225,6 +284,15 @@ body .menus__footer {
   width: 100%;
   height: 3em;
   box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
+}
+body .menus__footer a {
+  text-decoration: none;
+}
+body .menus__footer a :hover {
+  text-decoration: none;
+}
+body .menus__footer a :visited {
+  text-decoration: none;
 }
 body .menus__footer__info {
   line-height: 0.5em;
@@ -248,6 +316,144 @@ body .menus__footer__info {
   text-decoration: none;
 }
 
+* {
+  margin: 0em;
+  text-decoration: none;
+}
+
+body {
+  background-color: white;
+  padding-bottom: 2em;
+  max-width: 1024px;
+  margin: auto;
+  position: relative;
+  text-decoration: none;
+}
+body .container__carte {
+  padding: 2em;
+  margin-bottom: 3em;
+}
+body .container__carte__restaurant {
+  display: block;
+  justify-content: center;
+  margin: 3em;
+  padding: 2em;
+  box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
+}
+body .container__carte__restaurant__header {
+  margin-top: 4em;
+}
+body .container__carte__restaurant__header img {
+  display: block;
+  margin: auto;
+  width: 4em;
+}
+body .container__carte__restaurant__header--titre {
+  display: block;
+  text-align: center;
+  margin: 0em 1em 1em 1em;
+}
+body .container__carte__restaurant__mets {
+  display: block;
+  width: auto;
+  margin-bottom: 4em;
+}
+body .container__carte__restaurant__mets__header {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1em;
+}
+body .container__carte__restaurant__mets__header img {
+  display: flex;
+  width: auto;
+  margin: auto;
+  padding: 1em 0em 2em 0em;
+}
+body .container__carte__restaurant__mets--plats {
+  display: inline-flex;
+  justify-content: left;
+  width: 70%;
+  margin-left: 4em;
+}
+body .container__carte__restaurant__mets--prix {
+  display: inline-flex;
+  justify-content: left;
+  width: 5%;
+  font-weight: bold;
+}
+body .container__carte__restaurant__Footer {
+  display: block;
+  padding: 2em;
+  animation-play-state: inherit;
+}
+body .container__carte__restaurant__Footer img {
+  position: relative;
+  left: 18em;
+  top: 3em;
+}
+body .container__carte__restaurant__Footer a {
+  display: block;
+  margin: auto;
+  padding-left: 8em;
+  text-align: center;
+  width: 11em;
+  animation-play-state: paused;
+  animation: none;
+}
+body .container__carte__restaurant__Footer a :hover {
+  animation-play-state: paused;
+}
+body .container__carte__restaurant__Footer a :visited {
+  animation-play-state: paused;
+}
+body .container__carte__restaurant__Footer a h3 {
+  animation-play-state: paused;
+}
+body .container__carte__restaurant__Footer a h3 :hover {
+  animation-play-state: paused;
+}
+body .container__carte__restaurant__Footer a h3 :visited {
+  animation-play-state: paused;
+}
+body .container__carte__restaurant__accueil {
+  background-color: #589a86;
+  color: #FBC02D;
+  display: flex;
+  width: 10%;
+  border: 0;
+  border-radius: 15px;
+  padding: 0.5em;
+  margin: auto;
+  font-size: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  text-shadow: 0.1em 0.1em 0.2em black;
+  box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
+}
+body .container__carte__restaurant__accueil--return a {
+  color: #FBC02D;
+  text-decoration: none;
+}
+body .container__carte__restaurant__accueil--return a :hover {
+  text-decoration: none;
+}
+body .container__carte__restaurant__accueil--return a :visited {
+  text-decoration: none;
+}
+
+.btn_return a {
+  color: #FBC02D;
+  text-decoration: none;
+}
+.btn_return a .btn_return a:visited {
+  color: #FBC02D;
+  text-decoration: none;
+}
+.btn_return a .btn_return a:hover {
+  color: #FBC02D;
+  text-decoration: none;
+}
+
 .menus__header {
   background-color: #589a86;
 }
@@ -255,16 +461,29 @@ body .menus__footer__info {
   font-family: "roboto", serif;
   font-size: 8em;
   color: #FBC02D;
+  text-decoration: none;
+}
+.menus__header__title a {
+  text-decoration: none;
+}
+.menus__header__title a:hover {
+  text-decoration: none;
 }
 .menus__header__title a:visited {
+  text-decoration: none;
   color: #FBC02D;
 }
 
-.menus__container__list a {
-  display: block;
-}
 .menus__container__list a :hover {
-  display: block;
+  text-decoration: none;
+  -webkit-animation: zoom-in-out 1s linear 0s 1 normal;
+  -moz-animation: zoom-in-out 1s linear 0s 1 normal;
+  -ms-animation: zoom-in-out 1s linear 0s 1 normal;
+  animation: zoom-in-out 1s linear 0s 1 normal;
+  opacity: 60%;
+}
+.menus__container__list a :visited {
+  text-decoration: none;
   -webkit-animation: zoom-in-out 1s linear 0s 1 normal;
   -moz-animation: zoom-in-out 1s linear 0s 1 normal;
   -ms-animation: zoom-in-out 1s linear 0s 1 normal;
@@ -280,27 +499,29 @@ body .menus__footer__info {
 .menus__container__list__restaurant__carte {
   font-size: 3em;
 }
-.menus__container__list .restaurant--note {
+.menus__container__list .restaurant__note {
+  grid-area: a;
   background-color: #FCDFDB;
   color: #3c1218;
 }
-.menus__container__list .restaurant--note h2 {
+.menus__container__list .restaurant__note h2 {
   animation-play-state: paused;
   color: #3c1218;
   font-size: 2.5em;
   font-family: "Devonshire", cursive;
 }
-.menus__container__list .restaurant--note p {
+.menus__container__list .restaurant__note p {
   animation-play-state: paused;
-  font-family: "Source Serif Pro", serif;
+  font-family: "Dancing Script", cursive;
   font-weight: bold;
 }
-.menus__container__list .restaurant--chic {
+.menus__container__list .restaurant__chic {
+  grid-area: ab;
   background-color: #FFF5FE;
 }
-.menus__container__list .restaurant--chic h2 {
-  animation-play-state: paused;
-  margin-top: 7.5em;
+.menus__container__list .restaurant__chic h2 {
+  animation: none;
+  margin-top: 6em;
   background-image: linear-gradient(to right, #c67412, #a56799, #6e4ccc);
   -webkit-background-clip: text;
   -webkit-background-clip: text;
@@ -310,19 +531,21 @@ body .menus__footer__info {
   font-size: 1.5em;
   font-family: "Croissant One", cursive;
 }
-.menus__container__list .restaurant--chic p {
+.menus__container__list .restaurant__chic p {
   animation-play-state: paused;
   color: #c67412;
   margin-top: 1.5em;
-  font-family: "Source Serif Pro", serif;
+  font-family: "Dancing Script", cursive;
   font-weight: bold;
+  text-decoration: none;
 }
-.menus__container__list .restaurant--delice {
+.menus__container__list .restaurant__delice {
+  grid-area: c;
   background-color: #FFF5FE;
 }
-.menus__container__list .restaurant--delice h2 {
+.menus__container__list .restaurant__delice h2 {
   animation-play-state: paused;
-  margin-top: 7.5em;
+  margin-top: 6em;
   background-image: linear-gradient(to right, #0a35e0, #0889fb, #3aabf7);
   -webkit-background-clip: text;
   -webkit-background-clip: text;
@@ -332,14 +555,14 @@ body .menus__footer__info {
   font-size: 1.5em;
   font-family: "Croissant One", cursive;
 }
-.menus__container__list .restaurant--delice p {
+.menus__container__list .restaurant__delice p {
   animation-play-state: paused;
   color: #0889fb;
-  margin-top: 1.5em;
-  font-family: "Source Serif Pro", serif;
+  margin-top: 1em;
+  font-family: "Dancing Script", cursive;
   font-weight: bold;
 }
-.menus__container__list .restaurant--gout {
+.menus__container__list .restaurant__gout {
   background-color: #FFF5FE;
   background-image: linear-gradient(45deg, #558B2F, #8BC34A);
   -webkit-background-clip: text;
@@ -347,8 +570,9 @@ body .menus__footer__info {
   -moz-background-clip: text;
   background-clip: text;
   color: transparent;
+  grid-area: d;
 }
-.menus__container__list .restaurant--gout h2 {
+.menus__container__list .restaurant__gout h2 {
   animation-play-state: paused;
   background-image: linear-gradient(45deg, #558B2F, #8BC34A);
   -webkit-background-clip: text;
@@ -356,11 +580,11 @@ body .menus__footer__info {
   -moz-background-clip: text;
   background-clip: text;
   color: transparent;
-  margin-top: 7.5em;
+  margin-top: 6em;
   font-size: 1.5em;
   font-family: "Croissant One", cursive;
 }
-.menus__container__list .restaurant--gout p {
+.menus__container__list .restaurant__gout p {
   animation-play-state: paused;
   background-image: linear-gradient(45deg, #558B2F, #8BC34A);
   -webkit-background-clip: text;
@@ -368,8 +592,8 @@ body .menus__footer__info {
   -moz-background-clip: text;
   background-clip: text;
   color: transparent;
-  margin-top: 1.5em;
-  font-family: "Source Serif Pro", serif;
+  margin-top: 1em;
+  font-family: "Dancing Script", cursive;
   font-weight: bold;
 }
 .menus__container__list__bouton {
@@ -392,13 +616,14 @@ body .menus__footer__info {
 .menus__container__list__bouton__prochainement__loading {
   display: inline-block;
 }
-.menus__container__list__bouton {
+.menus__container__list__annonce {
   background-color: #589a86;
 }
-.menus__container__list__bouton__prochainement {
+.menus__container__list__annonce__prochainement {
   color: #FBC02D;
+  font-size: 1.5em;
 }
-.menus__container__list__bouton__prochainement__loading span {
+.menus__container__list__annonce__prochainement__loading span {
   width: 0.3em;
   height: 0.3em;
   background-color: #FBC02D;
@@ -410,159 +635,25 @@ body .menus__footer__info {
   animation-timing-function: ease-in-out;
   text-shadow: 0.1em 0.1em 0.2em black;
 }
-.menus__container__list__bouton__prochainement .loading span:nth-child(2) {
+.menus__container__list__annonce__prochainement__loading span:nth-child(2) {
   animation-delay: 0.4s;
 }
-.menus__container__list__bouton__prochainement .loading span:nth-child(3) {
+.menus__container__list__annonce__prochainement__loading span:nth-child(3) {
   animation-delay: 0.8s;
 }
 
 .menus__footer {
   background-color: #589a86;
 }
+.menus__footer a:hover {
+  color: #FBC02D;
+  animation: headshake 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9);
+  animation-iteration-count: 4;
+}
 .menus__footer__info {
   color: #FBC02D;
-}
-
-.menus-list {
-  text-align: center;
-  width: auto;
-  display: grid;
-  padding: 2em;
-  grid-template-columns: repeat(auto-fill, 20em);
-  grid-gap: 5em;
-}
-@media all and (max-width: 480px) {
-  .menus-list {
-    flex-direction: column;
-    justify-content: center;
-  }
-}
-.menus-list a {
-  display: block;
-  width: 10em;
-  height: 15em;
-  font-size: 2em;
-  margin: 0em;
-  text-decoration: none;
-}
-.menus-list a:hover {
-  -webkit-animation: zoom-in-out 1s linear 0s 1 normal;
-  -moz-animation: zoom-in-out 1s linear 0s 1 normal;
-  -ms-animation: zoom-in-out 1s linear 0s 1 normal;
-  animation: zoom-in-out 1s linear 0s 1 normal;
-  opacity: 60%;
-}
-@media all and (max-width: 480px) {
-  .menus-list a {
-    width: 90%;
-    margin: auto;
-  }
-}
-
-.menus-list__menu_note {
-  box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
-  background-color: #FCDFDB;
-  width: auto;
-  height: 15em;
-  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
-}
-.menus-list__menu_note img {
-  padding-top: 3em;
-  margin: auto;
-}
-.menus-list__menu_note h2 {
-  font-family: "Devonshire", cursive;
-  font-size: 1em;
-  color: #3c1218;
-  text-align: center;
-}
-.menus-list__menu_note h2:visited {
-  color: #3c1218;
-}
-.menus-list__menu_note p {
-  font-family: "Caveat", cursive;
-  font-size: 2em;
-  padding-top: 0.5em;
-  color: #3c1218;
-}
-
-.menus-list__menu_chic {
-  box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
-  background-color: #FFF5FE;
-  width: auto;
-  height: 15em;
-  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
-}
-.menus-list__menu_chic h2 {
-  font-family: "Croissant One", cursive;
-  font-size: 0.7em;
-  background-image: linear-gradient(to right, #c67412, #a56799, #6e4ccc);
-  -webkit-background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  padding-top: 7em;
-  margin: auto;
-}
-.menus-list__menu_chic p {
-  font-family: "Source Serif Pro", serif;
-  padding-top: 1em;
-  font-size: 1.5em;
-  color: #c67412;
-}
-
-.menus-list__menu_delice {
-  width: auto;
-  height: 15em;
-  box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
-  background-color: #F3F3F3;
-  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
-}
-.menus-list__menu_delice h2 {
-  font-family: "Dancing Script", cursive;
-  font-size: 1em;
-  background-image: linear-gradient(to right, #0a35e0, #0889fb);
-  -webkit-background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  padding-top: 5em;
-  margin: auto;
-}
-.menus-list__menu_delice p {
-  font-family: "Caveat", cursive;
-  font-size: 2em;
-  padding-top: 0.5em;
-  color: #0889fb;
-}
-
-.menus-list__menu_gout {
-  width: auto;
-  height: 15em;
-  box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
-  background-color: white;
-  text-shadow: 2px 2px 4px rgba(153, 153, 153, 0.349);
-}
-.menus-list__menu_gout h2 {
-  font-family: "Kaushan Script", cursive;
-  font-size: 1em;
-  background-image: linear-gradient(to right, #558B2F, #8BC34A);
-  -webkit-background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  padding-top: 5em;
-  margin: auto;
-}
-.menus-list__menu_gout p {
-  font-family: "Caveat", cursive;
-  font-size: 2em;
-  padding-top: 0.5em;
-  color: #8BC34A;
+  animation: headshake 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9);
+  animation-iteration-count: 4;
 }
 
 .container-mention {
@@ -588,331 +679,241 @@ body .menus__footer__info {
   padding: 1.5em;
 }
 
-.note {
+.container__carte .note {
+  font-family: "Devonshire", cursive;
   background-color: #FCDFDB;
-  color: #3c1218;
-  font-family: "Devonshire", cursive;
+  animation-name: text-focus-in;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
 }
-.note img {
-  width: 4em;
-  padding-top: 2em;
-}
-.note h2:nth-child(2) {
-  font-family: "Devonshire", cursive;
+.container__carte .note h2 {
   font-size: 3em;
-  padding: 0em 0em 0.5em 0em;
-}
-.note .menu-card_bandeau a {
-  text-decoration: none;
   color: #3c1218;
 }
-.note .menu-card_bandeau :hover {
+.container__carte .note h3 {
+  font-size: 2em;
+}
+.container__carte .note a {
   color: #3c1218;
-  text-decoration: none;
 }
-.note .menu-card_bandeau :visited {
+.container__carte .note a :hover {
   color: #3c1218;
-  text-decoration: none;
+  border-bottom: solid 0.07em;
+  text-shadow: 2px 2px 4px rgba(153, 153, 153, 0.349);
+  animation: couleur, progress-bar 1000ms;
 }
-.note .menu-card_detail_prix {
-  font-weight: bolder;
+.container__carte .note a :visited {
+  color: #3c1218;
 }
-
-.chic {
+.container__carte .note p {
+  font-size: 1.5em;
+}
+.container__carte .chic {
   font-family: "Croissant One", cursive;
   background-color: #FFF5FE;
+  text-shadow: 2px 2px 4px rgba(153, 153, 153, 0.349);
+  animation-name: text-focus-in;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
 }
-.chic h2 {
+.container__carte .chic h2 {
+  font-size: 3em;
   background-image: linear-gradient(to right, #c67412, #a56799, #6e4ccc);
   -webkit-background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-family: "Croissant One", cursive;
 }
-.chic h2 svg {
-  display: block;
-  font: 3em "croissant";
-  width: 100%;
-  height: 1.5em;
-}
-@media all and (max-width: 480px) {
-  .chic h2 svg {
-    font-size: 7em;
-  }
-}
-.chic h2 .text-copy {
-  fill: none;
-  stroke: white;
-  stroke-dasharray: 6% 29%;
-  stroke-width: 5px;
-  stroke-dashoffset: 0%;
-  animation: stroke-offset 5.5s infinite linear;
-  animation-play-state: running;
-}
-.chic h2 .text-copy:nth-child(1) {
-  stroke: #c67412;
-  animation-delay: -1;
-}
-.chic h2 .text-copy:nth-child(2) {
-  stroke: #a56799;
-  animation-delay: -2s;
-}
-.chic h2 .text-copy:nth-child(3) {
-  stroke: #6e4ccc;
-  animation-delay: -3s;
-}
-.chic h2 .text-copy:nth-child(4) {
-  stroke: #c67412;
-  animation-delay: -4s;
-}
-.chic h2 .text-copy:nth-child(5) {
-  stroke: #a56799;
-  animation-delay: -5s;
-}
-.chic .orange,
-.chic .violet,
-.chic .bleu {
-  font-size: 0.8em;
-}
-.chic .orange h3 {
+.container__carte .chic h3 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  padding-top: 0.2em;
   color: #c67412;
 }
-.chic .orange h3 :hover {
+.container__carte .chic .parme h3 {
+  color: #a56799;
+}
+.container__carte .chic .parme h3 :hover {
+  animation: gradient 4s linear infinite;
+  background: linear-gradient(90deg, #c67412 0%, #a56799 10%, #6e4ccc 20%, #c67412 30%, #a56799 40%, #6e4ccc 50%, #c67412 60%, #a56799 70%, #6e4ccc 80%, #c67412 90%, #a56799 100%);
+  background-size: 1000% 100%;
+  -webkit-background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.container__carte .chic .parme h3 :visited {
+  animation: gradient 4s linear infinite;
+  background: linear-gradient(90deg, #c67412 0%, #a56799 10%, #6e4ccc 20%, #c67412 30%, #a56799 40%, #6e4ccc 50%, #c67412 60%, #a56799 70%, #6e4ccc 80%, #c67412 90%, #a56799 100%);
+  background-size: 1000% 100%;
+  -webkit-background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.container__carte .chic .violet h3 {
+  color: #6e4ccc;
+}
+.container__carte .chic .violet h3 :hover {
+  animation: gradient 4s linear infinite;
+  background: linear-gradient(90deg, #c67412 0%, #a56799 10%, #6e4ccc 20%, #c67412 30%, #a56799 40%, #6e4ccc 50%, #c67412 60%, #a56799 70%, #6e4ccc 80%, #c67412 90%, #a56799 100%);
+  background-size: 1000% 100%;
+  -webkit-background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.container__carte .chic .violet h3 :visited {
+  animation: gradient 4s linear infinite;
+  background: linear-gradient(90deg, #c67412 0%, #a56799 10%, #6e4ccc 20%, #c67412 30%, #a56799 40%, #6e4ccc 50%, #c67412 60%, #a56799 70%, #6e4ccc 80%, #c67412 90%, #a56799 100%);
+  background-size: 1000% 100%;
+  -webkit-background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.container__carte .chic a {
   color: #c67412;
 }
-.chic .orange h3 :visited {
+.container__carte .chic a :hover {
+  color: #c67412;
+  animation: gradient 4s linear infinite;
+  background: linear-gradient(90deg, #c67412 0%, #a56799 10%, #6e4ccc 20%, #c67412 30%, #a56799 40%, #6e4ccc 50%, #c67412 60%, #a56799 70%, #6e4ccc 80%, #c67412 90%, #a56799 100%);
+  background-size: 1000% 100%;
+  -webkit-background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.container__carte .chic a :visited {
+  color: #c67412;
+  animation: gradient 4s linear infinite;
+  background: linear-gradient(90deg, #c67412 0%, #a56799 10%, #6e4ccc 20%, #c67412 30%, #a56799 40%, #6e4ccc 50%, #c67412 60%, #a56799 70%, #6e4ccc 80%, #c67412 90%, #a56799 100%);
+  background-size: 1000% 100%;
+  -webkit-background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.container__carte .chic p {
+  font-size: 1em;
   color: #c67412;
 }
-.chic .violet h3 {
+.container__carte .chic .parme {
   color: #a56799;
 }
-.chic .violet h3 :hover {
-  color: #a56799;
-}
-.chic .violet h3 :visited {
-  color: #a56799;
-}
-.chic .bleu h3 {
+.container__carte .chic .violet {
   color: #6e4ccc;
 }
-.chic .bleu h3 :hover {
-  color: #6e4ccc;
-}
-.chic .bleu h3 :visited {
-  color: #6e4ccc;
-}
-.chic .menu-card_detail_prix {
-  font-weight: bolder;
-}
-.chic .orange p {
-  color: #c67412;
-}
-.chic .violet p {
-  color: #a56799;
-}
-.chic .bleu p {
-  color: #6e4ccc;
-}
-
-a {
-  text-decoration: none;
-}
-
-.delice {
+.container__carte .delice {
   font-family: "Dancing Script", cursive;
   background-color: #F3F3F3;
+  text-shadow: 2px 2px 4px rgba(153, 153, 153, 0.349);
+  animation-name: text-focus-in;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
 }
-.delice h2 {
-  font-family: "Dancing Script", cursive;
-  background-image: linear-gradient(to right, #0a35e0, #0889fb);
-  -webkit-background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-.delice h2:nth-child(1) {
-  font-family: "Dancing Script", cursive;
+.container__carte .delice h2 {
   font-size: 4em;
-  padding: 1em 0em 1em 0em;
-}
-@media all and (max-width: 480px) {
-  .delice h2:nth-child(1) {
-    font-size: 3em;
-  }
-}
-.delice .bleuClaire,
-.delice .BleuAzur,
-.delice .bleuMarin {
-  font-size: 1em;
-}
-.delice .bleuClaire h3 {
-  color: #00a2ff;
-}
-.delice .bleuClaire h3 :hover {
-  color: #00a2ff;
-}
-.delice :visited {
-  color: #00a2ff;
-}
-
-.BleuAzur h3 {
-  color: #0889fb;
-}
-.BleuAzur h3 :hover {
-  color: #0889fb;
-}
-.BleuAzur h3 :visited {
-  color: #0889fb;
-}
-
-.bleuMarin h3 {
-  color: #0a35e0;
-}
-.bleuMarin h3 :hover {
-  color: #0a35e0;
-}
-
-:visited {
-  color: #0a35e0;
-}
-
-.menu-card_detail_prix {
-  font-weight: bolder;
-}
-
-.orange p {
-  color: #c67412;
-}
-
-.violet p {
-  color: #a56799;
-}
-
-.bleu p {
-  color: #0889fb;
-}
-
-a {
-  text-decoration: none;
-}
-
-.gout {
-  font-family: "Kaushan Script", cursive;
-  background-color: white;
-}
-.gout h2 {
-  font-family: "Caveat", cursive;
-  background-image: linear-gradient(to right, #558B2F, #8BC34A);
+  background-image: linear-gradient(to right, #0a35e0, #0889fb, white);
   -webkit-background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
   color: transparent;
 }
-.gout h2:nth-child(1) {
+.container__carte .delice h3 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+.container__carte .delice a {
+  color: black;
+}
+.container__carte .delice a :hover {
+  color: black;
+  animation-name: elastic;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+.container__carte .delice a :visited {
+  color: black;
+}
+.container__carte .delice p {
+  font-size: 1.4em;
+  color: black;
+}
+.container__carte .delice .parme {
+  color: black;
+}
+.container__carte .delice .violet {
+  color: black;
+}
+.container__carte .gout {
   font-family: "Caveat", cursive;
-  font-size: 5em;
-  padding: 1em 0em 1em 0em;
+  background-color: white;
+  text-shadow: 2px 2px 4px rgba(153, 153, 153, 0.349);
+  animation-name: text-focus-in;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
 }
-.gout h3 {
-  font-size: 1em;
+.container__carte .gout h2 {
+  font-size: 4em;
+  background-image: linear-gradient(to right, #558B2F, #8BC34A, rgba(118, 238, 6, 0.89));
+  -webkit-background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.container__carte .gout h3 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+.container__carte .gout a {
   color: black;
 }
-.gout h3 :hover {
+.container__carte .gout a :hover {
   color: black;
-  -webkit-animation: zoom-in-out 1s linear 0s 1 normal;
-  -moz-animation: zoom-in-out 1s linear 0s 1 normal;
-  -ms-animation: zoom-in-out 1s linear 0s 1 normal;
-  animation: zoom-in-out 1s linear 0s 1 normal;
-  opacity: 60%;
+  animation: blur 0.5s ease-out;
+  text-shadow: 0px 0px 3px #fff, 0px 0px 5px #fff;
 }
-.gout :visited {
+.container__carte .gout a :visited {
+  color: black;
+  animation: blur 0.5s ease-out;
+  text-shadow: 0px 0px 3px #fff, 0px 0px 5px #fff;
+}
+.container__carte .gout p {
+  font-size: 1.4em;
   color: black;
 }
-
-h3 {
-  font-size: 1.5em;
+.container__carte .gout .parme {
+  color: black;
 }
-
-.menu-card_detail_prix {
-  font-weight: bolder;
-}
-
-.orange p {
-  color: #c67412;
-}
-
-.violet p {
-  color: #a56799;
-}
-
-.bleu p {
-  color: #0889fb;
-}
-
-a {
-  text-decoration: none;
-}
-
-.btn-accueil {
-  display: flex;
-  background: #589a86;
-  color: #FBC02D;
-  width: 10%;
-  border: 0;
-  border-radius: 15px;
-  padding: 0.5em;
-  margin: 2em 14em 1em 16em;
-  font-size: 1.5rem;
-  text-align: center;
-  cursor: pointer;
-  text-shadow: 0.1em 0.1em 0.2em black;
-}
-.btn-accueil i {
-  display: block;
-  width: 8em;
-  color: #589a86;
-}
-@media all and (max-width: 768px) {
-  .btn-accueil {
-    display: flex;
-    justify-content: center;
-    width: 45%;
-    font-size: 1.3em;
-    padding: 0.5em;
-    margin: 1em 1em 2em 6em;
-  }
-}
-@media all and (max-width: 480px) {
-  .btn-accueil {
-    text-align: center;
-    width: 70%;
-    font-size: 1em;
-    padding: 0.5em;
-    margin: 1em 1em 2em 2.5em;
-  }
-}
-.btn-accueil:hover {
-  color: #FBC02D;
-}
-.btn-accueil:visited {
-  color: #FBC02D;
-}
-
-.btn_home a {
-  color: #FBC02D;
-  text-decoration: none;
-}
-.btn_home a .btn_home a:visited {
-  color: #FBC02D;
-  text-decoration: none;
-}
-.btn_home a .btn_home a:hover {
-  color: #FBC02D;
-  text-decoration: none;
+.container__carte .gout .violet {
+  color: black;
 }
 
 /*# sourceMappingURL=style.css.map */

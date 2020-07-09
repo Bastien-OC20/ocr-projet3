@@ -15,7 +15,7 @@
 
   75% {
     // entièrement à gauche
-    transform: translateX($shake-intensity * -2);
+    transform: translateX($shake-intensity * -4);
   }
 }
 
@@ -126,19 +126,7 @@
   }
 }
 
-@keyframes couleur {
-  from {
-    color: rgb(121, 80, 80);
-  }
 
-  60% {
-    color: rgb(88, 23, 32, 0.685);
-  }
-
-  to {
-    color: $colormenu1;
-  }
-}
 
 @keyframes progress-bar {
   from {
@@ -151,10 +139,111 @@
 }
 
 
-// animation chic à la française
 
-@keyframes stroke-offset {
+@keyframes text-focus-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+
   100% {
-    stroke-dashoffset: -35%;
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes elastic {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  30% {
+    -webkit-transform: scaleX(1.25) scaleY(0.75);
+    transform: scaleX(1.25) scaleY(0.75);
+  }
+
+  40% {
+    -webkit-transform: scaleX(0.75) scaleY(1.25);
+    transform: scaleX(0.75) scaleY(1.25);
+  }
+
+  60% {
+    -webkit-transform: scaleX(1.15) scaleY(0.85);
+    transform: scaleX(1.15) scaleY(0.85);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+
+// text-Gradient
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 51%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@-moz-keyframes gradient {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 51%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 51%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+// Blur via  CSS generator
+@keyframes blur {
+  from {
+    text-shadow: 0px 0px 10px #fff,
+      0px 0px 10px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #7B96B8,
+      0px 0px 150px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px -10px 100px #7B96B8,
+      0px -10px 100px #7B96B8;
   }
 }

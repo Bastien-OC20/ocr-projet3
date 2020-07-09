@@ -1,384 +1,212 @@
-.note {
-    background-color: $bgmenu1;
-    color: $colormenu1;
-    font-family: $font2;
-
-    img {
-        width: 4em;
-        padding-top: 2em;
-    }
-
-    h2:nth-child(2) {
+// cadre des pages des menus
+.container__carte {
+    .note {
         font-family: $font2;
-        font-size: 3em;
-        padding: 0em 0em 0.5em 0em;
-    }
+        background-color: $bgmenu1;
+        @include text-focus;
 
-    .menu-card_bandeau {
+        h2 {
+            font-size: 3em;
+            color: $colormenu1;
+
+        }
+
+        h3 {
+            font-size: 2em;
+        }
+
         a {
-            text-decoration: none;
             color: $colormenu1;
-        }
 
-        :hover {
-            color: $colormenu1;
-            text-decoration: none;
-        }
+            :hover {
+                color: $colormenu1;
+                @include progress-bar;
+            }
 
-
-        :visited {
-            color: $colormenu1;
-            text-decoration: none;
-        }
-    }
-
-    .menu-card_detail_prix {
-        font-weight: bolder;
-    }
-}
-
-.chic {
-    font-family: $font3;
-    background-color: $bgmenu2;
-
-    h2 {
-        background-image: linear-gradient(to right, $colormenu2a, $colormenu2b, $colormenu2c, );
-        -webkit-background-clip: text;
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        font-family: $font3;
-
-        // test du svg
-
-        svg {
-            display: block;
-            font: 3em 'croissant';
-            width: 100%;
-            height: 1.5em;
-
-            @include small {
-                font-size: 7em;
+            :visited {
+                color: $colormenu1;
             }
         }
 
-        .text-copy {
-            fill: none;
-            stroke: white;
-            stroke-dasharray: 6% 29%;
-            stroke-width: 5px;
-            stroke-dashoffset: 0%;
-            animation: stroke-offset 5.5s infinite linear;
-            animation-play-state: running;
+        p {
+            font-size: 1.5em;
         }
 
-        .text-copy:nth-child(1) {
-            stroke: $colormenu2a;
-            animation-delay: -1;
-        }
-
-        .text-copy:nth-child(2) {
-            stroke: $colormenu2b;
-            animation-delay: -2s;
-        }
-
-        .text-copy:nth-child(3) {
-            stroke: $colormenu2c;
-            animation-delay: -3s;
-        }
-
-        .text-copy:nth-child(4) {
-            stroke: $colormenu2a;
-            animation-delay: -4s;
-        }
-
-        .text-copy:nth-child(5) {
-            stroke: $colormenu2b;
-            animation-delay: -5s;
-        }
     }
 
-    .orange,
-    .violet,
-    .bleu {
-        font-size: 0.8em;
-    }
+    .chic {
+        font-family: $font3;
+        background-color: $bgmenu2;
+        @include text-shadow-3;
+        @include text-focus;
 
-    .orange h3 {
-        color: $colormenu2a;
-
-        :hover {
-            color: $colormenu2a;
-        }
-
-        :visited {
-            color: $colormenu2a;
-        }
-    }
-
-    .violet h3 {
-        color: $colormenu2b;
-
-        :hover {
-            color: $colormenu2b;
-        }
-
-        :visited {
-            color: $colormenu2b;
-        }
-    }
-
-    .bleu h3 {
-        color: $colormenu2c;
-
-        :hover {
-            color: $colormenu2c;
-        }
-
-        :visited {
-            color: $colormenu2c;
-        }
-    }
-
-    .menu-card_detail_prix {
-        font-weight: bolder;
-    }
-
-    .orange p {
-        color: $colormenu2a;
-    }
-
-    .violet p {
-        color: $colormenu2b;
-    }
-
-    .bleu p {
-        color: $colormenu2c;
-    }
-}
-
-a {
-    text-decoration: none;
-}
-
-
-.delice {
-    font-family: $font4;
-    background-color: $bgmenu3;
-
-    h2 {
-        font-family: $font4;
-        background-image: linear-gradient(to right, $colormenu3a, $colormenu3b);
-        -webkit-background-clip: text;
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        background-clip: text;
-        color: transparent;
-    }
-
-    h2:nth-child(1) {
-        font-family: $font4;
-        font-size: 4em;
-        padding: 1em 0em 1em 0em;
-
-        @include small {
+        h2 {
             font-size: 3em;
+            background-image: linear-gradient(to right, $colormenu2a, $colormenu2b, $colormenu2c, );
+            -webkit-background-clip: text;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            color: transparent;
+
+        }
+
+        h3 {
+            font-size: 1.5em;
+            margin-bottom: 1em;
+            padding-top: 0.2em;
+            color: $colormenu2a;
+        }
+
+        .parme h3 {
+            color: $colormenu2b;
+
+            :hover {
+                @include gradient;
+            }
+
+            :visited {
+                @include gradient;
+            }
+        }
+
+        .violet h3 {
+            color: $colormenu2c;
+
+            :hover {
+                @include gradient;
+            }
+
+            :visited {
+                @include gradient;
+            }
+        }
+
+        a {
+            color: $colormenu2a;
+
+            :hover {
+                color: $colormenu2a;
+                @include gradient;
+            }
+
+            :visited {
+                color: $colormenu2a;
+                @include gradient;
+            }
+        }
+
+        p {
+            font-size: 1em;
+            color: $colormenu2a;
+        }
+
+        .parme {
+            color: $colormenu2b;
+        }
+
+        .violet {
+            color: $colormenu2c;
         }
     }
 
-    .bleuClaire,
-    .BleuAzur,
-    .bleuMarin {
-        font-size: 1em;
-    }
+    .delice {
+        font-family: $font4;
+        background-color: $bgmenu3;
+        @include text-shadow-3;
+        @include text-focus;
 
-    .bleuClaire h3 {
-        color: rgb(0, 162, 255);
-
-        :hover {
-            color: rgb(0, 162, 255);
+        h2 {
+            font-size: 4em;
+            background-image: linear-gradient(to right, $colormenu3a, $colormenu3b, white);
+            -webkit-background-clip: text;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            color: transparent
         }
-    }
 
-    :visited {
-        color: rgb(0, 162, 255);
-    }
-}
+        h3 {
+            font-size: 2em;
+            margin-bottom: 1em;
 
-.BleuAzur h3 {
-    color: $colormenu3b;
+        }
 
-    :hover {
-        color: $colormenu3b;
-    }
-
-    :visited {
-        color: $colormenu3b;
-    }
-}
-
-.bleuMarin h3 {
-    color: $colormenu3a;
-
-    :hover {
-        color: $colormenu3a;
-    }
-}
-
-:visited {
-    color: $colormenu3a;
-}
-
-
-.menu-card_detail_prix {
-    font-weight: bolder;
-}
-
-.orange p {
-    color: $colormenu2a;
-}
-
-.violet p {
-    color: $colormenu2b;
-}
-
-.bleu p {
-    color: $colormenu3b;
-}
-
-a {
-    text-decoration: none;
-}
-
-
-.gout {
-    font-family: $font6;
-    background-color: $bgmenu4;
-
-    h2 {
-        font-family: $font5;
-        background-image: linear-gradient(to right, $colormenu4a, $colormenu4b);
-        -webkit-background-clip: text;
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        background-clip: text;
-        color: transparent;
-    }
-
-    h2:nth-child(1) {
-        font-family: $font5;
-        font-size: 5em;
-        padding: 1em 0em 1em 0em;
-    }
-
-    h3 {
-        font-size: 1em;
-        color: black;
-
-        :hover {
+        a {
             color: black;
-            @include animate;
+
+            :hover {
+                color: black;
+                @include elastic;
+            }
+
+            :visited {
+                color: black;
+            }
+        }
+
+        p {
+            font-size: 1.4em;
+            color: black;
+        }
+
+        .parme {
+            color: black;
+        }
+
+        .violet {
+            color: black;
         }
     }
 
-    :visited {
-        color: black;
-    }
-}
+    .gout {
+        font-family: $font5;
+        background-color: $bgmenu4;
+        @include text-shadow-3;
+        @include text-focus;
 
-h3 {
-    font-size: 1.5em;
-}
+        h2 {
+            font-size: 4em;
+            background-image: linear-gradient(to right, $colormenu4a, $colormenu4b, $colormenu4c);
+            -webkit-background-clip: text;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
 
+        h3 {
+            font-size: 2em;
+            margin-bottom: 1em;
 
+        }
 
-.menu-card_detail_prix {
-    font-weight: bolder;
-}
+        a {
+            color: black;
 
-.orange p {
-    color: $colormenu2a;
-}
+            :hover {
+                color: black;
+                @include blur;
+            }
 
-.violet p {
-    color: $colormenu2b;
-}
+            :visited {
+                color: black;
+                @include blur;
+            }
+        }
 
-.bleu p {
-    color: $colormenu3b;
-}
+        p {
+            font-size: 1.4em;
+            color: black;
+        }
 
-a {
-    text-decoration: none;
-}
+        .parme {
+            color: black;
+        }
 
-
-
-
-
-
-
-// Bouton Retour
-.btn-accueil {
-    i {
-        display: block;
-        width: 8em;
-        color: $main-background;
-    }
-
-    display: flex;
-    background: $main-background;
-    color: $main-text;
-    width: 10%;
-    border: 0;
-    border-radius: 15px;
-    padding: 0.5em;
-    margin: 2em 14em 1em 16em;
-    font-size: 1.5rem;
-    text-align: center;
-    cursor: pointer;
-    @include text-shadow-1;
-
-    @include medium {
-        display: flex;
-        justify-content: center;
-        width: 45%;
-        font-size: 1.3em;
-        padding: 0.5em;
-        margin: 1em 1em 2em 6em;
+        .violet {
+            color: black;
+        }
     }
 
-    @include small {
-        text-align: center;
-        width: 70%;
-        font-size: 1em;
-        padding: 0.5em;
-        margin: 1em 1em 2em 2.5em;
-    }
-
-    &:hover {
-        color: $main-text;
-    }
-
-    &:visited {
-        color: $main-text;
-    }
-}
-
-// Bouton Home
-
-.btn_home a {
-    color: $main-text;
-    text-decoration: none;
-
-    .btn_home a:visited {
-        color: $main-text;
-        text-decoration: none;
-    }
-
-    .btn_home a:hover {
-        color: $main-text;
-        text-decoration: none;
-    }
 }

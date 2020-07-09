@@ -20,89 +20,97 @@
 
     <body>
         <!--header-->
-        <header class="menus-title">
-            <h1><a href="../index.html">Ohmyfood</a></h1>
+        <header class="menus__header">
+            <h1 class="menus__header__title"><a href="../index.html">Ohmyfood</a></h1>
 
         </header>
         <!--main-->
-        <main class="container--menu">
-            <article class="menu-card delice">
-
-                <h2>Le délice des papilles</h2>
-
+        <main class="container__carte">
+            <article class="container__carte__restaurant delice">
+                <header class="container__carte__restaurant__header">
+                    <h2 class="container__carte__restaurant__header--titre">Le délice des papilles</h2>
+                </header>
 
                 <!--sous titres entrées-->
-                <section class="menu-card_bandeau bleuMarin">
-                    <span class="menu-card_bandeau-bar"><img src="../img/barre-delice-gauche-1.png"
-                            alt="leftbar" /></span>
-                    <a href="#">
-                        <h3>Pour&nbsp;bien&nbsp;commencer</h3>
-                    </a>
-                    <span class="menu-card_bandeau-bar"><img src="../img/barre-delice-droite-1.png"
-                            alt="rightbar" /></span>
-                </section>
-                <!--liste des entrées-->
-                <section class="menu-card_detail ">
-                    <p class="menu-card_detail_plats">Tartare de thon assaisonné au yuzu</p>
-                    <p class="menu-card_detail_prix">55€</p>
-                    <p class="menu-card_detail_plats">Bouchées de homard croustillant et sa farandole de petits légumes
+                <aside class="container__carte__restaurant__mets">
+                    <header class="container__carte__restaurant__mets__header">
+                        <img src="../img/barre-delice-gauche-1.png" alt="leftbar" />
+                        <a href="#">
+                            <h3 class="container__carte__restaurant__mets__header--titre">Pour&nbsp;bien&nbsp;commencer
+                            </h3>
+                        </a>
+                        <img src="../img/barre-delice-droite-1.png" alt="rightbar" />
+                    </header>
+                    <!--liste des entrées-->
+
+                    <p class="container__carte__restaurant__mets--plats">Tartare de thon assaisonné au yuzu</p>
+                    <p class="container__carte__restaurant__mets--prix">55€</p>
+                    <p class="container__carte__restaurant__mets--plats">Bouchées de homard croustillant et sa farandole
+                        de petits légumes
                     </p>
-                    <p class="menu-card_detail_prix">89€</p>
-                    <p class="menu-card_detail_plats">Velouté de cèpes aux truffes</p>
-                    <p class="menu-card_detail_prix">56€</p>
-                </section>
+                    <p class="container__carte__restaurant__mets--prix">89€</p>
+                    <p class="container__carte__restaurant__mets--plats">Velouté de cèpes aux truffes</p>
+                    <p class="container__carte__restaurant__mets--prix">56€</p>
+                </aside>
                 <!--sous titres plats principaux-->
-                <section class="menu-card_bandeau BleuAzur">
-                    <span class="menu-card_bandeau-bar"><img src="../img/barre-delice-gauche-2.png"
-                            alt="leftbar" /></span>
-                    <a href="#">
-                        <h3>Pour&nbsp;bien&nbsp;continuer</h3>
-                    </a>
-                    <span class="menu-card_bandeau-bar"><img src="../img/barre-delice-droite-2.png"
-                            alt="rightbar" /></span>
-                </section>
-                <!--liste des plats principaux-->
+                <aside class="container__carte__restaurant__mets">
+                    <header class="container__carte__restaurant__mets__header">
+                        <img src="../img/barre-delice-gauche-2.png" alt="leftbar" />
+                        <a href="#">
+                            <h3 class="container__carte__restaurant__mets__header--titre">Pour&nbsp;bien&nbsp;continuer
+                            </h3>
+                        </a>
+                        <img src="../img/barre-delice-droite-2.png" alt="rightbar" />
+                    </header>
+                    <!--liste des plats principaux-->
 
-                <section class="menu-card_detail">
-                    <p class="menu-card_detail_plats">Poulet rôti aux herbes de Provence et sa crème de truffe</p>
-                    <p class="menu-card_detail_prix">101€</p>
-                    <p class="menu-card_detail_plats">Langouste rôtie et ses légumes de saison</p>
-                    <p class="menu-card_detail_prix">225€</p>
-                    <p class="menu-card_detail_plats">Côte de boeuf Angus et sa purée de panais</p>
-                    <p class="menu-card_detail_prix">115€</p>
-                </section>
 
+                    <p class="container__carte__restaurant__mets--plats">Poulet rôti aux herbes de Provence et sa crème
+                        de truffe</p>
+                    <p class="container__carte__restaurant__mets--prix">101€</p>
+                    <p class="container__carte__restaurant__mets--plats">Langouste rôtie et ses légumes de saison</p>
+                    <p class="container__carte__restaurant__mets--prix">225€</p>
+                    <p class="container__carte__restaurant__mets--plats">Côte de boeuf Angus et sa purée de panais</p>
+                    <p class="container__carte__restaurant__mets--prix">115€</p>
+
+                </aside>
                 <!--sous titre desserts-->
-                <section class="menu-card_bandeau bleuClaire">
-                    <span class="menu-card_bandeau-bar"><img src="../img/barre-delice-gauche-3.png"
-                            alt="leftbar" /></span>
-                    <a href="#">
-                        <h3>Gourmandises&nbsp;sucrées</h3>
-                    </a>
-                    <span class="menu-card_bandeau-bar"> <img src="../img/barre-delice-droite-3.png"
-                            alt="rightbar" /></span>
-                </section>
-                <!--liste des desserts-->
-                <section class="menu-card_detail">
-                    <p class="menu-card_detail_plats">Farandole de desserts du chef</p>
-                    <p class="menu-card_detail_prix">55€</p>
-                    <p class="menu-card_detail_plats">Crème brûlée revisitée</p>
-                    <p class="menu-card_detail_prix">60€</p>
-                    <p class="menu-card_detail_plats">Tiramisu à la noisette</p>
-                    <p class="menu-card_detail_prix">55€</p>
-                </section>
+                <aside class="container__carte__restaurant__mets">
+                    <header class="container__carte__restaurant__mets__header">
+                        <!--sous titre desserts-->
+
+                        <img src="../img/barre-delice-gauche-3.png" alt="leftbar" />
+                        <a href="#">
+                            <h3 class="container__carte__restaurant__mets__header--titre">Gourmandises&nbsp;sucrées</h3>
+                        </a>
+                        <img src="../img/barre-delice-droite-3.png" alt="rightbar" />
+                    </header>
+                    <!--liste des desserts-->
+
+                    <p class="container__carte__restaurant__mets--plats">Farandole de desserts du chef</p>
+                    <p class="container__carte__restaurant__mets--prix">55€</p>
+                    <p class="container__carte__restaurant__mets--plats">Crème brûlée revisitée</p>
+                    <p class="container__carte__restaurant__mets--prix">60€</p>
+                    <p class="container__carte__restaurant__mets--plats">Tiramisu à la noisette</p>
+                    <p class="container__carte__restaurant__mets--prix">55€</p>
+                </aside>
             </article>
-            <aside class="btn-accueil">
-                <h4 class="btn_return"><a href="../index.html" alt="bouton accueil"
-                        title="Bouton retour à l'Accueil">Accueil</a></h4>
+            <aside class="container__carte__restaurant__accueil">
+                <h4 class="container__carte__restaurant__accueil--return"><a href="../index.html"
+                        title="Retour à l'Accueil">Accueil</a></h4>
             </aside>
+
         </main>
         <!--footer-->
-        <footer>
+        <footer class="menus__footer">
             <!--lien vers les mentions légales-->
-            <a href="../pages/mention_legales.html">Mentions légales</a>
+            <a href="../pages/mention_legales.html">
+                <p class="menus__footer__info">Mentions légales</p>
+            </a>
             <!--contact mail-->
-            <a href="mailto:contact@ohmyfood.com">Contactez-nous</a>
+            <a href="mailto:contact@ohmyfood.com">
+                <p class="menus__footer__info">Contactez-nous</p>
+            </a>
         </footer>
     </body>
 

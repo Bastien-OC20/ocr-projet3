@@ -20,102 +20,119 @@
 
     <body>
         <!--header-->
-        <header class="menus-title">
-            <h1><a href="../index.html">Ohmyfood</a></h1>
+        <header class="menus__header">
+            <h1 class="menus__header__title"><a href="../index.html">Ohmyfood</a></h1>
 
         </header>
         <!--main content-->
-        <main class="container--menu">
-            <article class="menu-card note">
-
-                <img src="../img/note.png" alt="Images" title="note de musique" />
-                <h2>La note enchantée</h2>
-
+        <main class="container__carte">
+            <article class="container__carte__restaurant note">
+                <header class="container__carte__restaurant__header">
+                    <img src="../img/note.png" alt="Images" title="note de musique" />
+                    <h2 class="container__carte__restaurant__header--titre">La note enchantée</h2>
+                </header>
                 <!--sous titres entrées-->
-                <section class="menu-card_bandeau">
-                    <span class="menu-card_bandeau-bar"><img src="../img/barre-note-gauche.png" alt="leftbar" /></span>
-                    <a href="#">
-                        <h3>Prélude</h3>
-                    </a>
-                    <span class="menu-card_bandeau-bar"><img src="../img/barre-note-droite.png" alt="rightbar" /></span>
-                </section>
-                <!--liste des entrées-->
-                <section class="menu-card_detail">
-                    <p class="menu-card_detail_plats">Ravioles de foie gras accompagnées de leur crème à la truffe</p>
-                    <p class="menu-card_detail_prix">98€</p>
-                    <p class="menu-card_detail_plats">Caviar osciètre sur blinis à la farine de blé noir</p>
-                    <p class="menu-card_detail_prix">115€</p>
-                    <p class="menu-card_detail_plats">Homard et espuma de potiron mariné au zeste d'orange</p>
-                    <p class="menu-card_detail_prix">89€</p>
-                    <p class="menu-card_detail_plats">Foie gras de canard cuit entier, confiture de figues et pain
-                        toasté</p>
-                    <p class="menu-card_detail_prix">105€</p>
-                </section>
-                <!--sous titres plats principaux-->
-                <section class="menu-card_bandeau">
-                    <span class="menu-card_bandeau-bar"><img src="../img/barre-note-gauche.png" alt="leftbar" /></span>
-                    <a href="#">
-                        <h3>Point&nbsp;d'orgue</h3>
-                    </a>
-                    <span class="menu-card_bandeau-bar"><img src="../img/barre-note-droite.png" alt="rightbar" /></span>
-                </section>
-                <!--liste des plats principaux-->
-                <section class="menu-card_detail">
-                    <p class="menu-card_detail_plats">Noix de coquilles Saint-Jacques sur lit de purée de céleri rave
+                <aside class="container__carte__restaurant__mets">
+                    <header class="container__carte__restaurant__mets__header">
+                        <img src="../img/barre-note-gauche.png" alt="leftbar" />
+                        <a href="#">
+                            <h3 class="container__carte__restaurant__mets__header--titre">Prélude</h3>
+                        </a>
+                        <img src="../img/barre-note-droite.png" alt="rightbar" />
+                    </header>
+                    <!--liste des entrées-->
+
+                    <p class="container__carte__restaurant__mets--plats">Ravioles de foie gras accompagnées de leur
+                        crème à
+                        la truffe</p>
+                    <p class="container__carte__restaurant__mets--prix">&nbsp;98€</p>
+                    <p class="container__carte__restaurant__mets--plats">Caviar osciètre sur blinis à la farine de blé
+                        noir
                     </p>
-                    <p class="menu-card_detail_prix">102€</p>
-                    <p class="menu-card_detail_plats">Langoustine poêlée, purée de patates douces</p>
-                    <p class="menu-card_detail_prix">205€</p>
-                    <p class="menu-card_detail_plats">Mijoté de queue de boeuf et riz sauvage au zeste de citron</p>
-                    <p class="menu-card_detail_prix">169€</p>
-                </section>
+                    <p class="container__carte__restaurant__mets--prix">115€</p>
+                    <p class="container__carte__restaurant__mets--plats">Homard et espuma de potiron mariné au zeste
+                        d'orange
+                    </p>
+                    <p class="container__carte__restaurant__mets--prix">&nbsp;89€</p>
+                    <p class="container__carte__restaurant__mets--plats">Foie gras de canard cuit entier, confiture de
+                        figues
+                        et pain
+                        toasté</p>
+                    <p class="container__carte__restaurant__mets--prix">105€</p>
+                </aside>
+                <!--sous titres plats principaux-->
+                <aside class="container__carte__restaurant__mets">
+                    <header class="container__carte__restaurant__mets__header">
+                        <img src="../img/barre-note-gauche.png" alt="leftbar" />
+                        <a href="#">
+                            <h3 class="container__carte__restaurant__mets__header--titre">Point&nbsp;d'orgue</h3>
+                        </a>
+                        <img src="../img/barre-note-droite.png" alt="rightbar" />
+                    </header>
+                    <!--liste des plats principaux-->
+
+                    <p class="container__carte__restaurant__mets--plats">Noix de coquilles Saint-Jacques sur lit de
+                        purée de
+                        céleri rave
+                    </p>
+                    <p class="container__carte__restaurant__mets--prix">102€</p>
+                    <p class="container__carte__restaurant__mets--plats">Langoustine poêlée, purée de patates douces</p>
+                    <p class="container__carte__restaurant__mets--prix">205€</p>
+                    <p class="container__carte__restaurant__mets--plats">Mijoté de queue de boeuf et riz sauvage au
+                        zeste de
+                        citron</p>
+                    <p class="container__carte__restaurant__mets--prix">169€</p>
+
+                </aside>
                 <!--sous titre desserts-->
-                <section class="menu-card_bandeau">
-                    <span class="menu-card_bandeau-bar"><img src="../img/barre-note-gauche.png" alt="leftbar" /></span>
-                    <a href="#">
-                        <h3>Mouvement&nbsp;final</h3>
-                    </a>
-                    <span class="menu-card_bandeau-bar"> <img src="../img/barre-note-droite.png"
-                            alt="rightbar" /></span>
-                </section>
-                <!--liste des desserts-->
-                <section class="menu-card_detail">
-                    <p class="menu-card_detail_plats">Macaron noisette et chocolat, glace au caramel brun et sel de
+                <aside class="container__carte__restaurant__mets">
+                    <header class="container__carte__restaurant__mets__header">
+                        <img src="../img/barre-note-gauche.png" alt="leftbar" />
+                        <a href="#">
+                            <h3 class="container__carte__restaurant__mets__header--titre">Mouvement&nbsp;final</h3>
+                        </a>
+                        <img src="../img/barre-note-droite.png" alt="rightbar" />
+                    </header>
+                    <!--liste des desserts-->
+
+                    <p class="container__carte__restaurant__mets--plats">Macaron noisette et chocolat, glace au caramel
+                        brun
+                        et sel de
                         guérande</p>
-                    <p class="menu-card_detail_prix">42€</p>
-                    <p class="menu-card_detail_plats">Baba au rhum revisité, avec son coulis de citron</p>
-                    <p class="menu-card_detail_prix">55€</p>
-                    <p class="menu-card_detail_plats">Tarte au citron meringuée destructurée</p>
-                    <p class="menu-card_detail_prix">45€</p>
-                </section>
+                    <p class="container__carte__restaurant__mets--prix">&nbsp;42€</p>
+                    <p class="container__carte__restaurant__mets--plats">Baba au rhum revisité, avec son coulis de
+                        citron</p>
+                    <p class="container__carte__restaurant__mets--prix">&nbsp;55€</p>
+                    <p class="container__carte__restaurant__mets--plats">Tarte au citron meringuée destructurée</p>
+                    <p class="container__carte__restaurant__mets--prix">&nbsp;45€</p>
+                </aside>
 
                 <!--nom de restaurant avec icone en bas de page-->
-                <section class="menu-card__titreFooter">
-                    <span class="menu-card__titreFooter-picture"><img src="../img/note.png" alt="Images" /></span>
+                <aside class="container__carte__restaurant__Footer">
+                    <img src="../img/note.png" alt="Images" />
                     <a href="#">
 
-                        <h3>La&nbsp;note&nbsp;enchantée</h3>
-
-                        <h3 class="menu-card__note--sousTitre-trait">La&nbsp;note&nbsp;enchantée</h3>
-
-
-                        <h3>La&nbsp;note&nbsp;enchantée</h3>
+                        <h3 class="container__carte__restaurant__footer--header">La&nbsp;note&nbsp;enchantée</h3>
 
                     </a>
-                </section>
+                </aside>
             </article>
             <!-- boutton -->
-            <aside class="btn-accueil">
-                <h4 class="btn_return"><a href="../index.html" alt="bouton accueil"
-                        title="Bouton retour à l'Accueil">Accueil</a></h4>
+            <aside class="container__carte__restaurant__accueil">
+                <h4 class="container__carte__restaurant__accueil--return"><a href="../index.html"
+                        title="Retour à l'Accueil">Accueil</a></h4>
             </aside>
         </main>
         <!--footer-->
-        <footer>
+        <footer class="menus__footer">
             <!--lien vers les mentions légales-->
-            <a href="../pages/mention_legales.html">Mentions légales</a>
+            <a href="../pages/mention_legales.html">
+                <p class="menus__footer__info">Mentions légales</p>
+            </a>
             <!--contact mail-->
-            <a href="mailto:contact@ohmyfood.com">Contactez-nous</a>
+            <a href="mailto:contact@ohmyfood.com">
+                <p class="menus__footer__info">Contactez-nous</p>
+            </a>
         </footer>
     </body>
 
