@@ -1,7 +1,6 @@
-$breakpoints: (
-  'Small': 480px,
-  'Medium': 768px,
-  'large': 1024px,
+$breakpoints: ('Small': 480px,
+    'Medium': 768px,
+    'large': 1024px,
 );
 
 @mixin large {
@@ -19,27 +18,5 @@ $breakpoints: (
 @mixin small {
     @media all and (max-width: map-get($breakpoints, Small)) {
         @content;
-    }
-}
-
-
-
-
-
-
-// Bouton Retour
-
-.btn_return a {
-    color: $main-text;
-    text-decoration: none;
-
-    .btn_return a:visited {
-        color: $main-text;
-        text-decoration: none;
-    }
-
-    .btn_return a:hover {
-        color: $main-text;
-        text-decoration: none;
     }
 }

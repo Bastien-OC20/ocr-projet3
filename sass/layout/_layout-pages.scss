@@ -1,9 +1,8 @@
+// Feuille de style de la mise en page des menus
+
+
 @import "breakpoints";
 
-* {
-    margin: 0em;
-    text-decoration: none;
-}
 
 body {
     background-color: $bodybackground;
@@ -27,128 +26,149 @@ body {
             @include box-shadow;
 
             &__header {
-                margin-top: 4em;
+                margin: 4em;
 
-                img {
-                    display: block;
-                    margin: auto;
-                    width: 4em;
-                }
+
 
                 &--titre {
                     display: block;
                     text-align: center;
-                    margin:0em 1em 1em 1em ;
                 }
 
             }
 
             &__mets {
                 display: block;
-                width: auto;
-                margin-bottom: 4em;
+                margin: 2em;
+                justify-content: center;
 
                 &__header {
                     display: flex;
-                    justify-content: space-around;
+                    justify-content: space-between;
                     margin-bottom: 1em;
+                    text-align: center;
 
                     img {
                         display: flex;
-                        width: auto;
-                        margin: auto;
+                        width: 15em;
                         padding: 1em 0em 2em 0em;
                     }
                 }
 
-                &--plats {
-                    display: inline-flex;
-                    justify-content: left;
-                    width: 70%;
-                    margin-left: 4em
-                }
+                &__detail {
+                    display: block;
+                    padding: 1em;
 
-                &--prix {
-                    display: inline-flex;
-                    justify-content: left;
-                    width: 5%;
-                    font-weight: bold;
-                }
+                    &--plats {
+                        display: inline-flex;
+                        width: 75%;
+                        padding-left: 2em;
+                        text-align: left;
+                    }
 
+                    &--prix {
+                        display: inline-flex;
+                        font-weight: lighter;
+                        padding-left: 0.5em;
+                        justify-content: right;
+                    }
+                }
             }
 
             &__Footer {
                 display: block;
                 padding: 2em;
-                animation-play-state: inherit;
+                margin-bottom: 2em;
 
                 img {
-                    position: relative;
-                    left: 18em;
-                    top: 3em;
+                    display: inline-block;
+                    width: 3em;
+                    padding-left: 18em;
+                    padding-top: 2em;
                 }
 
                 a {
-                    display: block;
+                    display: inline-block;
                     margin: auto;
-                    padding-left: 8em;
+                    padding-left: 0.5em;
                     text-align: center;
                     width: 11em;
-                    animation-play-state: paused;
-                    animation: none;
 
-                    :hover {
-                        animation-play-state: paused;
-                    }
 
-                    :visited {
-                        animation-play-state: paused;
-                    }
-
-                    h3 {
-                        animation-play-state: paused;
-
-                        :hover {
-                            animation-play-state: paused;
-                        }
-
-                        :visited {
-                            animation-play-state: paused;
-                        }
-                    }
                 }
             }
 
             &__accueil {
-                background-color: $main-background;
-                color: $main-text;
-                display: flex;
-                width: 10%;
-                border: 0;
-                border-radius: 15px;
-                padding: 0.5em;
-                margin: auto;
-                font-size: 1.5rem;
-                text-align: center;
-                cursor: pointer;
-                @include text-shadow-1;
-                @include box-shadow;
+                position: relative;
+                top: 2em;
+                left: 92%;
+                transform: translate(-50%, -50%);
+                margin-bottom: 1em;
 
-                &--return {
-                    a {
-                        color: $main-text;
-                        text-decoration: none;
+                a {
+                    display: block;
+                    width: 6em;
+                    height: 1.5em;
+                    background-color: $main-background;
+                    line-height: 1.5em;
+                    font-size: 1.2em;
+                    text-decoration: none;
+                    color: #333;
+                    border: 0.01em solid #333;
+                    border-radius: 15px;
+                    letter-spacing: 0.1em;
+                    text-align: center;
+                    position: relative;
+                    transition: all .35s;
+                    @include box-shadow;
+                }
 
+                &--bouton {
+                    position: relative;
+                    z-index: 2;
+                    font-family: $font1;
+                    color: $main-text;
+                    @include text-shadow-3;
+                }
 
-                        :hover {
-                            text-decoration: none;
+                &--bouton:hover {
+                    color: $main-background;
+                }
 
-                        }
+                &--bouton:visited {
+                    color: $main-background;
+                }
 
-                        :visited {
-                            text-decoration: none;
-                        }
-                    }
+                &--bouton:active {
+                    color: $main-background;
+                }
+
+                &--bouton:after {
+                    color: $main-background;
+                }
+
+                a:after {
+                    position: absolute;
+                    content: "";
+                    top: 0;
+                    left: 0;
+                    width: 0;
+                    height: 100%;
+                    background: $main-text;
+                    transition: all .35s;
+                    border-radius: 15px;
+
+                }
+
+                a:hover {
+                    color: $main-background;
+                    border-radius: 15px;
+
+                }
+
+                a:hover:after {
+                    width: 100%;
+                    color: $main-background;
                 }
             }
         }

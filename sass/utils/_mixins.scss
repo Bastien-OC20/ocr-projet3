@@ -16,7 +16,13 @@
     box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
 }
 
+@mixin animateShadow {
+    animation: text-shadow 2s ease-in-out infinite;
+}
 
+@mixin animateShadow2 {
+    animation: text-shadow2 1.5s ease-in-out infinite;
+}
 
 // ZOOM
 
@@ -81,10 +87,4 @@
     -moz-background-clip: text;
     background-clip: text;
     color: transparent;
-}
-
-// Eclairage
-@mixin blur {
-    animation: blur .5s ease-out;
-    text-shadow: 0px 0px 3px #fff, 0px 0px 5px #fff;
 }

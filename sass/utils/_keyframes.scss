@@ -1,24 +1,8 @@
-// aside
-@keyframes dots {
-  50% {
-    opacity: 0;
-    transform: scale(0.7) translate(0.5em);
-  }
-}
+// Feuille de style pour les animations
 
-// footer
-@keyframes headshake {
-  25% {
-    // entièrement à droite
-    transform: translateX($shake-intensity);
-  }
 
-  75% {
-    // entièrement à gauche
-    transform: translateX($shake-intensity * -4);
-  }
-}
 
+// Zoom cartes de l'index
 @keyframes zoom-hover {
   25% {
     transform: scale(1);
@@ -75,58 +59,28 @@
   }
 }
 
-
-@keyframes animationFrames {
-  0% {
-    transform: translate(-2px, -51px);
-  }
-
-  100% {
-    transform: translate(-55px, -48px);
+// points
+@keyframes dots {
+  50% {
+    opacity: 0;
+    transform: scale(0.7) translate(0.5em);
   }
 }
 
-@-moz-keyframes animationFrames {
-  0% {
-    -moz-transform: translate(-2px, -51px);
+// footer headshake
+@keyframes headshake {
+  25% {
+
+    transform: translateX($shake-intensity);
   }
 
-  100% {
-    -moz-transform: translate(-55px, -48px);
-  }
-}
+  75% {
 
-@-webkit-keyframes animationFrames {
-  0% {
-    -webkit-transform: translate(-2px, -51px);
-  }
-
-  100% {
-    -webkit-transform: translate(-55px, -48px);
+    transform: translateX($shake-intensity * -4);
   }
 }
 
-@-o-keyframes animationFrames {
-  0% {
-    -o-transform: translate(-2px, -51px);
-  }
-
-  100% {
-    -o-transform: translate(-55px, -48px);
-  }
-}
-
-@-ms-keyframes animationFrames {
-  0% {
-    -ms-transform: translate(-2px, -51px);
-  }
-
-  100% {
-    -ms-transform: translate(-55px, -48px);
-  }
-}
-
-
+// Underline
 
 @keyframes progress-bar {
   from {
@@ -138,7 +92,7 @@
   }
 }
 
-
+// Focus chargement pages
 
 @keyframes text-focus-in {
   0% {
@@ -152,6 +106,7 @@
   }
 }
 
+// Etirement
 
 @keyframes elastic {
   0% {
@@ -221,29 +176,5 @@
 
   100% {
     background-position: 0% 50%
-  }
-}
-
-// Blur via  CSS generator
-@keyframes blur {
-  from {
-    text-shadow: 0px 0px 10px #fff,
-      0px 0px 10px #fff,
-      0px 0px 25px #fff,
-      0px 0px 25px #fff,
-      0px 0px 25px #fff,
-      0px 0px 25px #fff,
-      0px 0px 25px #fff,
-      0px 0px 25px #fff,
-      0px 0px 50px #fff,
-      0px 0px 50px #fff,
-      0px 0px 50px #7B96B8,
-      0px 0px 150px #7B96B8,
-      0px 10px 100px #7B96B8,
-      0px 10px 100px #7B96B8,
-      0px 10px 100px #7B96B8,
-      0px 10px 100px #7B96B8,
-      0px -10px 100px #7B96B8,
-      0px -10px 100px #7B96B8;
   }
 }

@@ -29,62 +29,59 @@
 .menus__container {
 
     &__list {
-        a {
-
-            :hover {
-                text-decoration: none;
-                @include animate;
-
-            }
-
-            :visited {
-                text-decoration: none;
-                @include animate;
-
-            }
-
-        }
 
         &__restaurant {
+
+            &--titre {
+                @include text-shadow-3;
+
+            }
+
+            &--carte {
+                font-size: 3em;
+
+            }
+        }
+
+        // La note enchantee
+        .restaurant__note {
+            background-color: $bgmenu1;
+            color: $colormenu1;
+
+            &:hover {
+                @include animate;
+            }
+
             img {
                 width: 4em;
             }
 
-            &__titre {
-                @include text-shadow-3;
-            }
+            &--titre {
 
-
-            &__carte {
-                font-size: 3em;
-            }
-        }
-
-        .restaurant__note {
-            grid-area: a;
-            background-color: $bgmenu1;
-            color: $colormenu1;
-
-            h2 {
-                animation-play-state: paused;
                 color: $colormenu1;
                 font-size: 2.5em;
                 font-family: $font2;
+                padding-top: 3.3em;
+
             }
 
-            p {
-                animation-play-state: paused;
+            &--carte {
                 font-family: $font4;
                 font-weight: bold;
+                margin-top: 1em;
+                color: $colormenu1;
             }
         }
 
+        // Le chic a la francaise
         .restaurant__chic {
-            grid-area: ab;
             background-color: $bgmenu2;
 
+            &:hover {
+                @include animate;
+            }
 
-            h2 {
+            &--titre {
                 animation: none;
                 margin-top: 6em;
                 background-image: linear-gradient(to right, $colormenu2a, $colormenu2b, $colormenu2c, );
@@ -97,22 +94,25 @@
                 font-family: $font3;
             }
 
-            p {
+            &--carte {
                 animation-play-state: paused;
                 color: $colormenu2a;
-                margin-top: 1.5em;
+                margin-top: 1em;
                 font-family: $font4;
                 font-weight: bold;
                 text-decoration: none;
             }
         }
 
+        // le delice des papilles
         .restaurant__delice {
-            grid-area: c;
             background-color: $bgmenu2;
 
-            h2 {
-                animation-play-state: paused;
+            &:hover {
+                @include animate;
+            }
+
+            &--titre {
                 margin-top: 6em;
                 background-image: linear-gradient(to right, $colormenu3a, $colormenu3b, $colormenu3c);
                 -webkit-background-clip: text;
@@ -124,8 +124,7 @@
                 font-family: $font3;
             }
 
-            p {
-                animation-play-state: paused;
+            &--carte {
                 color: $colormenu3b;
                 margin-top: 1em;
                 font-family: $font4;
@@ -133,6 +132,7 @@
             }
         }
 
+        // la palette du gout
         .restaurant__gout {
             background-color: $bgmenu2;
             background-image: linear-gradient(45deg, $colormenu4a, $colormenu4b);
@@ -141,9 +141,12 @@
             -moz-background-clip: text;
             background-clip: text;
             color: transparent;
-            grid-area: d;
 
-            h2 {
+            &:hover {
+                @include animate;
+            }
+
+            &--titre {
                 animation-play-state: paused;
                 background-image: linear-gradient(45deg, $colormenu4a, $colormenu4b);
                 -webkit-background-clip: text;
@@ -156,8 +159,7 @@
                 font-family: $font3;
             }
 
-            p {
-                animation-play-state: paused;
+            &--carte {
                 background-image: linear-gradient(45deg, $colormenu4a, $colormenu4b);
                 -webkit-background-clip: text;
                 -webkit-background-clip: text;
@@ -171,29 +173,6 @@
         }
     }
 
-    &__list__bouton {
-        display: flex;
-        width: 25%;
-        border: 0;
-        border-radius: 15px;
-        padding: 0.5em;
-        margin: 2em 14em 1em 14em;
-        font-size: 1.5rem;
-        text-align: center;
-        cursor: pointer;
-        @include text-shadow-1;
-        @include box-shadow;
-
-        &__prochainement {
-            display: inline;
-            margin-right: 0.5em;
-
-            &__loading {
-                display: inline-block;
-            }
-        }
-    }
-
     &__list__annonce {
         background-color: $main-background;
 
@@ -201,10 +180,11 @@
             color: $main-text;
             font-size: 1.5em;
 
-            &__loading span {
+            &--loading span {
                 width: 0.3em;
                 height: 0.3em;
                 background-color: $main-text;
+                margin-top: 1em;
                 border-radius: 50%;
                 display: inline-block;
                 animation-name: dots;
@@ -214,17 +194,18 @@
                 @include text-shadow-1;
             }
 
-            &__loading span:nth-child(2) {
+            &--loading span:nth-child(2) {
                 animation-delay: 0.4s;
             }
 
-            &__loading span:nth-child(3) {
+            &--loading span:nth-child(3) {
                 animation-delay: 0.8s;
             }
         }
     }
 }
 
+// footer
 .menus__footer {
     background-color: $main-background;
 

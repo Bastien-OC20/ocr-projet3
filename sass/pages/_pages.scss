@@ -1,212 +1,296 @@
-// cadre des pages des menus
+// habillages des menus
+
+
 .container__carte {
+    @include text-shadow-3;
+    @include text-focus;
+
     .note {
         font-family: $font2;
         background-color: $bgmenu1;
-        @include text-focus;
 
-        h2 {
-            font-size: 3em;
-            color: $colormenu1;
+        &__header {
 
-        }
-
-        h3 {
-            font-size: 2em;
-        }
-
-        a {
-            color: $colormenu1;
-
-            :hover {
-                color: $colormenu1;
-                @include progress-bar;
+            img {
+                display: block;
+                width: 6em;
+                margin: auto;
             }
 
-            :visited {
+
+            &--titre {
+                margin: auto;
+                font-size: 4em;
+                width: 5.5em;
                 color: $colormenu1;
             }
         }
 
-        p {
-            font-size: 1.5em;
+        &__mets {
+
+            &__header {
+
+                img {
+                    padding-top: 1em;
+                }
+
+                a {
+                    color: $colormenu1;
+
+                    :hover {
+                        color: $colormenu1;
+                        @include progress-bar;
+                    }
+
+                    :visited {
+                        color: $colormenu1;
+                    }
+                }
+
+                &--titre {
+                    font-size: 2em;
+                }
+
+            }
+
+            &__detail {
+                font-size: 1.4em;
+            }
         }
 
+        &__footer {
+            height: 5em;
+
+
+            &--header {
+                font-size: 2em;
+                color: $colormenu1;
+
+                &:hover {
+                    text-decoration: none;
+                    color: $colormenu1;
+                    @include progress-bar;
+                }
+            }
+        }
     }
 
     .chic {
         font-family: $font3;
         background-color: $bgmenu2;
-        @include text-shadow-3;
-        @include text-focus;
 
-        h2 {
-            font-size: 3em;
-            background-image: linear-gradient(to right, $colormenu2a, $colormenu2b, $colormenu2c, );
-            -webkit-background-clip: text;
-            -webkit-background-clip: text;
-            -moz-background-clip: text;
-            background-clip: text;
-            color: transparent;
 
-        }
+        &__header {
 
-        h3 {
-            font-size: 1.5em;
-            margin-bottom: 1em;
-            padding-top: 0.2em;
-            color: $colormenu2a;
-        }
+            &--titre {
+                font-size: 3em;
+                background-image: linear-gradient(to right, $colormenu2a, $colormenu2b, $colormenu2c, );
+                -webkit-background-clip: text;
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                margin: auto;
+                width: 12em;
 
-        .parme h3 {
-            color: $colormenu2b;
+                &:hover {
+                    @include gradient;
+                }
 
-            :hover {
-                @include gradient;
-            }
-
-            :visited {
-                @include gradient;
+                &:visited {
+                    @include gradient;
+                }
             }
         }
 
-        .violet h3 {
-            color: $colormenu2c;
+        &__mets {
 
-            :hover {
-                @include gradient;
+            &__header {
+                img {
+                    width: 12em;
+                }
+
+                &--titre {
+                    font-size: 1.5em;
+                    color: $colormenu2a;
+                    width: 15em;
+
+                    &:hover {
+                        @include gradient;
+                    }
+
+                    &:visited {
+                        @include gradient;
+                    }
+
+                    &#parme {
+                        color: $colormenu2b;
+
+                        &:hover {
+                            @include gradient;
+                        }
+
+                        &:visited {
+                            @include gradient;
+                        }
+                    }
+
+                    &#violet {
+                        color: $colormenu2c;
+
+                        &:hover {
+                            @include gradient;
+                        }
+
+                        &:visited {
+                            @include gradient;
+                        }
+                    }
+                }
             }
 
-            :visited {
-                @include gradient;
-            }
-        }
-
-        a {
-            color: $colormenu2a;
-
-            :hover {
+            &__detail {
                 color: $colormenu2a;
-                @include gradient;
+
+                &#detailparme {
+                    color: $colormenu2b;
+
+                }
+
+                &#detailviolet {
+                    color: $colormenu2c;
+
+                }
+
+                &--plats {
+                    font-size: 1em;
+                    justify-content: left;
+
+                }
+
+                &--prix {
+                    font-size: 1em;
+                    justify-content: right;
+                    text-align: right;
+                }
+
             }
 
-            :visited {
-                color: $colormenu2a;
-                @include gradient;
-            }
-        }
 
-        p {
-            font-size: 1em;
-            color: $colormenu2a;
-        }
 
-        .parme {
-            color: $colormenu2b;
-        }
 
-        .violet {
-            color: $colormenu2c;
         }
     }
 
     .delice {
         font-family: $font4;
         background-color: $bgmenu3;
-        @include text-shadow-3;
-        @include text-focus;
 
-        h2 {
-            font-size: 4em;
-            background-image: linear-gradient(to right, $colormenu3a, $colormenu3b, white);
-            -webkit-background-clip: text;
-            -webkit-background-clip: text;
-            -moz-background-clip: text;
-            background-clip: text;
-            color: transparent
-        }
 
-        h3 {
-            font-size: 2em;
-            margin-bottom: 1em;
+        &__header {
 
-        }
+            &--titre {
+                font-size: 4em;
+                background-image: linear-gradient(to right, $colormenu3a, $colormenu3b, white);
+                -webkit-background-clip: text;
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                background-clip: text;
+                color: transparent;
 
-        a {
-            color: black;
+                &:hover {
+                    @include elastic;
+                }
 
-            :hover {
-                color: black;
-                @include elastic;
-            }
-
-            :visited {
-                color: black;
+                &:visited {
+                    @include elastic;
+                }
             }
         }
 
-        p {
-            font-size: 1.4em;
-            color: black;
-        }
+        &__mets {
 
-        .parme {
-            color: black;
-        }
+            &__header {
 
-        .violet {
-            color: black;
+                img {
+                    padding-top: 1em;
+                    width: 13em;
+                }
+
+                &--titre {
+                    font-size: 2em;
+                    width: 10em;
+                    color: black;
+
+                    &:hover {
+                        color: black;
+                        @include elastic;
+                    }
+
+                    &:visited {
+                        color: black;
+                        @include elastic;
+                    }
+                }
+            }
+
+            &__detail {
+                font-size: 1.3em;
+            }
         }
     }
 
     .gout {
         font-family: $font5;
         background-color: $bgmenu4;
-        @include text-shadow-3;
-        @include text-focus;
 
-        h2 {
-            font-size: 4em;
-            background-image: linear-gradient(to right, $colormenu4a, $colormenu4b, $colormenu4c);
-            -webkit-background-clip: text;
-            -webkit-background-clip: text;
-            -moz-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
 
-        h3 {
-            font-size: 2em;
-            margin-bottom: 1em;
+        &__header {
 
-        }
+            &--titre {
+                font-size: 4em;
+                background-image: linear-gradient(to right, $colormenu4a, $colormenu4b, $colormenu4c);
+                -webkit-background-clip: text;
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                background-clip: text;
+                color: transparent;
 
-        a {
-            color: black;
-
-            :hover {
-                color: black;
-                @include blur;
-            }
-
-            :visited {
-                color: black;
-                @include blur;
+                &:hover {
+                    animation: none;
+                }
             }
         }
 
-        p {
-            font-size: 1.4em;
-            color: black;
-        }
+        &__mets {
 
-        .parme {
-            color: black;
-        }
+            &__header {
 
-        .violet {
-            color: black;
+                img {
+                    padding-top: 1em;
+                    width: 13em;
+                }
+
+                &--titre {
+                    font-size: 2em;
+                    width: 10em;
+                    color: black;
+
+                    &:hover {
+                        color: black;
+
+                    }
+
+                    &:visited {
+                        color: black;
+
+                    }
+                }
+            }
+
+            &__detail {
+                font-size: 1.3em;
+            }
         }
     }
-
 }

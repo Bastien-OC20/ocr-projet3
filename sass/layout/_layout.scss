@@ -1,3 +1,6 @@
+// Feuille de style de mise en forme du cadre de la page index
+
+
 @import "breakpoints";
 
 * {
@@ -16,9 +19,10 @@ body {
     // Cadre index.html
 
     .menus__header {
-        width: auto;
+        display: block;
+        width: 100%;
+        margin: auto;
         height: 8em;
-        position: relative;
         padding: 1em;
         @include box-shadow;
 
@@ -43,11 +47,6 @@ body {
             grid-template-columns: repeat(auto-fill, 20em);
             grid-gap: 8em;
 
-
-            a {
-                text-decoration: none;
-            }
-
             &__restaurant {
                 @include box-shadow;
                 display: block;
@@ -56,22 +55,25 @@ body {
                 padding: 1em;
                 justify-content: center;
 
-                img {
-                    position: absolute;
-                    display: block;
-                    padding: 4em 0em 0em 7em;
-                    margin: auto;
-                    justify-content: center;
-                }
+                a {
 
+                    img {
+                        position: absolute;
+                        display: block;
+                        padding: 4em 0em 0em 7em;
+                        margin: auto;
+                        justify-content: center;
+                    }
 
+                    &--titre {
+                        margin-top: 3.3em;
+                        animation-play-state: paused;
+                    }
 
-                &__titre {
-                    margin-top: 3.3em;
-                }
-
-                &__carte {
-                    margin-top: 1.3em;
+                    &--carte {
+                        margin-top: 1.3em;
+                        animation-play-state: paused;
+                    }
                 }
             }
         }
@@ -112,24 +114,11 @@ body {
         height: 3em;
         @include box-shadow;
 
-        a {
-            text-decoration: none;
-
-            :hover {
-                text-decoration: none;
-            }
-
-            :visited {
-                text-decoration: none;
-            }
-        }
-
         &__info {
             line-height: 0.5em;
             margin: 1.2em;
             font-size: 1em;
             font-weight: bolder;
-            text-decoration: none;
             @include text-shadow-1;
         }
     }
