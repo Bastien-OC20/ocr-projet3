@@ -374,6 +374,141 @@ body .container__carte__restaurant__accueil a:hover:after {
   color: #589a86;
 }
 
+@media all and (max-width: 480px) {
+  * {
+    margin: 0em;
+    text-decoration: none;
+  }
+
+  body {
+    display: block;
+    margin: 0em;
+    padding: 0em;
+  }
+  body .menus__header {
+    grid-gap: 0;
+    margin: 0em;
+    height: 6em;
+    padding: 0em;
+  }
+  body .menus__header__title {
+    font-size: 4em;
+    text-align: center;
+    line-height: 1.5em;
+  }
+  body .menus__container {
+    padding: 0em;
+    width: max-content;
+    margin: 0em;
+  }
+  body .menus__container__list {
+    text-align: center;
+    grid-gap: 2em;
+    padding: 1em;
+    margin: 0em;
+  }
+  body .menus__container__list:hover {
+    animation-play-state: paused;
+  }
+  body .menus__container__list img {
+    padding-top: 6em;
+  }
+  body .menus__container__list h2 {
+    padding-top: 0em;
+  }
+  body .menus__container__list__restaurant {
+    width: auto;
+    height: 28em;
+    margin: 0em;
+    justify-content: center;
+  }
+  body .menus__container__list__restaurant a:hover {
+    animation-play-state: paused;
+  }
+  body .menus__container__list__restaurant--titre h2 {
+    padding-top: 2em;
+  }
+  body .menus__container__list__annonce {
+    width: 60%;
+    border: 0;
+    border-radius: 15px;
+    padding: 0.5em;
+    margin: 0em 1em 6em 4em;
+  }
+  body .container__carte {
+    display: block;
+    padding: 1em;
+    margin: auto;
+    width: 80%;
+  }
+  body .container__carte .note__header img {
+    width: 4em;
+  }
+  body .container__carte .note__header--titre {
+    font-size: 2.5em;
+    padding-top: 0em;
+  }
+  body .container__carte .note__footer img {
+    display: block;
+    padding: 0em;
+    margin: auto;
+  }
+  body .container__carte .note__footer--header {
+    padding: 0em;
+  }
+  body .container__carte .chic__header--titre {
+    font-size: 1.5em;
+    padding-top: 0em;
+  }
+  body .container__carte__restaurant {
+    width: auto;
+    padding: 1em;
+    margin: 0em;
+  }
+  body .container__carte__restaurant__header {
+    margin: 1em;
+  }
+  body .container__carte__restaurant__header--titre {
+    font-size: 1em;
+    width: auto;
+    animation-play-state: paused;
+  }
+  body .container__carte__restaurant__mets {
+    margin: 0em;
+  }
+  body .container__carte__restaurant__mets__header {
+    display: block;
+  }
+  body .container__carte__restaurant__mets__header img {
+    display: block;
+    margin: auto;
+  }
+  body .container__carte__restaurant__mets__detail--plats {
+    display: block;
+    text-align: center;
+    padding-left: 1em;
+  }
+  body .container__carte__restaurant__mets__detail--prix {
+    padding: 0em 0em 1em 4em;
+  }
+  body .container__carte__restaurant__accueil {
+    width: 5em;
+    left: 50%;
+    padding: 2em 0em 2em 0em;
+    margin: 0em;
+  }
+  body .menus__footer {
+    margin: 0em;
+    height: 3em;
+    padding: 0em;
+    justify-content: space-around;
+  }
+  body .menus__footer__info {
+    line-height: 0.5em;
+    margin: 1.2em;
+    font-size: 1em;
+  }
+}
 .menus__header {
   background-color: #589a86;
 }
