@@ -1,0 +1,8 @@
+$breakpoints: ('Small': 480px,
+    'Medium': 768px,
+    'large': 1024px,
+);
+
+
+
+@media all and (max-width: map-get($breakpoints, Medium)) {}

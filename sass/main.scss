@@ -1,10 +1,11 @@
 @import "./utils/variables";
 @import "./utils/mixins";
 @import "./utils/keyframes";
-@import "./layout/layout";
+@import "./layout/layout-menu";
 @import "./layout/layout-pages";
-@import "./layout/breakpoints";
 @import "./layout/breakpoints-small";
+@import "./layout/breakpoints-medium";
+@import "./layout/breakpoints-large";
 @import "./pages/menu";
 @import "./pages/mentions";
 @import "./pages/pages";

@@ -1,295 +1,64 @@
-// habillages des menus
-
-
-.container__carte {
-    @include text-shadow-3;
-    @include text-focus;
-
-    .note {
-        font-family: $font2;
-        background-color: $bgmenu1;
-
-        &__header {
-
-            img {
-                display: block;
-                width: 6em;
-                margin: auto;
-            }
-
-
-            &--titre {
-                margin: auto;
-                font-size: 4em;
-                width: 5.5em;
-                color: $colormenu1;
-            }
-        }
-
-        &__mets {
-
-            &__header {
-
-                img {
-                    padding-top: 1em;
-                }
-
-                a {
-                    color: $colormenu1;
-
-                    :hover {
-                        color: $colormenu1;
-                        @include progress-bar;
-                    }
-
-                    :visited {
-                        color: $colormenu1;
-                    }
-                }
-
-                &--titre {
-                    font-size: 2em;
-                }
-
-            }
-
-            &__detail {
-                font-size: 1.4em;
-            }
-        }
-
-        &__footer {
-            height: 5em;
-
-
-            &--header {
-                font-size: 2em;
-                color: $colormenu1;
-
-                &:hover {
-                    text-decoration: none;
-                    color: $colormenu1;
-                    @include progress-bar;
-                }
-            }
-        }
-    }
-
-    .chic {
-        font-family: $font3;
-        background-color: $bgmenu2;
-
-
-        &__header {
-
-            &--titre {
+// Gabarit des pages de chaque restaurant
+body {
+    .restaurant {
+        &__carte:nth-child(1) { //la note enchantée
+            @include box-shadow;
+            font-family: $font2;
+            color: $colormenu1;
+            background-color: $bgmenu1;
+            h2 {
                 font-size: 3em;
-                background-image: linear-gradient(to right, $colormenu2a, $colormenu2b, $colormenu2c, );
-                -webkit-background-clip: text;
-                -webkit-background-clip: text;
-                -moz-background-clip: text;
-                background-clip: text;
-                color: transparent;
-                margin: auto;
-                width: 12em;
-
+                margin: 0.1em;
+            }
+            section {
+                margin-bottom: 2em;
+            }
+            a {
+                color: $colormenu1;
+                text-decoration: none;
                 &:hover {
-                    @include gradient;
+                    color: $colormenu1;
+                    text-decoration: none;
                 }
-
                 &:visited {
-                    @include gradient;
+                    color: $colormenu1;
+                    text-decoration: none;
                 }
+            }
+            h3 {
+                font-size: 2em;
+                text-decoration: none;
+            }
+            p {
+                font-size: 1.5em;
+                margin: 0.2em;
             }
         }
-
-        &__mets {
-
-            &__header {
-                img {
-                    width: 12em;
+        &__accueil {
+            color: $main-text;
+            a {
+                text-decoration: none;
+                :hover {
+                    text-decoration: none;
+                    color: $main-text;
                 }
-
-                &--titre {
-                    font-size: 1.5em;
-                    color: $colormenu2a;
-                    width: 15em;
-
-                    &:hover {
-                        @include gradient;
-                    }
-
-                    &:visited {
-                        @include gradient;
-                    }
-
-                    &#parme {
-                        color: $colormenu2b;
-
-                        &:hover {
-                            @include gradient;
-                        }
-
-                        &:visited {
-                            @include gradient;
-                        }
-                    }
-
-                    &#violet {
-                        color: $colormenu2c;
-
-                        &:hover {
-                            @include gradient;
-                        }
-
-                        &:visited {
-                            @include gradient;
-                        }
-                    }
+                :visited {
+                    text-decoration: none;
+                    color: $main-text;
                 }
             }
-
-            &__detail {
-                color: $colormenu2a;
-
-                &#detailparme {
-                    color: $colormenu2b;
-
-                }
-
-                &#detailviolet {
-                    color: $colormenu2c;
-
-                }
-
-                &--plats {
-                    font-size: 1em;
-                    justify-content: left;
-
-                }
-
-                &--prix {
-                    font-size: 1em;
-                    justify-content: right;
-                    text-align: right;
-                }
-
-            }
-
-
-
-
-        }
-    }
-
-    .delice {
-        font-family: $font4;
-        background-color: $bgmenu3;
-
-
-        &__header {
-
-            &--titre {
-                font-size: 4em;
-                background-image: linear-gradient(to right, $colormenu3a, $colormenu3b, white);
-                -webkit-background-clip: text;
-                -webkit-background-clip: text;
-                -moz-background-clip: text;
-                background-clip: text;
-                color: transparent;
-
-                &:hover {
-                    @include elastic;
-                }
-
-                &:visited {
-                    @include elastic;
-                }
-            }
-        }
-
-        &__mets {
-
-            &__header {
-
-                img {
-                    padding-top: 1em;
-                    width: 13em;
-                }
-
-                &--titre {
-                    font-size: 2em;
-                    width: 10em;
-                    color: black;
-
-                    &:hover {
-                        color: black;
-                        @include elastic;
-                    }
-
-                    &:visited {
-                        color: black;
-                        @include elastic;
-                    }
-                }
-            }
-
-            &__detail {
-                font-size: 1.3em;
-            }
-        }
-    }
-
-    .gout {
-        font-family: $font5;
-        background-color: $bgmenu4;
-
-
-        &__header {
-
-            &--titre {
-                font-size: 4em;
-                background-image: linear-gradient(to right, $colormenu4a, $colormenu4b, $colormenu4c);
-                -webkit-background-clip: text;
-                -webkit-background-clip: text;
-                -moz-background-clip: text;
-                background-clip: text;
-                color: transparent;
-
-                &:hover {
-                    animation: none;
-                }
-            }
-        }
-
-        &__mets {
-
-            &__header {
-
-                img {
-                    padding-top: 1em;
-                    width: 13em;
-                }
-
-                &--titre {
-                    font-size: 2em;
-                    width: 10em;
-                    color: black;
-
-                    &:hover {
-                        color: black;
-
-                    }
-
-                    &:visited {
-                        color: black;
-
-                    }
-                }
-            }
-
-            &__detail {
-                font-size: 1.3em;
+            &--retour {
+                color: $main-text;
+                font-family: $font7;
+                height: 1.5em;
+                background-color: $main-background;
+                line-height: 1.5em;
+                font-size: 1.2em;
+                border: 0.01em solid #333;
+                letter-spacing: 0.1em;
+                position: relative;
+                transition: all .35s;
+                @include box-shadow;
             }
         }
     }

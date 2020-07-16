@@ -1,21 +1,27 @@
+
 // Habillage de l'index
 
-// Header
-.menus__header {
+
+// Bandeau
+body{
+    text-decoration: none;
+.menu {
     background-color: $main-background;
 
-    &__title {
+    &--logo {
+        @include box-shadow;
+        font-size: 6rem;
         font-family: $font1;
-        font-size: 8em;
-        color: $main-text;
-        text-decoration: none;
+        padding-bottom: 2rem;
 
         a {
             text-decoration: none;
+            color: $main-text;
         }
 
         a:hover {
             text-decoration: none;
+            color: $main-text;
         }
 
         a:visited {
@@ -25,160 +31,127 @@
     }
 }
 
+
+
 // Grid des menus
-.menus__container {
 
-    &__list {
+.menu {
 
-        &__restaurant {
+    &__restaurant {
 
-            &--titre {
-                @include text-shadow-3;
+        &__liste {
 
+            &__carte {
+                @include box-shadow;
             }
 
-            &--carte {
-                font-size: 3em;
-
-            }
-        }
-
-        // La note enchantee
-        .restaurant__note {
-            background-color: $bgmenu1;
-            color: $colormenu1;
-
-            &:hover {
-                @include animate;
-            }
-
-            img {
-                width: 4em;
-            }
-
-            &--titre {
-
-                color: $colormenu1;
-                font-size: 2.5em;
+            //    la note enchantée
+            &__carte:nth-child(1) {
                 font-family: $font2;
-                padding-top: 3.3em;
 
+                background-color: $bgmenu1;
+
+                h2 {
+                    position: relative;
+                    top: -2.5em;
+                    color: $colormenu1;
+                    font-size: 2.5em;
+                }
+
+                p {
+                    color: $colormenu1;
+                    margin-top: -2em;
+                    font-size: 2.5em;
+                }
             }
 
-            &--carte {
-                font-family: $font4;
-                font-weight: bold;
-                margin-top: 1em;
-                color: $colormenu1;
-            }
-        }
-
-        // Le chic a la francaise
-        .restaurant__chic {
-            background-color: $bgmenu2;
-
-            &:hover {
-                @include animate;
-            }
-
-            &--titre {
-                animation: none;
-                margin-top: 6em;
-                background-image: linear-gradient(to right, $colormenu2a, $colormenu2b, $colormenu2c, );
-                -webkit-background-clip: text;
-                -webkit-background-clip: text;
-                -moz-background-clip: text;
-                background-clip: text;
-                color: transparent;
-                font-size: 1.5em;
+            // le chic à la française
+            &__carte:nth-child(2) {
                 font-family: $font3;
+                background-color: $bgmenu2;
+
+                h2 {
+                    background-image: linear-gradient(to right, $colormenu2a, $colormenu2b, $colormenu2c, );
+                    -webkit-background-clip: text;
+                    -moz-background-clip: text;
+                    background-clip: text;
+                    color: transparent;
+                    font-size: 1.5em;
+                }
+
+                p {
+                    background-image: linear-gradient(to right, $colormenu2a, $colormenu2b, $colormenu2c, );
+                    -webkit-background-clip: text;
+                    -moz-background-clip: text;
+                    background-clip: text;
+                    color: transparent;
+                    font-size: 1.5em;
+                    margin-top: 3em;
+                }
             }
 
-            &--carte {
-                animation-play-state: paused;
-                color: $colormenu2a;
-                margin-top: 1em;
+            // le délice des papilles
+            &__carte:nth-child(3) {
                 font-family: $font4;
-                font-weight: bold;
-                text-decoration: none;
+                background-color: $bgmenu3;
+
+                h2 {
+                    font-size: 2em;
+                    margin-top: 4em;
+                    background-image: linear-gradient(to right, $colormenu3a, $colormenu3b, $colormenu3c);
+                    -webkit-background-clip: text;
+                    -moz-background-clip: text;
+                    background-clip: text;
+                    color: transparent;
+                }
+
+                p {
+                    font-size: 2em;
+                    background-image: linear-gradient(to right, $colormenu3a, $colormenu3b, $colormenu3c);
+                    -webkit-background-clip: text;
+                    -moz-background-clip: text;
+                    background-clip: text;
+                    color: transparent;
+                }
             }
+
+            // la palette du gout
+            &__carte:nth-child(4) {
+                font-family: $font6;
+                background-color: $bgmenu4;
+
+                h2 {
+                    background-image: linear-gradient(45deg, $colormenu4a, $colormenu4b, $colormenu4c);
+                    -webkit-background-clip: text;
+                    -moz-background-clip: text;
+                    background-clip: text;
+                    color: transparent;
+                    font-size: 2em;
+                    margin-top: 4em;
+                }
+
+                p {
+                    background-image: linear-gradient(45deg, $colormenu4a, $colormenu4b, $colormenu4c);
+                    -webkit-background-clip: text;
+                    -moz-background-clip: text;
+                    background-clip: text;
+                    color: transparent;
+                    font-size: 2em;
+                    margin-top: 1.5em;
+                }
+            }
+
         }
 
-        // le delice des papilles
-        .restaurant__delice {
-            background-color: $bgmenu2;
+        &__annonce {
+            background-color: $main-background;
+            @include text-shadow-1;
+            @include box-shadow;
 
-            &:hover {
-                @include animate;
+            &--prochainement {
+                display: inline;
+                color: $main-text;
             }
-
-            &--titre {
-                margin-top: 6em;
-                background-image: linear-gradient(to right, $colormenu3a, $colormenu3b, $colormenu3c);
-                -webkit-background-clip: text;
-                -webkit-background-clip: text;
-                -moz-background-clip: text;
-                background-clip: text;
-                color: transparent;
-                font-size: 1.5em;
-                font-family: $font3;
-            }
-
-            &--carte {
-                color: $colormenu3b;
-                margin-top: 1em;
-                font-family: $font4;
-                font-weight: bold;
-            }
-        }
-
-        // la palette du gout
-        .restaurant__gout {
-            background-color: $bgmenu2;
-            background-image: linear-gradient(45deg, $colormenu4a, $colormenu4b);
-            -webkit-background-clip: text;
-            -webkit-background-clip: text;
-            -moz-background-clip: text;
-            background-clip: text;
-            color: transparent;
-
-            &:hover {
-                @include animate;
-            }
-
-            &--titre {
-                animation-play-state: paused;
-                background-image: linear-gradient(45deg, $colormenu4a, $colormenu4b);
-                -webkit-background-clip: text;
-                -webkit-background-clip: text;
-                -moz-background-clip: text;
-                background-clip: text;
-                color: transparent;
-                margin-top: 6em;
-                font-size: 1.5em;
-                font-family: $font3;
-            }
-
-            &--carte {
-                background-image: linear-gradient(45deg, $colormenu4a, $colormenu4b);
-                -webkit-background-clip: text;
-                -webkit-background-clip: text;
-                -moz-background-clip: text;
-                background-clip: text;
-                color: transparent;
-                margin-top: 1em;
-                font-family: $font4;
-                font-weight: bold;
-            }
-        }
-    }
-
-    &__list__annonce {
-        background-color: $main-background;
-
-        &__prochainement {
-            color: $main-text;
-            font-size: 1.5em;
 
             &--loading span {
                 width: 0.3em;
@@ -191,7 +164,6 @@
                 animation-duration: 2s;
                 animation-iteration-count: infinite;
                 animation-timing-function: ease-in-out;
-                @include text-shadow-1;
             }
 
             &--loading span:nth-child(2) {
@@ -203,20 +175,31 @@
             }
         }
     }
+
+    &__footer {
+        background-color: $main-background;
+        @include box-shadow;
+        text-decoration: none;
+
+        :hover {
+            text-decoration: none;
+        }
+
+        :visited {
+            text-decoration: none;
+        }
+
+        &--mention {
+            color: $main-text;
+            text-decoration: none;
+            @include text-shadow-1;
+        }
+
+        &--contact {
+            color: $main-text;
+
+        }
+    }
+
 }
-
-// footer
-.menus__footer {
-    background-color: $main-background;
-
-    a:hover {
-        color: $main-text;
-        @include headshake;
-    }
-
-    &__info {
-        color: $main-text;
-        @include headshake;
-
-    }
 }

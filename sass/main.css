@@ -244,43 +244,22 @@
   }
 }
 
-* {
-  margin: 0em;
-  text-decoration: none;
-}
-
 body {
-  background-color: white;
-  padding-bottom: 2em;
-  max-width: 1024px;
-  margin: auto;
-  position: relative;
   text-decoration: none;
 }
 
-body .menus__header {
-  display: block;
-  width: 100%;
-  margin: auto;
-  height: 8em;
-  padding: 1em;
-  -webkit-box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
-          box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
-}
-
-body .menus__header__title {
+body .menu--logo {
   text-align: center;
-  line-height: 0.8em;
-  text-shadow: 0.1em 0.1em 0.2em black;
-}
-
-body .menus__container {
-  display: block;
-  padding: 4em;
+  text-decoration: none;
   margin: auto;
+  height: 6rem;
 }
 
-body .menus__container__list {
+body .menu__restaurant {
+  margin: 4em;
+}
+
+body .menu__restaurant__liste {
   text-align: center;
   width: auto;
   display: -ms-grid;
@@ -289,77 +268,65 @@ body .menus__container__list {
   margin: 2em;
   -ms-grid-columns: (20em)[auto-fill];
       grid-template-columns: repeat(auto-fill, 20em);
-  grid-gap: 8em;
+  grid-gap: 4em;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-body .menus__container__list__restaurant {
-  -webkit-box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
-          box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
-  display: block;
+body .menu__restaurant__liste__carte {
   width: auto;
-  height: 28em;
   padding: 1em;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 25rem;
 }
 
-body .menus__container__list__restaurant a img {
-  position: absolute;
-  display: block;
-  padding: 4em 0em 0em 7em;
+body .menu__restaurant__liste__carte a {
+  text-decoration: none;
+}
+
+body .menu__restaurant__liste__carte img {
   margin: auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  position: absolute;
+  width: 3em;
+  top: 21em;
+  left: 17em;
 }
 
-body .menus__container__list__restaurant a--titre {
-  margin-top: 3.3em;
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+body .menu__restaurant__liste__carte--titre {
+  margin-top: 6em;
+  text-decoration: none;
 }
 
-body .menus__container__list__restaurant a--carte {
-  margin-top: 1.3em;
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+body .menu__restaurant__liste__carte--detail {
+  margin-top: 2em;
 }
 
-body .menus__container__list__annonce {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 23%;
+body .menu__restaurant__annonce {
+  width: 25%;
   border: 0;
   border-radius: 15px;
-  padding: 0.5em;
   margin: auto;
   text-align: center;
+  line-height: 2em;
   cursor: pointer;
-  text-shadow: 0.1em 0.1em 0.2em black;
-  -webkit-box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
-          box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
 }
 
-body .menus__container__list__annonce__prochainement {
+body .menu__restaurant__annonce--prochainement {
   display: inline;
-  padding-right: 0.5em;
+  padding: 0.5em;
 }
 
-body .menus__container__list__annonce__prochainement__loading {
+body .menu__restaurant__annonce--loading {
   padding-top: 0.5em;
   display: inline-block;
 }
 
-body .menus__footer {
+body .menu__footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -369,16 +336,14 @@ body .menus__footer {
   max-width: 1024px;
   width: 100%;
   height: 3em;
-  -webkit-box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
-          box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
 }
 
-body .menus__footer__info {
+body .menu__footer--mention, body .menu__footer--contact {
   line-height: 0.5em;
   margin: 1.2em;
   font-size: 1em;
   font-weight: bolder;
-  text-shadow: 0.1em 0.1em 0.2em black;
+  text-decoration: none;
 }
 
 body {
@@ -390,64 +355,57 @@ body {
   text-decoration: none;
 }
 
-body .container__carte {
+body .restaurant {
   padding: 2em;
   margin-bottom: 3em;
 }
 
-body .container__carte__restaurant {
+body .restaurant__carte {
   display: block;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin: 3em;
   padding: 2em;
-  -webkit-box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
-          box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
 }
 
-body .container__carte__restaurant__header {
-  margin: 4em;
-}
-
-body .container__carte__restaurant__header--titre {
+body .restaurant__carte__header img {
   display: block;
+  width: 4em;
+  margin: auto;
+  padding-top: 2em;
+}
+
+body .restaurant__carte__header--titre {
   text-align: center;
 }
 
-body .container__carte__restaurant__mets {
-  display: block;
-  margin: 2em;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-body .container__carte__restaurant__mets__header {
+body .restaurant__carte__menu__header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 1em;
-  text-align: center;
 }
 
-body .container__carte__restaurant__mets__header img {
+body .restaurant__carte__menu__header img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 15em;
-  padding: 1em 0em 2em 0em;
+  width: auto;
 }
 
-body .container__carte__restaurant__mets__detail {
+body .restaurant__carte__menu__header--titre {
+  text-align: center;
+}
+
+body .restaurant__carte__menu__detail {
   display: block;
   padding: 1em;
 }
 
-body .container__carte__restaurant__mets__detail--plats {
+body .restaurant__carte__menu__detail--plat {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -456,7 +414,7 @@ body .container__carte__restaurant__mets__detail--plats {
   text-align: left;
 }
 
-body .container__carte__restaurant__mets__detail--prix {
+body .restaurant__carte__menu__detail--prix {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -467,101 +425,34 @@ body .container__carte__restaurant__mets__detail--prix {
           justify-content: right;
 }
 
-body .container__carte__restaurant__Footer {
+body .restaurant__carte__footer {
   display: block;
   padding: 2em;
   margin-bottom: 2em;
 }
 
-body .container__carte__restaurant__Footer img {
+body .restaurant__carte__footer img {
   display: inline-block;
   width: 3em;
   padding-left: 18em;
-  padding-top: 2em;
+  padding-top: 4em;
 }
 
-body .container__carte__restaurant__Footer a {
+body .restaurant__carte__footer--header {
   display: inline-block;
   margin: auto;
   padding-left: 0.5em;
   text-align: center;
-  width: 11em;
 }
 
-body .container__carte__restaurant__accueil {
-  position: relative;
-  top: 2em;
-  left: 92%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  margin-bottom: 1em;
-}
-
-body .container__carte__restaurant__accueil a {
+body .restaurant__accueil--retour {
   display: block;
   width: 6em;
-  height: 1.5em;
-  background-color: #589a86;
-  line-height: 1.5em;
-  font-size: 1.2em;
+  padding: 0.5em;
+  margin: auto;
   text-decoration: none;
-  color: #333;
-  border: 0.01em solid #333;
   border-radius: 15px;
-  letter-spacing: 0.1em;
   text-align: center;
-  position: relative;
-  -webkit-transition: all .35s;
-  transition: all .35s;
-  -webkit-box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
-          box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
-}
-
-body .container__carte__restaurant__accueil--bouton {
-  position: relative;
-  z-index: 2;
-  font-family: "roboto", serif;
-  color: #FBC02D;
-  text-shadow: 2px 2px 4px rgba(153, 153, 153, 0.349);
-}
-
-body .container__carte__restaurant__accueil--bouton:hover {
-  color: #589a86;
-}
-
-body .container__carte__restaurant__accueil--bouton:visited {
-  color: #589a86;
-}
-
-body .container__carte__restaurant__accueil--bouton:active {
-  color: #589a86;
-}
-
-body .container__carte__restaurant__accueil--bouton:after {
-  color: #589a86;
-}
-
-body .container__carte__restaurant__accueil a:after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: #FBC02D;
-  -webkit-transition: all .35s;
-  transition: all .35s;
-  border-radius: 15px;
-}
-
-body .container__carte__restaurant__accueil a:hover {
-  color: #589a86;
-  border-radius: 15px;
-}
-
-body .container__carte__restaurant__accueil a:hover:after {
-  width: 100%;
-  color: #589a86;
 }
 
 @media all and (max-width: 480px) {
@@ -707,179 +598,144 @@ body .container__carte__restaurant__accueil a:hover:after {
   }
 }
 
-.menus__header {
+body {
+  text-decoration: none;
+}
+
+body .menu {
   background-color: #589a86;
 }
 
-.menus__header__title {
+body .menu--logo {
+  -webkit-box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
+          box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
+  font-size: 6rem;
   font-family: "roboto", serif;
-  font-size: 8em;
-  color: #FBC02D;
-  text-decoration: none;
+  padding-bottom: 2rem;
 }
 
-.menus__header__title a {
-  text-decoration: none;
-}
-
-.menus__header__title a:hover {
-  text-decoration: none;
-}
-
-.menus__header__title a:visited {
+body .menu--logo a {
   text-decoration: none;
   color: #FBC02D;
 }
 
-.menus__container__list__restaurant--titre {
-  text-shadow: 2px 2px 4px rgba(153, 153, 153, 0.349);
+body .menu--logo a:hover {
+  text-decoration: none;
+  color: #FBC02D;
 }
 
-.menus__container__list__restaurant--carte {
-  font-size: 3em;
+body .menu--logo a:visited {
+  text-decoration: none;
+  color: #FBC02D;
 }
 
-.menus__container__list .restaurant__note {
+body .menu__restaurant__liste__carte {
+  -webkit-box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
+          box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
+}
+
+body .menu__restaurant__liste__carte:nth-child(1) {
+  font-family: "Devonshire", cursive;
   background-color: #FCDFDB;
-  color: #3c1218;
 }
 
-.menus__container__list .restaurant__note:hover {
-  -webkit-animation: zoom-in-out 1s linear 0s 1 normal;
-  animation: zoom-in-out 1s linear 0s 1 normal;
-  opacity: 60%;
-}
-
-.menus__container__list .restaurant__note img {
-  width: 4em;
-}
-
-.menus__container__list .restaurant__note--titre {
+body .menu__restaurant__liste__carte:nth-child(1) h2 {
+  position: relative;
+  top: -2.5em;
   color: #3c1218;
   font-size: 2.5em;
-  font-family: "Devonshire", cursive;
-  padding-top: 3.3em;
 }
 
-.menus__container__list .restaurant__note--carte {
-  font-family: "Dancing Script", cursive;
-  font-weight: bold;
-  margin-top: 1em;
+body .menu__restaurant__liste__carte:nth-child(1) p {
   color: #3c1218;
+  margin-top: -2em;
+  font-size: 2.5em;
 }
 
-.menus__container__list .restaurant__chic {
+body .menu__restaurant__liste__carte:nth-child(2) {
+  font-family: "Croissant One", cursive;
   background-color: #FFF5FE;
 }
 
-.menus__container__list .restaurant__chic:hover {
-  -webkit-animation: zoom-in-out 1s linear 0s 1 normal;
-  animation: zoom-in-out 1s linear 0s 1 normal;
-  opacity: 60%;
-}
-
-.menus__container__list .restaurant__chic--titre {
-  -webkit-animation: none;
-          animation: none;
-  margin-top: 6em;
+body .menu__restaurant__liste__carte:nth-child(2) h2 {
   background-image: -webkit-gradient(linear, left top, right top, from(#c67412), color-stop(#a56799), to(#6e4ccc));
   background-image: linear-gradient(to right, #c67412, #a56799, #6e4ccc);
   -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 1.5em;
+}
+
+body .menu__restaurant__liste__carte:nth-child(2) p {
+  background-image: -webkit-gradient(linear, left top, right top, from(#c67412), color-stop(#a56799), to(#6e4ccc));
+  background-image: linear-gradient(to right, #c67412, #a56799, #6e4ccc);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   font-size: 1.5em;
-  font-family: "Croissant One", cursive;
+  margin-top: 3em;
 }
 
-.menus__container__list .restaurant__chic--carte {
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-  color: #c67412;
-  margin-top: 1em;
+body .menu__restaurant__liste__carte:nth-child(3) {
   font-family: "Dancing Script", cursive;
-  font-weight: bold;
-  text-decoration: none;
+  background-color: #F3F3F3;
 }
 
-.menus__container__list .restaurant__delice {
-  background-color: #FFF5FE;
-}
-
-.menus__container__list .restaurant__delice:hover {
-  -webkit-animation: zoom-in-out 1s linear 0s 1 normal;
-  animation: zoom-in-out 1s linear 0s 1 normal;
-  opacity: 60%;
-}
-
-.menus__container__list .restaurant__delice--titre {
-  margin-top: 6em;
+body .menu__restaurant__liste__carte:nth-child(3) h2 {
+  font-size: 2em;
+  margin-top: 4em;
   background-image: -webkit-gradient(linear, left top, right top, from(#0a35e0), color-stop(#0889fb), to(#3aabf7));
   background-image: linear-gradient(to right, #0a35e0, #0889fb, #3aabf7);
   -webkit-background-clip: text;
-  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-size: 1.5em;
-  font-family: "Croissant One", cursive;
 }
 
-.menus__container__list .restaurant__delice--carte {
-  color: #0889fb;
-  margin-top: 1em;
-  font-family: "Dancing Script", cursive;
-  font-weight: bold;
-}
-
-.menus__container__list .restaurant__gout {
-  background-color: #FFF5FE;
-  background-image: linear-gradient(45deg, #558B2F, #8BC34A);
-  -webkit-background-clip: text;
+body .menu__restaurant__liste__carte:nth-child(3) p {
+  font-size: 2em;
+  background-image: -webkit-gradient(linear, left top, right top, from(#0a35e0), color-stop(#0889fb), to(#3aabf7));
+  background-image: linear-gradient(to right, #0a35e0, #0889fb, #3aabf7);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-.menus__container__list .restaurant__gout:hover {
-  -webkit-animation: zoom-in-out 1s linear 0s 1 normal;
-  animation: zoom-in-out 1s linear 0s 1 normal;
-  opacity: 60%;
+body .menu__restaurant__liste__carte:nth-child(4) {
+  font-family: "Kaushan Script", cursive;
+  background-color: white;
 }
 
-.menus__container__list .restaurant__gout--titre {
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-  background-image: linear-gradient(45deg, #558B2F, #8BC34A);
-  -webkit-background-clip: text;
+body .menu__restaurant__liste__carte:nth-child(4) h2 {
+  background-image: linear-gradient(45deg, #558B2F, #8BC34A, rgba(118, 238, 6, 0.89));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  margin-top: 6em;
-  font-size: 1.5em;
-  font-family: "Croissant One", cursive;
+  font-size: 2em;
+  margin-top: 4em;
 }
 
-.menus__container__list .restaurant__gout--carte {
-  background-image: linear-gradient(45deg, #558B2F, #8BC34A);
-  -webkit-background-clip: text;
+body .menu__restaurant__liste__carte:nth-child(4) p {
+  background-image: linear-gradient(45deg, #558B2F, #8BC34A, rgba(118, 238, 6, 0.89));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  margin-top: 1em;
-  font-family: "Dancing Script", cursive;
-  font-weight: bold;
+  font-size: 2em;
+  margin-top: 1.5em;
 }
 
-.menus__container__list__annonce {
+body .menu__restaurant__annonce {
   background-color: #589a86;
+  text-shadow: 0.1em 0.1em 0.2em black;
+  -webkit-box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
+          box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
 }
 
-.menus__container__list__annonce__prochainement {
+body .menu__restaurant__annonce--prochainement {
+  display: inline;
   color: #FBC02D;
-  font-size: 1.5em;
 }
 
-.menus__container__list__annonce__prochainement--loading span {
+body .menu__restaurant__annonce--loading span {
   width: 0.3em;
   height: 0.3em;
   background-color: #FBC02D;
@@ -894,37 +750,41 @@ body .container__carte__restaurant__accueil a:hover:after {
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
-  text-shadow: 0.1em 0.1em 0.2em black;
 }
 
-.menus__container__list__annonce__prochainement--loading span:nth-child(2) {
+body .menu__restaurant__annonce--loading span:nth-child(2) {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
 
-.menus__container__list__annonce__prochainement--loading span:nth-child(3) {
+body .menu__restaurant__annonce--loading span:nth-child(3) {
   -webkit-animation-delay: 0.8s;
           animation-delay: 0.8s;
 }
 
-.menus__footer {
+body .menu__footer {
   background-color: #589a86;
+  -webkit-box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
+          box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
+  text-decoration: none;
 }
 
-.menus__footer a:hover {
-  color: #FBC02D;
-  -webkit-animation: headshake 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9);
-          animation: headshake 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9);
-  -webkit-animation-iteration-count: 4;
-          animation-iteration-count: 4;
+body .menu__footer :hover {
+  text-decoration: none;
 }
 
-.menus__footer__info {
+body .menu__footer :visited {
+  text-decoration: none;
+}
+
+body .menu__footer--mention, body .menu__footer--contact {
   color: #FBC02D;
-  -webkit-animation: headshake 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9);
-          animation: headshake 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9);
-  -webkit-animation-iteration-count: 4;
-          animation-iteration-count: 4;
+  text-decoration: none;
+  text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+body .menu__footer--contact {
+  color: #FBC02D;
 }
 
 .container-mention {
@@ -955,384 +815,79 @@ body .container__carte__restaurant__accueil a:hover:after {
   padding: 1.5em;
 }
 
-.container__carte {
-  text-shadow: 2px 2px 4px rgba(153, 153, 153, 0.349);
-  -webkit-animation-name: text-focus-in;
-          animation-name: text-focus-in;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-fill-mode: none;
-          animation-fill-mode: none;
-}
-
-.container__carte .note {
+body .restaurant__carte:nth-child(1) {
+  -webkit-box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
+          box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
   font-family: "Devonshire", cursive;
+  color: #3c1218;
   background-color: #FCDFDB;
 }
 
-.container__carte .note__header img {
-  display: block;
-  width: 6em;
-  margin: auto;
-}
-
-.container__carte .note__header--titre {
-  margin: auto;
-  font-size: 4em;
-  width: 5.5em;
-  color: #3c1218;
-}
-
-.container__carte .note__mets__header img {
-  padding-top: 1em;
-}
-
-.container__carte .note__mets__header a {
-  color: #3c1218;
-}
-
-.container__carte .note__mets__header a :hover {
-  color: #3c1218;
-  border-bottom: solid 0.07em;
-  text-shadow: 2px 2px 4px rgba(153, 153, 153, 0.349);
-  -webkit-animation: couleur, progress-bar 1000ms;
-          animation: couleur, progress-bar 1000ms;
-}
-
-.container__carte .note__mets__header a :visited {
-  color: #3c1218;
-}
-
-.container__carte .note__mets__header--titre {
-  font-size: 2em;
-}
-
-.container__carte .note__mets__detail {
-  font-size: 1.4em;
-}
-
-.container__carte .note__footer {
-  height: 5em;
-}
-
-.container__carte .note__footer--header {
-  font-size: 2em;
-  color: #3c1218;
-}
-
-.container__carte .note__footer--header:hover {
-  text-decoration: none;
-  color: #3c1218;
-  border-bottom: solid 0.07em;
-  text-shadow: 2px 2px 4px rgba(153, 153, 153, 0.349);
-  -webkit-animation: couleur, progress-bar 1000ms;
-          animation: couleur, progress-bar 1000ms;
-}
-
-.container__carte .chic {
-  font-family: "Croissant One", cursive;
-  background-color: #FFF5FE;
-}
-
-.container__carte .chic__header--titre {
+body .restaurant__carte:nth-child(1) h2 {
   font-size: 3em;
-  background-image: -webkit-gradient(linear, left top, right top, from(#c67412), color-stop(#a56799), to(#6e4ccc));
-  background-image: linear-gradient(to right, #c67412, #a56799, #6e4ccc);
-  -webkit-background-clip: text;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  margin: auto;
-  width: 12em;
+  margin: 0.1em;
 }
 
-.container__carte .chic__header--titre:hover {
-  -webkit-animation: gradient 4s linear infinite;
-          animation: gradient 4s linear infinite;
-  background: -webkit-gradient(linear, left top, right top, from(#c67412), color-stop(10%, #a56799), color-stop(20%, #6e4ccc), color-stop(30%, #c67412), color-stop(40%, #a56799), color-stop(50%, #6e4ccc), color-stop(60%, #c67412), color-stop(70%, #a56799), color-stop(80%, #6e4ccc), color-stop(90%, #c67412), to(#a56799));
-  background: linear-gradient(90deg, #c67412 0%, #a56799 10%, #6e4ccc 20%, #c67412 30%, #a56799 40%, #6e4ccc 50%, #c67412 60%, #a56799 70%, #6e4ccc 80%, #c67412 90%, #a56799 100%);
-  background-size: 1000% 100%;
-  -webkit-background-clip: text;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+body .restaurant__carte:nth-child(1) section {
+  margin-bottom: 2em;
 }
 
-.container__carte .chic__header--titre:visited {
-  -webkit-animation: gradient 4s linear infinite;
-          animation: gradient 4s linear infinite;
-  background: -webkit-gradient(linear, left top, right top, from(#c67412), color-stop(10%, #a56799), color-stop(20%, #6e4ccc), color-stop(30%, #c67412), color-stop(40%, #a56799), color-stop(50%, #6e4ccc), color-stop(60%, #c67412), color-stop(70%, #a56799), color-stop(80%, #6e4ccc), color-stop(90%, #c67412), to(#a56799));
-  background: linear-gradient(90deg, #c67412 0%, #a56799 10%, #6e4ccc 20%, #c67412 30%, #a56799 40%, #6e4ccc 50%, #c67412 60%, #a56799 70%, #6e4ccc 80%, #c67412 90%, #a56799 100%);
-  background-size: 1000% 100%;
-  -webkit-background-clip: text;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+body .restaurant__carte:nth-child(1) a {
+  color: #3c1218;
+  text-decoration: none;
 }
 
-.container__carte .chic__mets__header img {
-  width: 12em;
+body .restaurant__carte:nth-child(1) a:hover {
+  color: #3c1218;
+  text-decoration: none;
 }
 
-.container__carte .chic__mets__header--titre {
+body .restaurant__carte:nth-child(1) a:visited {
+  color: #3c1218;
+  text-decoration: none;
+}
+
+body .restaurant__carte:nth-child(1) h3 {
+  font-size: 2em;
+  text-decoration: none;
+}
+
+body .restaurant__carte:nth-child(1) p {
   font-size: 1.5em;
-  color: #c67412;
-  width: 15em;
+  margin: 0.2em;
 }
 
-.container__carte .chic__mets__header--titre:hover {
-  -webkit-animation: gradient 4s linear infinite;
-          animation: gradient 4s linear infinite;
-  background: -webkit-gradient(linear, left top, right top, from(#c67412), color-stop(10%, #a56799), color-stop(20%, #6e4ccc), color-stop(30%, #c67412), color-stop(40%, #a56799), color-stop(50%, #6e4ccc), color-stop(60%, #c67412), color-stop(70%, #a56799), color-stop(80%, #6e4ccc), color-stop(90%, #c67412), to(#a56799));
-  background: linear-gradient(90deg, #c67412 0%, #a56799 10%, #6e4ccc 20%, #c67412 30%, #a56799 40%, #6e4ccc 50%, #c67412 60%, #a56799 70%, #6e4ccc 80%, #c67412 90%, #a56799 100%);
-  background-size: 1000% 100%;
-  -webkit-background-clip: text;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+body .restaurant__accueil {
+  color: #FBC02D;
 }
 
-.container__carte .chic__mets__header--titre:visited {
-  -webkit-animation: gradient 4s linear infinite;
-          animation: gradient 4s linear infinite;
-  background: -webkit-gradient(linear, left top, right top, from(#c67412), color-stop(10%, #a56799), color-stop(20%, #6e4ccc), color-stop(30%, #c67412), color-stop(40%, #a56799), color-stop(50%, #6e4ccc), color-stop(60%, #c67412), color-stop(70%, #a56799), color-stop(80%, #6e4ccc), color-stop(90%, #c67412), to(#a56799));
-  background: linear-gradient(90deg, #c67412 0%, #a56799 10%, #6e4ccc 20%, #c67412 30%, #a56799 40%, #6e4ccc 50%, #c67412 60%, #a56799 70%, #6e4ccc 80%, #c67412 90%, #a56799 100%);
-  background-size: 1000% 100%;
-  -webkit-background-clip: text;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+body .restaurant__accueil a {
+  text-decoration: none;
 }
 
-.container__carte .chic__mets__header--titre#parme {
-  color: #a56799;
+body .restaurant__accueil a :hover {
+  text-decoration: none;
+  color: #FBC02D;
 }
 
-.container__carte .chic__mets__header--titre#parme:hover {
-  -webkit-animation: gradient 4s linear infinite;
-          animation: gradient 4s linear infinite;
-  background: -webkit-gradient(linear, left top, right top, from(#c67412), color-stop(10%, #a56799), color-stop(20%, #6e4ccc), color-stop(30%, #c67412), color-stop(40%, #a56799), color-stop(50%, #6e4ccc), color-stop(60%, #c67412), color-stop(70%, #a56799), color-stop(80%, #6e4ccc), color-stop(90%, #c67412), to(#a56799));
-  background: linear-gradient(90deg, #c67412 0%, #a56799 10%, #6e4ccc 20%, #c67412 30%, #a56799 40%, #6e4ccc 50%, #c67412 60%, #a56799 70%, #6e4ccc 80%, #c67412 90%, #a56799 100%);
-  background-size: 1000% 100%;
-  -webkit-background-clip: text;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+body .restaurant__accueil a :visited {
+  text-decoration: none;
+  color: #FBC02D;
 }
 
-.container__carte .chic__mets__header--titre#parme:visited {
-  -webkit-animation: gradient 4s linear infinite;
-          animation: gradient 4s linear infinite;
-  background: -webkit-gradient(linear, left top, right top, from(#c67412), color-stop(10%, #a56799), color-stop(20%, #6e4ccc), color-stop(30%, #c67412), color-stop(40%, #a56799), color-stop(50%, #6e4ccc), color-stop(60%, #c67412), color-stop(70%, #a56799), color-stop(80%, #6e4ccc), color-stop(90%, #c67412), to(#a56799));
-  background: linear-gradient(90deg, #c67412 0%, #a56799 10%, #6e4ccc 20%, #c67412 30%, #a56799 40%, #6e4ccc 50%, #c67412 60%, #a56799 70%, #6e4ccc 80%, #c67412 90%, #a56799 100%);
-  background-size: 1000% 100%;
-  -webkit-background-clip: text;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.container__carte .chic__mets__header--titre#violet {
-  color: #6e4ccc;
-}
-
-.container__carte .chic__mets__header--titre#violet:hover {
-  -webkit-animation: gradient 4s linear infinite;
-          animation: gradient 4s linear infinite;
-  background: -webkit-gradient(linear, left top, right top, from(#c67412), color-stop(10%, #a56799), color-stop(20%, #6e4ccc), color-stop(30%, #c67412), color-stop(40%, #a56799), color-stop(50%, #6e4ccc), color-stop(60%, #c67412), color-stop(70%, #a56799), color-stop(80%, #6e4ccc), color-stop(90%, #c67412), to(#a56799));
-  background: linear-gradient(90deg, #c67412 0%, #a56799 10%, #6e4ccc 20%, #c67412 30%, #a56799 40%, #6e4ccc 50%, #c67412 60%, #a56799 70%, #6e4ccc 80%, #c67412 90%, #a56799 100%);
-  background-size: 1000% 100%;
-  -webkit-background-clip: text;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.container__carte .chic__mets__header--titre#violet:visited {
-  -webkit-animation: gradient 4s linear infinite;
-          animation: gradient 4s linear infinite;
-  background: -webkit-gradient(linear, left top, right top, from(#c67412), color-stop(10%, #a56799), color-stop(20%, #6e4ccc), color-stop(30%, #c67412), color-stop(40%, #a56799), color-stop(50%, #6e4ccc), color-stop(60%, #c67412), color-stop(70%, #a56799), color-stop(80%, #6e4ccc), color-stop(90%, #c67412), to(#a56799));
-  background: linear-gradient(90deg, #c67412 0%, #a56799 10%, #6e4ccc 20%, #c67412 30%, #a56799 40%, #6e4ccc 50%, #c67412 60%, #a56799 70%, #6e4ccc 80%, #c67412 90%, #a56799 100%);
-  background-size: 1000% 100%;
-  -webkit-background-clip: text;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.container__carte .chic__mets__detail {
-  color: #c67412;
-}
-
-.container__carte .chic__mets__detail#detailparme {
-  color: #a56799;
-}
-
-.container__carte .chic__mets__detail#detailviolet {
-  color: #6e4ccc;
-}
-
-.container__carte .chic__mets__detail--plats {
-  font-size: 1em;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-}
-
-.container__carte .chic__mets__detail--prix {
-  font-size: 1em;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
-  text-align: right;
-}
-
-.container__carte .delice {
-  font-family: "Dancing Script", cursive;
-  background-color: #F3F3F3;
-}
-
-.container__carte .delice__header--titre {
-  font-size: 4em;
-  background-image: -webkit-gradient(linear, left top, right top, from(#0a35e0), color-stop(#0889fb), to(white));
-  background-image: linear-gradient(to right, #0a35e0, #0889fb, white);
-  -webkit-background-clip: text;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.container__carte .delice__header--titre:hover {
-  -webkit-animation-name: elastic;
-          animation-name: elastic;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-fill-mode: none;
-          animation-fill-mode: none;
-}
-
-.container__carte .delice__header--titre:visited {
-  -webkit-animation-name: elastic;
-          animation-name: elastic;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-fill-mode: none;
-          animation-fill-mode: none;
-}
-
-.container__carte .delice__mets__header img {
-  padding-top: 1em;
-  width: 13em;
-}
-
-.container__carte .delice__mets__header--titre {
-  font-size: 2em;
-  width: 10em;
-  color: black;
-}
-
-.container__carte .delice__mets__header--titre:hover {
-  color: black;
-  -webkit-animation-name: elastic;
-          animation-name: elastic;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-fill-mode: none;
-          animation-fill-mode: none;
-}
-
-.container__carte .delice__mets__header--titre:visited {
-  color: black;
-  -webkit-animation-name: elastic;
-          animation-name: elastic;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-fill-mode: none;
-          animation-fill-mode: none;
-}
-
-.container__carte .delice__mets__detail {
-  font-size: 1.3em;
-}
-
-.container__carte .gout {
-  font-family: "Caveat", cursive;
-  background-color: white;
-}
-
-.container__carte .gout__header--titre {
-  font-size: 4em;
-  background-image: -webkit-gradient(linear, left top, right top, from(#558B2F), color-stop(#8BC34A), to(rgba(118, 238, 6, 0.89)));
-  background-image: linear-gradient(to right, #558B2F, #8BC34A, rgba(118, 238, 6, 0.89));
-  -webkit-background-clip: text;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.container__carte .gout__header--titre:hover {
-  -webkit-animation: none;
-          animation: none;
-}
-
-.container__carte .gout__mets__header img {
-  padding-top: 1em;
-  width: 13em;
-}
-
-.container__carte .gout__mets__header--titre {
-  font-size: 2em;
-  width: 10em;
-  color: black;
-}
-
-.container__carte .gout__mets__header--titre:hover {
-  color: black;
-}
-
-.container__carte .gout__mets__header--titre:visited {
-  color: black;
-}
-
-.container__carte .gout__mets__detail {
-  font-size: 1.3em;
+body .restaurant__accueil--retour {
+  color: #FBC02D;
+  font-family: "Source Serif Pro", serif;
+  height: 1.5em;
+  background-color: #589a86;
+  line-height: 1.5em;
+  font-size: 1.2em;
+  border: 0.01em solid #333;
+  letter-spacing: 0.1em;
+  position: relative;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+  -webkit-box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
+          box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
 }
 /*# sourceMappingURL=main.css.map */

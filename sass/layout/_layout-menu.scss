@@ -1,0 +1,101 @@
+// Gabarit de la page index
+
+// Header
+body{
+    text-decoration: none;
+.menu {
+    &--logo {
+        text-align: center;
+        text-decoration: none;
+        margin: auto;
+        height: 6rem;
+    }
+}
+
+// Grid des menus
+.menu__restaurant {
+    margin: 4em;
+
+    &__liste {
+        text-align: center;
+        width: auto;
+        display: grid;
+        padding: 2em;
+        margin: 2em;
+        grid-template-columns: repeat(auto-fill, 20em);
+        grid-gap: 4em;
+        justify-content: space-around;
+
+        &__carte {
+            width: auto;
+            padding: 1em;
+            justify-content: center;
+            height: 25rem;
+
+            a {
+                text-decoration: none;
+            }
+
+            img {
+                margin: auto;
+                position: absolute;
+                width: 3em;
+                top: 21em;
+                left: 17em;
+            }
+
+            &--titre {
+                margin-top: 6em;
+                text-decoration: none;
+            }
+
+            &--detail {
+                margin-top: 2em;
+            }
+        }
+    }
+
+    &__annonce {
+        width: 25%;
+        border: 0;
+        border-radius: 15px;
+        margin: auto;
+        text-align: center;
+        line-height: 2em;
+        cursor: pointer;
+
+        &--prochainement {
+            display: inline;
+            padding: 0.5em;
+        }
+
+        &--loading {
+            padding-top: 0.5em;
+            display: inline-block;
+        }
+    }
+}
+
+.menu__footer {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0em;
+    margin: auto;
+    max-width: 1024px; //!a revoir
+    width: 100%;
+    height: 3em;
+
+    &--mention {
+        line-height: 0.5em;
+        margin: 1.2em;
+        font-size: 1em;
+        font-weight: bolder;
+        text-decoration: none;
+    }
+
+    &--contact {
+        @extend .menu__footer--mention;
+    }
+}
+}
