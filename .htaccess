@@ -1,0 +1,9 @@
+SetEnvIf Remote_Addr "^https://bastien-oc20.github.io/ocr-projet3/$" mun_site_ip
+SetEnvIf Request_URI "^http:127.0.0.1:5500/index.html" mon_site_url
+SetEnvIf Request_URI "^http:127.0.0.1:5500/index.html/css/(css|js|img|template)/" media
+
+Order Deny,Allow
+deny from env=!media
+Allow from env=https://bastien-oc20.github.io/ocr-projet3/
+Allow from env=http:127.0.0.1:5500
+Allow from env=local

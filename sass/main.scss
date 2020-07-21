@@ -1,7 +1,12 @@
 @import "./utils/variables";
 @import "./utils/mixins";
 @import "./utils/keyframes";
-@import "./base/base";
-@import "./layout/layout";
-@import "./pages/menu";
+@import "./layout/layout-index";
+@import "./layout/layout-restaurant";
+@import "./layout/breakpoints";
+@import "./pages/index";
+@import "./pages/restaurant";
+@import "./pages/header-footer";
+@import "./pages/bouton";
 @import "./pages/mentions";
+

@@ -1,0 +1,30 @@
+// Page Mentions-légales
+
+.mention {
+    @include box-shadow;
+    padding: 2em;
+    font-family: $font1;
+
+    &--header {
+        text-align: center;
+        font-size: 3em;
+        padding: 1em;
+
+    }
+
+    &__article {
+        padding: 2em;
+
+        @include text-shadow-3;
+
+        &--titre {
+            font-size: 1.5em;
+            margin: 0em;
+        }
+
+        &--para {
+            font-size: 1.2em;
+
+        }
+    }
+}
