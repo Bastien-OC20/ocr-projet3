@@ -10,15 +10,14 @@ Ce projet s'inscrit dans le cadre de la formation "Développeur web" proposée p
 
 
 Consignes :
-- Coder le CV en HTML et CSS uniquement
-- Réaliser un code responsive (choix du mobile first pour ma part)
-- Utiliser Git
+- Mettre en œuvre des effets CSS graphiques avancés
+- Assurer la cohérence graphique d'un site web
+- Mettre en place une structure de navigation pour un site web
 
 ### Pré-requis
 
-- Scss et Sass
-- Intégrez une maquette
-- Git et Github
+- Simplifiez-vous le CSS avec Sass
+- Créez des animations CSS modernes
 
 ### Installation
 
@@ -56,9 +55,6 @@ Consignes :
 
 - [**Bastien-OC20**](https://github.com/Bastien-OC20/)
 
-
-## Wiki
-- [**Wiki du projet**]()
 
 
 ## License
