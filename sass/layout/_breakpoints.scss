@@ -1,5 +1,202 @@
-$breakpoints: ('Small': 480px, 'Medium': 768px);
+$breakpoints: ('Small': 480px,
+    'Medium': 768px,
+    'large': 1024px,
+);
 
-@media only screen and (max-width: map-get($breakpoints, Small)){}
 
-@media only screen and (max-width: map-get($breakpoints, Medium)){}
+
+
+@media all and (max-width: map-get($breakpoints, Small)) {
+
+    // page index
+
+    body {
+        margin: 0em;
+
+        .menu {
+            max-width: 480px;
+
+            h1 {
+                font-size: 4em;
+            }
+        }
+
+        // Grid des menus
+        .menu {
+            &__restaurant {
+                margin: 0em;
+
+                &__liste {
+                    display: flex;
+                    flex-direction: column;
+                    grid-gap: 2em;
+                    max-width: 100%;
+                    justify-content: center;
+
+                    &__carte {
+                        display: block;
+                        margin: 0em;
+                        padding: 1em;
+                        width: auto;
+                    }
+
+                    &__carte:nth-child(1) {
+
+                        a {
+                            display: block;
+                            justify-content: center;
+                            transform: initial;
+
+                            &:hover {
+                                transform: unset;
+                                opacity: 1;
+                            }
+
+                            img {
+                                position: inherit;
+                                display: block;
+                                max-width: 3em;
+                                margin-top: 3em;
+                            }
+
+                            h2 {
+                                margin: 1em;
+                            }
+                        }
+                    }
+
+                    &__carte:nth-child(2) {
+
+                        a {
+                            transform: initial;
+
+                            &:hover {
+                                transform: unset;
+                                opacity: 1;
+                            }
+                        }
+                    }
+
+                    &__carte:nth-child(3) {
+                        a {
+                            transform: initial;
+
+                            &:hover {
+                                transform: unset;
+                                opacity: 1;
+                            }
+                        }
+                    }
+
+                    &__carte:nth-child(4) {
+                        a {
+                            transform: initial;
+
+                            &:hover {
+                                transform: unset;
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+
+                &__annonce {
+                    margin: 2em auto;
+                    min-width: 80%;
+
+                }
+            }
+
+            &__footer {
+                p {
+                    font-size: 0.8em;
+                    margin: 1.5em;
+                }
+            }
+        }
+
+        // pages des restaurants
+        main {
+            .restaurant {
+                margin: 0em;
+                padding: 0em;
+
+                h2 {
+                    font-size: 2.5em;
+                    margin: auto;
+                    padding: 2em;
+                }
+
+                &__header {
+                    font-size: 0.9em;
+                }
+
+                &__menu {
+                    &__header {
+                        display: block;
+                        margin: auto;
+                        padding-bottom: 2em;
+
+                        img {
+                            display: block;
+                            margin: auto;
+                            padding-bottom: 1em;
+                            max-width: 10em;
+                        }
+
+                        a {
+                            display: flex;
+                            margin: auto;
+                            justify-content: center;
+
+                            h3 {
+                                display: block;
+                                text-align: center;
+                                font-size: 2em;
+                                margin: auto;
+                                padding-top: 0em;
+                                animation-name: none;
+
+                                &:hover {
+                                    animation-play-state: paused;
+                                    animation: none;
+                                    margin: auto;
+                                    border-bottom: unset;
+                                    background: linear-gradient(unset);
+                                }
+                            }
+                        }
+                    }
+
+                    &__detail {
+
+                        &--plat {
+                            display: block;
+                            margin: auto;
+                            font-size: 1.2em;
+                            text-align: center;
+                        }
+
+                        &--prix {
+                            font-size: 1.2em;
+                            margin-bottom: 1em;
+                        }
+                    }
+                }
+
+                &__accueil {
+                    margin-top: 2em;
+                }
+            }
+        }
+        .mention{
+            margin: 0em;
+            padding: 0em;
+            &--header{
+                margin: 0em;
+                padding: 0.5em;
+            }
+        }
+    }
+}
+
