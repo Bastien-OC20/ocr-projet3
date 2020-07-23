@@ -1,0 +1,51 @@
+
+@import "breakpoints";
+// Gabarit de la page index
+
+
+// Header
+body {
+    background-color: $body-background;
+    padding-bottom: 2em;
+    max-width: 1024px;
+    margin-left:auto;
+   margin-right: auto;
+
+    // Grid des menus
+    .menu__restaurant {
+        margin: 1em;
+
+        &__liste {
+            text-align: center;
+            width: auto;
+            display: grid;
+            padding: 1em;
+            margin-bottom: 3em;
+            grid-template-columns: repeat(auto-fill, 20em);
+            grid-gap: 4em;
+            justify-content: space-evenly;
+
+            &__carte {
+                width: auto;
+                padding: 1em;
+                justify-content: center;
+               height: 25em;
+
+                img {
+                    margin: auto;
+                    position: absolute;
+                    width: 4em;
+                    top: -5em;
+                    left: 7em;
+                }
+
+                &--titre {
+                    margin-top: 5.5em;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+

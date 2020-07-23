@@ -1,8 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=DM+Serif+Display&family=Dancing+Script:wght@600&family=Kaushan+Script&family=Satisfy&family=Source+Serif+Pro:ital@1&display=swap');
+
+$font1:'roboto', serif;
+$font2:'Satisfy', cursive;
+$font3: 'alegrya';
+$font4: 'Dancing Script', cursive;
+$font5: 'Caveat', cursive;
+$font6: 'Kaushan Script', cursive;
+$font7: 'Source Serif Pro', serif;
+
 // couleurs
+$body-background: white;
 
-$main-background: #579c87;
-$main-text: #fdcb46;
+$main-background:#589a86;
+$main-text:#FBC02D;
 
 
+// menus
+$bgmenu1: #FCDFDB;
+$colormenu1: #3c1218;
+
+$bgmenu2:#FFF5FE;
+$colormenu2a:#c67412;
+$colormenu2b:#a56799;
+$colormenu2c: #6e4ccc;
+
+$bgmenu3 :#F3F3F3;
+$colormenu3a: #0a35e0;
+$colormenu3b:#0889fb;
+$colormenu3c:#3aabf7;
+
+
+$bgmenu4: white;
+$colormenu4a:#558B2F;
+$colormenu4b:#8BC34A;
+$colormenu4c:rgba(118, 238, 6, 0.89);
+
+
+
+
+// Prochainement
+$anim-point:100ms;
+$anim-delay:$anim-point / 5;
+$size:1em;
+
+
+
+// footer
+$shake-intensity: 2%;
 
 

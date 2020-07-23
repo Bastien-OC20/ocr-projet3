@@ -1,0 +1,131 @@
+
+// Habillage de l'index
+
+// Bandeau
+body {
+    // Grid des menus
+    .menu {
+        &__restaurant {
+
+            &__liste {
+
+                &__carte {
+                    @include box-shadow;
+
+                    a {
+                        display: block;
+                        text-decoration: none;
+                        transform: scale(1);
+                        opacity: 1;
+                        transition-property: transform, opacity;
+                        transition-duration: 1s, 1s;
+
+                        &:hover {
+                            transform: scale(1.2);
+                            opacity: 0.65;
+                        }
+                    }
+                }
+
+                //    la note enchantée
+                &__carte:nth-child(1) {
+                    font-family: $font2;
+                    background-color: $bgmenu1;
+
+                    h2 {
+                        color: $colormenu1;
+                        font-size: 2em;
+                        margin-top: 4em;
+                    }
+
+                    p {
+                        color: $colormenu1;
+                        font-size: 3em;
+                        margin-top: 0.7em;
+                    }
+                }
+
+                // le chic à la française
+                &__carte:nth-child(2) {
+                    font-family: $font3;
+                    background-color: $bgmenu2;
+
+
+                    h2 {
+                        background-image: linear-gradient(to right, $colormenu2a, $colormenu2b, $colormenu2c);
+                        -webkit-background-clip: text;
+                        -moz-background-clip: text;
+                        background-clip: text;
+                        color: transparent;
+                        font-size: 1.5em;
+                        margin-top: 5.5em;
+                    }
+
+                    p {
+                        background-image: linear-gradient(to right, $colormenu2a, $colormenu2b, $colormenu2c);
+                        -webkit-background-clip: text;
+                        -moz-background-clip: text;
+                        background-clip: text;
+                        color: transparent;
+                        font-size: 2.5em;
+                        margin-top: 1.3em;
+                    }
+                }
+
+                // le délice des papilles
+                &__carte:nth-child(3) {
+                    font-family: $font4;
+                    background-color: $bgmenu3;
+
+                    h2 {
+                        font-size: 2em;
+                        margin-top: 4em;
+                        background-image: linear-gradient(to right, $colormenu3a, $colormenu3b, $colormenu3c);
+                        -webkit-background-clip: text;
+                        -moz-background-clip: text;
+                        background-clip: text;
+                        color: transparent;
+                    }
+
+                    p {
+                        font-size: 3em;
+                        margin-top: 1.2em;
+                        background-image: linear-gradient(to right, $colormenu3a, $colormenu3b, $colormenu3c);
+                        -webkit-background-clip: text;
+                        -moz-background-clip: text;
+                        background-clip: text;
+                        color: transparent;
+                    }
+                }
+
+                // la palette du gout
+                &__carte:nth-child(4) {
+                    font-family: $font6;
+                    background-color: $bgmenu4;
+
+
+                    h2 {
+                        background-image: linear-gradient(45deg, $colormenu4a, $colormenu4b, $colormenu4c);
+                        -webkit-background-clip: text;
+                        -moz-background-clip: text;
+                        background-clip: text;
+                        color: transparent;
+                        font-size: 2em;
+                        margin-top: 4em;
+                    }
+
+                    p {
+                        background-image: linear-gradient(45deg, $colormenu4a, $colormenu4b, $colormenu4c);
+                        -webkit-background-clip: text;
+                        -moz-background-clip: text;
+                        background-clip: text;
+                        color: transparent;
+                        font-size: 2.5em;
+                        margin-top: 1.2em;
+                    }
+                }
+            }
+        }
+
+    }
+}
