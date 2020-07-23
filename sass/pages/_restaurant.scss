@@ -1,4 +1,4 @@
-.restaurant__note {
+.menu--note {
     background-color: $bgmenu1;
     font-family: $font2;
     justify-content: space-around;
@@ -11,18 +11,13 @@
 
     }
 
-    a {
-        color: $colormenu1;
+    img {
+        width: 10em;
     }
 
     h3 {
         font-size: 2em;
         width: auto;
-
-
-        &:hover {
-            @include progress-bar;
-        }
     }
 
     h4 {
@@ -40,7 +35,7 @@
 }
 
 
-.restaurant__chic {
+.menu--chic {
     background-color: $bgmenu2;
     font-family: $font3;
     justify-content: space-around;
@@ -54,10 +49,6 @@
         -moz-background-clip: text;
         background-clip: text;
         color: transparent;
-
-        &:hover {
-            @include gradient;
-        }
     }
 
     img {
@@ -65,47 +56,29 @@
     }
 
     h3 {
-        font-size: 1.5em;
+        font-size: 2em;
+        width: auto;
+    }
 
+    .plat--entree {
+        color: $colormenu2a;
+    }
 
-        &:hover {
-            @include gradient;
-        }
+    .plat--principal {
+        color: $colormenu2b;
+    }
+
+    .plat--dessert {
+        color: $colormenu2c;
     }
 
     p {
         font-size: 1.2em;
     }
 
-    #entree {
-
-        color: $colormenu2a;
-
-
-        a {
-            color: $colormenu2a;
-        }
-    }
-
-    #plat-principal {
-        color: $colormenu2b;
-
-        a {
-            color: $colormenu2b;
-        }
-    }
-
-    #dessert {
-        color: $colormenu2c;
-    }
-
-    a {
-        color: $colormenu2c;
-    }
-
 }
 
-.restaurant__delice {
+.menu--delice {
     background-color: $bgmenu3;
     font-family: $font4;
     justify-content: space-around;
@@ -121,49 +94,35 @@
         color: transparent;
     }
 
+    img {
+        width: 10em;
+    }
+
     h3 {
         font-size: 2em;
         width: auto;
-        padding-bottom: 0.5em;
-
-        &:hover {
-            @include progress-bar;
-        }
-
     }
 
-    #entree {
+    .plat--entree {
         color: $colormenu3a;
-
-        a {
-            color: $colormenu3a;
-        }
     }
 
-    #plat-principal {
+    .plat--principal {
         color: $colormenu3b;
-
-        a {
-            color: $colormenu3b;
-        }
     }
 
-    #dessert {
+    .plat--dessert {
         color: $colormenu3c;
-
-        a {
-            color: $colormenu3c;
-        }
     }
 
     p {
-        font-size: 1.5em;
         color: black;
+        font-size: 1.5em;
     }
 }
 
 
-.restaurant__gout {
+.menu--gout {
     background-color: $bgmenu4;
     font-family: $font4;
     justify-content: space-around;
@@ -183,27 +142,12 @@
         width: 10em;
     }
 
-    a {
-        color: black;
-    }
-
     h3 {
         font-size: 2em;
         width: auto;
-        margin-top: 0.8em;
-
-        &:hover {
-            background-image: linear-gradient(45deg, $colormenu4a, $colormenu4b, $colormenu4c);
-            -webkit-background-clip: text;
-            -moz-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            @include progress-bar;
-        }
     }
 
     p {
         font-size: 1.3em;
-        color: black;
     }
 }

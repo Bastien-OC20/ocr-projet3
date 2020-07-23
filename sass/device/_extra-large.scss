@@ -1,3 +1,16 @@
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
+    .menu {
+        &__restaurant {
+            &__annonce {
+                width: 50%;
+            }
+        }
+        &__accueil{
+            margin: 2em;
+        }
+    }
+    .menu__footer{
+        max-width: 30%;
+    }
 }

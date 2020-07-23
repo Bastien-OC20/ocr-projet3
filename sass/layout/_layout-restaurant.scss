@@ -1,17 +1,24 @@
 @import "breakpoints";
 
-
-// Gabarit des pages de chaque restaurant
 body {
+    padding-bottom: 0em;
+    margin-bottom: 0em;
+
+    ul {
+        list-style-type: none;
+        padding-inline-start: 0px;
+    }
+
     main {
         padding: 1em;
         margin-bottom: 3em;
 
-        .restaurant {
+        .menu {
             display: block;
             justify-content: center;
             margin: 1em;
             padding: 2em;
+            @include box-shadow;
 
             &__header {
                 img {
@@ -27,67 +34,42 @@ body {
                 }
             }
 
-            &__menu {
+            &__plat {
+                display: block;
+                margin: auto;
+                text-align: center;
+
                 &__header {
-                    display: flex;
+                    display: block;
+                    text-align: center;
                     justify-content: space-between;
-                    margin: auto;
-
-                    img {
-                        display: flex;
-                        width: 15em;
-                    }
-
-                    a {
-                        display: block;
-                        text-decoration: none;
-                        height: 6em;
-                    }
-
-                    &--titre {
-                        text-align: center;
-
-                    }
                 }
 
                 &__detail {
-                    display: block;
-                    margin: auto;
-                    padding: 1em;
-                    text-align: center;
+                    justify-content: center;
 
                     &--plat {
-                        display: inline-flex;
-                        width: 70%;
-                        text-align: left;
-                        margin: 0em;
+                        text-align: center;
                     }
 
                     &--prix {
-                        display: inline-flex;
-                        padding-left: 0.5em;
-                        justify-content: right;
-                        margin: 0.3em;
+                        text-align: center;
                     }
                 }
             }
 
-            &__footer {
-                display: block;
-                text-align: center;
-                padding: 2em;
-
-                img {
-                    display: inline-block;
-                    max-width: 3em;
-                    margin: auto;
-                }
-
-                &--titre {
-                    display: inline-block;
-                    margin: auto;
+            &__carte {
+                &__footer {
+                    margin-top: 3em;
                     text-align: center;
-                    line-height: 1.5em;
+
+                    img {
+                        max-width: 3em;
+                    }
+
+                    &--titre {
+                        display: inline;
+                    }
                 }
             }
         }

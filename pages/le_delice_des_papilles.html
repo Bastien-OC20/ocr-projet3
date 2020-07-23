@@ -20,107 +20,106 @@
 
     <body>
         <!--header-->
-        <header class="menu">
-            <h1 class="menu--logo"><a href="../index.html">Ohmyfood</a></h1>
-
+        <header class="menu__site">
+            <h1 class="menu__site--logo"><a href="../index.html">Ohmyfood</a></h1>
         </header>
         <!--main-->
-        <main >
-            <article class="restaurant restaurant__delice">
-                <header class="restaurant__header">
-                    <h2 class="restaurant__header--titre">Le délice des papilles
+        <main>
+            <article class="menu menu--delice">
+                <header class="menu__header">
+                    <h2 class="menu__header--titre">Le délice des papilles
                     </h2>
                 </header>
 
                 <!--sous titres entrées-->
-                <aside class="restaurant__menu" id="entree">
-                    <header class="restaurant__menu__header">
+                <section class="menu__plat plat--entree">
+                    <header class="menu__plat__header">
                         <img src="../img/deliceBarleft1.svg" alt="leftbar" />
-                        <a href="#">
-                            <h3 class="container__restaurant__mets__header--titre delice__mets__header--titre">
-                                Pour&nbsp;bien&nbsp;commencer
-                            </h3>
-                        </a>
+                        <h3 class="menu__plat__header--titre">
+                            Pour bien commencer
+                        </h3>
                         <img src="../img/deliceBarRight1.svg" alt="rightbar" />
                     </header>
                     <!--liste des entrées-->
-                    <section class="restaurant__menu__detail">
-                        <p class="restaurant__menu__detail--plat">Tartare
-                            de thon assaisonné au yuzu</p>
-                        <p class="restaurant__menu__detail--prix">55€</p>
-                        <p class="restaurant__menu__detail--plat">
-                            Bouchées de homard croustillant et sa farandole
-                            de petits légumes
-                        </p>
-                        <p class="restaurant__menu__detail--prix">89€</p>
-                        <p class="restaurant__menu__detail--plat">Velouté
-                            de cèpes aux truffes</p>
-                        <p class="restaurant__menu__detail--prix">56€</p>
-                    </section>
-                </aside>
+                    <ul class="menu__plat__detail">
+                        <li class="menu__plat__detail--plat">
+                            <p>Tartare de thon assaisonné au yuzu</p>
+                            <p class="menu__plat__detail--prix">55€</p>
+                        </li>
+                        <li class="menu__plat__detail--plat">
+                            <p>Bouchée de homard croustillant et sa farandole de petits légumes</p>
+                            <p class="menu__plat__detail--prix">89€</p>
+                        </li>
+                        <li class="menu__plat__detail--plat">
+                            <p>Velouté de cèpes aux truffes</p>
+                            <p class="menu__plat__detail--prix">56€</p>
+                        </li>
+                    </ul>
+                </section>
                 <!--sous titres plats principaux-->
-                <aside class="restaurant__menu" id="plat-principal">
-                    <header class="restaurant__menu__header">
+                <section class="menu__plat plat--principal">
+                    <header class="menu__plat__header">
                         <img src="../img/deliceBarleft2.svg" alt="leftbar" />
-                        <a href="#">
-                            <h3 class="restaurant__menu__header--titre">
-                                Pour&nbsp;bien&nbsp;continuer
-                            </h3>
-                        </a>
+                        <h3 class="menu__plat__header--titre">
+                            Pour bien continuer
+                        </h3>
                         <img src="../img/deliceBarRight2.svg" alt="rightbar" />
                     </header>
                     <!--liste des plats principaux-->
 
-                    <section class="restaurant__menu__detail">
-                        <p class="restaurant__menu__detail--plat">Poulet
-                            rôti aux herbes de Provence et sa crème
-                            de truffe</p>
-                        <p class="restaurant__menu__detail--prix">101€</p>
-                        <p class="restaurant__menu__detail--plat">
-                            Langouste rôtie et ses légumes de saison</p>
-                        <p class="restaurant__menu__detail--prix">225€</p>
-                        <p class="restaurant__menu__detail--plat">Côte de
-                            boeuf Angus et sa purée de panais</p>
-                        <p class="restaurant__menu__detail--prix">115€</p>
-                    </section>
-                </aside>
+                    <ul class="menu__plat__detail">
+                        <li class="menu__plat__detail--plat">
+                            <p>Poulet rôti aux herbes de provence et sa crème de truffe</p>
+                            <p class="menu__plat__detail--prix">110€</p>
+                        </li>
+                        <li class="menu__plat__detail--plat">
+                            <p>Langouste rôtie et ses légumes de saison</p>
+                            <p class="menu__plat__detail--prix">225€</p>
+                        </li>
+                        <li class="menu__plat__detail--plat">
+                            <p>Côte de boeuf angus et sa purée de panais</p>
+                            <p class="menu__plat__detail--prix">115€</p>
+                        </li>
+                    </ul>
+                </section>
                 <!--sous titre desserts-->
-                <aside class="restaurant__menu" id="dessert">
-                    <header class="restaurant__menu__header">
+                <section class="menu__plat plat--dessert">
+                    <header class="menu__plat__header">
 
                         <img src="../img/deliceBarleft3.svg" alt="leftbar" />
-                        <a href="#">
-                            <h3 class="restaurant__menu__header--titre">
-                                Gourmandises&nbsp;sucrées</h3>
-                        </a>
+
+                        <h3 class="menu__plat__header--titre">
+                            Gourmandises sucrées</h3>
+
                         <img src="../img/deliceBarRight3.svg" alt="rightbar" />
                     </header>
                     <!--liste des desserts-->
-                    <section class="restaurant__menu__detail">
-                        <p class="restaurant__menu__detail--plat">
-                            Farandole de desserts du chef</p>
-                        <p class="restaurant__menu__detail--prix">55€</p>
-                        <p class="restaurant__menu__detail--plat">Crème
-                            brûlée revisitée</p>
-                        <p class="restaurant__menu__detail--prix">60€</p>
-                        <p class="restaurant__menu__detail--plat">
-                            Tiramisu à la noisette</p>
-                        <p class="restaurant__menu__detail--prix">55€</p>
-                    </section>
-                </aside>
+                    <ul class="menu__plat__detail">
+                        <li class="menu__plat__detail--plat">
+                            <p>Farandole de desserts du chef</p>
+                            <p class="menu__plat__detail--prix">55€</p>
+                        </li>
+                        <li class="menu__plat__detail--plat">
+                            <p>Crème brûlée revisitée</p>
+                            <p class="menu__plat__detail--prix">60€</p>
+                        </li>
+                        <li class="menu__plat__detail--plat">
+                            <p>Tiramisu à la noisette</p>
+                            <p class="menu__plat__detail--prix">55€</p>
+                        </li>
+                    </ul>
+                </section>
             </article>
-            <aside class="restaurant__accueil">
-                <a href="../index.html"><span class="restaurant__accueil--retour">Accueil</span> </a>
+            <aside class="menu__accueil">
+                <a href="../index.html"><span class="menu__accueil--retour">Accueil</span> </a>
             </aside>
 
         </main>
         <!--footer-->
         <footer class="menu__footer">
-            <!--lien vers les mentions légales-->
-            <a href="../pages/mention_legales.html">
+            <a href="./pages/mention_legales.html">
                 <p class="menu__footer--mention">Mentions légales</p>
             </a>
-            <!--contact mail-->
             <a href="mailto:contact@ohmyfood.com">
                 <p class="menu__footer--contact">Contactez-nous</p>
             </a>

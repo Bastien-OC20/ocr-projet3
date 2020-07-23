@@ -1,6 +1,129 @@
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1250px) {
     body {
-        background-color: green;
+        .menu {
+            width: 70%;
+
+
+            &__restaurant {
+                margin: 1em;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, 50em);
+                grid-gap: 4em;
+                justify-content: space-evenly;
+
+                &__liste {
+                    text-align: center;
+                    width: auto;
+                    padding: 1em;
+                    margin-bottom: 3em;
+
+
+                    &__carte {
+                        width: auto;
+                        padding: 1em;
+                        justify-content: center;
+                        height: 25em;
+
+                        a {
+                            display: block;
+                            text-decoration: none;
+                            transform: scale(1);
+                            opacity: 1;
+                            transition-property: transform, opacity;
+                            transition-duration: 1s, 1s;
+
+                            &:hover {
+                                transform: scale(1.1);
+                                opacity: 0.65;
+                            }
+                        }
+
+                        img {
+                            margin: auto;
+                            position: absolute;
+                            width: 4em;
+                            top: -5em;
+                            left: 7em;
+                        }
+
+                        &--titre {
+                            margin-top: 5.5em;
+                            text-decoration: none;
+                        }
+                    }
+                }
+
+                &__annonce {
+                    width: 30%;
+                }
+            }
+
+            &__accueil {
+                margin: 2em;
+            }
+        }
+
+        .menu__footer {
+            max-width: 100%;
+        }
+    }
+
+    body {
+
+        main {
+            .menu {
+                margin: auto;
+
+                .menu__plat {
+                    &__header {
+                        display: flex;
+                        justify-content: space-around;
+                        position: relative;
+                        margin: 1em;
+
+                        h3 {
+                            display: block;
+                            font-size: 2em;
+
+
+                            &:hover {
+                                width: auto;
+                                @include progress-bar;
+                            }
+                        }
+
+                        img {
+                            display: flex;
+                            width: 15em;
+                        }
+                    }
+
+                    &__detail {
+                        margin-left: 2em;
+                        margin-right: 2em;
+                        display: block;
+
+                        &--plat {
+                            display: flex;
+                            text-align: left;
+                            margin-left: 5em;
+
+                        }
+
+                        p {
+                            width: 100%;
+                            margin: 0em;
+                        }
+
+                        &--prix {
+                            display: flex;
+                            flex: 0 0 18%;
+                            justify-content: right;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

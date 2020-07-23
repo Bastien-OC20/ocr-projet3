@@ -2,6 +2,8 @@
 
 .menu {
     &__restaurant {
+        padding-bottom: 4em;
+
         &__annonce {
             width: 30%;
             border: 0;
@@ -52,11 +54,12 @@
 }
 
 // Bouton retour à l'acceuil
-.restaurant {
+.menu {
 
     &__accueil {
         font-size: 1.2em;
         @include text-shadow-1;
+        margin: 2em;
 
         a {
             color: $main-text;

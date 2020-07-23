@@ -20,122 +20,110 @@
 
     <body>
         <!--header-->
-        <header class="menu">
-            <h1 class="menu--logo"><a href="../index.html">Ohmyfood</a></h1>
+        <header class="menu__site">
+            <h1 class="menu__site--logo"><a href="../index.html">Ohmyfood</a></h1>
 
         </header>
         <!--main content-->
-        <main >
-            <article class="restaurant restaurant__chic">
-                <header class="restaurant__header">
+        <main>
+            <article class="menu menu--chic">
+                <header class="menu__header">
 
-                    <h2 class="restaurant__header--titre">Le Chic à la
+                    <h2 class="menu__header--titre">Le Chic à la
                         française</h2>
                 </header>
                 <!--sous titres entrées-->
-                <aside class="restaurant__menu" id="entree" >
-                    <header class="restaurant__menu__header">
+                <section class="menu__plat plat--entree">
+                    <header class="menu__plat__header">
 
                         <img src="../img/chicBarleftOrange.svg" alt="Flêche gauche mauve">
-                        <a href="#">
-                            <h3 class="restaurant__nemu__header--titre">
-                                Pour&nbsp;se&nbsp;mettre&nbsp;en&nbsp;appétit</h3>
-                        </a>
+                        <h3 class="menu__plat__header--titre">
+                            Pour se mettre en appétit</h3>
                         <img src="../img/chicBarRightOrange.svg" alt="Flêche gauche mauve">
                     </header>
                     <!--liste des entrées-->
-                    <section class="restaurant__menu__detail">
-                        <p class="restaurant__menu__detail--plat">Tartare
-                            de poulpes acidulés
-                            au zeste d'orange</p>
-                        <p class="restaurant__menu__detail--prix">79€</p>
-                        <p class="restaurant__menu__detail--plat">Velouté
-                            de légumes d'antan
-                        </p>
-                        <p class="restaurant__menu__detail--prix">57€</p>
-                        <p class="restaurant__menu__detail--plat">Soupe à
-                            l'oignon revisitée
-                        </p>
-                        <p class="restaurant__menu__detail--prix">57€</p>
-
-                    </section>
-                </aside>
+                    <ul class="menu__plat__detail">
+                        <li class="menu__plat__detail--plat">
+                            <p>Tartare de poulpe acidulé aux zests d'orange</p>
+                            <p class="menu__plat__detail--prix">79€</p>
+                        </li>
+                        <li class="menu__plat__detail--plat">
+                            <p>Velouté de légumes d'antan</p>
+                            <p class="menu__plat__detail--prix">57€</p>
+                        </li>
+                        <li class="menu__plat__detail--plat">
+                            <p>Soupe à l'oignon revisitée</p>
+                            <p class="menu__plat__detail--prix">57€</p>
+                        </li>
+                    </ul>
+                </section>
                 <!--sous titres plats principaux-->
-                <aside class="restaurant__menu" id="plat-principal">
-                    <header class="restaurant__menu__header">
+                <section class="menu__plat plat--principal">
+                    <header class="menu__plat__header">
                         <!-- svg image gauche -->
                         <img src="../img/chicBarleftPurple.svg" alt="Flêche gauche mauve">
-                        <a href="#">
-                            <h3 class="restaurant__nemu__header--titre">
-                                Plaisir&nbsp;des&nbsp;papilles</h3>
-                        </a>
+
+                        <h3 class="menu__plat__header--titre">
+                            Plaisir des papilles</h3>
+
                         <img src="../img/chicBarRightPurple.svg" alt="Flêche gauche mauve">
                     </header>
                     <!--liste des plats principaux-->
-                    <section class="restaurant__menu__detail">
-                        <p class="restaurant__menu__detail--plat">Coquille
-                            Saint-Jacques accompagnée d'une
-                            purée
-                            de panais
-                        </p>
-                        <p class="restaurant__menu__detail--prix">95€</p>
-                        <p class="restaurant__menu__detail--plat">Magret de
-                            canard et
-                            parmentier de pommes
-                            de
-                            terre</p>
-                        <p class="restaurant__menu__detail--prix">88€</p>
-                        <p class="restaurant__menu__detail--plat">
-                            Pigeonneau d'Ille et
-                            Vilaine sur son lit
-                            de
-                            gnocchis aux légumes</p>
-                        <p class="restaurant__menu__detail--prix">175€</p>
-                    </section>
-                </aside>
+                    <ul class="menu__plat__detail">
+                        <li class="menu__plat__detail--plat">
+                            <p>Coquilles Saint-Jacques accompagnées d'une purée de panais</p>
+                            <p class="menu__plat__detail--prix">95€</p>
+                        </li>
+                        <li class="menu__plat__detail--plat">
+                            <p>Magret de canard et parmentier de pommes de terres</p>
+                            <p class="menu__plat__detail--prix">88€</p>
+                        </li>
+                        <li class="menu__plat__detail--plat">
+                            <p>Pigeonneau d'Ille et Vilaine sur son lit de gnocchis aux légumes</p>
+                            <p class="menu__plat__detail--prix">175€</p>
+                        </li>
+                    </ul>
+                </section>
                 <!--sous titre desserts-->
-                <aside class="restaurant__menu" id="dessert">
-                    <header class="restaurant__menu__header">
+                <section class="menu__plat plat--dessert">
+                    <header class="menu__plat__header">
                         <!-- svg image gauche -->
                         <img src="../img/chicBarleftParme.svg" alt="Flêche gauche mauve">
-                        <a href="#">
-                            <h3 class="restaurant__nemu__header--titre">
-                                Gourmandises&nbsp;sucrées</h3>
-                        </a>
+
+                        <h3 class="menu__plat__header--titre">
+                            Gourmandises sucrées</h3>
                         <!-- svg image droite -->
                         <img src="../img/chicBarRightParme.svg" alt="Flêche gauche mauve">
                     </header>
                     <!--liste des desserts-->
-                    <section class="restaurant__menu__detail">
-                        <p class="restaurant__menu__detail--plat">Pétales
-                            de violettes
-                            glacés et purée de
-                            noisettes</p>
-                        <p class="restaurant__menu__detail--prix">38€</p>
-                        <p class="restaurant__menu__detail--plat">Fondant
-                            au chocolat
-                            revisité</p>
-                        <p class="restaurant__menu__detail--prix">29€</p>
-                        <p class="restaurant__menu__detail--plat">
-                            Millefeuille
-                            croustillant</p>
-                        <p class="restaurant__menu__detail--prix">41€</p>
-                    </section>
-                </aside>
+                    <ul class="menu__plat__detail">
+                        <li class="menu__plat__detail--plat">
+                            <p>Pétales de violette glacés et purée de noisettes</p>
+                            <p class="menu__plat__detail--prix">38€</p>
+                        </li>
+                        <li class="menu__plat__detail--plat">
+                            <p>Fondant au chocolat revisité</p>
+                            <p class="menu__plat__detail--prix">29€</p>
+                        </li>
+                        <li class="menu__plat__detail--plat">
+                            <p>Millefeuille croustillant</p>
+                            <p class="menu__plat__detail--prix">41€</p>
+                        </li>
+                    </ul>
+                </section>
+
 
             </article>
             <!-- boutton -->
-            <aside class="restaurant__accueil">
-                <a href="../index.html"><span class="restaurant__accueil--retour">Accueil</span> </a>
+            <aside class="menu__accueil">
+                <a href="../index.html"><span class="menu__accueil--retour">Accueil</span> </a>
             </aside>
         </main>
         <!--footer-->
         <footer class="menu__footer">
-            <!--lien vers les mentions légales-->
-            <a href="../pages/mention_legales.html">
+            <a href="./pages/mention_legales.html">
                 <p class="menu__footer--mention">Mentions légales</p>
             </a>
-            <!--contact mail-->
             <a href="mailto:contact@ohmyfood.com">
                 <p class="menu__footer--contact">Contactez-nous</p>
             </a>

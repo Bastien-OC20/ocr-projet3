@@ -1,6 +1,18 @@
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) and (max-width: 767.98px) {
     body {
-        background-color: purple;
+        .menu {
+            &__restaurant {
+                &__annonce {
+                    width: 50%;
+                }
+            }
+            &__accueil{
+                margin: 2em;
+            }
+        }
+        .menu__footer{
+            max-width: 100%;
+        }
     }
 }
