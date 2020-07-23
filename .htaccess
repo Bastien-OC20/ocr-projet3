@@ -1,0 +1,8 @@
+SetEnvIf Remote_Addr "^https://bastien-oc20.github.io/ocr-projet3/$" githubpage
+SetEnvIf Request_URI "^http:127.0.0.1/index.html" prj_local
+SetEnvIf Request_URI "^http:127.0.0.1/index.html/css/(css|js|img|template)/" media
+
+Order Deny,Allow
+deny from env=!media
+Allow from env=prj_local
+Allow from env=local
