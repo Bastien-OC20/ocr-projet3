@@ -1,5 +1,5 @@
 
-@import "breakpoints";
+
 // Gabarit de la page index
 
 
@@ -13,7 +13,7 @@ body {
 
     // Grid des menus
     .menu__restaurant {
-        margin: 1em;
+        margin: 2em;
 
         &__liste {
             text-align: center;
@@ -26,22 +26,25 @@ body {
             justify-content: space-evenly;
 
             &__carte {
-                width: auto;
+                width:80%;
                 padding: 1em;
+                margin: auto;
                 justify-content: center;
-               height: 25em;
-
-                img {
-                    margin: auto;
-                    position: absolute;
-                    width: 4em;
-                    top: -5em;
-                    left: 7em;
-                }
+                height: 25em;
+               a{
+                   text-decoration: none;
+               }
 
                 &--titre {
-                    margin-top: 5.5em;
+                    display: block;
+                    margin-top: 4em;
                     text-decoration: none;
+
+                    img {
+                        display: block;
+                        margin: auto;
+                        width: 2em;
+                    }
                 }
             }
         }

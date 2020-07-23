@@ -1,8 +1,5 @@
-@import "breakpoints";
-
 body {
-    padding-bottom: 0em;
-    margin-bottom: 0em;
+
 
     ul {
         list-style-type: none;
@@ -23,14 +20,13 @@ body {
             &__header {
                 img {
                     display: block;
-                    width: 4em;
+                    width: 6em;
                     margin: auto;
                     padding-top: 2em;
                 }
 
                 &--titre {
                     text-align: center;
-                    margin-top: 1em;
                 }
             }
 

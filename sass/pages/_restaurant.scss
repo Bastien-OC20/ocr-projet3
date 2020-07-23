@@ -7,12 +7,12 @@
     @include text-focus;
 
     h2 {
-        font-size: 3em;
+        font-size: 4em;
 
     }
 
     img {
-        width: 10em;
+        width: 15em;
     }
 
     h3 {
@@ -43,7 +43,7 @@
     @include text-focus;
 
     h2 {
-        font-size: 2.5em;
+        font-size: 4em;
         background-image: linear-gradient(to right, $colormenu2a, $colormenu2b, $colormenu2c, );
         -webkit-background-clip: text;
         -moz-background-clip: text;
@@ -58,6 +58,7 @@
     h3 {
         font-size: 2em;
         width: auto;
+        flex-wrap: wrap;
     }
 
     .plat--entree {
@@ -86,7 +87,7 @@
     @include text-focus;
 
     h2 {
-        font-size: 3em;
+        font-size: 4em;
         background-image: linear-gradient(to right, $colormenu3a, $colormenu3b, $colormenu3c);
         -webkit-background-clip: text;
         -moz-background-clip: text;

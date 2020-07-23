@@ -3,6 +3,7 @@
 .mention {
     @include box-shadow;
     padding: 2em;
+    margin-bottom: 4em;
     font-family: $font1;
 
     &--header {
