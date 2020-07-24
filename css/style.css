@@ -199,7 +199,16 @@ body main .menu__carte__footer--titre {
     height: 25em;
   }
   body .menu__restaurant__liste__carte a {
+    display: block;
     text-decoration: none;
+    transform: scale(1);
+    opacity: 1;
+    transition-property: transform, opacity;
+    transition-duration: 1s, 1s;
+  }
+  body .menu__restaurant__liste__carte a:hover {
+    transform: scale(1.2);
+    opacity: 0.65;
   }
   body .menu__restaurant__liste__carte--titre {
     display: block;
@@ -224,28 +233,62 @@ body main .menu__carte__footer--titre {
     margin: auto;
   }
   body main .menu__plat__header img {
-    display: flex;
     width: 20em;
+    margin: 0.5em;
   }
   body main .menu__plat__header h3 {
-    margin: 2em;
     font-size: 2em;
+    text-align: center;
   }
-  body main .menu__plat__header h3:hover {
-    border-bottom: solid 0.07em;
-    text-shadow: 2px 2px 4px rgba(153, 153, 153, 0.349);
-    animation: couleur, progress-bar 1000ms;
+  body main .menu__plat__header h3 span {
+    position: relative;
+  }
+  body main .menu__plat__header h3 span::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0.09em;
+    bottom: -0.2em;
+    left: 0;
+    background-color: #3c1218;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  body main .menu__plat__header h3 span:hover::after {
+    visibility: visible;
+    width: 100%;
+  }
+  body main .menu--chic .plat--entree h3 span::after {
+    background-color: #c67412;
+  }
+  body main .menu--chic .plat--principal span::after {
+    background-color: #a56799;
+  }
+  body main .menu--chic .plat--dessert span::after {
+    background-color: #6e4ccc;
+  }
+  body main .menu--delice .plat--entree h3 span::after {
+    background-color: #0a35e0;
+  }
+  body main .menu--delice .plat--principal span::after {
+    background-color: #0889fb;
+  }
+  body main .menu--delice .plat--dessert span::after {
+    background-color: #3aabf7;
+  }
+  body main .menu--gout h3 span::after {
+    background-image: linear-gradient(45deg, #558B2F, #8BC34A, rgba(118, 238, 6, 0.89));
   }
   body main .menu__plat__detail li {
     display: block;
     text-align: left;
-    margin-left: 10em;
+    margin-left: 5em;
   }
   body main .menu__plat__detail li p {
     display: inline-block;
     margin: 0.5em;
     text-align: left;
-    width: 70%;
+    width: 80%;
   }
   body main .menu__plat__detail li p:nth-child(2) {
     display: inline-block;
@@ -369,7 +412,7 @@ body .menu__restaurant__liste__carte:nth-child(2) h2 {
   background-clip: text;
   color: transparent;
   font-size: 2em;
-  margin-top: 4em;
+  margin-top: 5em;
 }
 body .menu__restaurant__liste__carte:nth-child(2) p {
   background-image: linear-gradient(to right, #c67412, #a56799, #6e4ccc);
@@ -386,7 +429,7 @@ body .menu__restaurant__liste__carte:nth-child(3) {
 }
 body .menu__restaurant__liste__carte:nth-child(3) h2 {
   font-size: 2em;
-  margin-top: 4em;
+  margin-top: 5em;
   background-image: linear-gradient(to right, #0a35e0, #0889fb, #3aabf7);
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -413,7 +456,7 @@ body .menu__restaurant__liste__carte:nth-child(4) h2 {
   background-clip: text;
   color: transparent;
   font-size: 2em;
-  margin-top: 4em;
+  margin-top: 5em;
 }
 body .menu__restaurant__liste__carte:nth-child(4) p {
   background-image: linear-gradient(45deg, #558B2F, #8BC34A, rgba(118, 238, 6, 0.89));
@@ -513,7 +556,7 @@ body .menu__restaurant__liste__carte:nth-child(4) p {
   animation-fill-mode: none;
 }
 .menu--delice h2 {
-  font-size: 3em;
+  font-size: 4em;
   background-image: linear-gradient(to right, #0a35e0, #0889fb, #3aabf7);
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -703,6 +746,7 @@ body .menu__footer--mention:hover, body .menu__footer--contact:hover {
 .mention {
   box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
   padding: 2em;
+  margin-bottom: 4em;
   font-family: "roboto", serif;
 }
 .mention--header {
