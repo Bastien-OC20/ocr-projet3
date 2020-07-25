@@ -2,7 +2,8 @@ body {
     margin: auto;
     .menu__site {
         background-color: $main-background;
-        width: auto;
+        display: block;
+        width: 100%;
 
         &--logo {
             text-align: center;
@@ -10,7 +11,7 @@ body {
             margin: auto;
             height: 1.5em;
             @include box-shadow;
-            @include text-shadow-1;
+            @include text-shadow;
             font-size: 4em;
             font-family: $font1;
 
@@ -59,10 +60,10 @@ body {
             &--mention {
                 color: $main-text;
                 margin: 1.2em;
-                font-size: 0.6em;
+                font-size: 0.5em;
                 font-weight: bolder;
                 text-decoration: none;
-                @include text-shadow-1;
+                @include text-shadow;
 
                 &:hover {
                     @include headshake;

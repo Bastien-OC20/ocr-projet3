@@ -3,18 +3,17 @@ body {
 
     ul {
         list-style-type: none;
-        padding-inline-start: 0px;
+        padding-left: 0em;
     }
 
     main {
-        padding: 1em;
         margin-bottom: 3em;
 
         .menu {
             display: block;
             justify-content: center;
             margin: 1em;
-            padding: 2em;
+            padding: 1em;
             @include box-shadow;
 
             &__header {

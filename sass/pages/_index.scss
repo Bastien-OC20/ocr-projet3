@@ -11,10 +11,9 @@ body {
 
                 &__carte {
                     @include box-shadow;
-                }
 
                 //    la note enchantée
-                &__carte:nth-child(1) {
+                &:nth-child(1) {
                     font-family: $font2;
                     background-color: $bgmenu1;
 
@@ -32,84 +31,61 @@ body {
                 }
 
                 // le chic à la française
-                &__carte:nth-child(2) {
+                &:nth-child(2) {
                     font-family: $font3;
                     background-color: $bgmenu2;
 
 
                     h2 {
-                        background-image: linear-gradient(to right, $colormenu2a, $colormenu2b, $colormenu2c);
-                        -webkit-background-clip: text;
-                        -moz-background-clip: text;
-                        background-clip: text;
-                        color: transparent;
+                        @include degrade($bg-degrade-menu2);
                         font-size: 2em;
                         margin-top: 5em;
                     }
 
                     p {
-                        background-image: linear-gradient(to right, $colormenu2a, $colormenu2b, $colormenu2c);
-                        -webkit-background-clip: text;
-                        -moz-background-clip: text;
-                        background-clip: text;
-                        color: transparent;
+                        color: $colormenu2a;
                         font-size: 2.5em;
                         margin-top: 1.3em;
                     }
                 }
 
                 // le délice des papilles
-                &__carte:nth-child(3) {
+                &:nth-child(3) {
                     font-family: $font4;
                     background-color: $bgmenu3;
 
                     h2 {
+                        @include degrade($bg-degrade-menu3);
                         font-size: 2em;
                         margin-top: 5em;
-                        background-image: linear-gradient(to right, $colormenu3a, $colormenu3b, $colormenu3c);
-                        -webkit-background-clip: text;
-                        -moz-background-clip: text;
-                        background-clip: text;
-                        color: transparent;
                     }
 
                     p {
+                        color: $colormenu3a;
                         font-size: 3em;
                         margin-top: 1.2em;
-                        background-image: linear-gradient(to right, $colormenu3a, $colormenu3b, $colormenu3c);
-                        -webkit-background-clip: text;
-                        -moz-background-clip: text;
-                        background-clip: text;
-                        color: transparent;
                     }
                 }
 
                 // la palette du gout
-                &__carte:nth-child(4) {
+                &:nth-child(4) {
                     font-family: $font6;
                     background-color: $bgmenu4;
 
 
                     h2 {
-                        background-image: linear-gradient(45deg, $colormenu4a, $colormenu4b, $colormenu4c);
-                        -webkit-background-clip: text;
-                        -moz-background-clip: text;
-                        background-clip: text;
-                        color: transparent;
+                        @include degrade($bg-degrade-menu4);
                         font-size: 2em;
                         margin-top: 5em;
                     }
 
                     p {
-                        background-image: linear-gradient(45deg, $colormenu4a, $colormenu4b, $colormenu4c);
-                        -webkit-background-clip: text;
-                        -moz-background-clip: text;
-                        background-clip: text;
-                        color: transparent;
+                        color: $colormenu4a;
                         font-size: 2.5em;
                         margin-top: 1.2em;
                     }
                 }
+            }
             }
         }
 

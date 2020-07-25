@@ -43,12 +43,8 @@
     @include text-focus;
 
     h2 {
+        @include degrade($bg-degrade-menu2);
         font-size: 4em;
-        background-image: linear-gradient(to right, $colormenu2a, $colormenu2b, $colormenu2c, );
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        background-clip: text;
-        color: transparent;
     }
 
     img {
@@ -87,12 +83,8 @@
     @include text-focus;
 
     h2 {
+        @include degrade($bg-degrade-menu3);
         font-size: 4em;
-        background-image: linear-gradient(to right, $colormenu3a, $colormenu3b, $colormenu3c);
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        background-clip: text;
-        color: transparent;
     }
 
     img {
@@ -122,7 +114,6 @@
     }
 }
 
-
 .menu--gout {
     background-color: $bgmenu4;
     font-family: $font4;
@@ -131,12 +122,8 @@
     @include text-focus;
 
     h2 {
+        @include degrade($bg-degrade-menu4);
         font-size: 4em;
-        background-image: linear-gradient(45deg, $colormenu4a, $colormenu4b, $colormenu4c);
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        background-clip: text;
-        color: transparent;
     }
 
     img {

@@ -5,7 +5,7 @@
         padding-bottom: 4em;
 
         &__annonce {
-            max-width: 90%;
+            width: 85%;
             border: 0;
             border-radius: 15px;
             margin: auto;
@@ -15,7 +15,7 @@
             background-color: $main-background;
             font-family: $font7;
             font-size: 1.2em;
-            @include text-shadow-1;
+            @include text-shadow;
             @include box-shadow;
 
             &--prochainement {
@@ -58,7 +58,7 @@
 
     &__accueil {
         font-size: 1.2em;
-        @include text-shadow-1;
+        @include text-shadow;
         margin: 2em;
 
         a {
