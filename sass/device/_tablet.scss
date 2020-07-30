@@ -1,11 +1,21 @@
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) and (max-width: 991.98px) {
     body {
-
         padding-bottom: 2em;
         margin-left: auto;
         margin-right: auto;
         margin-top: 0em;
+
+        // En tête du site
+        .menu__site {
+            &--logo {
+                min-height: 3em;
+
+                a {
+                    font-size: 2em;
+                }
+            }
+        }
 
         // Grid des menus
         .menu__restaurant {
@@ -17,7 +27,7 @@
                 display: grid;
                 padding: 1em;
                 margin-bottom: 3em;
-                grid-template-columns: repeat(auto-fill, 20em);
+                grid-template-columns: repeat(auto-fill, 19em);
                 grid-gap: 4em;
                 justify-content: space-evenly;
 
@@ -48,6 +58,37 @@
 
             &__annonce {
                 max-width: 30%;
+            }
+        }
+
+
+        // template de chaque restaurant
+        main {
+            display: block;
+            margin-left: 2em;
+            justify-content: center;
+
+            .menu {
+                width: 88%;
+                display: block;
+                margin-right: 0em;
+
+                &__plats {
+                    &__header {
+
+                        &--titre {
+                            text-align: center;
+
+                            span {
+                                font-size: 1.4em;
+                            }
+                        }
+
+                        img {
+                            min-width: 20em;
+                        }
+                    }
+                }
             }
         }
     }

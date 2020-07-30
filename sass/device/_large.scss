@@ -1,47 +1,50 @@
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {
     body {
 
+        // En tête du site
+        .menu__site {
+            &--logo {
+                min-height: 3em;
 
-        // Grid des menus
+                a {
+                    font-size: 2em;
+                }
+            }
+        }
+
+        // page index des menus
         .menu__restaurant {
-            width: 80%;
+            width: 100%;
             margin: auto;
             justify-content: center;
 
             &__liste {
-                width: 70%;
+                text-align: center;
+                width: auto;
+                height: 35em;
                 display: grid;
-                margin: auto;
-                justify-content: space-around;
+                grid-template-columns: repeat(auto-fill, 20em);
+                grid-gap: 2em;
+                grid-row-gap: 5em;
+                justify-content: space-evenly;
 
                 &__carte {
+                    padding: 0em;
                     width: 100%;
-                    padding: 1em;
-                    height: 25em;
+                    height: 30em;
 
-                    a {
-                        display: block;
-                        text-decoration: none;
-                        transform: scale(1);
-                        opacity: 1;
-                        transition-property: transform, opacity;
-                        transition-duration: 1s, 1s;
-
-                        &:hover {
-                            transform: scale(1.2);
-                            opacity: 0.55;
-                        }
-                    }
 
                     &--titre {
                         display: block;
-                        margin-top: 4em;
+                        margin-top: 5.5em;
                         text-decoration: none;
+                        font-size: 2em;
 
                         img {
                             display: block;
                             margin: auto;
+                            padding-bottom: 1em;
                             width: 2em;
                         }
                     }
@@ -49,132 +52,58 @@
             }
 
             &__annonce {
-               max-width: 25%;
+                margin-top: 30em;
+                max-width: 25%;
             }
         }
 
+        // template de chaque page restaurant
         main {
-            width: 70%;
+            width: 90%;
             margin: auto;
 
-            .menu__plat__header {
-                display: flex;
-                justify-content: space-between;
-                margin: auto;
+            .menu {
+                &__plats {
+                    &__header {
+                        display: flex;
+                        justify-content: space-between;
+                        margin: auto;
 
+                        img {
+                            display: flex;
+                            min-width: 15em;
+                            margin: 0.5em;
+                        }
 
-                img {
-                    width: 20em;
-                    margin: 0.5em;
-                }
-
-                h3 {
-                    font-size: 2em;
-                    text-align: center;
-
-                    span {
-                        position: relative;
+                        &--titre {
+                            font-size: 1.5em;
+                            text-align: center;
+                        }
                     }
 
-                    span::after {
-                        content: "";
-                        position: absolute;
-                        width: 0;
-                        height: 0.09em;
-                        bottom: -0.2em;
-                        left: 0;
-                        background-color: $colormenu1;
-                        visibility: hidden;
-                        transition: all 0.3s ease-in-out;
-                    }
+                    &__detail {
+                        &__element {
+                            display: block;
+                            text-align: left;
+                            margin-left: 5em;
 
-                    span:hover::after {
-                        visibility: visible;
-                        width: 100%;
-                    }
-                }
-            }
+                            &__nom {
+                                display: inline-block;
+                                font-size: 1.2em;
+                                margin: 0.5em;
+                                text-align: left;
+                                width: 70%;
+                            }
 
-            .menu--chic {
-                .plat--entree {
-                    h3 {
-                        span::after {
-                            background-color: $colormenu2a;
+                            &__prix {
+                                display: inline-block;
+                                margin: 0em;
+                                width: 10%;
+                            }
                         }
                     }
                 }
-
-                .plat--principal {
-                    span::after {
-                        background-color: $colormenu2b;
-                    }
-                }
-
-                .plat--dessert {
-                    span::after {
-                        background-color: $colormenu2c;
-                    }
-                }
             }
-
-            .menu--delice {
-                .plat--entree {
-                    h3 {
-                        span::after {
-                            background-color: $colormenu3a;
-                        }
-                    }
-                }
-
-                .plat--principal {
-                    span::after {
-                        background-color: $colormenu3b;
-                    }
-                }
-
-                .plat--dessert {
-                    span::after {
-                        background-color: $colormenu3c;
-                    }
-                }
-            }
-
-            .menu--gout {
-
-                h3 {
-                    span::after {
-                        background-image: linear-gradient(45deg, $colormenu4a, $colormenu4b, $colormenu4c);
-                    }
-                }
-            }
-
-            .menu__plat__detail {
-                li {
-                    display: block;
-                    text-align: left;
-                    margin-left: 5em;
-
-
-                    p {
-                        display: inline-block;
-                        margin: 0.5em;
-                        text-align: left;
-                        width: 80%;
-                    }
-
-                    p:nth-child(2) {
-                        display: inline-block;
-                        margin: 0em;
-                        width: 10%;
-
-
-
-
-                    }
-                }
-            }
-
-
         }
     }
 }

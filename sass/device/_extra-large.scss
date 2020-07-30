@@ -1,0 +1,243 @@
+@media (min-width: 1200px) {
+    body {
+
+        // En tête du site
+        .menu__site {
+            margin-bottom: 4em;
+
+            &--logo {
+                min-height: 3.5em;
+
+                a {
+                    font-size: 2.5em;
+                }
+            }
+        }
+
+        // page index des menus
+        .menu__restaurant {
+            width: 80%;
+            margin: auto;
+            justify-content: center;
+
+            &__liste {
+                text-align: center;
+                width: auto;
+                height: 35em;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, 35em);
+                grid-gap: 2em;
+                grid-row-gap: 5em;
+                justify-content: space-around;
+
+                &__carte {
+                    padding: 0em;
+                    width: 67%;
+                    height: 35em;
+
+                    a {
+                        display: block;
+                        text-decoration: none;
+                        transform: scale(1);
+                        opacity: 1;
+                        transition-property: transform, opacity;
+                        transition-duration: 1s, 1s;
+
+                        &:hover {
+                            transform: scale(1.1);
+                            opacity: 0.55;
+                        }
+                    }
+
+                    &--titre {
+                        display: block;
+                        margin-top: 5.5em;
+                        text-decoration: none;
+                        font-size: 2.2em;
+
+                        img {
+                            display: block;
+                            margin: auto;
+                            padding-bottom: 1em;
+                            width: 2em;
+                        }
+                    }
+                }
+            }
+
+            &__annonce {
+                margin-top: 35em;
+                max-width: 18%;
+            }
+        }
+
+        // template de chaque page restaurant
+        main {
+            width: 70%;
+            margin: auto;
+
+            .menu {
+                padding: 4em;
+
+                &__header {
+                    img {
+                        display: block;
+                        position: relative;
+                        top: 2em;
+                        width: 10em;
+                    }
+
+                    &--titre {
+                        font-size: 5em;
+                        margin: 1em 0em 1em 0em;
+                    }
+                }
+
+                .menu {
+                    &__plats {
+                        &__header {
+                            display: flex;
+                            justify-content: space-between;
+                            margin: auto;
+
+                            img {
+                                display: flex;
+                                min-width: 16em;
+                                margin: 0.5em;
+                            }
+
+                            &--titre {
+                                font-size: 2.2em;
+                                text-align: center;
+
+                                .titre--underline {
+                                    position: relative;
+                                }
+
+                                // Keyframe underline
+                                .titre--underline::after {
+                                    content: "";
+                                    position: absolute;
+                                    width: 0;
+                                    height: 0.09em;
+                                    bottom: -0.2em;
+                                    left: 0;
+                                    background-color: $colormenu1;
+                                    visibility: hidden;
+                                    transition: all 0.3s ease-in-out;
+                                }
+
+                                .titre--underline:hover::after {
+                                    visibility: visible;
+                                    width: 100%;
+                                }
+                            }
+                        }
+
+                        &__detail {
+                            display: block;
+                            justify-content: center;
+
+                            &__element {
+                                display: block;
+                                justify-content: center;
+                                font-size: 1.2em;
+
+
+                                &__nom {
+                                    display: inline-block;
+                                    text-align: left;
+                                    width: 80%;
+                                }
+
+                                &__prix {
+                                    display: inline-block;
+                                    text-align: right;
+                                    margin: 0em;
+                                    width: 10%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Keyframe underline | attribution des couleur de l'underline
+
+            // Chic à la française
+            .menu--chic {
+                .plats--entree {
+                    .titre--underline::after {
+                        background-color: $colormenu2a;
+                    }
+                }
+
+                .plats--principal {
+                    .titre--underline::after {
+                        background-color: $colormenu2b;
+                    }
+                }
+
+                .plats--dessert {
+                    .titre--underline::after {
+                        background-color: $colormenu2c;
+                    }
+                }
+            }
+
+            // Délice des papilles
+            .menu--delice {
+                .plats--entree {
+                    .titre--underline::after {
+                        background-color: $colormenu3a;
+                    }
+                }
+
+                .plats--principal {
+                    .titre--underline::after {
+                        background-color: $colormenu3b;
+                    }
+                }
+
+                .plats--dessert {
+                    .titre--underline::after {
+                        background-color: $colormenu3c;
+                    }
+                }
+            }
+
+            // Palette du gout
+            .menu--gout {
+
+                .titre--underline::after {
+                    background-image: linear-gradient(45deg, $colormenu4a, $colormenu4b, $colormenu4c);
+                }
+            }
+
+            // Page Mentions-légales
+            .mention {
+                padding: 2em;
+                margin-bottom: 2em;
+
+                &--titre {
+                    text-align: center;
+                    font-size: 4em;
+                }
+
+                &__article {
+                    padding: 2em;
+
+                    &__titre {
+                        font-size: 2em;
+                        margin: 0em;
+                        @include text-shadow;
+                    }
+
+                    &__para {
+                        font-size: 1.5em;
+                    }
+                }
+            }
+        }
+    }
+}

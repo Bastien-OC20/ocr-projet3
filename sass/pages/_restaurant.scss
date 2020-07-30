@@ -1,3 +1,7 @@
+// design de chaque restaurant largeur smartphone
+
+// Style menu la note enchantée
+
 .menu--note {
     background-color: $bgmenu1;
     font-family: $font2;
@@ -6,35 +10,9 @@
     @include box-shadow;
     @include text-focus;
 
-    h2 {
-        font-size: 4em;
-
-    }
-
-    img {
-        width: 15em;
-    }
-
-    h3 {
-        font-size: 2em;
-        width: auto;
-    }
-
-    h4 {
-        font-size: 1.5em;
-    }
-
-    p {
-        font-size: 1.3em;
-        font-weight: 600;
-    }
-
-    p:nth-child(2n) {
-        font-weight: 600;
-    }
 }
 
-
+// Style menu le chic à la française
 .menu--chic {
     background-color: $bgmenu2;
     font-family: $font3;
@@ -42,39 +20,25 @@
     @include box-shadow;
     @include text-focus;
 
-    h2 {
+    .menu__header--titre {
         @include degrade($bg-degrade-menu2);
-        font-size: 4em;
     }
 
-    img {
-        width: 10em;
-    }
-
-    h3 {
-        font-size: 2em;
-        width: auto;
-        flex-wrap: wrap;
-    }
-
-    .plat--entree {
+    .plats--entree {
         color: $colormenu2a;
     }
 
-    .plat--principal {
+    .plats--principal {
         color: $colormenu2b;
     }
 
-    .plat--dessert {
+    .plats--dessert {
         color: $colormenu2c;
-    }
-
-    p {
-        font-size: 1.2em;
     }
 
 }
 
+// Style menu le délice des papilles
 .menu--delice {
     background-color: $bgmenu3;
     font-family: $font4;
@@ -82,38 +46,29 @@
     @include box-shadow;
     @include text-focus;
 
-    h2 {
+    .menu__header--titre {
         @include degrade($bg-degrade-menu3);
-        font-size: 4em;
+
     }
 
-    img {
-        width: 10em;
+    .menu__plats__detail__element {
+        color: black;
     }
 
-    h3 {
-        font-size: 2em;
-        width: auto;
-    }
-
-    .plat--entree {
+    .plats--entree {
         color: $colormenu3a;
     }
 
-    .plat--principal {
+    .plats--principal {
         color: $colormenu3b;
     }
 
-    .plat--dessert {
+    .plats--dessert {
         color: $colormenu3c;
-    }
-
-    p {
-        color: black;
-        font-size: 1.5em;
     }
 }
 
+// Style menu la palette des goûts
 .menu--gout {
     background-color: $bgmenu4;
     font-family: $font4;
@@ -121,21 +76,7 @@
     @include box-shadow;
     @include text-focus;
 
-    h2 {
+    .menu__header--titre {
         @include degrade($bg-degrade-menu4);
-        font-size: 4em;
-    }
-
-    img {
-        width: 10em;
-    }
-
-    h3 {
-        font-size: 2em;
-        width: auto;
-    }
-
-    p {
-        font-size: 1.3em;
     }
 }

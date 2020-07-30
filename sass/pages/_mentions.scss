@@ -2,29 +2,27 @@
 
 .mention {
     @include box-shadow;
-    padding: 2em;
-    margin-bottom: 4em;
+    padding: 1em;
+    margin:1em 1em 4em 1em;
     font-family: $font1;
 
-    &--header {
+    &--titre {
         text-align: center;
         font-size: 3em;
         padding: 1em;
-
     }
 
     &__article {
-        padding: 2em;
+        padding: 0em;
 
-        @include text-shadow;
-
-        &--titre {
-            font-size: 1.5em;
+        &__titre {
+            font-size: 2em;
             margin: 0em;
+            @include text-shadow;
         }
 
-        &--para {
-            font-size: 1.2em;
+        &__para {
+            font-size: 1.5em;
 
         }
     }

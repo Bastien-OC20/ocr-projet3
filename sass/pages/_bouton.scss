@@ -76,6 +76,7 @@
             text-decoration: none;
             border-radius: 15px;
             text-align: center;
+            @include box-shadow;
         }
     }
 }

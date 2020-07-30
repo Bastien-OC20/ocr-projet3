@@ -1,10 +1,6 @@
+// Template de chaque restaurant largeur smartphone
+
 body {
-
-
-    ul {
-        list-style-type: none;
-        padding-left: 0em;
-    }
 
     main {
         margin-bottom: 3em;
@@ -26,10 +22,11 @@ body {
 
                 &--titre {
                     text-align: center;
+                    font-size: 4em;
                 }
             }
 
-            &__plat {
+            &__plats {
                 display: block;
                 margin: auto;
                 text-align: center;
@@ -38,17 +35,32 @@ body {
                     display: block;
                     text-align: center;
                     justify-content: space-between;
+
+                    &--titre{
+                        font-size: 2em;
+                        width: auto;
+                    }
+
+                    img {
+                        width: 14em;
+                    }
                 }
 
                 &__detail {
                     justify-content: center;
+                    list-style-type: none;
+                    padding-left: 0em;
 
-                    &--plat {
-                        text-align: center;
-                    }
+                    &__element{
+                       display: inline;
 
-                    &--prix {
-                        text-align: center;
+                       &__nom{
+                        font-size: 1.5em;
+                        font-weight: 600;
+                       }
+                       &__prix{
+                        @extend .menu__plats__detail__element__nom;
+                       }
                     }
                 }
             }
@@ -64,6 +76,7 @@ body {
 
                     &--titre {
                         display: inline;
+                        font-size: 1.5em;
                     }
                 }
             }

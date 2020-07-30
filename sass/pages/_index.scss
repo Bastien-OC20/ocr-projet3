@@ -12,82 +12,65 @@ body {
                 &__carte {
                     @include box-shadow;
 
-                //    la note enchantée
-                &:nth-child(1) {
-                    font-family: $font2;
-                    background-color: $bgmenu1;
+                    //    la note enchantée
+                    &:nth-child(1) {
+                        font-family: $font2;
+                        background-color: $bgmenu1;
 
-                    h2 {
-                        color: $colormenu1;
-                        font-size: 2em;
-                        margin-top: 3em;
+                        .menu__restaurant__liste__carte--titre {
+                            color: $colormenu1;
+                            margin-top: 2em;
+                        }
+
+                        .menu__restaurant__liste__carte--detail {
+                            color: $colormenu1;
+                        }
                     }
 
-                    p {
-                        color: $colormenu1;
-                        font-size: 3em;
-                        margin-top: 0.7em;
-                    }
-                }
-
-                // le chic à la française
-                &:nth-child(2) {
-                    font-family: $font3;
-                    background-color: $bgmenu2;
+                    // le chic à la française
+                    &:nth-child(2) {
+                        font-family: $font3;
+                        background-color: $bgmenu2;
 
 
-                    h2 {
-                        @include degrade($bg-degrade-menu2);
-                        font-size: 2em;
-                        margin-top: 5em;
+                        .menu__restaurant__liste__carte--titre {
+                            @include degrade($bg-degrade-menu2);
+                        }
+
+                        .menu__restaurant__liste__carte--detail {
+                            color: $colormenu2a;
+                        }
                     }
 
-                    p {
-                        color: $colormenu2a;
-                        font-size: 2.5em;
-                        margin-top: 1.3em;
-                    }
-                }
+                    // le délice des papilles
+                    &:nth-child(3) {
+                        font-family: $font4;
+                        background-color: $bgmenu3;
 
-                // le délice des papilles
-                &:nth-child(3) {
-                    font-family: $font4;
-                    background-color: $bgmenu3;
+                        .menu__restaurant__liste__carte--titre {
+                            @include degrade($bg-degrade-menu3);
+                        }
 
-                    h2 {
-                        @include degrade($bg-degrade-menu3);
-                        font-size: 2em;
-                        margin-top: 5em;
+                        .menu__restaurant__liste__carte--detail {
+                            color: $colormenu3a;
+                        }
                     }
 
-                    p {
-                        color: $colormenu3a;
-                        font-size: 3em;
-                        margin-top: 1.2em;
-                    }
-                }
+                    // la palette du gout
+                    &:nth-child(4) {
+                        font-family: $font6;
+                        background-color: $bgmenu4;
 
-                // la palette du gout
-                &:nth-child(4) {
-                    font-family: $font6;
-                    background-color: $bgmenu4;
+                        .menu__restaurant__liste__carte--titre {
+                            @include degrade($bg-degrade-menu4);
+                        }
 
-
-                    h2 {
-                        @include degrade($bg-degrade-menu4);
-                        font-size: 2em;
-                        margin-top: 5em;
-                    }
-
-                    p {
-                        color: $colormenu4a;
-                        font-size: 2.5em;
-                        margin-top: 1.2em;
+                        .menu__restaurant__liste__carte--detail {
+                            color: $colormenu4a;
+                        }
                     }
                 }
-            }
             }
         }
-
     }
 }
