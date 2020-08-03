@@ -36,7 +36,8 @@ body {
         &__footer {
             background-color: $main-background;
             font-family: $font1;
-            font-size: 2em;
+            font-size: 2.5em;
+            text-align: center;
             display: flex;
             justify-content: space-between;
             position: fixed;

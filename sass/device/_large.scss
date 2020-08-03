@@ -5,10 +5,11 @@
         // En tête du site
         .menu__site {
             &--logo {
-                min-height: 3em;
+                min-height: 2.2em;
 
                 a {
                     font-size: 2em;
+                    line-height: 0.8em;
                 }
             }
         }
@@ -18,22 +19,23 @@
             width: 100%;
             margin: auto;
             justify-content: center;
+            padding-bottom: 3.5em;
 
             &__liste {
                 text-align: center;
-                width: auto;
-                height: 35em;
+                width: 25em;
+                height: 30em;
                 display: grid;
-                grid-template-columns: repeat(auto-fill, 20em);
-                grid-gap: 2em;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 5em;
                 grid-row-gap: 5em;
-                justify-content: space-evenly;
+                margin: auto;
 
                 &__carte {
                     padding: 0em;
-                    width: 100%;
+                    width: 24em;
                     height: 30em;
-
+                    margin: auto;
 
                     &--titre {
                         display: block;

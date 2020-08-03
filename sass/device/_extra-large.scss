@@ -6,10 +6,10 @@
             margin-bottom: 4em;
 
             &--logo {
-                min-height: 3.5em;
+                min-height: 2.5em;
 
                 a {
-                    font-size: 2.5em;
+                    font-size: 1.8em;
                 }
             }
         }
@@ -18,22 +18,22 @@
         .menu__restaurant {
             width: 80%;
             margin: auto;
-            justify-content: center;
 
             &__liste {
                 text-align: center;
-                width: auto;
-                height: 35em;
+                width: 25em;
+                height: 30em;
                 display: grid;
-                grid-template-columns: repeat(auto-fill, 35em);
-                grid-gap: 2em;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 5em;
                 grid-row-gap: 5em;
-                justify-content: space-around;
+                margin: auto;
 
                 &__carte {
                     padding: 0em;
-                    width: 67%;
-                    height: 35em;
+                    width: 24em;
+                    height: 30em;
+
 
                     a {
                         display: block;
@@ -67,14 +67,20 @@
 
             &__annonce {
                 margin-top: 35em;
-                max-width: 18%;
+                max-width: 25%;
             }
+
+        }
+
+        .menu__footer {
+            font-size: 3em;
         }
 
         // template de chaque page restaurant
         main {
             width: 70%;
             margin: auto;
+            padding-bottom: 2em;
 
             .menu {
                 padding: 4em;
