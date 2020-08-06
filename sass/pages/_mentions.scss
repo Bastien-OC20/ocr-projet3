@@ -3,7 +3,7 @@
 .mention {
     @include box-shadow;
     padding: 1em;
-    margin:1em 1em 4em 1em;
+    margin: 1em 1em 4em 1em;
     font-family: $font1;
 
     &--titre {
@@ -18,12 +18,10 @@
         &__titre {
             font-size: 2em;
             margin: 0em;
-            @include text-shadow;
         }
 
         &__para {
             font-size: 1.5em;
-
         }
     }
 }

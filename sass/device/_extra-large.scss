@@ -2,10 +2,10 @@
     body {
 
         // En tête du site
-        .menu__site {
+        .logo {
             margin-bottom: 4em;
 
-            &--logo {
+            &__site {
                 min-height: 2.5em;
 
                 a {
@@ -15,11 +15,11 @@
         }
 
         // page index des menus
-        .menu__restaurant {
+        .restaurant {
             width: 80%;
             margin: auto;
 
-            &__liste {
+            &__cartes {
                 text-align: center;
                 width: 25em;
                 height: 30em;
@@ -29,7 +29,7 @@
                 grid-row-gap: 5em;
                 margin: auto;
 
-                &__carte {
+                &__menu {
                     padding: 0em;
                     width: 24em;
                     height: 30em;
@@ -58,7 +58,6 @@
                         img {
                             display: block;
                             margin: auto;
-                            padding-bottom: 1em;
                             width: 2em;
                         }
                     }
@@ -72,8 +71,14 @@
 
         }
 
-        .menu__footer {
-            font-size: 3em;
+        .footer {
+            .footer__contact {
+                font-size: 0.7em;
+            }
+
+            .footer__mention {
+                font-size: 0.7em;
+            }
         }
 
         // template de chaque page restaurant
@@ -113,7 +118,7 @@
                             }
 
                             &--titre {
-                                font-size: 2.2em;
+                                font-size: 3em;
                                 text-align: center;
 
                                 .titre--underline {
@@ -173,6 +178,7 @@
             // Chic à la française
             .menu--chic {
                 .plats--entree {
+
                     .titre--underline::after {
                         background-color: $colormenu2a;
                     }
@@ -228,6 +234,7 @@
                 &--titre {
                     text-align: center;
                     font-size: 4em;
+                    @include text-shadow;
                 }
 
                 &__article {
@@ -236,7 +243,6 @@
                     &__titre {
                         font-size: 2em;
                         margin: 0em;
-                        @include text-shadow;
                     }
 
                     &__para {

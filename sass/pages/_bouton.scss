@@ -1,82 +1,77 @@
 // Bouton Prochainement
 
-.menu {
-    &__restaurant {
-        padding-bottom: 4em;
+.restaurant {
+    padding-bottom: 4em;
 
-        &__annonce {
-            width: 85%;
-            border: 0;
-            border-radius: 15px;
-            margin: auto;
-            text-align: center;
-            line-height: 2em;
-            cursor: pointer;
-            background-color: $main-background;
-            font-family: $font7;
-            font-size: 1.2em;
-            @include text-shadow;
-            @include box-shadow;
+    &__annonce {
+        width: 13em;
+        border: 0;
+        border-radius: 15px;
+        margin: auto;
+        text-align: center;
+        line-height: 2em;
+        cursor: pointer;
+        background-color: $main-background;
+        font-family: $font7;
+        font-size: 1.2em;
+        @include text-shadow;
+        @include box-shadow;
 
-            &--prochainement {
-                display: inline;
-                color: $main-text;
-                display: inline;
-                padding: 0.5em;
-            }
+        &--prochainement {
+            display: inline;
+            color: $main-text;
+            display: inline;
+            padding: 0.5em;
+        }
 
-            &--loading {
-                padding-top: 0.5em;
-                display: inline-block;
-            }
+        &--loading {
+            padding-top: 0.5em;
+            display: inline-block;
+        }
 
-            &--loading span {
-                width: 0.3em;
-                height: 0.3em;
-                background-color: $main-text;
-                border-radius: 50%;
-                display: inline-block;
-                animation-name: dots;
-                animation-duration: 2s;
-                animation-iteration-count: infinite;
-                animation-timing-function: ease-in-out;
-            }
+        &--loading span {
+            width: 0.3em;
+            height: 0.3em;
+            background-color: $main-text;
+            border-radius: 50%;
+            display: inline-block;
+            animation-name: dots;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
 
-            &--loading span:nth-child(2) {
-                animation-delay: 0.4s;
-            }
+        &--loading span:nth-child(2) {
+            animation-delay: 0.4s;
+        }
 
-            &--loading span:nth-child(3) {
-                animation-delay: 0.8s;
-            }
+        &--loading span:nth-child(3) {
+            animation-delay: 0.8s;
         }
     }
 }
 
 // Bouton retour à l'acceuil
-.menu {
+.accueil {
+    font-size: 1.2em;
+    @include text-shadow;
+    margin: 2em;
 
-    &__accueil {
-        font-size: 1.2em;
-        @include text-shadow;
-        margin: 2em;
+    a {
+        color: $main-text;
+        font-family: $font7;
+        text-decoration: none;
+    }
 
-        a {
-            color: $main-text;
-            font-family: $font7;
-            text-decoration: none;
-        }
-
-        &--retour {
-            background-color: $main-background;
-            display: block;
-            width: 6em;
-            padding: 0.5em;
-            margin: auto;
-            text-decoration: none;
-            border-radius: 15px;
-            text-align: center;
-            @include box-shadow;
-        }
+    &__retour {
+        background-color: $main-background;
+        display: block;
+        width: 6em;
+        padding: 0.5em;
+        margin: auto;
+        text-decoration: none;
+        border-radius: 15px;
+        text-align: center;
+        @include box-shadow;
     }
 }

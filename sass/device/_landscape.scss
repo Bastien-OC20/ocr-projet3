@@ -7,8 +7,8 @@
         margin-top: 0em;
 
         // En tête du site
-        .menu__site {
-            &--logo {
+        .logo {
+            &__site {
                 min-height: 2em;
 
                 a {
@@ -18,10 +18,10 @@
         }
 
         // Grid des menus
-        .menu__restaurant {
+        .restaurant {
             margin: 2em;
 
-            &__liste {
+            &__cartes {
                 text-align: center;
                 width: auto;
                 display: grid;
@@ -31,7 +31,7 @@
                 grid-gap: 4em;
                 justify-content: space-evenly;
 
-                &__carte {
+                &__menu {
                     width: 80%;
                     padding: 1em;
                     margin: auto;

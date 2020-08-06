@@ -38,10 +38,7 @@ body {
   margin-right: auto;
   margin-top: 0em;
 }
-body .menu__restaurant {
-  margin: 2em;
-}
-body .menu__restaurant__liste {
+body .restaurant__cartes {
   text-align: center;
   width: auto;
   display: grid;
@@ -51,37 +48,37 @@ body .menu__restaurant__liste {
   grid-gap: 4em;
   justify-content: space-evenly;
 }
-body .menu__restaurant__liste__carte {
+body .restaurant__cartes .menu--note .restaurant__cartes__menu--titre {
+  margin-top: 3.1em;
+}
+body .restaurant__cartes__menu {
   width: 80%;
   padding: 1em;
   margin: auto;
   justify-content: center;
   height: 25em;
 }
-body .menu__restaurant__liste__carte a {
+body .restaurant__cartes__menu a {
   text-decoration: none;
 }
-body .menu__restaurant__liste__carte--titre {
+body .restaurant__cartes__menu--titre {
   display: block;
   margin-top: 4em;
   text-decoration: none;
   font-size: 2em;
-  margin-top: 5em;
 }
-body .menu__restaurant__liste__carte--titre img {
+body .restaurant__cartes__menu--titre img {
   display: block;
   position: relative;
+  bottom: 1em;
   margin: auto;
   width: 2em;
 }
-body .menu__restaurant__liste__carte--detail {
+body .restaurant__cartes__menu--detail {
   font-size: 4em;
   margin-top: 0.6em;
 }
 
-body main {
-  margin-bottom: 3em;
-}
 body main .menu {
   display: block;
   justify-content: center;
@@ -141,20 +138,20 @@ body main .menu__carte__footer--titre {
 }
 
 @media (min-width: 1200px) {
-  body .menu__site {
+  body .logo {
     margin-bottom: 4em;
   }
-  body .menu__site--logo {
+  body .logo__site {
     min-height: 2.5em;
   }
-  body .menu__site--logo a {
+  body .logo__site a {
     font-size: 1.8em;
   }
-  body .menu__restaurant {
+  body .restaurant {
     width: 80%;
     margin: auto;
   }
-  body .menu__restaurant__liste {
+  body .restaurant__cartes {
     text-align: center;
     width: 25em;
     height: 30em;
@@ -164,12 +161,12 @@ body main .menu__carte__footer--titre {
     grid-row-gap: 5em;
     margin: auto;
   }
-  body .menu__restaurant__liste__carte {
+  body .restaurant__cartes__menu {
     padding: 0em;
     width: 24em;
     height: 30em;
   }
-  body .menu__restaurant__liste__carte a {
+  body .restaurant__cartes__menu a {
     display: block;
     text-decoration: none;
     transform: scale(1);
@@ -177,28 +174,30 @@ body main .menu__carte__footer--titre {
     transition-property: transform, opacity;
     transition-duration: 1s, 1s;
   }
-  body .menu__restaurant__liste__carte a:hover {
+  body .restaurant__cartes__menu a:hover {
     transform: scale(1.1);
     opacity: 0.55;
   }
-  body .menu__restaurant__liste__carte--titre {
+  body .restaurant__cartes__menu--titre {
     display: block;
     margin-top: 5.5em;
     text-decoration: none;
     font-size: 2.2em;
   }
-  body .menu__restaurant__liste__carte--titre img {
+  body .restaurant__cartes__menu--titre img {
     display: block;
     margin: auto;
-    padding-bottom: 1em;
     width: 2em;
   }
-  body .menu__restaurant__annonce {
+  body .restaurant__annonce {
     margin-top: 35em;
     max-width: 25%;
   }
-  body .menu__footer {
-    font-size: 3em;
+  body .footer .footer__contact {
+    font-size: 0.7em;
+  }
+  body .footer .footer__mention, body .footer .footer__contact {
+    font-size: 0.7em;
   }
   body main {
     width: 70%;
@@ -229,7 +228,7 @@ body main .menu__carte__footer--titre {
     margin: 0.5em;
   }
   body main .menu .menu__plats__header--titre {
-    font-size: 2.2em;
+    font-size: 3em;
     text-align: center;
   }
   body main .menu .menu__plats__header--titre .titre--underline {
@@ -298,6 +297,7 @@ body main .menu__carte__footer--titre {
   body main .mention--titre {
     text-align: center;
     font-size: 4em;
+    text-shadow: 0.1em 0.1em 0.2em black;
   }
   body main .mention__article {
     padding: 2em;
@@ -305,27 +305,26 @@ body main .menu__carte__footer--titre {
   body main .mention__article__titre {
     font-size: 2em;
     margin: 0em;
-    text-shadow: 0.1em 0.1em 0.2em black;
   }
   body main .mention__article__para {
     font-size: 1.5em;
   }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  body .menu__site--logo {
+  body .logo__site {
     min-height: 2.2em;
   }
-  body .menu__site--logo a {
+  body .logo__site a {
     font-size: 2em;
     line-height: 0.8em;
   }
-  body .menu__restaurant {
+  body .restaurant {
     width: 100%;
     margin: auto;
     justify-content: center;
     padding-bottom: 3.5em;
   }
-  body .menu__restaurant__liste {
+  body .restaurant__cartes {
     text-align: center;
     width: 25em;
     height: 30em;
@@ -335,25 +334,25 @@ body main .menu__carte__footer--titre {
     grid-row-gap: 5em;
     margin: auto;
   }
-  body .menu__restaurant__liste__carte {
+  body .restaurant__cartes__menu {
     padding: 0em;
     width: 24em;
     height: 30em;
     margin: auto;
   }
-  body .menu__restaurant__liste__carte--titre {
+  body .restaurant__cartes__menu--titre {
     display: block;
     margin-top: 5.5em;
     text-decoration: none;
     font-size: 2em;
   }
-  body .menu__restaurant__liste__carte--titre img {
+  body .restaurant__cartes__menu--titre img {
     display: block;
     margin: auto;
     padding-bottom: 1em;
     width: 2em;
   }
-  body .menu__restaurant__annonce {
+  body .restaurant__annonce {
     margin-top: 30em;
     max-width: 25%;
   }
@@ -372,7 +371,7 @@ body main .menu__carte__footer--titre {
     margin: 0.5em;
   }
   body main .menu__plats__header--titre {
-    font-size: 1.5em;
+    font-size: 2em;
     text-align: center;
   }
   body main .menu__plats__detail__element {
@@ -400,16 +399,16 @@ body main .menu__carte__footer--titre {
     margin-right: auto;
     margin-top: 0em;
   }
-  body .menu__site--logo {
+  body .logo__site {
     min-height: 2.5em;
   }
-  body .menu__site--logo a {
+  body .logo__site a {
     font-size: 2em;
   }
-  body .menu__restaurant {
+  body .restaurant {
     margin: 2em;
   }
-  body .menu__restaurant__liste {
+  body .restaurant__cartes {
     text-align: center;
     width: auto;
     display: grid;
@@ -419,27 +418,27 @@ body main .menu__carte__footer--titre {
     grid-gap: 4em;
     justify-content: space-evenly;
   }
-  body .menu__restaurant__liste__carte {
+  body .restaurant__cartes__menu {
     width: 80%;
     padding: 1em;
     margin: auto;
     justify-content: center;
     height: 25em;
   }
-  body .menu__restaurant__liste__carte a {
+  body .restaurant__cartes__menu a {
     text-decoration: none;
   }
-  body .menu__restaurant__liste__carte--titre {
+  body .restaurant__cartes__menu--titre {
     display: block;
     margin-top: 4em;
     text-decoration: none;
   }
-  body .menu__restaurant__liste__carte--titre img {
+  body .restaurant__cartes__menu--titre img {
     display: block;
     margin: auto;
     width: 2em;
   }
-  body .menu__restaurant__annonce {
+  body .restaurant__annonce {
     max-width: 30%;
   }
   body main {
@@ -469,16 +468,16 @@ body main .menu__carte__footer--titre {
     margin-right: auto;
     margin-top: 0em;
   }
-  body .menu__site--logo {
+  body .logo__site {
     min-height: 2em;
   }
-  body .menu__site--logo a {
+  body .logo__site a {
     font-size: 1.5em;
   }
-  body .menu__restaurant {
+  body .restaurant {
     margin: 2em;
   }
-  body .menu__restaurant__liste {
+  body .restaurant__cartes {
     text-align: center;
     width: auto;
     display: grid;
@@ -488,27 +487,27 @@ body main .menu__carte__footer--titre {
     grid-gap: 4em;
     justify-content: space-evenly;
   }
-  body .menu__restaurant__liste__carte {
+  body .restaurant__cartes__menu {
     width: 80%;
     padding: 1em;
     margin: auto;
     justify-content: center;
     height: 25em;
   }
-  body .menu__restaurant__liste__carte a {
+  body .restaurant__cartes__menu a {
     text-decoration: none;
   }
-  body .menu__restaurant__liste__carte--titre {
+  body .restaurant__cartes__menu--titre {
     display: block;
     margin-top: 4em;
     text-decoration: none;
   }
-  body .menu__restaurant__liste__carte--titre img {
+  body .restaurant__cartes__menu--titre img {
     display: block;
     margin: auto;
     width: 2em;
   }
-  body .menu__restaurant__annonce {
+  body .restaurant__annonce {
     width: 45%;
   }
   body main {
@@ -531,57 +530,6 @@ body main .menu__carte__footer--titre {
     min-width: 20em;
   }
 }
-body .menu__restaurant__liste__carte {
-  box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
-}
-body .menu__restaurant__liste__carte:nth-child(1) {
-  font-family: "Satisfy", cursive;
-  background-color: #FCDFDB;
-}
-body .menu__restaurant__liste__carte:nth-child(1) .menu__restaurant__liste__carte--titre {
-  color: #3c1218;
-  margin-top: 2em;
-}
-body .menu__restaurant__liste__carte:nth-child(1) .menu__restaurant__liste__carte--detail {
-  color: #3c1218;
-}
-body .menu__restaurant__liste__carte:nth-child(2) {
-  font-family: "alegrya";
-  background-color: #FFF5FE;
-}
-body .menu__restaurant__liste__carte:nth-child(2) .menu__restaurant__liste__carte--titre {
-  background: linear-gradient(to right, #E38913 27%, #a56799 48%, #8F5BFE 62%);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-body .menu__restaurant__liste__carte:nth-child(2) .menu__restaurant__liste__carte--detail {
-  color: #c67412;
-}
-body .menu__restaurant__liste__carte:nth-child(3) {
-  font-family: "Dancing Script", cursive;
-  background-color: #F3F3F3;
-}
-body .menu__restaurant__liste__carte:nth-child(3) .menu__restaurant__liste__carte--titre {
-  background: linear-gradient(to right, #0020d8, #0889fb 87%, #3aabf7 94%);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-body .menu__restaurant__liste__carte:nth-child(3) .menu__restaurant__liste__carte--detail {
-  color: #0a35e0;
-}
-body .menu__restaurant__liste__carte:nth-child(4) {
-  font-family: "Kaushan Script", cursive;
-  background-color: white;
-}
-body .menu__restaurant__liste__carte:nth-child(4) .menu__restaurant__liste__carte--titre {
-  background: linear-gradient(to right, #3d923a, #bfff7f 90%, #b9f085c4 97%);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-body .menu__restaurant__liste__carte:nth-child(4) .menu__restaurant__liste__carte--detail {
-  color: #558B2F;
-}
-
 .menu--note {
   background-color: #FCDFDB;
   font-family: "Satisfy", cursive;
@@ -595,6 +543,9 @@ body .menu__restaurant__liste__carte:nth-child(4) .menu__restaurant__liste__cart
   animation-direction: normal;
   animation-fill-mode: none;
 }
+.menu--note a {
+  color: #3c1218;
+}
 
 .menu--chic {
   background-color: #FFF5FE;
@@ -607,6 +558,14 @@ body .menu__restaurant__liste__carte:nth-child(4) .menu__restaurant__liste__cart
   animation-iteration-count: 1;
   animation-direction: normal;
   animation-fill-mode: none;
+  background: linear-gradient(to right, #E38913 27%, #a56799 48%, #8F5BFE 62%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.menu--chic a {
+  background: linear-gradient(to right, #E38913 27%, #a56799 48%, #8F5BFE 62%);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 .menu--chic .menu__header--titre {
   background: linear-gradient(to right, #E38913 27%, #a56799 48%, #8F5BFE 62%);
@@ -634,14 +593,19 @@ body .menu__restaurant__liste__carte:nth-child(4) .menu__restaurant__liste__cart
   animation-iteration-count: 1;
   animation-direction: normal;
   animation-fill-mode: none;
+  background: linear-gradient(to right, #0020d8, #0889fb 87%, #3aabf7 94%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.menu--delice a {
+  background: linear-gradient(to right, #0020d8, #0889fb 87%, #3aabf7 94%);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 .menu--delice .menu__header--titre {
   background: linear-gradient(to right, #0020d8, #0889fb 87%, #3aabf7 94%);
   -webkit-background-clip: text;
   color: transparent;
-}
-.menu--delice .menu__plats__detail__element {
-  color: black;
 }
 .menu--delice .plats--entree {
   color: #0a35e0;
@@ -664,47 +628,54 @@ body .menu__restaurant__liste__carte:nth-child(4) .menu__restaurant__liste__cart
   animation-iteration-count: 1;
   animation-direction: normal;
   animation-fill-mode: none;
+  background: linear-gradient(to right, #3d923a, #bfff7f 90%, #b9f085c4 97%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.menu--gout a {
+  background: linear-gradient(to right, #3d923a, #bfff7f 90%, #b9f085c4 97%);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 .menu--gout .menu__header--titre {
   background: linear-gradient(to right, #3d923a, #bfff7f 90%, #b9f085c4 97%);
   -webkit-background-clip: text;
   color: transparent;
 }
-
-body {
-  margin: auto;
+.menu--gout .menu__plats__header--titre, .menu--gout ul {
+  color: black;
 }
-body .menu__site {
+
+body .logo {
   background-color: #589a86;
   display: block;
-  width: 100%;
 }
-body .menu__site--logo {
+body .logo__site {
   text-align: center;
   text-decoration: none;
   margin: auto;
   height: 1.5em;
   box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
   text-shadow: 0.1em 0.1em 0.2em black;
-  font-size: 4em;
+  font-size: 4.2em;
   font-family: "roboto", serif;
 }
-body .menu__site--logo a {
+body .logo__site a {
   text-decoration: none;
   color: #FBC02D;
 }
-body .menu__site--logo a:hover {
+body .logo__site a:hover {
   text-decoration: none;
   color: #FBC02D;
 }
-body .menu__site--logo a:visited {
+body .logo__site a:visited {
   text-decoration: none;
   color: #FBC02D;
 }
-body .menu__footer {
+body .footer {
   background-color: #589a86;
   font-family: "roboto", serif;
-  font-size: 2.5em;
+  font-size: 2em;
   text-align: center;
   display: flex;
   justify-content: space-between;
@@ -713,17 +684,17 @@ body .menu__footer {
   margin: auto;
   width: 100%;
 }
-body .menu__footer a {
+body .footer a {
   color: #FBC02D;
   text-decoration: none;
 }
-body .menu__footer a:hover {
+body .footer a:hover {
   text-decoration: none;
 }
-body .menu__footer a:visited {
+body .footer a:visited {
   text-decoration: none;
 }
-body .menu__footer--mention, body .menu__footer--contact {
+body .footer__mention, body .footer__contact {
   color: #FBC02D;
   margin: 1.2em;
   font-size: 0.5em;
@@ -731,15 +702,15 @@ body .menu__footer--mention, body .menu__footer--contact {
   text-decoration: none;
   text-shadow: 0.1em 0.1em 0.2em black;
 }
-body .menu__footer--mention:hover, body .menu__footer--contact:hover {
+body .footer__mention:hover, body .footer__contact:hover {
   animation: headshake 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9);
   animation-iteration-count: 4;
 }
-.menu__restaurant {
+.restaurant {
   padding-bottom: 4em;
 }
-.menu__restaurant__annonce {
-  width: 85%;
+.restaurant__annonce {
+  width: 13em;
   border: 0;
   border-radius: 15px;
   margin: auto;
@@ -752,17 +723,17 @@ body .menu__footer--mention:hover, body .menu__footer--contact:hover {
   text-shadow: 0.1em 0.1em 0.2em black;
   box-shadow: 0.1em 0.1em 1em rgba(73, 73, 73, 0.425);
 }
-.menu__restaurant__annonce--prochainement {
+.restaurant__annonce--prochainement {
   display: inline;
   color: #FBC02D;
   display: inline;
   padding: 0.5em;
 }
-.menu__restaurant__annonce--loading {
+.restaurant__annonce--loading {
   padding-top: 0.5em;
   display: inline-block;
 }
-.menu__restaurant__annonce--loading span {
+.restaurant__annonce--loading span {
   width: 0.3em;
   height: 0.3em;
   background-color: #FBC02D;
@@ -773,24 +744,24 @@ body .menu__footer--mention:hover, body .menu__footer--contact:hover {
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
-.menu__restaurant__annonce--loading span:nth-child(2) {
+.restaurant__annonce--loading span:nth-child(2) {
   animation-delay: 0.4s;
 }
-.menu__restaurant__annonce--loading span:nth-child(3) {
+.restaurant__annonce--loading span:nth-child(3) {
   animation-delay: 0.8s;
 }
 
-.menu__accueil {
+.accueil {
   font-size: 1.2em;
   text-shadow: 0.1em 0.1em 0.2em black;
   margin: 2em;
 }
-.menu__accueil a {
+.accueil a {
   color: #FBC02D;
   font-family: "Source Serif Pro", serif;
   text-decoration: none;
 }
-.menu__accueil--retour {
+.accueil__retour {
   background-color: #589a86;
   display: block;
   width: 6em;
@@ -819,7 +790,6 @@ body .menu__footer--mention:hover, body .menu__footer--contact:hover {
 .mention__article__titre {
   font-size: 2em;
   margin: 0em;
-  text-shadow: 0.1em 0.1em 0.2em black;
 }
 .mention__article__para {
   font-size: 1.5em;

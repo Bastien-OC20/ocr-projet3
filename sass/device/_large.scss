@@ -3,8 +3,8 @@
     body {
 
         // En tête du site
-        .menu__site {
-            &--logo {
+        .logo {
+            &__site {
                 min-height: 2.2em;
 
                 a {
@@ -15,13 +15,13 @@
         }
 
         // page index des menus
-        .menu__restaurant {
+        .restaurant {
             width: 100%;
             margin: auto;
             justify-content: center;
             padding-bottom: 3.5em;
 
-            &__liste {
+            &__cartes {
                 text-align: center;
                 width: 25em;
                 height: 30em;
@@ -31,7 +31,7 @@
                 grid-row-gap: 5em;
                 margin: auto;
 
-                &__carte {
+                &__menu {
                     padding: 0em;
                     width: 24em;
                     height: 30em;
@@ -78,7 +78,7 @@
                         }
 
                         &--titre {
-                            font-size: 1.5em;
+                            font-size: 2em;
                             text-align: center;
                         }
                     }

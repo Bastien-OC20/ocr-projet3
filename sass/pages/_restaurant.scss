@@ -10,6 +10,9 @@
     @include box-shadow;
     @include text-focus;
 
+    a {
+        color: $colormenu1;
+    }
 }
 
 // Style menu le chic à la française
@@ -19,6 +22,11 @@
     justify-content: space-around;
     @include box-shadow;
     @include text-focus;
+    @include degrade($bg-degrade-menu2);
+
+    a {
+        @include degrade($bg-degrade-menu2);
+    }
 
     .menu__header--titre {
         @include degrade($bg-degrade-menu2);
@@ -45,14 +53,15 @@
     justify-content: space-around;
     @include box-shadow;
     @include text-focus;
+    @include degrade($bg-degrade-menu3);
+
+    a {
+        @include degrade($bg-degrade-menu3);
+    }
 
     .menu__header--titre {
         @include degrade($bg-degrade-menu3);
 
-    }
-
-    .menu__plats__detail__element {
-        color: black;
     }
 
     .plats--entree {
@@ -75,8 +84,16 @@
     justify-content: space-around;
     @include box-shadow;
     @include text-focus;
+    @include degrade($bg-degrade-menu4);
+
+    a {
+        @include degrade($bg-degrade-menu4);
+    }
 
     .menu__header--titre {
         @include degrade($bg-degrade-menu4);
+    }
+    .menu__plats__header--titre, ul{
+        color: black;
     }
 }
